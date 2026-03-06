@@ -1,6 +1,7 @@
 """
-Feature Engineering Module
-Creates advanced features for the churn prediction model.
+Feature Engineering Module — V3
+Creates derived features from merged data with full explanations.
+Supports optional weight multipliers from user configuration.
 """
 import pandas as pd
 import numpy as np
@@ -11,186 +12,125 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import *
 
 
-def create_engagement_score(df):
-    """Create a composite customer engagement score."""
+# ─── Feature Explanations (displayed in the app) ──────────
+FEATURE_EXPLANATIONS = {
+    "engagement_score": {
+        "what": "Combined score (0-100) measuring how actively the customer interacts with you.",
+        "how": "Weighted sum of: total interactions (40%), satisfaction score (30%), autopay enrollment (15%), paperless billing (15%).",
+        "why": "Highly engaged customers are invested in the relationship. Low engagement often precedes churn — the customer has mentally checked out.",
+    },
+    "composite_risk_score": {
+        "what": "Single number (0-10) summarizing overall churn risk from all behavioral flags.",
+        "how": "Sum of all risk flags (each 0 or 1): complaint risk + low satisfaction + negative sentiment + volatile sentiment + new customer + frequent caller + unresolved issues.",
+        "why": "Individual flags tell one story, but a customer with 5+ flags simultaneously is in serious danger. This aggregates risk signals into one actionable number.",
+    },
+    "complaint_risk_flag": {
+        "what": "Binary flag (0/1) — does this customer have an abnormally high complaint rate?",
+        "how": "Set to 1 if complaint_count > 3 OR avg_complaint_severity > 3.5.",
+        "why": "More than 3 complaints signals persistent dissatisfaction. High average severity means the issues aren't minor.",
+    },
+    "low_satisfaction_flag": {
+        "what": "Binary flag (0/1) — is this customer consistently unsatisfied with service?",
+        "how": "Set to 1 if avg_satisfaction_score < 2.5 out of 5.",
+        "why": "A satisfaction score below 2.5 means more than half their interactions were rated poorly. This is a strong churn predictor.",
+    },
+    "high_negative_sentiment_flag": {
+        "what": "Binary flag (0/1) — are most of this customer's comments negative?",
+        "how": "Set to 1 if negative_sentiment_ratio > 0.5 (more than half their comments scored negative by VADER).",
+        "why": "When the majority of what a customer writes is negative, they're expressing sustained frustration, not a one-off bad day.",
+    },
+    "very_negative_sentiment_flag": {
+        "what": "Binary flag (0/1) — is this customer's average sentiment deeply negative?",
+        "how": "Set to 1 if avg_sentiment_score < -0.3 on the -1 to +1 scale.",
+        "why": "An average below -0.3 means even their neutral-seeming complaints carry negative undertones. This captures 'politely furious' customers.",
+    },
+    "sentiment_volatile_flag": {
+        "what": "Binary flag (0/1) — does this customer swing between positive and negative?",
+        "how": "Set to 1 if sentiment_std > 0.5 (high standard deviation in sentiment scores across comments).",
+        "why": "Volatile customers are unpredictable — sometimes happy, sometimes furious. They're 'on the fence' and a single bad experience could tip them.",
+    },
+    "new_customer_flag": {
+        "what": "Binary flag (0/1) — is this customer in the critical first-year window?",
+        "how": "Set to 1 if account_tenure_months < 12.",
+        "why": "New customers haven't built loyalty yet. They churn at 2-3× the rate of established customers. The first year is the retention danger zone.",
+    },
+    "frequent_caller_flag": {
+        "what": "Binary flag (0/1) — is this customer contacting you excessively?",
+        "how": "Set to 1 if interactions_per_month > 2.",
+        "why": "Calling more than twice a month means something isn't being resolved. Each unnecessary contact erodes goodwill.",
+    },
+    "unresolved_issues_flag": {
+        "what": "Binary flag (0/1) — does this customer have open unresolved complaints?",
+        "how": "Set to 1 if unresolved_complaints > 0 OR unresolved_count > 1.",
+        "why": "Every unresolved issue is an open wound. Customers with unresolved complaints are actively unhappy.",
+    },
+}
+
+
+def engineer_features(df, feature_multipliers=None):
+    """
+    Create engineered features from merged data.
+    Optionally applies weight multipliers from user configuration.
+    """
+    print("=" * 60)
+    print("FEATURE ENGINEERING (V3)")
+    print("=" * 60)
+
     df = df.copy()
 
-    # Normalize relevant columns to 0-1 scale
-    def normalize(series):
-        min_val, max_val = series.min(), series.max()
-        if max_val == min_val:
-            return pd.Series(0.5, index=series.index)
-        return (series - min_val) / (max_val - min_val)
+    # ── Engagement Score ──
+    print("  Creating engagement_score...")
+    interactions_norm = np.clip(df.get("total_interactions", 0) / 15, 0, 1)
+    satisfaction_norm = np.clip(df.get("avg_satisfaction_score", 3) / 5, 0, 1)
+    autopay_norm = df.get("has_autopay", 0).astype(float)
+    paperless_norm = df.get("paperless_billing", 0).astype(float)
+    df["engagement_score"] = (interactions_norm * 40 + satisfaction_norm * 30 + autopay_norm * 15 + paperless_norm * 15).round(2)
 
-    score = pd.Series(0.0, index=df.index)
+    # ── Risk Flags ──
+    print("  Creating risk flags...")
+    df["complaint_risk_flag"] = ((df.get("complaint_count", 0) > 3) | (df.get("avg_complaint_severity", 0) > 3.5)).astype(int)
+    df["low_satisfaction_flag"] = (df.get("avg_satisfaction_score", 3) < 2.5).astype(int)
+    df["high_negative_sentiment_flag"] = (df.get("negative_sentiment_ratio", 0) > 0.5).astype(int)
+    df["very_negative_sentiment_flag"] = (df.get("avg_sentiment_score", 0) < -0.3).astype(int)
+    df["sentiment_volatile_flag"] = (df.get("sentiment_std", 0) > 0.5).astype(int)
+    df["new_customer_flag"] = (df.get("account_tenure_months", 12) < 12).astype(int)
+    df["frequent_caller_flag"] = (df.get("interactions_per_month", 0) > 2).astype(int)
+    df["unresolved_issues_flag"] = ((df.get("unresolved_complaints", 0) > 0) | (df.get("unresolved_count", 0) > 1)).astype(int)
 
-    # Higher satisfaction → higher engagement
-    if "avg_satisfaction_score" in df.columns:
-        score += normalize(df["avg_satisfaction_score"]) * 0.25
-
-    # More interactions (moderate) → engagement
-    if "total_interactions" in df.columns:
-        score += normalize(df["total_interactions"].clip(upper=df["total_interactions"].quantile(0.95))) * 0.15
-
-    # Autopay → engaged
-    if "has_autopay" in df.columns:
-        score += df["has_autopay"] * 0.15
-
-    # Paperless billing → digital engagement
-    if "paperless_billing" in df.columns:
-        score += df["paperless_billing"] * 0.10
-
-    # Low complaint severity → engaged
-    if "avg_complaint_severity" in df.columns:
-        score += (1 - normalize(df["avg_complaint_severity"])) * 0.15
-
-    # Longer tenure → engaged
-    if "account_tenure_months" in df.columns:
-        score += normalize(df["account_tenure_months"].clip(upper=240)) * 0.10
-
-    # Channel diversity → engaged
-    if "channel_diversity" in df.columns:
-        score += normalize(df["channel_diversity"]) * 0.10
-
-    df["engagement_score"] = score.clip(0, 1)
-    return df
-
-
-def create_risk_indicators(df):
-    """Create churn risk indicator features."""
-    df = df.copy()
-
-    # Payment risk
-    df["payment_risk_flag"] = (
-        (df.get("late_payments_count", 0) > 3) |
-        (df.get("payment_delay_avg_days", 0) > 15)
-    ).astype(int)
-
-    # Complaint risk
-    df["complaint_risk_flag"] = (
-        (df.get("complaint_count", 0) > 3) |
-        (df.get("avg_complaint_severity", 0) > 3.5)
-    ).astype(int)
-
-    # Satisfaction risk
-    df["low_satisfaction_flag"] = (
-        df.get("avg_satisfaction_score", 3) < 2.5
-    ).astype(int)
-
-    # High negative sentiment (NLP-derived)
-    df["high_negative_sentiment_flag"] = (
-        df.get("negative_sentiment_ratio", 0) > 0.5
-    ).astype(int)
-
-    # Very negative average sentiment score (VADER compound)
-    df["very_negative_sentiment_flag"] = (
-        df.get("avg_sentiment_score", 0) < -0.3
-    ).astype(int)
-
-    # Sentiment volatility — customer with mixed feelings
-    df["sentiment_volatile_flag"] = (
-        df.get("sentiment_std", 0) > 0.5
-    ).astype(int)
-
-    # New customer risk (< 6 months)
-    df["new_customer_flag"] = (
-        df.get("account_tenure_months", 0) < 6
-    ).astype(int)
-
-    # Consumption drop
-    df["consumption_declining_flag"] = (
-        df.get("consumption_trend", 0) < -0.1
-    ).astype(int)
-
-    # Composite risk score
-    risk_cols = [
-        "payment_risk_flag", "complaint_risk_flag", "low_satisfaction_flag",
+    # ── Composite Risk Score ──
+    print("  Creating composite_risk_score...")
+    risk_flags = [
+        "complaint_risk_flag", "low_satisfaction_flag",
         "high_negative_sentiment_flag", "very_negative_sentiment_flag",
-        "sentiment_volatile_flag", "new_customer_flag", "consumption_declining_flag"
+        "sentiment_volatile_flag", "new_customer_flag",
+        "frequent_caller_flag", "unresolved_issues_flag",
     ]
-    df["composite_risk_score"] = df[risk_cols].sum(axis=1)
+    df["composite_risk_score"] = df[risk_flags].sum(axis=1)
 
-    return df
+    # ── Apply weight multipliers if provided ──
+    if feature_multipliers:
+        print(f"  Applying {len(feature_multipliers)} weight multipliers...")
+        for col, multiplier in feature_multipliers.items():
+            if col in df.columns and col != TARGET_COLUMN and col not in ["customer_id", "customer_name"]:
+                if df[col].dtype in [np.float64, np.int64, np.float32, np.int32, float, int]:
+                    df[col] = df[col] * multiplier
 
+    # ── Summary ──
+    total_features = len([c for c in df.columns if c not in ["customer_id", "customer_name", "account_start_date"]])
+    print(f"\n  Total features: {total_features}")
+    print(f"  Risk flag distribution:")
+    for flag in risk_flags:
+        pct = df[flag].mean()
+        print(f"    {flag}: {pct:.1%} of customers flagged")
 
-def create_behavioral_features(df):
-    """Create behavioral pattern features."""
-    df = df.copy()
-
-    # Bill-to-income ratio proxy
-    if "avg_monthly_bill" in df.columns and "census_median_income" in df.columns:
-        monthly_income = df["census_median_income"] / 12
-        df["bill_to_income_ratio"] = (df["avg_monthly_bill"] / monthly_income.clip(lower=1)).clip(0, 1)
-
-    # Complaint rate (complaints per month of tenure)
-    if "complaint_count" in df.columns and "account_tenure_months" in df.columns:
-        df["complaint_rate_per_month"] = df["complaint_count"] / df["account_tenure_months"].clip(lower=1)
-
-    # Interaction frequency
-    if "total_interactions" in df.columns and "account_tenure_months" in df.columns:
-        df["interaction_rate_per_month"] = df["total_interactions"] / df["account_tenure_months"].clip(lower=1)
-
-    # Resolution efficiency
-    if "unresolved_count" in df.columns and "total_interactions" in df.columns:
-        df["unresolved_ratio"] = df["unresolved_count"] / df["total_interactions"].clip(lower=1)
-
-    # Escalation tendency
-    if "escalation_count" in df.columns and "complaint_count" in df.columns:
-        df["escalation_ratio"] = df["escalation_count"] / df["complaint_count"].clip(lower=1)
-
-    # Payment consistency
-    if "reversed_payments" in df.columns and "num_payments" in df.columns:
-        df["payment_reversal_ratio"] = df["reversed_payments"] / df["num_payments"].clip(lower=1)
-
-    # Competition exposure
-    if "num_competitors_in_area" in df.columns:
-        df["high_competition_flag"] = (df["num_competitors_in_area"] >= 2).astype(int)
-
-    return df
-
-
-def create_tenure_segments(df):
-    """Create customer tenure segments."""
-    df = df.copy()
-    if "account_tenure_months" in df.columns:
-        bins = [0, 6, 12, 24, 60, 120, 999]
-        labels = ["0-6mo", "6-12mo", "1-2yr", "2-5yr", "5-10yr", "10yr+"]
-        df["tenure_segment"] = pd.cut(
-            df["account_tenure_months"], bins=bins, labels=labels, include_lowest=True
-        ).astype(str)
-    return df
-
-
-def engineer_features(df):
-    """Run the complete feature engineering pipeline."""
-    print("=" * 60)
-    print("FEATURE ENGINEERING")
-    print("=" * 60)
-
-    initial_cols = df.shape[1]
-
-    df = create_engagement_score(df)
-    print(f"  [+] Engagement score created")
-
-    df = create_risk_indicators(df)
-    print(f"  [+] Risk indicators created")
-
-    df = create_behavioral_features(df)
-    print(f"  [+] Behavioral features created")
-
-    df = create_tenure_segments(df)
-    print(f"  [+] Tenure segments created")
-
-    new_cols = df.shape[1] - initial_cols
-    print(f"\n  New features added: {new_cols}")
-    print(f"  Total features: {df.shape[1]}")
-    print("=" * 60)
+    # Save
+    os.makedirs(DATA_DIR, exist_ok=True)
+    df.to_csv(FINAL_FEATURES_FILE, index=False)
+    print(f"  Saved to: {FINAL_FEATURES_FILE}")
 
     return df
 
 
 if __name__ == "__main__":
-    merged = pd.read_csv(MERGED_DATA_FILE)
-    engineered = engineer_features(merged)
-    engineered.to_csv(FINAL_FEATURES_FILE, index=False)
-    print(f"Saved to {FINAL_FEATURES_FILE}")
+    df = pd.read_csv(MERGED_DATA_FILE)
+    engineer_features(df)
