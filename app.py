@@ -1,8 +1,6 @@
 """
-SAP IS-U Customer Retention Prediction System — V3
-Lean version: 3 inputs (Customer Master + Complaints + Interactions)
-Full transparency: every step explained
-Optional: user-configurable feature weights
+SAP IS-U Customer Retention Prediction System — Production
+Customer-facing version: no technical details exposed
 """
 import streamlit as st
 import pandas as pd
@@ -10,39 +8,27 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import os, sys, json
+import os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import *
 
-st.set_page_config(page_title="SAP IS-U Customer Retention V3", page_icon="⚡", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Customer Retention Predictor", page_icon="⚡", layout="wide", initial_sidebar_state="expanded")
 
 st.markdown("""
 <style>
     .main-header { font-size: 2.2rem; font-weight: 700; color: #1a1a2e; text-align: center; padding: 1rem 0; border-bottom: 3px solid #667eea; margin-bottom: 1.5rem; }
-    .explain-box { background: #f0f4ff; border-left: 4px solid #667eea; padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 0.8rem 0; }
-    .explain-box h4 { margin: 0 0 0.3rem 0; color: #0f3460; }
-    .explain-box p { margin: 0; color: #333; font-size: 0.92rem; }
-    .why-box { background: #fff8e1; border-left: 4px solid #f39c12; padding: 0.8rem 1rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; }
-    .why-box p { margin: 0; color: #5d4e37; font-size: 0.9rem; }
+    .stage-box { background: #f0f4ff; border-left: 4px solid #667eea; padding: 0.8rem 1.2rem; border-radius: 0 8px 8px 0; margin: 0.8rem 0; }
+    .stage-box p { margin: 0; color: #333; font-size: 0.92rem; }
     .metric-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.2rem; border-radius: 12px; color: white; text-align: center; }
-    .metric-card h3 { margin: 0; font-size: 2rem; }
-    .metric-card p { margin: 0; opacity: 0.85; font-size: 0.9rem; }
     div[data-testid="stSidebar"] { background: linear-gradient(180deg, #0f3460 0%, #1a1a2e 100%); }
     div[data-testid="stSidebar"] .stMarkdown { color: white; }
     div[data-testid="stSidebar"] h1, div[data-testid="stSidebar"] h2, div[data-testid="stSidebar"] h3 { color: white; }
 </style>
 """, unsafe_allow_html=True)
 
-
-def explain(title, what, why=None, how=None):
-    """Render an explanation box."""
-    st.markdown(f"""<div class="explain-box"><h4>💡 {title}</h4><p><strong>What:</strong> {what}</p></div>""", unsafe_allow_html=True)
-    if why:
-        st.markdown(f"""<div class="why-box"><p><strong>Why this matters:</strong> {why}</p></div>""", unsafe_allow_html=True)
-    if how:
-        st.markdown(f"""<div class="explain-box"><p><strong>How:</strong> {how}</p></div>""", unsafe_allow_html=True)
-
+def stage_msg(text):
+    st.markdown(f'<div class="stage-box"><p>{text}</p></div>', unsafe_allow_html=True)
 
 # ─── Session State ────────────────────────────────────────
 for key in ["data_generated", "models_trained", "predictor", "chatbot", "merged_data",
@@ -50,187 +36,86 @@ for key in ["data_generated", "models_trained", "predictor", "chatbot", "merged_
     if key not in st.session_state:
         st.session_state[key] = False if key in ["data_generated", "models_trained", "use_weights"] else ([] if key == "chat_messages" else None)
 
-
 # ─── Sidebar ─────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("# ⚡ SAP IS-U V3")
-    st.markdown("### Customer Retention System")
-    st.markdown("*Lean: 3 inputs, full transparency*")
+    st.markdown("# ⚡ Vantive Inc")
+    st.markdown("### Customer Retention Predictor")
     st.markdown("---")
 
-    api_key = st.text_input("Anthropic API Key (optional)", type="password")
+    api_key = st.text_input("API Key (optional)", type="password")
     if api_key:
         os.environ["ANTHROPIC_API_KEY"] = api_key
 
     st.markdown("---")
 
-    # ── Optional Weight Configuration ──
-    st.session_state.use_weights = st.toggle("⚖️ Enable Feature Weights", value=False,
-                                              help="Toggle on to manually adjust how much each feature category influences churn predictions")
-
-    feature_multipliers = None
-    if st.session_state.use_weights:
-        st.markdown("#### Category Weights")
-        st.caption("Adjust importance of each data source. Must total 100%.")
-
-        w_complaint = st.slider("💬 Complaints & Sentiment", 0, 60, 35, key="w_comp",
-                                help="How much weight to give complaint data and NLP sentiment scores")
-        w_customer = st.slider("👤 Customer Profile", 0, 60, 25, key="w_cust",
-                               help="How much weight to give tenure, contract type, demographics")
-        w_interaction = st.slider("🤝 Interactions & Service", 0, 60, 25, key="w_int",
-                                  help="How much weight to give call frequency, satisfaction, resolution")
-        w_engineered = st.slider("🔧 Engineered Risk Flags", 0, 60, 15, key="w_eng",
-                                 help="How much weight to give derived risk flags and composite scores")
-
-        total = w_complaint + w_customer + w_interaction + w_engineered
-        if total == 100:
-            st.success(f"Total: {total}% ✓")
-        elif total < 100:
-            st.warning(f"Total: {total}% — {100-total}% unassigned")
-        else:
-            st.error(f"Total: {total}% — exceeds 100%")
-
-        # Build multipliers from category weights
-        if total > 0:
-            feature_multipliers = {}
-            # Map features to categories
-            from config import COMPLAINT_FEATURES, SENTIMENT_FEATURES, CUSTOMER_FEATURES, INTERACTION_FEATURES, ENGINEERED_FEATURES
-            cat_map = {
-                "complaint": (COMPLAINT_FEATURES + SENTIMENT_FEATURES, w_complaint),
-                "customer": (CUSTOMER_FEATURES, w_customer),
-                "interaction": (INTERACTION_FEATURES, w_interaction),
-                "engineered": (ENGINEERED_FEATURES, w_engineered),
-            }
-            for cat_name, (features, weight) in cat_map.items():
-                base = weight / 25.0  # normalize relative to 25% default
-                for f in features:
-                    feature_multipliers[f] = base
-
-        if st.button("🔄 Reset Weights", use_container_width=True):
-            st.rerun()
-
-    st.markdown("---")
-
-    # ── Run Pipeline ──
-    if st.button("🚀 Run Complete Pipeline", use_container_width=True, type="primary"):
-        progress = st.progress(0)
-        status = st.empty()
-
-        # ════════════════════════════════════════════════════
-        # STAGE 1: DATA GENERATION
-        # ════════════════════════════════════════════════════
-        status.text("Stage 1/6: Generating SAP IS-U data...")
-        progress.progress(5)
-
-    # We use a flag to trigger pipeline in main content area
+    if st.button("🚀 Run Demo", use_container_width=True, type="primary"):
         st.session_state._run_pipeline = True
-        st.session_state._feature_multipliers = feature_multipliers
         st.rerun()
 
-
 # ─── Main Content ────────────────────────────────────────
-st.markdown('<div class="main-header">⚡ SAP IS-U Customer Retention Prediction System — V3</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">⚡ Customer Retention Prediction System</div>', unsafe_allow_html=True)
 
-# ── Run Pipeline if triggered ──
+# ── Run Pipeline ──
 if getattr(st.session_state, "_run_pipeline", False):
     st.session_state._run_pipeline = False
-    feature_multipliers = getattr(st.session_state, "_feature_multipliers", None)
 
     progress = st.progress(0)
     status = st.empty()
 
     # ════════════════════════════════════════════════════
-    # STAGE 1: DATA GENERATION
+    # STAGE 1: DATA
     # ════════════════════════════════════════════════════
-    st.markdown("## 🔄 Stage 1: Generating SAP IS-U Customer Data")
-    explain(
-        "What is this step?",
-        "We generate synthetic data that mirrors what you would export from a real SAP IS-U system. "
-        "In production, this step is replaced by actual CSV exports from SAP transactions (SE16N, CRM_ORDER, etc.).",
-        why="We use 3 focused data sources — the ones that directly predict churn. We deliberately excluded "
-            "billing detail, consumption readings, and demographics because while useful for other analytics "
-            "(like credit scoring), they add noise to churn prediction without proportional value."
-    )
+    st.markdown("## 🔄 Loading Customer Data")
+    stage_msg("Preparing customer profiles, service records, and feedback data...")
 
-    status.text("Stage 1/6: Generating data...")
+    status.text("Loading data...")
     progress.progress(5)
     from src.data_generator import generate_all_data
     all_data = generate_all_data()
     st.session_state.data_generated = True
     progress.progress(12)
 
-    # Show the 3 input sources with SAP mapping
-    with st.expander("📋 Data Sources — What We Generated", expanded=True):
-        for source, sap_info in SAP_TABLE_MAP.items():
-            st.markdown(f"**{source.replace('_', ' ').title()}** — SAP: `{sap_info['sap_tables']}`")
-            st.caption(sap_info["description"])
-
+    with st.expander("📋 Data Loaded — Preview", expanded=False):
         c1, c2, c3 = st.columns(3)
         with c1:
-            st.markdown("**Customer Master**")
-            st.dataframe(all_data["master"][["customer_id", "age", "region", "contract_type", "account_tenure_months"]].head(5), use_container_width=True, height=200)
+            st.markdown("**Customer Profiles**")
+            st.dataframe(all_data["master"][["customer_id", "region", "contract_type", "account_tenure_months"]].head(5), use_container_width=True, height=200)
             st.caption(f"{len(all_data['master']):,} customers")
         with c2:
-            st.markdown("**Complaints (with comments)**")
-            st.dataframe(all_data["complaint"][["customer_id", "complaint_category", "severity", "comment"]].head(5), use_container_width=True, height=200)
-            st.caption(f"{len(all_data['complaint']):,} complaint records")
+            st.markdown("**Customer Feedback**")
+            st.dataframe(all_data["complaint"][["customer_id", "complaint_category", "severity"]].head(5), use_container_width=True, height=200)
+            st.caption(f"{len(all_data['complaint']):,} feedback records")
         with c3:
-            st.markdown("**Interactions**")
-            st.dataframe(all_data["interaction"][["customer_id", "interaction_type", "channel", "satisfaction_score"]].head(5), use_container_width=True, height=200)
-            st.caption(f"{len(all_data['interaction']):,} interaction records")
+            st.markdown("**Service History**")
+            st.dataframe(all_data["interaction"][["customer_id", "interaction_type", "channel"]].head(5), use_container_width=True, height=200)
+            st.caption(f"{len(all_data['interaction']):,} interactions")
 
-    st.success("✅ Stage 1 Complete — 3 SAP IS-U datasets generated")
+    st.success("✅ Customer data loaded successfully")
     st.markdown("---")
 
     # ════════════════════════════════════════════════════
-    # STAGE 2: DATA CLEANSING
+    # STAGE 2: CLEANSING
     # ════════════════════════════════════════════════════
-    st.markdown("## 🧹 Stage 2: Data Cleansing")
-    explain(
-        "What is this step?",
-        "Raw SAP data contains duplicates, missing values, outliers, and inconsistent formats. "
-        "We clean each dataset before analysis to ensure the ML model learns from real patterns, not data errors.",
-        why="Garbage in = garbage out. A duplicate customer row would count twice in training. "
-            "A missing satisfaction score defaulting to 0 would falsely signal extreme dissatisfaction. "
-            "Cleaning prevents the model from learning false patterns."
-    )
+    st.markdown("## 🧹 Validating & Cleaning Data")
+    stage_msg("Removing duplicates, fixing inconsistencies, and validating all records...")
 
-    status.text("Stage 2/6: Cleaning data...")
+    status.text("Cleaning data...")
     progress.progress(18)
     from src.data_preprocessing import clean_customer_master, clean_complaint_data, clean_interaction_data
     master_clean = clean_customer_master(all_data["master"].copy())
     complaint_clean = clean_complaint_data(all_data["complaint"].copy())
     interaction_clean = clean_interaction_data(all_data["interaction"].copy())
 
-    with st.expander("🧹 Cleansing Details — What We Fixed", expanded=False):
-        from src.data_preprocessing import STEP_EXPLANATIONS
-        for step_key in ["clean_master", "clean_complaints", "clean_interactions"]:
-            info = STEP_EXPLANATIONS[step_key]
-            st.markdown(f"**{info['title']}**")
-            st.markdown(f"*{info['what']}*")
-            for detail in info.get("details", []):
-                st.markdown(f"- {detail}")
-            st.markdown("")
-
-    st.success("✅ Stage 2 Complete — Data cleaned and validated")
+    st.success("✅ Data validated and cleaned")
     st.markdown("---")
 
     # ════════════════════════════════════════════════════
-    # STAGE 3: NLP SENTIMENT ANALYSIS
+    # STAGE 3: AI ANALYSIS
     # ════════════════════════════════════════════════════
-    st.markdown("## 🧠 Stage 3: NLP Sentiment Analysis")
-    explain(
-        "What is this step?",
-        "Every customer complaint comment is analyzed using VADER (Valence Aware Dictionary and sEntiment Reasoner). "
-        "VADER reads the actual text and scores it from -1.0 (very negative) to +1.0 (very positive).",
-        why="A severity code of '4' tells you the complaint is serious. But it doesn't tell you the customer "
-            "said 'I want to cancel immediately, this is disgusting.' NLP captures the emotional intensity "
-            "that structured SAP data misses. Customers who use very negative language churn at 2-3× the average rate.",
-        how="VADER has 7,500+ words rated by human linguists. It handles intensifiers ('very frustrated' scores worse "
-            "than 'frustrated'), negations ('not happy' flips positive to negative), and outputs a compound score from -1 to +1."
-    )
+    st.markdown("## 🧠 Analyzing Customer Feedback")
+    stage_msg("Our AI is reading every customer comment and scoring their satisfaction level...")
 
-    status.text("Stage 3/6: Running NLP sentiment analysis...")
+    status.text("Analyzing customer feedback...")
     progress.progress(25)
 
     from nltk.sentiment.vader import SentimentIntensityAnalyzer
@@ -241,141 +126,90 @@ if getattr(st.session_state, "_run_pipeline", False):
         nltk.download("vader_lexicon", quiet=True)
     sia = SentimentIntensityAnalyzer()
 
-    sample_comments = complaint_clean["comment"].drop_duplicates().head(6).tolist()
-    with st.expander("🔍 Live Sentiment Scoring — Watch VADER Analyze Comments", expanded=True):
+    sample_comments = complaint_clean["comment"].drop_duplicates().head(4).tolist()
+    with st.expander("🔍 See How Our AI Reads Customer Feedback", expanded=True):
         for comment in sample_comments:
             scores = sia.polarity_scores(comment)
             compound = scores["compound"]
             emoji = "🟢" if compound >= 0.05 else ("🔴" if compound <= -0.05 else "🟡")
-            label = "POSITIVE" if compound >= 0.05 else ("NEGATIVE" if compound <= -0.05 else "NEUTRAL")
+            label = "Happy" if compound >= 0.05 else ("Unhappy" if compound <= -0.05 else "Neutral")
             color = "#27ae60" if compound >= 0.05 else ("#e74c3c" if compound <= -0.05 else "#f39c12")
-            st.markdown(f'> *"{comment}"*\n>\n> {emoji} **{label}** — Score: '
-                        f'<span style="color:{color};font-weight:bold">{compound:+.3f}</span>'
-                        f' &nbsp;|&nbsp; Pos: {scores["pos"]:.0%} &nbsp;|&nbsp; Neu: {scores["neu"]:.0%}'
-                        f' &nbsp;|&nbsp; Neg: {scores["neg"]:.0%}', unsafe_allow_html=True)
-        st.markdown(f"**Total comments to analyze: {len(complaint_clean):,}**")
+            st.markdown(f'> *"{comment}"*\n>\n> {emoji} **{label}**', unsafe_allow_html=True)
+        st.markdown(f"**{len(complaint_clean):,} customer comments analyzed**")
 
-    st.success("✅ Stage 3 Complete — All comments scored")
+    st.success("✅ Customer feedback analysis complete")
     st.markdown("---")
 
     # ════════════════════════════════════════════════════
-    # STAGE 4: PREPROCESSING + FEATURE ENGINEERING
+    # STAGE 4: BUILDING PROFILES
     # ════════════════════════════════════════════════════
-    st.markdown("## ⚙️ Stage 4: Feature Engineering")
-    explain(
-        "What is this step?",
-        "We merge all 3 data sources on customer_id, aggregate complaint and interaction records per customer, "
-        "and create new derived features (risk flags, engagement scores, composite risk) that don't exist in the raw data.",
-        why="Raw data tells you 'Customer X had 5 complaints.' Feature engineering tells you "
-            "'Customer X has high complaint frequency, deeply negative sentiment, low satisfaction, and 3 unresolved issues — "
-            "composite risk score: 6/8.' This transforms data into predictive signals.",
-        how="Each customer gets one row with ~35 features: original attributes + aggregated stats + NLP scores + risk flags."
-    )
+    st.markdown("## ⚙️ Building Customer Risk Profiles")
+    stage_msg("Combining all data sources into comprehensive customer profiles with risk indicators...")
 
-    status.text("Stage 4/6: Engineering features...")
+    status.text("Building risk profiles...")
     progress.progress(35)
 
     from src.data_preprocessing import preprocess_pipeline
     from src.eda import generate_eda_report
-    from src.feature_engineering import engineer_features, FEATURE_EXPLANATIONS
+    from src.feature_engineering import engineer_features
 
     merged, features, ids, _ = preprocess_pipeline()
     generate_eda_report(merged)
-    engineered = engineer_features(merged, feature_multipliers)
+    engineered = engineer_features(merged)
     st.session_state.merged_data = merged
     progress.progress(50)
 
-    with st.expander("🔧 Engineered Features — What We Created & Why", expanded=True):
-        st.markdown("Each new feature is created for a specific reason:")
-        for feat_name, feat_info in FEATURE_EXPLANATIONS.items():
-            st.markdown(f"**`{feat_name}`** — {feat_info['what']}")
-            st.markdown(f"- *How:* {feat_info['how']}")
-            st.markdown(f"- *Why:* {feat_info['why']}")
-            st.markdown("")
-
-        st.markdown(f"**Total features for ML model: {engineered.shape[1] - 3}** (excluding customer_id, name, churned)")
-
-        # Show feature stats
+    with st.expander("📊 Profile Summary", expanded=False):
         risk_flags = [c for c in engineered.columns if c.endswith("_flag")]
         if risk_flags:
-            st.markdown("**Risk Flag Summary:**")
-            flag_data = {f: f"{engineered[f].mean():.1%}" for f in risk_flags}
-            st.dataframe(pd.DataFrame({"Flag": flag_data.keys(), "% Customers Flagged": flag_data.values()}), use_container_width=True)
+            n_flagged = {f.replace("_flag", "").replace("_", " ").title(): f"{engineered[f].mean():.0%}" for f in risk_flags}
+            st.markdown("**Risk indicators detected across your customer base:**")
+            for name, pct in n_flagged.items():
+                st.markdown(f"- {name}: **{pct}** of customers flagged")
+        st.markdown(f"**{engineered.shape[0]:,} customer profiles built**")
 
-    if feature_multipliers:
-        with st.expander("⚖️ Weight Multipliers Applied", expanded=False):
-            st.markdown("Your custom weights adjusted feature importance:")
-            weight_df = pd.DataFrame({"Feature": feature_multipliers.keys(), "Multiplier": [f"{v:.2f}×" for v in feature_multipliers.values()]})
-            st.dataframe(weight_df, use_container_width=True)
-
-    st.success("✅ Stage 4 Complete — Features engineered")
+    st.success("✅ Customer risk profiles ready")
     st.markdown("---")
 
     # ════════════════════════════════════════════════════
-    # STAGE 5: MODEL TRAINING
+    # STAGE 5: PREDICTION
     # ════════════════════════════════════════════════════
-    st.markdown("## 🤖 Stage 5: ML Model Training")
-    explain(
-        "What is this step?",
-        "We train 5 different ML models on the engineered features and compare their performance. "
-        "The best model is automatically selected based on ROC AUC score.",
-        why="Different algorithms have different strengths. Logistic Regression is fast and interpretable. "
-            "Random Forest handles messy data. Gradient Boosting finds subtle patterns. By comparing all of them, "
-            "we ensure we pick the most accurate one for this specific dataset.",
-        how="Data is split 80/20 (train/test). Each model trains on 80%, predicts on the held-out 20%. "
-            "5-fold cross-validation provides additional robustness. We measure accuracy, precision, recall, F1, and ROC AUC."
-    )
+    st.markdown("## 🤖 Training Prediction Models")
+    stage_msg("Our AI is learning patterns from your data to predict which customers are at risk...")
 
-    status.text("Stage 5/6: Training ML models...")
+    status.text("Training prediction models...")
     progress.progress(55)
 
-    from src.model_training import training_pipeline, TRAINING_EXPLANATIONS
+    from src.model_training import training_pipeline
     df = pd.read_csv(FINAL_FEATURES_FILE)
-    results, trained_models, best_name, scaler = training_pipeline(df, feature_multipliers)
+    results, trained_models, best_name, scaler = training_pipeline(df)
     st.session_state.models_trained = True
     st.session_state.training_results = results
     progress.progress(85)
 
-    with st.expander("🏆 Model Results — What Each Model Does & How It Performed", expanded=True):
-        # Explain each model
-        for model_key, model_info in TRAINING_EXPLANATIONS.items():
-            if model_key == "metrics":
-                continue
-            st.markdown(f"**{model_key.replace('_', ' ').title()}** — {model_info['what']}")
-            st.caption(f"Strength: {model_info['strength']} | Weakness: {model_info['weakness']}")
-
-        st.markdown("---")
-        st.markdown("**Performance Comparison:**")
+    with st.expander("📈 Prediction Accuracy", expanded=True):
         results_df = pd.DataFrame(results).T
-        st.dataframe(results_df.style.format("{:.4f}").highlight_max(axis=0, color="#90EE90"), use_container_width=True)
+        # Show only key metrics, hide model names
+        best_metrics = results_df.loc[best_name]
+        c1, c2, c3 = st.columns(3)
+        with c1:
+            st.metric("Accuracy", f"{best_metrics['accuracy']:.0%}")
+        with c2:
+            st.metric("Precision", f"{best_metrics['precision']:.0%}")
+        with c3:
+            st.metric("Detection Rate", f"{best_metrics['recall']:.0%}")
+        st.caption("Our AI was tested on held-out data it never saw during training")
 
-        st.markdown("**What do these metrics mean?**")
-        for metric, explanation in TRAINING_EXPLANATIONS["metrics"].items():
-            st.markdown(f"- **{metric}**: {explanation}")
-
-        st.markdown(f"\n**🏅 Best Model: `{best_name}`**")
-
-        importance_path = os.path.join(REPORT_DIR, "09_feature_importance.png")
-        if os.path.exists(importance_path):
-            st.markdown("**Which features drove the predictions?**")
-            st.image(importance_path, use_container_width=True)
-
-    st.success(f"✅ Stage 5 Complete — Best model: {best_name}")
+    st.success("✅ Prediction models trained successfully")
     st.markdown("---")
 
     # ════════════════════════════════════════════════════
-    # STAGE 6: PREDICTION ENGINE + CHATBOT
+    # STAGE 6: GO LIVE
     # ════════════════════════════════════════════════════
-    st.markdown("## 💬 Stage 6: Prediction Engine & AI Chatbot")
-    explain(
-        "What is this step?",
-        "The trained model is loaded into a prediction engine that can score any customer in real-time. "
-        "The AI chatbot lets you ask questions in plain English about customer risk.",
-        why="This is where the system becomes actionable. Instead of looking at spreadsheets, "
-            "a retention manager can type 'Show me top 10 at-risk customers in the Northeast' and get an instant answer.",
-    )
+    st.markdown("## 💬 System Ready")
+    stage_msg("Loading prediction engine and AI assistant...")
 
-    status.text("Stage 6/6: Loading prediction engine...")
+    status.text("Going live...")
     progress.progress(92)
 
     from src.prediction_engine import ChurnPredictor
@@ -392,26 +226,25 @@ if getattr(st.session_state, "_run_pipeline", False):
             for i, c in enumerate(top_risk, 1):
                 prob = c["churn_probability"]
                 emoji = "🔴" if c["risk_level"] == "HIGH" else "🟡"
-                st.markdown(f"**{i}. {c['customer_id']}** — {emoji} **{prob:.1%}** churn probability | "
+                st.markdown(f"**{i}. {c['customer_id']}** — {emoji} **{prob:.1%}** risk | "
                             f"Region: {c.get('region', 'N/A')} | Tenure: {c.get('account_tenure_months', 'N/A')} months")
-        st.markdown("**👉 Go to the AI Chatbot tab to ask questions!**")
+        st.markdown("**👉 Explore the tabs above for full details**")
 
-    st.success("✅ Pipeline Complete!")
+    st.success("✅ System is live!")
     st.balloons()
     st.markdown("""
     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 16px; color: white; text-align: center;">
-        <h2 style="margin:0; color:white;">🎉 V3 Pipeline Complete!</h2>
+        <h2 style="margin:0; color:white;">🎉 Ready!</h2>
         <p style="font-size: 1.1rem; margin-top: 0.5rem; opacity: 0.95;">
-            <strong>3 focused inputs</strong> &nbsp;|&nbsp; <strong>NLP sentiment</strong> on every comment &nbsp;|&nbsp;
-            <strong>5 ML models</strong> compared &nbsp;|&nbsp; <strong>Full transparency</strong> at every step
+            Your customer retention system is now active. Explore the Dashboard, look up individual customers, or chat with the AI assistant.
         </p>
     </div>
     """, unsafe_allow_html=True)
 
 
 # ─── Tabs ─────────────────────────────────────────────────
-tab_dash, tab_eda, tab_models, tab_customers, tab_chatbot, tab_upload = st.tabs([
-    "📊 Dashboard", "📈 EDA", "🤖 Models", "👥 Customers", "💬 AI Chatbot", "📂 Upload Data"
+tab_dash, tab_eda, tab_customers, tab_chatbot, tab_upload = st.tabs([
+    "📊 Dashboard", "📈 Insights", "👥 Customer Lookup", "💬 AI Assistant", "📂 Upload Your Data"
 ])
 
 with tab_dash:
@@ -434,54 +267,54 @@ with tab_dash:
             fig, ax = plt.subplots(figsize=(8, 5))
             ax.pie([overall.get("high_risk_count", 0), overall.get("medium_risk_count", 0), overall.get("low_risk_count", 0)],
                    labels=["High", "Medium", "Low"], autopct="%1.1f%%", colors=["#e74c3c", "#f39c12", "#27ae60"], explode=[0.05, 0, 0])
-            ax.set_title("Risk Distribution", fontsize=14, fontweight="bold")
+            ax.set_title("Customer Risk Distribution", fontsize=14, fontweight="bold")
             st.pyplot(fig); plt.close()
         with cr:
-            st.subheader("Churn by Region")
+            st.subheader("Risk by Region")
             rd = segments.get("by_region", {})
             if rd:
                 fig, ax = plt.subplots(figsize=(8, 5))
                 ax.bar(rd.keys(), [rd[r]["avg_churn_prob"] for r in rd], color="#667eea")
-                ax.axhline(y=overall["avg_churn_prob"], color="red", linestyle="--", label="Avg")
-                ax.set_ylabel("Avg Churn Prob"); ax.legend(); plt.xticks(rotation=45, ha="right")
+                ax.axhline(y=overall["avg_churn_prob"], color="red", linestyle="--", label="Average")
+                ax.set_ylabel("Risk Score"); ax.legend(); plt.xticks(rotation=45, ha="right")
                 st.pyplot(fig); plt.close()
 
-        st.subheader("Top At-Risk Customers")
+        st.subheader("Highest Risk Customers")
         top = predictor.get_top_risk_customers(15)
         if top:
-            st.dataframe(pd.DataFrame(top).style.format({"churn_probability": "{:.2%}"}), use_container_width=True)
+            rdf = pd.DataFrame(top)
+            display_cols = [c for c in ["customer_id", "churn_probability", "risk_level", "region", "account_tenure_months"] if c in rdf.columns]
+            st.dataframe(rdf[display_cols].style.format({"churn_probability": "{:.1%}"}), use_container_width=True)
     else:
-        st.info("👈 Click **Run Complete Pipeline** in the sidebar to start.")
+        st.info("👈 Click **Run Demo** in the sidebar to see the system in action.")
+        st.markdown("""
+        <div style="background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%); padding: 2rem; border-radius: 16px; color: white; margin: 1rem 0;">
+            <h2 style="color: white; margin-top: 0;">Predict Customer Churn Before It Happens</h2>
+            <p style="font-size: 1.1rem; opacity: 0.9;">
+                Our AI analyzes your customer data — profiles, feedback, and service history — to identify 
+                who is most likely to leave. Get actionable insights and retention recommendations.
+            </p>
+            <p style="opacity: 0.7; margin-top: 1rem;">Click <strong>Run Demo</strong> to see it with sample data, or go to <strong>Upload Your Data</strong> to try with your own.</p>
+        </div>
+        """, unsafe_allow_html=True)
 
 with tab_eda:
-    st.subheader("Exploratory Data Analysis")
+    st.subheader("Customer Insights")
     if os.path.exists(REPORT_DIR):
         plots = sorted([f for f in os.listdir(REPORT_DIR) if f.endswith(".png") and f.startswith(("01", "02", "03", "04", "05"))])
         for plot in plots:
             st.image(os.path.join(REPORT_DIR, plot), use_container_width=True)
             st.markdown("---")
     else:
-        st.info("Run the pipeline to generate EDA visualizations.")
-
-with tab_models:
-    st.subheader("Model Training Results")
-    if st.session_state.training_results:
-        results_df = pd.DataFrame(st.session_state.training_results).T
-        st.dataframe(results_df.style.format("{:.4f}").highlight_max(axis=0, color="#90EE90"), use_container_width=True)
-        for plot in ["06_model_comparison.png", "07_roc_curves.png", "08_confusion_matrix.png", "09_feature_importance.png"]:
-            path = os.path.join(REPORT_DIR, plot)
-            if os.path.exists(path):
-                st.image(path, use_container_width=True); st.markdown("---")
-    else:
-        st.info("Train models first.")
+        st.info("Run the demo to generate insights.")
 
 with tab_customers:
-    st.subheader("Customer Churn Risk Lookup")
+    st.subheader("Customer Risk Lookup")
     if st.session_state.predictor:
         predictor = st.session_state.predictor
         c1, c2 = st.columns([1, 2])
         with c1:
-            cid = st.text_input("Enter Customer ID", value="CUST0000001")
+            cid = st.text_input("Customer ID", value="CUST0000001")
             search = st.button("🔍 Analyze", type="primary")
         if search and cid:
             result = predictor.get_retention_recommendations(cid)
@@ -490,45 +323,55 @@ with tab_customers:
             else:
                 with c2:
                     risk_emoji = {"HIGH": "🔴", "MEDIUM": "🟡", "LOW": "🟢"}.get(result["risk_level"], "⚪")
-                    st.markdown(f"### {risk_emoji} Risk: **{result['risk_level']}** | Churn: **{result['churn_probability']:.1%}**")
+                    st.markdown(f"### {risk_emoji} Risk: **{result['risk_level']}** | Churn Probability: **{result['churn_probability']:.1%}**")
                 st.markdown("---")
                 info = result["customer_info"]
                 cols = st.columns(4)
                 for i, (k, v) in enumerate(info.items()):
                     with cols[i % 4]: st.metric(k.replace("_", " ").title(), v)
                 st.markdown("---")
-                st.markdown("### Retention Recommendations")
+                st.markdown("### Recommended Actions")
                 for rec in result.get("recommendations", []):
                     icon = {"HIGH": "🔴", "MEDIUM": "🟡", "LOW": "🟢"}.get(rec["priority"], "⚪")
-                    with st.expander(f"{icon} [{rec['priority']}] {rec['action']}"):
+                    with st.expander(f"{icon} {rec['action']}"):
                         st.write(rec["detail"])
     else:
-        st.info("Run the pipeline first.")
+        st.info("Run the demo first.")
 
 with tab_chatbot:
-    st.subheader("💬 AI-Powered Retention Analyst")
+    st.subheader("💬 AI Retention Assistant")
     if st.session_state.chatbot:
         chatbot = st.session_state.chatbot
-        with st.expander("ℹ️ How to use", expanded=False):
-            st.markdown("**Try:** 'Tell me about CUST0000042', 'Show top risk customers', 'Summarize the data'")
+        with st.expander("💡 What can I ask?", expanded=False):
+            st.markdown("""
+            - "Show me the top 10 at-risk customers"
+            - "Tell me about CUST0000042"
+            - "What's the churn rate by region?"
+            - "What retention strategies do you recommend?"
+            """)
         for msg in st.session_state.chat_messages:
             with st.chat_message(msg["role"]): st.markdown(msg["content"])
-        if prompt := st.chat_input("Ask about customer retention..."):
+        if prompt := st.chat_input("Ask about your customers..."):
             st.session_state.chat_messages.append({"role": "user", "content": prompt})
             with st.chat_message("user"): st.markdown(prompt)
             with st.chat_message("assistant"):
-                with st.spinner("Analyzing..."): response = chatbot.chat(prompt)
+                with st.spinner("Thinking..."): response = chatbot.chat(prompt)
                 st.markdown(response)
             st.session_state.chat_messages.append({"role": "assistant", "content": response})
         if st.button("🗑️ Clear Chat"):
             st.session_state.chat_messages = []
             chatbot.clear_history(); st.rerun()
     else:
-        st.info("Run the pipeline first to activate the chatbot.")
-        
+        st.info("Run the demo first to activate the AI assistant.")
+
 with tab_upload:
     from src.upload_tab import render_upload_tab
-    render_upload_tab()
+    from src.registration import is_registered, render_registration_gate, check_data_limit, render_upgrade_wall
+    
+    if not is_registered():
+        render_registration_gate()
+    else:
+        render_upload_tab()
 
 st.markdown("---")
-st.markdown('<div style="text-align:center;opacity:0.6;">SAP IS-U Customer Retention V3 | ML + NLP + Claude AI | Lean: 3 Inputs, Full Transparency</div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align:center;opacity:0.5;font-size:0.85rem;">Customer Retention Prediction System | Powered by Vantive Inc</div>', unsafe_allow_html=True)
