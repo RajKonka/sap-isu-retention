@@ -40,7 +40,8 @@ if "session_id" not in st.session_state:
 session_dirs = get_session_dirs(st.session_state.session_id)
 
 for key in ["data_generated", "models_trained", "predictor", "chatbot", "merged_data",
-            "training_results", "chat_messages", "use_weights", "feature_weights"]:
+            "training_results", "chat_messages", "use_weights", "feature_weights",
+            "prediction_results", "prediction_pdf", "prediction_xlsx"]:
     if key not in st.session_state:
         st.session_state[key] = False if key in ["data_generated", "models_trained", "use_weights"] else ([] if key == "chat_messages" else None)
 

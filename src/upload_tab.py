@@ -174,9 +174,21 @@ Optional: `interaction_date`, `interaction_type`, `channel`, `duration_minutes`,
         if is_predict_only:
             if not has_base:
                 st.error("Please run the demo first to initialize the system."); return False
-            return _predict_only(loaded_dfs, table_assignments, all_mappings)
+            result = _predict_only(loaded_dfs, table_assignments, all_mappings)
+            return result
         else:
             return _retrain(loaded_dfs, table_assignments, all_mappings)
+
+    # Re-render results from session state so download buttons survive reruns
+    if st.session_state.get("prediction_results") is not None:
+        st.markdown("---")
+        st.markdown("### Results")
+        _render_results(
+            st.session_state.prediction_results,
+            st.session_state.get("prediction_pdf"),
+            st.session_state.get("prediction_xlsx"),
+        )
+
     return False
 
 def _get_dirs():
@@ -289,6 +301,23 @@ def _predict_only(loaded_dfs, table_assignments, all_mappings):
 
     status.text("✅ Complete!")
     st.balloons()
+
+    # Persist results so download buttons survive Streamlit reruns
+    from src.report_generator import generate_pdf_report, generate_excel_report
+    st.session_state.prediction_results = res
+    st.session_state.prediction_pdf   = generate_pdf_report(res)
+    try:
+        st.session_state.prediction_xlsx = generate_excel_report(res)
+    except RuntimeError:
+        st.session_state.prediction_xlsx = None
+
+    _render_results(res,
+                    st.session_state.prediction_pdf,
+                    st.session_state.prediction_xlsx)
+    return True
+
+
+def _render_results(res, pdf_bytes, xlsx_bytes):
     n_h = (res["risk_level"]=="HIGH").sum()
     n_m = (res["risk_level"]=="MEDIUM").sum()
     n_l = (res["risk_level"]=="LOW").sum()
@@ -302,25 +331,21 @@ def _predict_only(loaded_dfs, table_assignments, all_mappings):
     show_cols = [c for c in ["customer_id","churn_probability","risk_level","prediction","customer_name","region","account_tenure_months"] if c in res.columns]
     st.dataframe(res.head(20)[show_cols].style.format({"churn_probability":"{:.1%}"}), use_container_width=True)
 
-    from src.report_generator import generate_pdf_report, generate_excel_report
     dl1, dl2, dl3 = st.columns(3)
     with dl1:
-        st.download_button("📄 Download PDF Report", generate_pdf_report(res),
+        st.download_button("📄 Download PDF Report", pdf_bytes,
                            "churn_report.pdf", "application/pdf", use_container_width=True)
     with dl2:
-        try:
-            xlsx_bytes = generate_excel_report(res)
+        if xlsx_bytes:
             st.download_button("📊 Download Excel Report", xlsx_bytes,
                                "churn_report.xlsx",
                                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                                use_container_width=True)
-        except RuntimeError as _exc:
+        else:
             st.button("📊 Excel (install openpyxl)", disabled=True, use_container_width=True)
-            st.caption(str(_exc))
     with dl3:
         st.download_button("📥 Download CSV", res.to_csv(index=False),
                            "risk_scores.csv", "text/csv", use_container_width=True)
-    return True
 
 def _retrain(loaded_dfs, table_assignments, all_mappings):
     dirs = _get_dirs()
