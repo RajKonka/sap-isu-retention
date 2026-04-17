@@ -28,13 +28,55 @@ def _base_model_exists():
             os.path.exists(os.path.join(d, "scaler.pkl")) and
             os.path.exists(os.path.join(d, "model_metadata.pkl")))
 
+def _render_history():
+    """Show previous run history for this user."""
+    import json
+    path = _history_file()
+    if not os.path.exists(path):
+        return
+    try:
+        history = json.loads(open(path).read())
+    except Exception:
+        return
+    if not history:
+        return
+
+    with st.expander(f"🕘 Your Previous Runs ({len(history)})", expanded=False):
+        for i, run in enumerate(history):
+            ts = run.get("timestamp", "")[:16].replace("T", " at ")
+            total = run.get("total", 0)
+            high  = run.get("high_risk", 0)
+            med   = run.get("medium_risk", 0)
+            low   = run.get("low_risk", 0)
+            avg   = run.get("avg_churn_prob", 0)
+            label = "**Latest run**" if i == 0 else f"Run {i + 1}"
+            st.markdown(
+                f"{label} — {ts}  \n"
+                f"📊 {total:,} customers · 🔴 {high} high · 🟡 {med} medium · 🟢 {low} low · "
+                f"avg risk {avg:.1%}"
+            )
+        if os.path.exists(_last_results_file()):
+            last_res = pd.read_csv(_last_results_file())
+            st.download_button(
+                "📥 Re-download Last Results (CSV)",
+                last_res.to_csv(index=False),
+                "last_results.csv", "text/csv",
+            )
+
+
 def render_upload_tab():
     st.subheader("📂 Upload Your Own Data")
+
+    # Restore last run from disk when user logs back in
+    restore_session_from_disk()
+
     has_base = _base_model_exists()
     if has_base:
         st.markdown('<div style="background:#ecfdf5;border-left:4px solid #27ae60;padding:1rem;border-radius:0 8px 8px 0;margin-bottom:1rem;"><strong>✅ System is ready.</strong> Upload your customer data and get risk scores instantly.</div>', unsafe_allow_html=True)
     else:
         st.warning("Please click Run Demo first to initialize the system.")
+
+    _render_history()
 
     st.markdown("**Upload up to 3 file types — Excel or CSV works best. Column names don't need to match exactly, we'll auto-detect.**")
 
@@ -197,6 +239,70 @@ def _get_dirs():
     sid = st.session_state.get("session_id")
     return get_session_dirs(sid) if sid else {}
 
+
+def _history_file():
+    dirs = _get_dirs()
+    return os.path.join(dirs.get("data_dir", DATA_DIR), "run_history.json")
+
+
+def _last_results_file():
+    dirs = _get_dirs()
+    return os.path.join(dirs.get("data_dir", DATA_DIR), "last_results.csv")
+
+
+def _save_run_to_history(res):
+    """Append a summary entry to this user's run_history.json."""
+    import json
+    from datetime import datetime
+    entry = {
+        "timestamp":      datetime.now().isoformat(),
+        "total":          int(len(res)),
+        "high_risk":      int((res["risk_level"] == "HIGH").sum()),
+        "medium_risk":    int((res["risk_level"] == "MEDIUM").sum()),
+        "low_risk":       int((res["risk_level"] == "LOW").sum()),
+        "avg_churn_prob": round(float(res["churn_probability"].mean()), 4),
+    }
+    path = _history_file()
+    try:
+        history = json.loads(open(path).read()) if os.path.exists(path) else []
+    except Exception:
+        history = []
+    history.insert(0, entry)          # newest first
+    history = history[:20]            # keep last 20 runs
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w") as f:
+        import json as _json
+        _json.dump(history, f, indent=2)
+    # Save the results CSV for re-download
+    res.to_csv(_last_results_file(), index=False)
+
+
+def restore_session_from_disk():
+    """
+    Called after login. If this user has previous results on disk, reload them
+    into session state so their last run is immediately available.
+    """
+    if st.session_state.get("prediction_results") is not None:
+        return  # already loaded this session
+
+    last_csv = _last_results_file()
+    if not os.path.exists(last_csv):
+        return
+
+    try:
+        res = pd.read_csv(last_csv)
+        if res.empty:
+            return
+        from src.report_generator import generate_pdf_report, generate_excel_report
+        st.session_state.prediction_results = res
+        st.session_state.prediction_pdf     = generate_pdf_report(res)
+        try:
+            st.session_state.prediction_xlsx = generate_excel_report(res)
+        except RuntimeError:
+            st.session_state.prediction_xlsx = None
+    except Exception:
+        pass
+
 def _prepare_data(loaded_dfs, table_assignments, all_mappings, progress, status):
     dirs = _get_dirs()
     _data_dir = dirs.get("data_dir", DATA_DIR)
@@ -302,7 +408,7 @@ def _predict_only(loaded_dfs, table_assignments, all_mappings):
     status.text("✅ Complete!")
     st.balloons()
 
-    # Persist results so download buttons survive Streamlit reruns
+    # Persist results so download buttons survive reruns and come back on next login
     from src.report_generator import generate_pdf_report, generate_excel_report
     st.session_state.prediction_results = res
     st.session_state.prediction_pdf   = generate_pdf_report(res)
@@ -310,6 +416,7 @@ def _predict_only(loaded_dfs, table_assignments, all_mappings):
         st.session_state.prediction_xlsx = generate_excel_report(res)
     except RuntimeError:
         st.session_state.prediction_xlsx = None
+    _save_run_to_history(res)
 
     _render_results(res,
                     st.session_state.prediction_pdf,
