@@ -1,0 +1,1001 @@
+customer_id,customer_name,age,account_tenure_months,account_start_date,contract_type,service_type,dwelling_type,has_autopay,paperless_billing,family_size,income_bracket,home_ownership,region,gender,churned
+C00001,Henry Smith,67,11,2024-11-16,Monthly,Gas,House,0,0,4,Medium,Own,Central,Male,1
+C00002,Rachel Davis,63,93,2017-10-10,Annual,Electricity + Water,Townhouse,0,0,5,Medium,Own,East,Female,0
+C00003,Olivia Jones,53,78,2018-07-28,Monthly,Electricity,Mobile Home,1,1,1,High,Rent,Central,Female,0
+C00004,Grace Thompson,71,53,2020-08-15,Monthly,Electricity + Gas,Condo,1,1,2,Low,Own,East,Male,1
+C00005,Frank Robinson,29,52,2020-07-17,Annual,Electricity + Water,House,0,0,1,Medium,Own,South,Male,0
+C00006,Beth Johnson,73,103,2016-07-06,Monthly,Electricity + Water,House,1,0,3,Low,Own,North,Male,0
+C00007,Bob Williams,69,11,2024-10-12,2-Year,Gas,Condo,0,1,3,Medium,Rent,West,Female,1
+C00008,Noah Davis,50,83,2018-01-18,Monthly,Water,Condo,1,0,1,Low,Rent,West,Female,0
+C00009,Bob Thompson,63,24,2022-03-12,Annual,Electricity,Apartment,1,0,4,Low,Rent,Central,Female,0
+C00010,Mia Clark,51,12,2023-01-22,Annual,Electricity,Apartment,1,0,1,Medium,Rent,West,Male,0
+C00011,Adrian Davis,37,63,2019-10-04,Annual,Gas,Apartment,1,0,4,Medium,Rent,North,Male,0
+C00012,Cole Robinson,66,117,2015-09-05,Annual,Electricity + Water,Apartment,0,0,4,Low,Rent,East,Female,0
+C00013,Rachel Smith,35,88,2017-01-10,Annual,Water,House,1,0,5,High,Own,West,Male,0
+C00014,Karen Jackson,39,91,2017-02-09,2-Year,Electricity + Gas,House,0,1,1,Low,Rent,East,Female,0
+C00015,Victor Wilson,51,86,2017-04-23,Monthly,Gas,House,1,1,5,Medium,Own,East,Male,0
+C00016,James Miller,68,94,2017-03-25,Monthly,Electricity,Condo,0,1,3,Medium,Own,Central,Male,0
+C00017,Victor Brown,43,62,2019-07-14,Annual,Gas,House,1,0,5,Medium,Own,West,Female,0
+C00018,Frank Thomas,49,16,2023-06-15,Annual,Electricity,House,1,0,4,Medium,Rent,West,Female,0
+C00019,Grace Anderson,24,100,2016-05-09,Monthly,Electricity,Apartment,1,1,4,Low,Rent,East,Female,0
+C00020,Wendy Lewis,28,54,2020-02-15,Monthly,Water,House,1,0,1,Medium,Rent,South,Male,0
+C00021,Quinn Johnson,25,60,2019-08-20,2-Year,Electricity,House,0,1,4,Low,Rent,East,Female,0
+C00022,Diana Thompson,26,45,2021-10-21,Annual,Electricity,Apartment,0,1,3,Low,Rent,Central,Female,0
+C00023,Henry Thomas,70,22,2023-08-28,2-Year,Electricity + Gas,Apartment,1,0,5,Medium,Own,West,Female,0
+C00024,Frank Thompson,69,111,2015-10-17,Annual,Gas,Apartment,1,1,4,High,Rent,West,Female,0
+C00025,Sam Clark,68,94,2017-11-10,Annual,Electricity + Gas,Condo,1,1,1,High,Rent,North,Female,0
+C00026,Xander Robinson,25,77,2018-11-02,Monthly,Electricity,House,1,1,5,High,Rent,Central,Female,1
+C00027,Mia Williams,26,48,2020-08-20,2-Year,Gas,Condo,1,1,1,Medium,Own,South,Male,0
+C00028,Carol Davis,37,98,2016-01-23,Monthly,Electricity + Gas,Condo,1,0,2,Medium,Own,Central,Male,0
+C00029,Sam Williams,53,65,2019-05-16,Annual,Water,Condo,0,0,2,Medium,Rent,East,Female,0
+C00030,Olivia Brown,40,53,2020-06-26,Monthly,Electricity + Gas,Apartment,0,0,5,High,Own,Central,Male,1
+C00031,Yara Wilson,49,54,2020-09-09,Annual,Electricity + Gas,Apartment,1,0,1,Medium,Own,Central,Male,0
+C00032,Diana Clark,31,28,2022-11-02,Annual,Electricity + Gas,Apartment,1,1,5,Medium,Own,West,Female,0
+C00033,Xander Garcia,62,11,2024-08-18,Annual,Gas,Townhouse,1,0,2,Medium,Own,Central,Male,0
+C00034,Xander Anderson,39,66,2019-05-04,2-Year,Gas,House,1,1,4,Medium,Own,West,Female,0
+C00035,Noah Wilson,25,106,2016-10-03,Monthly,Electricity + Gas,Mobile Home,1,1,1,Low,Rent,Central,Female,0
+C00036,Emma Lewis,63,8,2024-09-20,Annual,Electricity,Apartment,0,0,2,Medium,Rent,North,Male,0
+C00037,Karen Thompson,72,103,2016-10-13,Monthly,Water,Townhouse,1,1,4,Medium,Rent,North,Female,0
+C00038,Paul Garcia,22,99,2016-08-17,Monthly,Water,Apartment,0,1,4,High,Own,East,Male,0
+C00039,Diana Thomas,46,33,2022-08-21,Monthly,Gas,House,0,1,5,Medium,Own,Central,Female,1
+C00040,Rachel Clark,68,76,2018-05-11,Monthly,Gas,Apartment,0,0,5,High,Own,West,Female,0
+C00041,Olivia Taylor,61,20,2023-05-18,Monthly,Gas,Apartment,0,1,3,Medium,Own,East,Male,1
+C00042,David Davis,69,91,2017-04-16,Annual,Water,Apartment,1,1,2,High,Own,East,Male,0
+C00043,Carol Taylor,45,84,2017-04-17,Annual,Water,Apartment,1,0,2,Low,Rent,West,Male,0
+C00044,Zach Wilson,42,43,2021-08-20,Annual,Electricity,House,1,1,5,High,Rent,Central,Male,0
+C00045,Emma Miller,61,9,2024-05-11,Monthly,Electricity + Gas,Apartment,0,0,4,Medium,Own,Central,Male,0
+C00046,Uma Miller,30,116,2015-02-15,Monthly,Electricity,Apartment,0,1,5,Medium,Own,North,Non-binary,0
+C00047,Fiona Thomas,35,54,2020-01-17,Monthly,Electricity + Gas,Mobile Home,1,0,3,Low,Own,East,Male,0
+C00048,Diana Jones,55,107,2016-11-04,Annual,Gas,House,1,0,3,Medium,Own,South,Female,0
+C00049,Quinn Jones,59,81,2018-06-06,2-Year,Gas,Apartment,1,1,5,Medium,Own,West,Male,0
+C00050,Paul Thompson,28,93,2017-07-03,Monthly,Electricity + Gas,House,1,0,4,Medium,Own,East,Non-binary,0
+C00051,Quinn Robinson,50,91,2017-11-06,Annual,Gas,Apartment,0,1,2,High,Own,Central,Male,0
+C00052,Beth Robinson,42,24,2022-02-13,Monthly,Gas,Apartment,1,0,3,Medium,Own,East,Male,1
+C00053,Zach Anderson,50,44,2021-12-27,Monthly,Water,Apartment,1,0,2,Medium,Rent,West,Female,0
+C00054,Olivia Jones,75,56,2020-09-26,Monthly,Electricity + Water,Mobile Home,1,0,4,Medium,Own,North,Male,0
+C00055,Fiona Williams,26,60,2019-08-22,Monthly,Electricity,House,1,0,1,High,Own,Central,Female,0
+C00056,David Brown,77,6,2024-06-16,Annual,Gas,Townhouse,1,0,5,High,Own,North,Male,0
+C00057,James Clark,47,66,2019-09-06,2-Year,Electricity + Water,House,0,0,5,Medium,Own,South,Female,0
+C00058,Karen Jackson,65,19,2023-03-11,Monthly,Electricity + Gas,House,1,1,1,High,Rent,Central,Female,0
+C00059,Emma Thomas,45,89,2017-04-22,Annual,Gas,Apartment,1,0,4,Medium,Rent,Central,Female,0
+C00060,Yara Lewis,39,82,2018-12-26,Annual,Electricity + Gas,House,1,0,1,High,Rent,East,Male,0
+C00061,Diana Martin,65,110,2015-04-27,2-Year,Electricity,Apartment,1,0,2,High,Rent,East,Male,0
+C00062,Quinn Thompson,60,89,2017-09-11,Annual,Electricity,Townhouse,1,1,2,Medium,Own,North,Male,0
+C00063,Alice Brown,30,44,2021-12-14,Monthly,Water,Townhouse,1,1,3,Low,Own,Central,Male,1
+C00064,Rachel Clark,61,116,2015-08-15,Annual,Electricity + Gas,Apartment,1,0,5,Medium,Own,North,Male,0
+C00065,Victor Brown,64,49,2020-04-02,Monthly,Water,Apartment,1,0,3,Low,Own,North,Female,0
+C00066,Sam Jackson,43,39,2021-11-04,2-Year,Gas,Apartment,0,1,2,High,Rent,East,Female,0
+C00067,Karen White,73,108,2015-10-02,Monthly,Electricity + Water,House,0,1,1,Medium,Own,North,Female,0
+C00068,Alice Wilson,57,45,2021-07-21,Annual,Electricity + Gas,House,0,1,5,Medium,Own,North,Male,0
+C00069,Liam Martin,40,10,2024-02-07,Monthly,Water,Townhouse,1,1,2,High,Own,West,Male,1
+C00070,Grace Clark,22,56,2020-06-20,Monthly,Electricity,Mobile Home,0,0,3,Low,Own,West,Female,1
+C00071,Tina Clark,59,95,2017-06-11,2-Year,Electricity,House,0,1,1,Medium,Rent,South,Male,0
+C00072,Mia Jones,33,23,2023-03-23,Annual,Water,Apartment,1,1,2,Medium,Own,West,Male,0
+C00073,Xander Garcia,64,56,2020-05-04,Monthly,Electricity + Water,Townhouse,1,1,3,Medium,Own,West,Male,0
+C00074,Alice Lewis,51,16,2023-02-10,2-Year,Electricity + Water,Condo,1,1,5,Low,Own,South,Female,0
+C00075,Uma Harris,48,82,2018-09-06,2-Year,Gas,Apartment,0,0,2,Low,Rent,West,Non-binary,0
+C00076,Bob Brown,31,57,2020-06-13,Monthly,Electricity,Apartment,1,1,3,Medium,Own,East,Male,0
+C00077,Xander Moore,61,40,2021-09-16,Annual,Electricity + Water,Townhouse,1,1,5,Medium,Rent,Central,Female,0
+C00078,Paul Johnson,31,28,2022-06-05,Annual,Water,Condo,0,1,2,Medium,Own,North,Male,1
+C00079,Paul Robinson,45,68,2019-09-19,Annual,Gas,House,1,0,2,Low,Own,South,Male,1
+C00080,Frank Williams,68,80,2018-09-28,Monthly,Water,Condo,0,0,1,Medium,Rent,South,Female,0
+C00081,Fiona Williams,73,112,2015-02-02,Monthly,Electricity + Water,House,0,1,5,Medium,Own,South,Male,0
+C00082,Iris Jones,77,53,2020-06-03,2-Year,Gas,Condo,0,0,1,Medium,Own,Central,Female,0
+C00083,Ethan Thompson,75,20,2023-09-27,2-Year,Water,House,0,1,2,Medium,Rent,West,Male,1
+C00084,Karen Wilson,53,100,2016-08-19,Annual,Water,House,1,0,1,Medium,Own,East,Male,0
+C00085,Beth Miller,33,75,2018-03-26,2-Year,Electricity + Gas,House,0,1,4,Medium,Own,East,Female,0
+C00086,Mia Moore,68,84,2017-10-20,Annual,Water,Apartment,0,0,2,High,Rent,Central,Male,1
+C00087,Zach Clark,66,12,2023-03-21,Annual,Gas,Apartment,0,0,4,Medium,Own,East,Female,0
+C00088,Xander White,77,38,2021-12-05,Annual,Electricity + Water,House,1,1,4,Medium,Own,South,Male,0
+C00089,Cole Brown,58,92,2017-09-15,Annual,Electricity + Water,Apartment,1,1,1,Low,Own,North,Female,0
+C00090,Paul Davis,29,100,2016-04-11,Annual,Electricity + Water,Apartment,1,1,2,Low,Rent,South,Male,0
+C00091,Emma Taylor,50,52,2020-03-24,Monthly,Water,Townhouse,1,1,1,Low,Own,West,Male,0
+C00092,Bob Robinson,47,96,2016-11-02,Annual,Electricity,Condo,1,1,1,High,Own,East,Female,0
+C00093,Olivia Robinson,69,101,2016-07-01,Monthly,Gas,Townhouse,0,1,3,High,Rent,East,Male,0
+C00094,Olivia Smith,43,47,2021-10-16,Monthly,Electricity + Gas,House,0,0,2,Low,Rent,East,Male,1
+C00095,Emma Clark,40,107,2016-10-28,Annual,Electricity + Water,House,0,1,1,Low,Rent,Central,Non-binary,0
+C00096,David Davis,26,35,2022-01-28,Monthly,Electricity + Gas,Condo,1,0,3,Medium,Own,Central,Female,0
+C00097,Emma Johnson,68,29,2022-09-17,Monthly,Electricity + Gas,House,1,1,3,Medium,Own,North,Female,0
+C00098,Victor Williams,64,82,2018-05-13,Annual,Electricity,Apartment,1,1,5,Medium,Own,North,Female,0
+C00099,Paul Wilson,24,76,2018-11-08,2-Year,Water,Condo,1,1,4,Medium,Rent,South,Female,0
+C00100,Fiona Miller,46,17,2023-03-28,Monthly,Gas,Mobile Home,1,0,2,High,Own,Central,Female,1
+C00101,Iris Robinson,48,100,2016-01-06,Monthly,Electricity,Apartment,1,1,3,Medium,Rent,East,Female,0
+C00102,Ethan Davis,48,24,2022-08-04,Monthly,Electricity + Water,Townhouse,1,1,1,Medium,Own,Central,Male,0
+C00103,Ethan Jackson,73,96,2016-07-15,Annual,Electricity,Apartment,1,0,2,Medium,Rent,West,Male,0
+C00104,Mia Brown,30,1,2024-07-11,Annual,Electricity,Townhouse,1,0,3,Medium,Rent,East,Female,0
+C00105,Grace Jackson,39,95,2017-04-14,Monthly,Electricity,House,1,0,1,High,Own,South,Female,0
+C00106,Wendy Jackson,32,94,2017-06-26,Annual,Electricity + Gas,House,1,1,5,Low,Rent,South,Male,0
+C00107,Adrian White,35,93,2017-12-08,Monthly,Electricity,Apartment,0,1,3,Medium,Rent,North,Male,0
+C00108,David Clark,72,80,2018-10-25,Monthly,Electricity + Water,House,1,0,4,Medium,Own,East,Male,1
+C00109,Grace Johnson,74,57,2020-12-06,2-Year,Electricity + Gas,Townhouse,1,0,2,High,Own,South,Female,0
+C00110,Zach Taylor,24,84,2017-04-10,Monthly,Gas,Apartment,1,0,5,Medium,Rent,South,Female,0
+C00111,Grace Davis,57,33,2022-11-01,Monthly,Electricity,Condo,0,1,2,Medium,Own,North,Male,0
+C00112,Mia Miller,35,93,2017-05-20,Monthly,Electricity + Gas,Condo,1,1,5,High,Own,West,Female,0
+C00113,Cole Jones,32,67,2019-12-25,Annual,Electricity,Apartment,0,0,3,High,Own,Central,Female,0
+C00114,Beth Garcia,38,55,2020-11-25,2-Year,Electricity + Water,Townhouse,1,0,4,Medium,Rent,East,Female,0
+C00115,Rachel White,32,61,2019-02-05,2-Year,Gas,House,0,1,2,High,Own,East,Male,0
+C00116,Paul Williams,49,68,2019-12-22,Monthly,Electricity + Gas,Apartment,0,0,5,Medium,Rent,Central,Female,0
+C00117,Cole Thompson,77,5,2024-08-04,Monthly,Electricity,House,1,0,1,Medium,Own,East,Female,0
+C00118,Grace Johnson,54,17,2023-10-18,Annual,Electricity,Condo,0,1,1,High,Own,West,Female,1
+C00119,Alice Williams,62,30,2022-07-20,Monthly,Gas,Condo,1,1,3,Medium,Rent,East,Male,0
+C00120,Paul Garcia,49,14,2023-03-05,2-Year,Electricity,Condo,0,0,5,Medium,Own,East,Female,0
+C00121,Adrian Harris,22,53,2020-12-04,Annual,Water,Condo,1,1,5,High,Own,East,Female,0
+C00122,Ethan Miller,26,80,2018-02-03,Monthly,Electricity + Water,Mobile Home,1,0,5,High,Own,West,Male,0
+C00123,Zach Johnson,37,78,2018-10-20,Annual,Electricity + Water,House,0,0,3,High,Rent,West,Male,0
+C00124,Karen Thomas,35,57,2020-03-18,Monthly,Gas,Condo,0,1,5,Medium,Own,East,Female,0
+C00125,Alice Thomas,69,102,2016-10-04,Monthly,Water,Apartment,1,0,3,High,Own,North,Female,0
+C00126,Quinn White,69,68,2019-06-15,Annual,Electricity + Gas,Apartment,0,1,3,Low,Own,Central,Male,0
+C00127,Sam Jackson,69,10,2024-03-23,Annual,Electricity,Apartment,1,1,1,Medium,Own,Central,Male,0
+C00128,Fiona Jones,57,92,2017-03-07,Annual,Electricity,Apartment,1,0,4,Medium,Own,North,Male,0
+C00129,Mia Moore,53,69,2019-04-17,Annual,Electricity + Gas,House,0,0,2,High,Own,South,Female,0
+C00130,Noah Johnson,58,76,2018-11-09,2-Year,Electricity + Gas,House,1,1,1,High,Own,Central,Non-binary,0
+C00131,David Taylor,44,68,2019-10-08,2-Year,Electricity,House,1,0,2,Medium,Own,South,Male,0
+C00132,David Johnson,59,66,2019-09-11,Annual,Electricity + Water,Apartment,0,0,4,Medium,Rent,Central,Male,0
+C00133,Ethan Martin,66,11,2024-08-10,Monthly,Water,Condo,1,0,2,Medium,Rent,West,Male,1
+C00134,Karen Johnson,64,67,2019-06-14,Annual,Electricity + Gas,Apartment,1,0,2,Medium,Own,Central,Male,0
+C00135,Frank Garcia,56,95,2017-11-06,2-Year,Electricity + Water,Apartment,1,1,2,Medium,Own,North,Female,0
+C00136,Emma Lewis,25,37,2021-04-11,Monthly,Electricity + Water,Apartment,0,1,3,Low,Own,East,Female,0
+C00137,Emma Davis,62,72,2018-12-18,Annual,Electricity + Water,Apartment,1,0,4,Medium,Rent,East,Male,0
+C00138,Zach Brown,42,4,2024-05-11,Monthly,Gas,House,1,1,4,High,Own,Central,Male,0
+C00139,Paul Robinson,63,42,2021-05-19,Monthly,Electricity + Water,Condo,0,0,1,Medium,Own,South,Male,1
+C00140,Carol Lewis,52,52,2020-06-04,Annual,Electricity + Gas,House,1,1,2,High,Own,South,Female,1
+C00141,Frank Jackson,71,117,2015-09-04,Monthly,Water,Townhouse,1,1,4,Medium,Own,North,Female,0
+C00142,Uma Wilson,40,26,2022-09-25,Annual,Electricity + Water,Townhouse,0,1,2,Medium,Own,West,Female,1
+C00143,Noah Taylor,74,33,2022-10-13,Annual,Electricity,Apartment,0,1,1,Low,Own,Central,Male,1
+C00144,Paul Wilson,69,49,2020-02-18,Annual,Electricity + Gas,Condo,1,1,2,Medium,Rent,North,Female,0
+C00145,Zach Jones,40,119,2015-02-21,Monthly,Electricity,House,0,0,4,Medium,Rent,South,Male,0
+C00146,Tina White,49,102,2016-11-05,Monthly,Gas,Condo,0,0,4,Medium,Rent,South,Female,0
+C00147,Uma Williams,51,5,2024-12-28,Annual,Electricity + Gas,Townhouse,1,1,1,Low,Rent,Central,Female,0
+C00148,Alice White,65,28,2022-02-12,Annual,Electricity + Water,Townhouse,0,1,4,Medium,Own,East,Female,0
+C00149,Grace Williams,60,98,2016-11-25,Annual,Electricity + Water,Townhouse,0,0,1,Medium,Rent,South,Female,0
+C00150,Noah Martin,69,7,2024-04-12,2-Year,Gas,Condo,0,1,4,Medium,Rent,South,Male,0
+C00151,Quinn Jones,42,102,2016-12-12,Monthly,Gas,Mobile Home,1,1,3,Low,Rent,East,Female,1
+C00152,Wendy Williams,50,34,2022-12-17,2-Year,Electricity + Gas,Apartment,0,1,1,Medium,Rent,South,Male,0
+C00153,Paul Anderson,46,110,2015-08-06,Monthly,Electricity + Water,Condo,0,0,2,Medium,Own,North,Male,0
+C00154,Sam Garcia,72,35,2022-03-18,Monthly,Electricity + Water,Townhouse,1,0,5,Medium,Own,Central,Male,0
+C00155,Cole Thompson,39,52,2020-10-28,Annual,Gas,Apartment,0,0,3,Medium,Own,East,Male,0
+C00156,Tina Lewis,54,79,2018-02-19,Monthly,Electricity,Condo,0,0,4,Low,Own,South,Male,0
+C00157,Alice Thompson,28,16,2023-05-02,Monthly,Water,Apartment,0,0,4,High,Own,West,Male,0
+C00158,Tina Brown,69,67,2019-08-20,Monthly,Gas,Apartment,0,1,1,Low,Own,West,Female,0
+C00159,Iris Wilson,43,61,2019-01-01,Monthly,Electricity,House,1,1,5,Medium,Own,North,Male,0
+C00160,Henry Brown,41,94,2017-05-03,Annual,Electricity,House,1,1,2,Low,Rent,North,Male,0
+C00161,James Wilson,54,119,2015-10-08,Monthly,Electricity + Gas,Condo,1,1,4,Medium,Rent,North,Non-binary,0
+C00162,Sam Lewis,49,80,2018-02-09,Annual,Gas,Apartment,1,0,3,Medium,Rent,West,Female,0
+C00163,Noah Taylor,69,49,2020-05-01,Annual,Electricity + Gas,Apartment,1,1,3,High,Own,West,Male,0
+C00164,Noah Clark,51,49,2020-01-01,Monthly,Gas,House,0,1,2,Medium,Rent,West,Male,0
+C00165,Quinn Martin,50,50,2020-08-23,Monthly,Water,Apartment,0,1,5,Medium,Rent,West,Female,1
+C00166,Fiona Wilson,27,97,2016-01-13,2-Year,Water,Condo,1,0,1,Low,Rent,East,Female,0
+C00167,David Williams,23,39,2021-04-06,Annual,Electricity + Gas,Condo,0,0,5,Low,Rent,East,Male,0
+C00168,Beth Wilson,44,20,2023-07-13,Annual,Electricity,House,1,0,2,Medium,Own,West,Female,1
+C00169,Carol Smith,77,40,2021-03-20,Annual,Electricity + Gas,Apartment,1,1,5,Medium,Own,South,Male,0
+C00170,Victor Jones,73,3,2024-03-21,Monthly,Water,Apartment,1,1,1,Medium,Rent,Central,Male,0
+C00171,Quinn Garcia,57,13,2023-11-09,Monthly,Gas,Apartment,1,0,1,High,Rent,Central,Female,0
+C00172,Cole Thompson,57,11,2024-10-05,Annual,Gas,Apartment,1,0,1,Medium,Own,Central,Female,0
+C00173,Beth Thompson,43,92,2017-01-27,Monthly,Electricity + Gas,Apartment,0,0,3,High,Own,Central,Female,0
+C00174,Alice Brown,31,86,2017-11-18,Annual,Gas,Apartment,0,1,2,Medium,Own,South,Male,0
+C00175,Emma Jones,22,83,2018-06-28,Annual,Electricity + Gas,Apartment,1,1,3,High,Own,North,Male,0
+C00176,Carol Anderson,40,55,2020-02-09,Annual,Gas,Apartment,1,0,5,Medium,Rent,East,Male,0
+C00177,James Jackson,39,86,2017-11-04,Annual,Gas,Apartment,1,0,1,Medium,Rent,West,Male,0
+C00178,Iris Johnson,32,20,2023-05-11,Monthly,Water,Condo,0,0,3,High,Own,West,Male,0
+C00179,Tina Anderson,36,108,2015-04-10,Monthly,Electricity + Gas,Townhouse,0,1,4,Medium,Own,South,Female,0
+C00180,Carol Anderson,23,60,2019-02-21,Monthly,Electricity + Gas,Apartment,1,1,3,High,Own,South,Female,0
+C00181,Noah Davis,56,112,2015-11-21,Annual,Water,Condo,1,1,5,Medium,Own,East,Female,0
+C00182,Grace Anderson,73,19,2023-04-03,Monthly,Gas,Condo,1,0,4,Low,Own,Central,Male,1
+C00183,Adrian Lewis,60,60,2019-08-17,Monthly,Electricity,House,0,1,1,Medium,Rent,North,Male,0
+C00184,James Davis,47,83,2018-03-10,Monthly,Electricity + Water,Apartment,1,1,3,Medium,Rent,South,Female,0
+C00185,Karen Garcia,45,59,2020-11-18,Monthly,Electricity,House,1,1,2,High,Own,South,Male,0
+C00186,Adrian Smith,39,54,2020-10-11,Annual,Electricity + Gas,Townhouse,1,0,1,High,Rent,Central,Female,0
+C00187,Liam Taylor,29,20,2023-07-16,Monthly,Gas,House,1,1,5,Low,Rent,East,Male,0
+C00188,Adrian Davis,55,46,2021-05-21,2-Year,Gas,Townhouse,1,1,2,Low,Own,North,Female,0
+C00189,Rachel Garcia,53,29,2022-08-09,Monthly,Electricity,House,1,0,1,Low,Rent,South,Female,0
+C00190,Grace Thomas,22,36,2021-06-06,Annual,Electricity + Water,Apartment,0,0,2,Medium,Rent,North,Female,0
+C00191,Carol Harris,45,82,2018-12-20,Monthly,Electricity + Gas,Condo,1,0,5,Low,Rent,East,Female,1
+C00192,Olivia Miller,37,76,2018-09-27,Monthly,Gas,Apartment,1,0,3,Medium,Own,Central,Female,0
+C00193,Diana Anderson,31,73,2018-01-13,2-Year,Water,Condo,1,1,5,Medium,Own,East,Male,0
+C00194,Tina Davis,61,44,2021-10-28,2-Year,Electricity,Mobile Home,1,0,3,High,Own,Central,Female,0
+C00195,Olivia Smith,51,115,2015-03-06,2-Year,Electricity + Gas,Condo,0,0,1,Medium,Own,West,Female,1
+C00196,Mia Thomas,57,11,2024-04-23,Monthly,Electricity + Gas,House,0,1,2,Medium,Own,Central,Non-binary,1
+C00197,Victor Wilson,61,41,2021-06-28,Monthly,Electricity + Gas,Condo,1,0,1,Low,Rent,South,Male,0
+C00198,Emma Wilson,76,15,2023-03-09,Annual,Electricity,House,0,1,3,High,Own,Central,Male,0
+C00199,Wendy Clark,66,41,2021-12-05,Monthly,Electricity + Water,Apartment,0,1,2,Low,Own,South,Female,0
+C00200,Zach Thompson,56,115,2015-12-19,Annual,Gas,Condo,0,1,5,Low,Rent,East,Female,0
+C00201,Victor Smith,71,44,2021-02-25,Annual,Water,Townhouse,1,1,2,Low,Own,West,Male,0
+C00202,Henry Wilson,48,109,2015-04-03,Annual,Water,Apartment,1,0,2,High,Own,South,Male,0
+C00203,Liam Robinson,77,59,2020-05-18,Annual,Gas,Apartment,1,1,5,Low,Rent,South,Male,0
+C00204,Quinn Johnson,64,84,2017-09-25,Annual,Electricity,Condo,0,0,3,Medium,Own,North,Male,1
+C00205,Grace Lewis,58,55,2020-08-01,Monthly,Gas,Townhouse,0,1,1,Medium,Own,North,Male,0
+C00206,Beth Anderson,72,32,2022-09-15,Monthly,Electricity + Water,Apartment,1,1,3,High,Rent,East,Male,0
+C00207,Uma Jackson,50,91,2017-01-03,Annual,Electricity + Water,Condo,1,1,2,Low,Own,Central,Male,0
+C00208,Henry Thomas,62,116,2015-07-05,Annual,Electricity + Water,House,1,1,4,Low,Own,South,Female,0
+C00209,Mia Wilson,37,32,2022-03-14,Monthly,Gas,House,1,0,3,Medium,Own,East,Male,0
+C00210,Carol Jackson,75,93,2017-03-10,Monthly,Water,Apartment,0,0,4,Low,Rent,Central,Male,0
+C00211,Alice Martin,56,32,2022-10-03,Annual,Electricity,Mobile Home,1,1,5,Medium,Own,West,Male,0
+C00212,Mia Anderson,65,86,2017-02-23,Annual,Water,House,0,0,4,Medium,Rent,North,Male,0
+C00213,Beth Williams,47,94,2017-01-06,Annual,Electricity + Gas,House,0,0,2,Medium,Own,East,Non-binary,0
+C00214,Victor Lewis,70,54,2020-06-25,Monthly,Water,House,0,0,2,Low,Rent,North,Female,0
+C00215,Uma Brown,26,88,2017-09-05,Monthly,Water,Condo,0,1,3,Medium,Own,South,Male,1
+C00216,Tina Martin,28,33,2022-07-15,Annual,Electricity + Water,House,1,1,3,Low,Own,South,Male,0
+C00217,Tina Jackson,50,10,2024-02-21,Monthly,Electricity + Gas,Apartment,0,0,2,Medium,Own,West,Male,0
+C00218,Uma Thomas,63,12,2023-10-14,Annual,Gas,Mobile Home,0,0,5,Low,Rent,North,Male,0
+C00219,Sam Thompson,67,54,2020-05-12,Annual,Electricity + Gas,House,1,1,5,High,Own,South,Male,0
+C00220,Iris Miller,46,108,2015-09-22,Monthly,Electricity,Apartment,1,0,2,Medium,Own,South,Male,0
+C00221,Adrian Thomas,58,16,2023-03-01,Monthly,Electricity,Apartment,1,1,4,Low,Own,South,Male,1
+C00222,Liam Lewis,52,55,2020-11-24,Monthly,Electricity + Gas,Condo,1,0,5,Low,Own,West,Female,1
+C00223,Tina Thomas,75,84,2017-04-20,2-Year,Electricity + Water,Apartment,1,1,1,Medium,Rent,South,Male,0
+C00224,Alice Moore,58,25,2022-12-22,Annual,Electricity + Gas,Apartment,1,0,2,Low,Own,South,Male,0
+C00225,Sam Miller,45,86,2017-05-12,Monthly,Water,House,0,1,4,Low,Own,East,Female,0
+C00226,Beth Robinson,76,37,2021-09-11,2-Year,Electricity,Townhouse,1,1,3,High,Own,West,Male,1
+C00227,Uma White,28,97,2016-07-17,Annual,Electricity + Gas,Townhouse,1,0,4,Medium,Own,North,Male,0
+C00228,Cole White,77,69,2019-01-18,Annual,Water,House,1,1,3,Low,Own,Central,Male,0
+C00229,Noah Martin,30,66,2019-02-26,2-Year,Gas,Apartment,1,0,1,Medium,Own,Central,Male,0
+C00230,Ethan Garcia,38,22,2023-05-25,Monthly,Electricity,Condo,0,0,3,Medium,Own,West,Male,0
+C00231,Frank Moore,68,56,2020-03-02,Monthly,Electricity,House,1,1,3,High,Rent,East,Female,0
+C00232,Victor Williams,63,102,2016-08-05,Annual,Electricity + Water,House,1,1,5,Low,Own,West,Female,0
+C00233,Paul Moore,76,3,2024-02-27,Monthly,Water,Apartment,1,0,1,Medium,Rent,East,Male,1
+C00234,Olivia Miller,63,91,2017-08-11,Annual,Gas,Apartment,1,0,1,High,Own,South,Male,0
+C00235,James Smith,57,59,2020-03-17,Monthly,Gas,House,0,0,1,Low,Own,South,Female,1
+C00236,Carol Davis,41,86,2017-03-02,Monthly,Electricity,Apartment,0,1,3,Low,Own,North,Female,0
+C00237,Ethan Lewis,22,79,2018-05-03,Monthly,Electricity + Water,House,1,0,5,Medium,Own,Central,Male,0
+C00238,Emma White,28,52,2020-07-12,Monthly,Electricity,Apartment,0,1,4,High,Rent,South,Male,0
+C00239,Adrian Clark,38,37,2021-05-21,Monthly,Water,Townhouse,1,0,5,Medium,Rent,South,Male,1
+C00240,Mia Thomas,24,75,2018-05-22,Monthly,Gas,Apartment,0,1,5,Medium,Rent,Central,Female,0
+C00241,Fiona Thomas,50,17,2023-05-26,2-Year,Gas,House,1,1,4,High,Rent,East,Male,0
+C00242,Paul Jones,65,70,2019-05-06,Monthly,Gas,Condo,1,0,4,High,Own,West,Male,0
+C00243,Alice Brown,75,12,2023-05-06,Monthly,Electricity + Water,House,0,0,2,Medium,Own,South,Male,1
+C00244,Beth Davis,49,78,2018-11-16,Monthly,Electricity,Townhouse,0,1,5,Medium,Rent,South,Male,0
+C00245,Liam Martin,71,75,2018-07-16,Monthly,Gas,Apartment,1,0,4,Medium,Own,West,Male,0
+C00246,Diana Johnson,77,11,2024-06-02,Monthly,Gas,Townhouse,0,1,5,Medium,Own,East,Female,0
+C00247,Paul Brown,70,91,2017-09-13,Annual,Gas,House,0,1,5,High,Rent,North,Female,0
+C00248,Diana Jones,48,50,2020-07-26,Monthly,Electricity,House,1,1,2,Low,Rent,Central,Male,0
+C00249,Diana Martin,40,94,2017-12-05,2-Year,Electricity + Water,Apartment,0,1,1,Low,Rent,East,Male,0
+C00250,Uma White,76,5,2024-07-23,2-Year,Gas,House,0,1,5,High,Own,West,Female,0
+C00251,Beth Thompson,35,22,2023-03-13,Monthly,Electricity + Gas,House,1,1,3,Medium,Rent,South,Male,0
+C00252,Cole Garcia,45,59,2020-07-15,Monthly,Gas,Townhouse,1,1,5,Low,Own,East,Male,1
+C00253,Ethan White,26,23,2023-10-18,Monthly,Electricity + Water,Condo,0,0,4,Low,Own,West,Male,1
+C00254,Quinn Davis,66,40,2021-03-20,Annual,Gas,House,0,0,2,Medium,Own,Central,Female,0
+C00255,Rachel Martin,58,79,2018-03-18,Monthly,Gas,Condo,1,0,2,High,Rent,South,Female,1
+C00256,Fiona Clark,26,18,2023-08-03,2-Year,Gas,Townhouse,1,1,4,Low,Rent,West,Female,1
+C00257,Paul Wilson,34,81,2018-11-09,Annual,Gas,Condo,1,0,2,Low,Rent,Central,Female,0
+C00258,Cole Williams,53,13,2023-05-24,Annual,Electricity,Townhouse,0,1,2,Medium,Own,West,Male,0
+C00259,Sam Davis,52,21,2023-07-02,Annual,Water,Townhouse,0,0,2,High,Own,North,Male,0
+C00260,Rachel Taylor,66,70,2019-08-21,2-Year,Electricity,Apartment,1,0,4,Medium,Own,North,Male,0
+C00261,Uma Thompson,36,95,2017-08-15,Monthly,Gas,Townhouse,0,1,1,High,Rent,South,Female,1
+C00262,Frank Jones,73,21,2023-02-04,Monthly,Gas,Condo,0,1,1,High,Own,North,Female,1
+C00263,James Davis,46,36,2021-05-04,Monthly,Gas,House,1,0,1,Medium,Own,West,Male,0
+C00264,Yara Jones,68,111,2015-12-28,2-Year,Water,Apartment,1,0,4,High,Rent,Central,Female,0
+C00265,Noah Williams,35,118,2015-11-01,Annual,Electricity + Gas,House,1,0,1,Medium,Own,East,Male,0
+C00266,Adrian Jackson,24,70,2019-10-01,Annual,Electricity + Water,Condo,1,0,3,Medium,Rent,East,Male,0
+C00267,Victor Thompson,25,54,2020-01-01,Monthly,Gas,Apartment,1,0,1,Medium,Own,West,Male,1
+C00268,Diana Jackson,42,42,2021-06-18,2-Year,Electricity + Water,Townhouse,0,1,3,High,Rent,East,Female,0
+C00269,David Miller,75,73,2018-01-26,Annual,Electricity,Condo,0,0,1,High,Own,East,Female,1
+C00270,Adrian Thomas,24,71,2019-04-05,Annual,Electricity + Gas,Mobile Home,1,1,1,High,Own,East,Female,0
+C00271,Bob Robinson,42,36,2021-11-23,2-Year,Water,House,0,1,3,High,Own,South,Female,0
+C00272,Yara Harris,28,3,2024-05-21,Monthly,Electricity + Gas,Townhouse,0,1,4,Medium,Own,North,Female,0
+C00273,Alice Anderson,74,19,2023-03-07,Monthly,Electricity + Water,Condo,1,0,1,High,Rent,East,Female,1
+C00274,Tina Thomas,59,115,2015-09-02,Annual,Gas,House,1,0,3,High,Own,Central,Female,0
+C00275,Adrian Thompson,64,50,2020-10-14,Monthly,Electricity,Townhouse,0,1,5,Low,Own,North,Male,0
+C00276,Olivia Harris,61,58,2020-08-03,Monthly,Water,Apartment,0,1,4,Low,Rent,South,Female,1
+C00277,Olivia Wilson,58,56,2020-10-04,Monthly,Electricity,Apartment,1,1,4,Medium,Own,South,Female,0
+C00278,Beth Harris,65,94,2017-09-14,Monthly,Water,Apartment,0,0,2,High,Rent,Central,Female,0
+C00279,Bob Thomas,22,8,2024-08-23,2-Year,Water,House,0,0,5,Medium,Rent,East,Male,1
+C00280,Victor Thomas,70,10,2024-11-28,Annual,Electricity + Water,House,0,1,1,Medium,Own,East,Female,0
+C00281,Karen White,63,33,2022-04-18,Monthly,Electricity + Gas,House,0,1,4,Low,Rent,West,Female,1
+C00282,Iris Lewis,63,58,2020-06-08,Monthly,Electricity + Water,House,1,0,3,Medium,Own,South,Male,0
+C00283,Bob Thomas,44,80,2018-07-10,Monthly,Electricity,Apartment,1,1,1,Medium,Own,West,Non-binary,0
+C00284,Bob Williams,66,59,2020-09-18,Annual,Electricity + Gas,Apartment,1,1,5,Low,Own,North,Male,0
+C00285,Beth Jones,43,53,2020-06-05,2-Year,Electricity,House,0,1,4,High,Rent,North,Male,0
+C00286,Diana Garcia,24,112,2015-06-15,2-Year,Water,Townhouse,0,1,2,Low,Rent,Central,Male,0
+C00287,David Wilson,72,20,2023-02-22,Monthly,Water,Townhouse,0,1,1,High,Own,West,Female,1
+C00288,Yara Taylor,35,69,2019-08-24,Monthly,Electricity + Water,Apartment,1,0,4,Low,Rent,North,Female,1
+C00289,Noah White,27,65,2019-02-02,Annual,Water,Condo,1,1,3,High,Own,East,Male,0
+C00290,Uma Taylor,56,57,2020-06-09,Annual,Gas,Apartment,1,1,1,Medium,Rent,North,Female,0
+C00291,Yara Wilson,35,97,2016-05-08,Annual,Electricity,Condo,1,0,5,Low,Rent,West,Male,0
+C00292,Adrian Wilson,70,32,2022-10-16,Annual,Electricity + Water,House,1,0,4,Low,Rent,West,Male,0
+C00293,Frank Harris,46,114,2015-06-06,Annual,Electricity + Gas,Townhouse,0,1,3,Low,Rent,South,Female,0
+C00294,Bob Thompson,22,40,2021-01-27,Monthly,Electricity,Mobile Home,1,1,2,Medium,Rent,South,Female,1
+C00295,David Anderson,75,65,2019-07-26,Monthly,Electricity + Water,Condo,0,0,2,High,Own,South,Female,1
+C00296,Olivia Clark,50,62,2019-03-10,Monthly,Electricity + Water,Apartment,0,1,3,Medium,Rent,South,Female,1
+C00297,Emma Clark,36,102,2016-05-12,Monthly,Electricity + Gas,Apartment,0,0,1,Medium,Rent,South,Non-binary,0
+C00298,Carol Smith,59,53,2020-04-13,Monthly,Water,Apartment,1,1,2,Medium,Rent,South,Male,0
+C00299,Paul Miller,51,34,2022-02-02,Annual,Electricity,Townhouse,0,1,2,Medium,Own,East,Male,0
+C00300,Bob Lewis,23,3,2024-12-25,Monthly,Electricity,Townhouse,0,1,1,Medium,Rent,Central,Male,0
+C00301,James Davis,64,44,2021-04-22,Monthly,Gas,Mobile Home,1,0,1,Medium,Own,West,Female,0
+C00302,Iris Harris,44,99,2016-07-10,Annual,Water,Apartment,0,1,2,Medium,Own,South,Female,0
+C00303,Henry Robinson,61,2,2024-10-16,Annual,Electricity,House,0,1,2,High,Own,Central,Female,0
+C00304,Noah White,72,107,2016-05-11,Monthly,Electricity,Apartment,1,1,2,Medium,Own,South,Male,1
+C00305,Quinn Anderson,56,65,2019-12-07,Annual,Water,House,1,0,4,Low,Rent,Central,Male,0
+C00306,Karen Lewis,59,17,2023-05-09,2-Year,Water,House,1,1,3,Low,Own,South,Female,0
+C00307,Henry Garcia,36,36,2021-12-03,Annual,Water,Apartment,1,0,1,Medium,Rent,East,Non-binary,0
+C00308,Tina Brown,35,66,2019-06-23,Annual,Water,Townhouse,0,0,5,Medium,Rent,South,Male,1
+C00309,Bob Moore,45,38,2021-01-19,Monthly,Electricity + Water,House,1,1,4,High,Own,West,Male,0
+C00310,Yara Thomas,69,13,2023-11-27,2-Year,Water,House,1,0,3,Medium,Rent,South,Male,0
+C00311,Mia Williams,51,80,2018-11-01,Monthly,Electricity + Gas,House,1,0,1,Medium,Own,Central,Male,1
+C00312,Paul Brown,41,80,2018-12-18,2-Year,Electricity + Water,Condo,1,1,5,High,Rent,North,Male,0
+C00313,Tina Lewis,65,15,2023-02-16,Annual,Gas,Townhouse,1,1,4,Medium,Rent,East,Male,0
+C00314,Henry Robinson,69,34,2022-11-18,Monthly,Electricity,House,0,1,3,High,Own,North,Female,0
+C00315,Carol Anderson,72,30,2022-05-28,Monthly,Water,House,1,1,1,Low,Rent,Central,Male,1
+C00316,Beth Anderson,38,79,2018-11-11,Annual,Gas,Apartment,1,1,1,Medium,Own,East,Male,0
+C00317,Emma Martin,61,87,2017-12-04,Annual,Electricity + Water,House,0,0,2,High,Own,West,Male,0
+C00318,Victor Smith,55,87,2017-03-01,Monthly,Electricity + Gas,Apartment,0,0,2,High,Rent,Central,Female,0
+C00319,Adrian Harris,47,112,2015-05-14,Annual,Electricity + Water,Apartment,1,1,2,High,Own,East,Male,0
+C00320,Grace Jackson,44,92,2017-04-05,2-Year,Electricity,Condo,1,1,3,Medium,Rent,North,Male,1
+C00321,Xander Clark,28,39,2021-04-04,Annual,Water,House,1,1,1,High,Own,South,Male,0
+C00322,Diana Jones,37,13,2023-08-05,Annual,Electricity + Gas,Townhouse,1,1,2,Medium,Own,South,Female,0
+C00323,Beth Garcia,52,74,2018-05-08,Monthly,Electricity + Gas,House,1,1,5,Medium,Rent,Central,Female,0
+C00324,Rachel Lewis,71,110,2015-08-04,Annual,Gas,Mobile Home,0,0,5,Low,Own,Central,Male,0
+C00325,Ethan White,70,117,2015-09-14,Monthly,Electricity + Water,Mobile Home,0,0,1,Low,Rent,East,Male,0
+C00326,Beth Robinson,32,28,2022-03-19,2-Year,Gas,Townhouse,1,1,4,Medium,Own,Central,Male,0
+C00327,Rachel Taylor,60,29,2022-01-09,Monthly,Electricity + Water,Apartment,0,0,5,Low,Rent,South,Female,0
+C00328,Paul Williams,26,5,2024-09-04,Annual,Electricity + Gas,House,1,0,3,Medium,Rent,West,Female,0
+C00329,Rachel White,59,17,2023-03-17,Monthly,Electricity,Condo,1,0,2,High,Own,South,Male,0
+C00330,Paul White,41,67,2019-03-03,Monthly,Electricity + Water,Townhouse,1,1,3,High,Own,South,Male,0
+C00331,Yara Taylor,47,66,2019-08-21,Annual,Electricity,House,1,1,2,Low,Own,South,Female,0
+C00332,Bob Harris,62,45,2021-04-11,Annual,Gas,Apartment,0,0,2,High,Rent,East,Female,0
+C00333,Uma Garcia,45,37,2021-03-12,Annual,Electricity + Water,Apartment,1,1,5,Low,Own,South,Male,0
+C00334,Fiona Miller,67,99,2016-04-07,2-Year,Electricity + Water,Condo,0,0,4,Medium,Own,South,Male,0
+C00335,Wendy Wilson,51,55,2020-07-08,2-Year,Electricity + Water,Townhouse,1,1,3,High,Rent,South,Male,0
+C00336,Victor Wilson,77,97,2016-11-05,2-Year,Electricity + Gas,Apartment,0,0,1,Low,Own,North,Female,0
+C00337,Rachel Thompson,57,115,2015-12-16,Monthly,Water,Apartment,0,0,5,Low,Own,Central,Female,0
+C00338,Alice Martin,38,38,2021-09-05,Annual,Gas,House,1,1,1,Low,Own,South,Female,0
+C00339,Mia Williams,65,25,2022-11-20,2-Year,Water,Apartment,1,1,4,Medium,Own,North,Female,1
+C00340,Paul Jackson,44,114,2015-07-08,Monthly,Electricity + Gas,House,0,0,2,High,Rent,East,Male,1
+C00341,Fiona Thompson,51,76,2018-05-16,Monthly,Electricity,Townhouse,1,1,2,Low,Rent,Central,Male,0
+C00342,Paul Harris,29,35,2022-10-16,Annual,Electricity + Gas,Apartment,1,0,1,Low,Rent,South,Male,0
+C00343,Fiona White,28,75,2018-04-18,Annual,Electricity + Gas,Apartment,0,0,2,Medium,Rent,Central,Female,0
+C00344,Bob Williams,54,62,2019-10-22,Annual,Gas,House,1,1,4,Low,Own,West,Female,1
+C00345,Sam Davis,32,108,2015-12-16,2-Year,Gas,House,1,0,3,Medium,Own,West,Male,0
+C00346,Zach Davis,77,31,2022-05-24,Annual,Electricity + Gas,Apartment,1,1,1,High,Rent,South,Male,1
+C00347,Tina Robinson,69,118,2015-08-08,Monthly,Electricity,House,1,0,2,High,Rent,North,Female,0
+C00348,Xander Harris,61,112,2015-10-22,Monthly,Electricity,House,1,1,1,High,Rent,South,Female,0
+C00349,Wendy Jackson,63,22,2023-10-10,Monthly,Water,Townhouse,1,1,3,Medium,Own,Central,Female,1
+C00350,Victor Anderson,55,20,2023-03-18,Monthly,Gas,Apartment,1,1,5,High,Rent,West,Male,0
+C00351,Diana Wilson,25,64,2019-12-14,Annual,Water,Apartment,1,0,5,Low,Rent,West,Female,0
+C00352,Tina Wilson,43,6,2024-07-26,Annual,Electricity + Gas,Apartment,1,0,5,Low,Rent,Central,Female,0
+C00353,Olivia Brown,49,36,2021-01-08,Monthly,Electricity + Gas,Condo,0,0,1,Medium,Rent,South,Female,1
+C00354,Mia Taylor,73,52,2020-02-15,Monthly,Electricity + Gas,Apartment,1,1,3,Low,Own,South,Female,0
+C00355,Henry Thompson,34,116,2015-09-05,2-Year,Electricity + Gas,Townhouse,1,1,1,High,Own,Central,Female,0
+C00356,Liam Miller,49,119,2015-06-18,Monthly,Electricity + Water,Condo,1,0,3,Medium,Own,East,Female,0
+C00357,Noah Harris,41,19,2023-02-02,Annual,Electricity + Water,Townhouse,0,0,3,High,Own,South,Female,0
+C00358,Rachel Robinson,29,107,2016-07-12,Annual,Gas,Apartment,1,1,4,Medium,Rent,South,Male,0
+C00359,Sam Brown,27,11,2024-08-01,Annual,Water,Townhouse,1,0,2,Medium,Own,Central,Male,0
+C00360,Mia Moore,42,90,2017-01-10,Monthly,Electricity + Water,Apartment,0,1,1,Medium,Own,North,Female,0
+C00361,Olivia Anderson,26,101,2016-05-14,Annual,Electricity,Apartment,1,1,3,Low,Own,North,Female,0
+C00362,Liam Moore,25,107,2016-06-10,Monthly,Water,Apartment,0,0,3,Medium,Rent,West,Male,1
+C00363,Alice Thompson,41,27,2022-10-11,Annual,Electricity + Gas,Apartment,0,1,4,Medium,Own,North,Male,0
+C00364,Iris Wilson,33,107,2016-08-05,Monthly,Electricity + Water,House,0,1,1,High,Own,North,Female,1
+C00365,Carol Johnson,53,14,2023-02-21,Annual,Electricity + Gas,Apartment,1,0,4,Medium,Rent,Central,Female,0
+C00366,Sam Jones,22,62,2019-08-23,Annual,Electricity + Water,House,1,0,3,Low,Own,East,Female,0
+C00367,Fiona Brown,38,56,2020-11-13,Monthly,Electricity,Apartment,1,1,4,Medium,Own,West,Male,0
+C00368,Alice Robinson,47,38,2021-01-02,Monthly,Electricity,Apartment,0,0,5,Medium,Own,East,Female,0
+C00369,Sam Harris,75,3,2024-12-02,Monthly,Electricity + Water,Condo,0,1,2,Low,Rent,North,Female,1
+C00370,Ethan White,57,92,2017-02-19,Monthly,Electricity + Gas,House,0,1,4,Medium,Rent,North,Male,0
+C00371,Victor Garcia,71,40,2021-08-27,Monthly,Electricity + Gas,Apartment,1,1,1,Medium,Rent,West,Male,1
+C00372,David Wilson,41,79,2018-05-25,2-Year,Electricity,Apartment,0,1,5,Low,Own,North,Non-binary,0
+C00373,Ethan Brown,47,49,2020-09-12,Monthly,Gas,House,1,1,3,Medium,Rent,East,Male,1
+C00374,Emma Thomas,45,45,2021-11-14,Annual,Electricity + Water,House,0,1,4,Low,Rent,South,Female,1
+C00375,Fiona Williams,71,106,2016-11-05,2-Year,Gas,House,1,0,4,Medium,Own,South,Female,0
+C00376,David Jones,75,12,2023-11-02,Monthly,Electricity + Gas,House,1,0,4,Low,Own,Central,Female,1
+C00377,James Robinson,75,88,2017-10-22,Annual,Gas,House,1,0,2,Medium,Own,West,Male,0
+C00378,Tina Williams,64,89,2017-04-12,2-Year,Gas,Apartment,0,0,4,Low,Rent,West,Female,1
+C00379,Paul Brown,50,46,2021-06-14,Annual,Electricity,Apartment,1,1,3,High,Own,South,Male,0
+C00380,Adrian Lewis,52,32,2022-09-10,Monthly,Electricity + Water,House,1,1,4,Low,Own,South,Female,1
+C00381,Olivia Martin,76,1,2024-03-09,Monthly,Electricity + Water,House,1,1,4,Medium,Rent,West,Male,0
+C00382,Yara White,37,112,2015-07-28,Monthly,Electricity,House,1,0,3,Medium,Rent,North,Female,0
+C00383,Cole Moore,41,113,2015-07-23,Annual,Gas,Apartment,0,1,1,Low,Rent,South,Female,0
+C00384,Beth Moore,72,29,2022-12-20,2-Year,Electricity + Gas,Apartment,1,1,2,Medium,Rent,West,Male,0
+C00385,David Lewis,43,4,2024-01-11,2-Year,Gas,Apartment,1,1,5,High,Own,West,Male,0
+C00386,Grace Miller,35,15,2023-02-21,Monthly,Water,House,0,1,3,High,Rent,North,Female,0
+C00387,Noah Wilson,53,9,2024-01-10,Annual,Gas,House,1,0,4,Medium,Own,West,Male,0
+C00388,Frank Garcia,40,99,2016-07-15,Monthly,Electricity,Condo,1,0,2,Low,Own,East,Male,0
+C00389,Paul Garcia,71,107,2016-07-05,2-Year,Gas,House,1,1,4,Medium,Rent,South,Male,0
+C00390,Emma Garcia,72,19,2023-08-20,Monthly,Electricity + Gas,House,1,0,3,Medium,Own,West,Female,1
+C00391,Alice Jackson,39,89,2017-03-02,2-Year,Electricity,House,1,0,2,Low,Own,Central,Female,0
+C00392,Cole Lewis,51,22,2023-04-21,Annual,Electricity + Water,Mobile Home,1,1,1,High,Rent,East,Male,1
+C00393,Ethan Moore,77,44,2021-06-17,Monthly,Electricity,Apartment,1,1,2,Medium,Own,South,Non-binary,0
+C00394,Carol Davis,63,72,2018-01-02,Monthly,Electricity,Apartment,0,0,3,Medium,Own,South,Male,0
+C00395,Sam Moore,34,86,2017-10-15,Annual,Electricity + Gas,Mobile Home,0,1,2,Medium,Rent,East,Male,0
+C00396,Diana Williams,55,105,2016-01-07,Monthly,Electricity + Gas,House,0,1,2,Medium,Rent,North,Male,0
+C00397,Olivia Wilson,56,6,2024-09-14,Annual,Gas,Mobile Home,1,1,2,Low,Rent,East,Male,0
+C00398,Mia Jackson,58,24,2022-06-01,2-Year,Gas,House,1,0,2,High,Own,North,Male,0
+C00399,Henry Thompson,23,34,2022-12-21,Annual,Electricity,Apartment,0,0,4,Low,Rent,North,Female,0
+C00400,Olivia Clark,38,37,2021-09-15,Monthly,Water,Apartment,0,0,3,High,Rent,East,Male,0
+C00401,James Wilson,69,119,2015-06-11,Monthly,Gas,Apartment,1,1,3,High,Own,West,Female,0
+C00402,James Williams,35,93,2017-09-25,Monthly,Electricity,Condo,1,1,1,Medium,Own,Central,Male,0
+C00403,David Garcia,38,39,2021-02-19,2-Year,Gas,House,1,0,3,Low,Own,North,Male,0
+C00404,Tina Lewis,40,116,2015-03-18,Monthly,Electricity + Water,Mobile Home,1,0,5,Medium,Own,South,Male,0
+C00405,Sam White,31,60,2019-06-05,Monthly,Gas,Apartment,1,0,4,Medium,Own,East,Female,0
+C00406,Henry White,30,60,2019-11-15,Monthly,Electricity + Water,Apartment,1,0,3,Medium,Rent,East,Female,0
+C00407,Tina Thomas,41,52,2020-10-20,2-Year,Gas,Mobile Home,0,1,2,High,Rent,Central,Male,0
+C00408,Rachel Martin,70,18,2023-05-26,Monthly,Electricity,House,1,0,2,Medium,Own,West,Male,1
+C00409,Fiona White,22,112,2015-04-17,2-Year,Gas,Condo,1,0,1,High,Rent,East,Male,0
+C00410,Frank Lewis,37,2,2024-12-05,Annual,Gas,Apartment,1,0,1,Low,Own,North,Female,1
+C00411,Carol Jackson,25,21,2023-07-19,Annual,Electricity,Townhouse,0,0,4,Medium,Own,North,Male,0
+C00412,Uma Lewis,53,28,2022-02-03,2-Year,Electricity + Gas,House,0,1,5,Low,Rent,North,Female,0
+C00413,Quinn Smith,36,34,2022-03-09,Annual,Gas,Apartment,1,0,5,Medium,Own,West,Male,0
+C00414,Frank Davis,66,16,2023-11-26,2-Year,Water,Townhouse,1,1,4,Low,Rent,South,Male,0
+C00415,Bob Wilson,54,3,2024-11-23,Monthly,Electricity + Gas,Apartment,0,1,5,Medium,Own,South,Female,0
+C00416,Carol Garcia,65,81,2018-11-26,Annual,Electricity + Gas,House,0,0,3,High,Own,West,Male,0
+C00417,Ethan Martin,57,116,2015-01-10,Annual,Electricity + Gas,House,1,0,2,Medium,Own,Central,Male,0
+C00418,Cole Wilson,46,15,2023-10-20,Annual,Electricity,Condo,0,0,2,Low,Own,East,Female,0
+C00419,Liam Robinson,70,36,2021-02-20,2-Year,Water,House,1,1,2,Low,Rent,Central,Male,0
+C00420,Beth Clark,48,61,2019-10-07,2-Year,Electricity,Townhouse,1,1,4,Medium,Rent,West,Male,0
+C00421,Fiona Williams,75,111,2015-11-27,Annual,Water,Mobile Home,1,1,1,Medium,Own,West,Male,0
+C00422,Ethan Anderson,77,83,2018-05-28,Annual,Electricity + Water,House,1,0,5,Low,Own,Central,Female,0
+C00423,Adrian Taylor,54,92,2017-03-04,Annual,Water,House,1,0,4,Medium,Rent,North,Female,0
+C00424,Uma Brown,59,70,2019-09-22,Monthly,Electricity + Gas,Townhouse,1,0,2,Low,Rent,West,Male,0
+C00425,Karen Taylor,36,50,2020-01-13,Monthly,Gas,House,0,1,4,Medium,Own,Central,Female,0
+C00426,Adrian Harris,67,24,2022-07-19,Monthly,Electricity + Water,Apartment,1,0,1,Medium,Own,Central,Female,0
+C00427,Sam Thomas,59,103,2016-04-16,Monthly,Gas,Townhouse,0,0,3,Low,Own,East,Female,0
+C00428,Carol White,72,96,2016-06-07,Monthly,Electricity + Gas,Apartment,1,1,1,Low,Own,West,Female,0
+C00429,Frank Taylor,36,3,2024-10-03,Annual,Water,Apartment,1,0,1,Low,Own,Central,Female,0
+C00430,Quinn Taylor,66,86,2017-12-15,Monthly,Electricity + Water,Townhouse,0,0,1,Low,Own,Central,Female,0
+C00431,Henry Thomas,48,11,2024-05-24,2-Year,Electricity + Water,Apartment,0,1,4,Medium,Own,Central,Male,0
+C00432,Alice Thompson,32,88,2017-04-24,Annual,Electricity,House,0,1,4,High,Own,Central,Male,0
+C00433,Diana Jackson,31,99,2016-11-08,Monthly,Electricity + Water,Apartment,0,0,5,High,Own,South,Female,0
+C00434,David Miller,53,16,2023-05-25,Monthly,Electricity,Condo,1,0,5,Medium,Rent,West,Male,1
+C00435,Xander Lewis,39,52,2020-03-10,Monthly,Electricity + Gas,Townhouse,1,0,5,Medium,Rent,East,Female,0
+C00436,Fiona Clark,27,15,2023-11-16,2-Year,Electricity + Water,Apartment,1,0,5,Medium,Own,Central,Male,0
+C00437,Cole Johnson,45,68,2019-12-10,Monthly,Water,Apartment,1,1,1,High,Own,Central,Female,0
+C00438,Noah Wilson,58,111,2015-04-15,Annual,Electricity + Water,House,1,0,4,Low,Own,Central,Male,0
+C00439,Iris Moore,39,10,2024-02-15,2-Year,Gas,House,1,0,4,Medium,Rent,East,Female,0
+C00440,Cole Harris,75,48,2020-02-20,2-Year,Gas,House,0,1,1,Medium,Rent,East,Male,0
+C00441,Henry Smith,65,116,2015-08-14,Monthly,Gas,Mobile Home,0,0,1,Low,Own,North,Male,0
+C00442,Paul Garcia,50,36,2021-04-15,Monthly,Gas,House,0,1,5,Medium,Rent,West,Female,0
+C00443,Tina Thompson,74,16,2023-08-19,Monthly,Water,Condo,0,1,5,High,Rent,East,Female,0
+C00444,Alice Thompson,46,59,2020-10-12,Monthly,Electricity + Gas,House,1,1,2,High,Rent,East,Female,0
+C00445,Adrian Williams,29,61,2019-01-15,Monthly,Water,House,1,0,1,Low,Own,West,Non-binary,0
+C00446,Olivia Brown,24,79,2018-11-03,Annual,Electricity + Gas,Apartment,0,1,2,Medium,Own,Central,Male,0
+C00447,Diana Brown,74,38,2021-01-25,2-Year,Gas,Apartment,0,1,1,Medium,Rent,North,Female,0
+C00448,James Harris,75,114,2015-02-04,Annual,Electricity,Townhouse,1,0,4,Medium,Own,East,Male,0
+C00449,Sam Martin,63,63,2019-09-25,Annual,Electricity + Gas,Mobile Home,1,1,2,Medium,Rent,West,Female,0
+C00450,Rachel Jackson,27,35,2022-08-22,Monthly,Electricity + Water,Condo,1,0,1,Low,Rent,Central,Male,1
+C00451,Ethan Harris,38,115,2015-12-27,Annual,Electricity + Water,House,1,0,5,High,Own,West,Male,0
+C00452,Paul White,24,111,2015-07-01,Annual,Gas,Townhouse,1,1,5,High,Own,West,Female,0
+C00453,James Thomas,24,60,2019-06-07,2-Year,Electricity + Gas,House,1,1,5,Medium,Own,Central,Female,1
+C00454,Mia Lewis,35,3,2024-09-02,2-Year,Water,Condo,0,0,5,Medium,Own,Central,Male,0
+C00455,Iris Williams,54,72,2018-10-12,Monthly,Water,Apartment,0,1,1,Medium,Rent,West,Female,1
+C00456,Rachel Jackson,25,67,2019-09-26,Monthly,Electricity,Apartment,1,1,4,Medium,Rent,South,Female,1
+C00457,Victor Martin,77,18,2023-05-22,Monthly,Electricity + Gas,House,0,0,4,Low,Own,East,Male,1
+C00458,Rachel Smith,47,76,2018-12-20,Monthly,Electricity,House,0,0,4,Medium,Rent,West,Female,1
+C00459,Sam Moore,36,101,2016-04-24,2-Year,Electricity,House,1,0,2,Low,Own,North,Male,0
+C00460,Fiona Jones,50,13,2023-05-01,Monthly,Water,Condo,0,0,2,High,Rent,West,Male,0
+C00461,Cole Thompson,66,87,2017-04-23,Annual,Electricity,Townhouse,1,0,5,Medium,Own,East,Female,0
+C00462,Ethan Anderson,39,17,2023-04-09,Annual,Gas,Mobile Home,1,0,1,Medium,Rent,Central,Male,0
+C00463,Victor Thompson,24,90,2017-03-20,Monthly,Electricity + Gas,House,1,0,4,Medium,Rent,South,Male,0
+C00464,Yara White,24,50,2020-07-22,Monthly,Water,Apartment,0,0,4,High,Own,Central,Female,0
+C00465,Uma Miller,69,1,2024-09-20,Annual,Electricity + Gas,House,0,0,4,Low,Rent,East,Male,0
+C00466,Paul Robinson,28,115,2015-06-12,Annual,Electricity,Apartment,1,1,3,Low,Rent,East,Female,0
+C00467,Yara Davis,57,20,2023-12-18,Monthly,Water,Apartment,1,1,4,Low,Own,West,Female,0
+C00468,Adrian Johnson,43,71,2019-06-14,Monthly,Electricity + Water,House,1,1,5,Medium,Rent,East,Male,0
+C00469,Uma Harris,65,22,2023-06-18,Annual,Electricity + Water,Apartment,0,1,4,High,Rent,Central,Female,0
+C00470,Yara Thomas,25,112,2015-01-13,Monthly,Water,House,1,1,1,Low,Rent,North,Male,0
+C00471,James Harris,72,88,2017-11-12,2-Year,Electricity + Gas,Apartment,1,1,2,High,Own,West,Female,0
+C00472,Carol Jones,61,96,2016-02-06,Monthly,Electricity + Water,Townhouse,0,0,2,Medium,Rent,Central,Male,0
+C00473,Victor Brown,47,52,2020-02-11,Monthly,Electricity + Gas,House,1,1,2,Medium,Rent,South,Female,0
+C00474,Cole Brown,33,56,2020-12-21,Annual,Electricity,Condo,1,1,2,Low,Rent,South,Male,1
+C00475,Diana Smith,76,76,2018-07-25,Annual,Electricity + Water,Apartment,1,1,2,Medium,Own,East,Female,0
+C00476,James Jackson,38,94,2017-01-03,Annual,Gas,Condo,1,1,4,Medium,Own,West,Male,0
+C00477,James Williams,49,101,2016-06-06,Monthly,Electricity + Water,Townhouse,1,0,1,Medium,Rent,Central,Male,0
+C00478,Ethan Wilson,44,3,2024-08-15,2-Year,Gas,Townhouse,1,1,4,Low,Own,West,Male,0
+C00479,Victor Lewis,34,79,2018-01-20,Annual,Electricity + Water,Townhouse,1,1,4,High,Own,West,Female,0
+C00480,Zach Clark,45,13,2023-10-05,Annual,Electricity + Gas,Condo,0,0,5,High,Own,East,Non-binary,0
+C00481,Frank Taylor,30,35,2022-09-10,Monthly,Electricity + Gas,Apartment,1,1,1,Medium,Rent,West,Male,1
+C00482,Yara Taylor,22,99,2016-01-02,Monthly,Gas,House,0,1,2,Medium,Own,South,Male,0
+C00483,Fiona Thompson,38,30,2022-08-02,Annual,Electricity + Water,House,1,0,5,High,Rent,East,Male,0
+C00484,Carol Lewis,28,95,2017-03-05,Monthly,Electricity,Apartment,0,0,3,Low,Rent,North,Male,0
+C00485,Emma Davis,45,56,2020-09-21,Annual,Electricity + Gas,House,1,0,3,High,Rent,North,Female,0
+C00486,Sam Davis,70,28,2022-05-25,Monthly,Gas,House,0,0,1,Medium,Rent,Central,Female,0
+C00487,Frank Jackson,31,40,2021-03-14,2-Year,Electricity + Gas,House,1,0,4,High,Own,Central,Female,0
+C00488,Grace Clark,22,64,2019-07-05,Annual,Gas,Apartment,1,1,2,Low,Rent,East,Male,0
+C00489,Grace White,28,92,2017-06-26,2-Year,Water,House,1,0,5,Medium,Own,North,Male,0
+C00490,Karen Moore,50,73,2018-05-08,Annual,Gas,Apartment,1,0,2,Medium,Rent,North,Female,0
+C00491,Bob Johnson,37,112,2015-11-05,Monthly,Electricity,Townhouse,0,1,1,Medium,Own,North,Male,1
+C00492,Uma Johnson,49,104,2016-08-04,Annual,Electricity,Condo,0,0,3,High,Rent,West,Female,0
+C00493,Sam Anderson,23,90,2017-06-10,Annual,Water,Apartment,0,1,3,High,Rent,South,Male,0
+C00494,Xander Jackson,40,72,2018-03-21,Annual,Gas,Apartment,1,0,3,Low,Own,South,Male,0
+C00495,James Davis,44,35,2022-07-12,Monthly,Gas,Apartment,0,0,5,Medium,Rent,Central,Female,0
+C00496,Adrian Robinson,46,50,2020-01-13,Annual,Water,Apartment,0,1,2,Medium,Own,Central,Male,0
+C00497,Liam Garcia,52,15,2023-11-10,2-Year,Gas,Townhouse,1,1,2,Medium,Own,West,Non-binary,0
+C00498,Liam Williams,65,45,2021-01-27,Annual,Gas,House,1,0,4,Medium,Own,South,Male,0
+C00499,Yara Lewis,48,111,2015-09-20,Monthly,Gas,Mobile Home,0,0,1,High,Own,East,Male,1
+C00500,Paul Harris,69,51,2020-05-19,Annual,Gas,House,1,1,5,High,Rent,South,Male,0
+C00501,James Davis,51,14,2023-09-13,Annual,Water,Condo,1,1,2,Low,Rent,Central,Male,1
+C00502,Diana Clark,36,78,2018-05-15,2-Year,Electricity + Gas,Apartment,0,0,2,Medium,Own,North,Female,0
+C00503,Quinn White,34,115,2015-01-25,Monthly,Electricity + Water,House,1,1,1,Medium,Rent,West,Male,0
+C00504,Quinn Smith,40,104,2016-12-19,Monthly,Water,Townhouse,1,0,2,Medium,Rent,East,Female,0
+C00505,Diana Moore,55,33,2022-10-23,Annual,Electricity,House,1,0,3,Low,Rent,West,Female,0
+C00506,Karen Williams,35,55,2020-01-02,Annual,Gas,Townhouse,0,1,4,Medium,Own,East,Male,0
+C00507,Cole Anderson,73,64,2019-01-25,Annual,Gas,Apartment,0,0,5,Medium,Rent,North,Male,0
+C00508,Tina Clark,48,30,2022-07-27,Annual,Electricity + Gas,House,0,1,4,Low,Own,West,Male,0
+C00509,Beth Wilson,70,32,2022-12-19,Monthly,Gas,House,0,0,2,High,Rent,West,Female,0
+C00510,Diana Moore,60,29,2022-07-27,Annual,Electricity + Water,Townhouse,1,0,5,Medium,Rent,East,Female,0
+C00511,Mia Thomas,40,119,2015-01-16,Monthly,Gas,House,0,1,1,Medium,Rent,South,Male,0
+C00512,Ethan Brown,34,89,2017-09-08,Monthly,Electricity + Gas,Condo,1,1,2,Medium,Own,South,Female,0
+C00513,Paul Thomas,63,101,2016-06-17,Annual,Electricity,Townhouse,1,1,2,High,Own,East,Male,0
+C00514,Wendy Robinson,40,98,2016-08-18,Annual,Electricity + Water,Townhouse,0,0,3,Low,Rent,South,Male,0
+C00515,Sam Moore,35,115,2015-05-05,2-Year,Electricity + Water,House,0,1,2,Low,Own,South,Male,0
+C00516,Bob Thomas,74,13,2023-01-06,Monthly,Water,Townhouse,1,0,5,Medium,Own,South,Non-binary,0
+C00517,Rachel Smith,49,105,2016-01-09,Monthly,Gas,Condo,0,0,2,Medium,Rent,North,Male,0
+C00518,David Lewis,24,8,2024-08-16,2-Year,Electricity,House,0,1,2,Medium,Rent,Central,Male,0
+C00519,Fiona Moore,49,57,2020-08-05,Monthly,Water,Apartment,1,0,4,High,Own,South,Male,0
+C00520,Olivia Lewis,47,71,2019-04-22,Monthly,Electricity + Gas,House,1,1,3,Low,Own,North,Female,0
+C00521,Wendy Davis,70,43,2021-01-04,Monthly,Electricity + Water,Apartment,1,0,3,Low,Rent,North,Male,1
+C00522,Mia Lewis,61,18,2023-10-27,Annual,Water,Townhouse,1,1,5,Medium,Own,Central,Male,0
+C00523,Quinn Jones,32,23,2023-02-19,2-Year,Electricity + Gas,Apartment,1,0,3,High,Own,East,Male,0
+C00524,Grace Clark,30,99,2016-03-10,Annual,Electricity + Water,Apartment,1,1,1,High,Own,South,Female,0
+C00525,Carol Moore,55,38,2021-06-11,Annual,Electricity + Water,Apartment,1,1,4,Medium,Own,East,Male,0
+C00526,Cole Johnson,24,37,2021-09-20,Monthly,Electricity + Gas,House,1,0,4,Medium,Rent,North,Female,0
+C00527,Xander Jones,39,110,2015-12-03,Monthly,Electricity,House,0,0,2,Medium,Own,South,Male,0
+C00528,Frank Moore,29,18,2023-08-21,Annual,Electricity,Condo,0,0,5,Medium,Own,South,Male,0
+C00529,Uma Jackson,23,109,2015-12-16,Monthly,Electricity + Gas,Apartment,1,0,2,Low,Own,Central,Female,0
+C00530,Liam Miller,73,110,2015-08-07,Monthly,Electricity + Gas,Apartment,1,1,1,Medium,Own,North,Female,0
+C00531,Iris Thompson,27,72,2018-11-26,Monthly,Electricity,Townhouse,1,0,1,High,Own,East,Male,0
+C00532,Xander Martin,22,20,2023-03-18,Monthly,Electricity,House,1,1,4,Medium,Rent,West,Female,1
+C00533,Rachel Garcia,74,19,2023-01-05,Annual,Water,House,1,1,2,Medium,Rent,Central,Female,0
+C00534,Quinn Harris,32,34,2022-09-19,Annual,Water,House,1,0,3,Medium,Own,East,Male,0
+C00535,Sam Taylor,67,69,2019-12-12,Monthly,Electricity,Mobile Home,1,0,4,Medium,Own,South,Female,0
+C00536,Henry White,23,19,2023-09-22,Annual,Electricity + Gas,Townhouse,0,1,5,Low,Own,South,Female,0
+C00537,Emma Jones,30,55,2020-05-14,Annual,Electricity,Apartment,1,1,3,Medium,Own,South,Male,0
+C00538,Olivia Thomas,28,14,2023-06-28,Annual,Water,House,0,0,5,High,Rent,West,Female,0
+C00539,Xander Williams,61,65,2019-02-26,Annual,Electricity + Water,House,1,1,2,Low,Own,South,Male,0
+C00540,Zach Smith,56,3,2024-05-02,Monthly,Electricity + Water,Apartment,1,1,5,Medium,Rent,West,Male,0
+C00541,Quinn Thompson,48,85,2017-09-12,Annual,Electricity + Gas,Apartment,0,1,2,Low,Rent,West,Non-binary,0
+C00542,Henry White,35,7,2024-02-06,Monthly,Water,Condo,1,1,1,Low,Own,Central,Female,1
+C00543,Xander Wilson,26,24,2022-06-13,Monthly,Electricity + Water,Townhouse,0,1,4,High,Rent,South,Female,0
+C00544,Yara Clark,53,21,2023-04-05,Monthly,Water,Apartment,0,0,4,Medium,Own,Central,Female,1
+C00545,Xander Brown,34,99,2016-06-15,Annual,Electricity + Gas,Townhouse,1,1,5,Medium,Own,East,Female,0
+C00546,Olivia Harris,55,7,2024-10-05,Monthly,Water,Mobile Home,1,1,5,Medium,Rent,West,Male,0
+C00547,Bob Lewis,60,52,2020-11-18,Monthly,Electricity + Gas,Apartment,1,0,1,High,Own,West,Non-binary,0
+C00548,Uma Lewis,69,71,2019-05-13,Annual,Electricity + Water,Apartment,1,0,4,Medium,Rent,Central,Female,0
+C00549,Olivia Clark,49,62,2019-10-28,Monthly,Electricity + Gas,Condo,1,0,4,Medium,Rent,East,Female,1
+C00550,Emma Clark,22,82,2018-09-25,Monthly,Electricity + Water,House,1,0,4,Medium,Own,West,Male,0
+C00551,Diana Moore,37,96,2016-12-17,Monthly,Electricity,Condo,0,0,1,Low,Rent,South,Male,1
+C00552,Adrian Brown,69,47,2021-09-13,Monthly,Electricity,House,0,0,1,Medium,Own,East,Male,0
+C00553,Iris Johnson,51,99,2016-07-21,Monthly,Electricity,Apartment,1,0,4,Low,Rent,East,Male,0
+C00554,Carol Moore,56,38,2021-09-19,Monthly,Electricity + Gas,Townhouse,1,0,5,Medium,Own,West,Male,0
+C00555,Fiona Brown,47,118,2015-04-04,Monthly,Water,Apartment,0,0,1,Medium,Own,West,Female,0
+C00556,Grace Davis,31,61,2019-09-11,Annual,Gas,Apartment,0,1,1,Medium,Own,North,Female,0
+C00557,Iris Thomas,72,88,2017-09-28,2-Year,Electricity,Apartment,1,0,3,High,Rent,Central,Male,0
+C00558,Diana Anderson,65,105,2016-08-09,Annual,Electricity + Water,House,1,0,2,Medium,Own,West,Male,0
+C00559,Adrian Robinson,77,95,2017-02-01,Annual,Water,House,0,1,5,Low,Rent,North,Female,0
+C00560,James Jackson,69,102,2016-07-24,2-Year,Water,House,0,0,5,Medium,Own,Central,Male,0
+C00561,Grace Harris,38,64,2019-09-27,2-Year,Electricity + Gas,Apartment,0,1,3,High,Own,West,Female,0
+C00562,Adrian Wilson,36,6,2024-03-19,Annual,Electricity + Gas,Apartment,1,1,5,Low,Own,North,Male,0
+C00563,Carol Anderson,35,59,2020-10-18,2-Year,Electricity,House,1,0,2,Medium,Own,East,Male,0
+C00564,Noah White,73,22,2023-11-10,2-Year,Electricity,Condo,1,1,5,High,Rent,Central,Male,0
+C00565,Cole Davis,53,106,2016-07-11,Annual,Electricity + Water,Apartment,1,1,3,Low,Own,South,Female,0
+C00566,Xander Brown,47,29,2022-12-26,Annual,Gas,Apartment,0,1,3,Medium,Rent,Central,Male,0
+C00567,Xander Thompson,76,28,2022-11-25,Monthly,Water,Apartment,1,0,1,High,Rent,East,Female,1
+C00568,Wendy Johnson,55,30,2022-06-14,Monthly,Water,House,0,1,1,Low,Own,South,Male,0
+C00569,Zach Wilson,72,77,2018-11-09,Annual,Gas,Townhouse,0,0,1,Medium,Rent,South,Male,1
+C00570,Mia Brown,77,68,2019-12-06,Annual,Gas,Apartment,0,0,3,Medium,Rent,East,Female,0
+C00571,Diana Williams,26,113,2015-02-01,Monthly,Water,House,0,0,1,Medium,Rent,West,Male,1
+C00572,Noah Clark,42,50,2020-12-14,Annual,Electricity,Mobile Home,0,0,1,High,Own,Central,Male,0
+C00573,Bob Johnson,63,34,2022-01-16,Annual,Electricity + Gas,Condo,1,0,4,Low,Rent,North,Female,0
+C00574,Victor Davis,67,6,2024-06-19,Annual,Electricity + Water,Townhouse,1,1,5,Medium,Rent,Central,Female,1
+C00575,Iris Robinson,30,1,2024-12-23,Monthly,Water,Condo,1,0,1,High,Own,East,Male,0
+C00576,Noah Williams,39,45,2021-09-11,Monthly,Water,Condo,0,1,3,Low,Rent,North,Male,0
+C00577,Noah Robinson,52,111,2015-04-05,Annual,Electricity,Apartment,0,1,5,High,Own,Central,Non-binary,0
+C00578,Noah Davis,66,63,2019-08-24,Annual,Electricity,Apartment,1,1,3,Low,Rent,South,Female,0
+C00579,Victor Jones,28,107,2016-03-22,2-Year,Gas,Apartment,1,0,1,Medium,Rent,West,Female,0
+C00580,Alice Wilson,55,13,2023-03-15,2-Year,Gas,House,1,1,1,Low,Rent,West,Female,0
+C00581,James Jones,38,12,2023-11-02,2-Year,Electricity,House,1,0,5,Medium,Rent,North,Female,0
+C00582,Quinn Garcia,34,100,2016-01-14,Monthly,Electricity + Water,House,0,1,3,High,Rent,South,Male,0
+C00583,Henry Smith,50,13,2023-12-18,Monthly,Electricity,Townhouse,1,1,1,High,Rent,West,Male,0
+C00584,Iris Smith,45,7,2024-06-25,Monthly,Water,Townhouse,0,1,5,High,Own,South,Female,1
+C00585,Wendy Davis,57,49,2020-01-15,Annual,Electricity + Gas,Townhouse,1,0,5,Medium,Own,North,Female,1
+C00586,Uma Smith,39,111,2015-10-13,2-Year,Water,Apartment,1,1,4,High,Own,North,Female,0
+C00587,Liam Wilson,68,83,2018-01-11,Monthly,Gas,House,1,1,1,Medium,Own,Central,Female,0
+C00588,David Jones,26,12,2023-04-12,Annual,Gas,Apartment,0,1,1,High,Rent,North,Male,0
+C00589,Adrian Martin,70,100,2016-03-01,Monthly,Water,Apartment,0,1,2,Medium,Rent,North,Female,1
+C00590,Henry Williams,23,101,2016-10-03,Monthly,Gas,Condo,1,0,1,High,Own,East,Female,0
+C00591,Ethan White,63,96,2016-05-22,Monthly,Water,Condo,1,1,3,Low,Own,North,Male,0
+C00592,Xander Martin,41,108,2015-08-11,Monthly,Electricity,Condo,0,1,2,Medium,Rent,West,Female,0
+C00593,Grace White,43,29,2022-01-24,2-Year,Electricity,Condo,0,0,4,Medium,Own,East,Female,0
+C00594,Olivia Lewis,23,117,2015-09-12,Monthly,Water,Mobile Home,0,1,1,Low,Rent,West,Male,0
+C00595,Carol Martin,61,39,2021-09-28,Annual,Water,Apartment,0,1,4,Low,Rent,East,Female,0
+C00596,Tina White,31,96,2016-04-06,Annual,Electricity,House,0,0,5,High,Own,West,Female,1
+C00597,Bob Johnson,58,69,2019-11-06,Monthly,Electricity + Water,House,1,0,1,Medium,Own,West,Female,0
+C00598,Ethan Thomas,62,93,2017-06-17,Monthly,Electricity,Apartment,0,0,4,Low,Own,East,Male,1
+C00599,Beth Brown,69,75,2018-09-23,Annual,Electricity + Water,House,1,1,3,Medium,Own,North,Female,0
+C00600,Fiona White,61,77,2018-03-05,Monthly,Water,House,1,1,1,Medium,Own,South,Male,0
+C00601,Emma Williams,38,74,2018-12-15,2-Year,Electricity + Water,Mobile Home,0,1,2,Medium,Own,North,Female,1
+C00602,Uma Lewis,63,93,2017-03-07,Monthly,Electricity + Water,House,0,1,4,High,Own,North,Male,0
+C00603,James Williams,68,88,2017-08-21,Annual,Gas,Mobile Home,1,1,5,High,Own,South,Female,0
+C00604,Iris Wilson,39,17,2023-02-16,Annual,Water,Townhouse,1,0,2,Medium,Own,South,Female,1
+C00605,Uma Thomas,28,99,2016-01-19,Monthly,Gas,Apartment,0,0,1,Medium,Rent,North,Female,0
+C00606,Sam White,71,64,2019-02-08,Monthly,Electricity + Gas,Townhouse,0,1,2,Medium,Own,South,Female,0
+C00607,Beth Brown,30,39,2021-12-09,2-Year,Gas,Apartment,0,1,5,High,Rent,East,Male,0
+C00608,Henry Clark,55,62,2019-03-18,Monthly,Electricity + Gas,Apartment,1,0,3,Low,Own,North,Female,0
+C00609,Noah Jackson,35,116,2015-11-10,Monthly,Electricity + Water,House,1,1,3,Low,Own,South,Male,0
+C00610,Cole Davis,29,103,2016-07-20,Monthly,Electricity + Gas,Condo,0,1,1,High,Own,North,Female,0
+C00611,Adrian Taylor,65,100,2016-02-05,Monthly,Electricity,Apartment,0,1,4,High,Rent,North,Male,0
+C00612,Diana Thomas,30,56,2020-06-09,Annual,Gas,House,0,0,3,Medium,Own,North,Female,1
+C00613,Adrian Brown,59,94,2017-06-03,Annual,Water,Townhouse,0,0,3,Medium,Own,East,Male,0
+C00614,Uma Jackson,60,46,2021-04-03,Monthly,Electricity + Gas,Townhouse,1,1,5,Medium,Own,West,Female,0
+C00615,Uma Wilson,25,82,2018-08-08,Annual,Electricity + Gas,Apartment,1,1,3,Medium,Rent,West,Female,0
+C00616,Xander Jones,31,77,2018-11-14,Monthly,Electricity + Gas,Apartment,0,0,5,Medium,Own,West,Male,1
+C00617,Ethan Williams,66,30,2022-11-05,Monthly,Gas,House,1,0,3,Low,Own,West,Male,1
+C00618,Frank Williams,50,32,2022-07-03,Annual,Electricity + Gas,Townhouse,0,0,2,Medium,Rent,Central,Female,0
+C00619,Frank Jackson,28,8,2024-11-25,2-Year,Water,House,0,1,5,Medium,Own,South,Female,1
+C00620,Grace Anderson,77,17,2023-12-15,Monthly,Electricity + Water,House,0,0,4,Medium,Own,West,Male,1
+C00621,Iris Thompson,36,52,2020-02-21,Monthly,Water,House,1,0,4,Low,Rent,Central,Male,1
+C00622,David Robinson,22,57,2020-08-21,Annual,Electricity + Water,Apartment,0,0,2,High,Own,East,Male,0
+C00623,Victor Brown,73,20,2023-10-03,Annual,Electricity + Water,Apartment,1,1,4,Medium,Own,Central,Female,1
+C00624,Adrian Anderson,22,50,2020-01-18,Monthly,Electricity,Apartment,1,0,3,High,Own,North,Female,1
+C00625,Beth Johnson,52,72,2018-08-25,Monthly,Gas,House,1,1,1,Low,Own,Central,Male,0
+C00626,Sam Lewis,77,28,2022-11-13,Annual,Gas,House,1,1,2,Medium,Rent,East,Female,0
+C00627,Tina Anderson,54,41,2021-04-25,Monthly,Electricity,Apartment,0,1,5,High,Rent,South,Female,1
+C00628,Grace Robinson,54,44,2021-11-27,Monthly,Electricity,House,0,0,3,Medium,Rent,North,Female,1
+C00629,Noah Jones,43,61,2019-12-16,Monthly,Water,Townhouse,1,1,4,Low,Own,West,Male,0
+C00630,Ethan Davis,29,44,2021-08-03,Monthly,Gas,Condo,0,0,1,Medium,Rent,East,Male,0
+C00631,Grace Anderson,54,88,2017-08-18,Annual,Electricity,Apartment,1,1,2,Medium,Rent,South,Male,0
+C00632,Xander Brown,72,39,2021-07-25,2-Year,Gas,Condo,0,1,5,Medium,Own,South,Male,0
+C00633,Rachel Robinson,27,52,2020-05-17,Annual,Gas,House,0,1,3,Medium,Rent,Central,Male,0
+C00634,Olivia Jackson,71,46,2021-06-23,Annual,Electricity,House,1,0,5,Medium,Rent,East,Male,0
+C00635,Bob Lewis,45,22,2023-07-15,2-Year,Electricity,Townhouse,1,1,5,Medium,Rent,North,Male,0
+C00636,Rachel Smith,52,82,2018-06-12,Monthly,Water,Townhouse,1,1,2,Low,Own,South,Female,0
+C00637,Liam Wilson,31,29,2022-10-27,Monthly,Electricity + Water,Condo,1,1,5,Medium,Own,North,Male,0
+C00638,Tina Taylor,56,36,2021-10-05,2-Year,Electricity + Gas,House,0,1,4,Medium,Rent,West,Female,0
+C00639,Wendy Smith,32,95,2017-05-13,Monthly,Water,Townhouse,1,1,1,Low,Rent,Central,Male,1
+C00640,Liam Jones,37,113,2015-07-05,Annual,Electricity + Water,Apartment,1,1,1,Low,Own,Central,Female,0
+C00641,Zach Williams,62,80,2018-03-19,Annual,Electricity + Water,Apartment,1,1,1,Low,Own,West,Male,0
+C00642,James Clark,24,110,2015-03-26,Monthly,Electricity,House,0,0,4,Low,Rent,West,Female,0
+C00643,Bob Williams,47,102,2016-05-28,Annual,Electricity + Water,Mobile Home,1,1,1,Medium,Own,East,Female,0
+C00644,Noah Thomas,55,58,2020-01-07,Monthly,Electricity,House,0,1,2,Low,Own,West,Male,0
+C00645,Adrian White,29,92,2017-11-21,Monthly,Electricity,Condo,0,1,3,Medium,Rent,North,Female,0
+C00646,Victor Garcia,38,40,2021-02-25,Annual,Electricity + Gas,Apartment,1,1,1,High,Own,East,Male,0
+C00647,Xander Moore,41,55,2020-04-24,Monthly,Water,Townhouse,1,0,2,High,Own,East,Female,0
+C00648,Uma Robinson,59,64,2019-04-15,Annual,Electricity,Townhouse,1,1,4,Low,Own,North,Male,0
+C00649,Frank Johnson,76,115,2015-03-05,2-Year,Gas,Condo,1,1,5,Medium,Rent,East,Male,0
+C00650,James Garcia,68,101,2016-05-13,Annual,Gas,House,0,0,3,Medium,Own,West,Male,0
+C00651,David Williams,32,59,2020-09-22,Monthly,Gas,House,0,1,4,High,Rent,South,Female,0
+C00652,Rachel White,23,78,2018-11-18,Monthly,Electricity + Water,Apartment,1,0,3,High,Rent,East,Male,0
+C00653,Beth Harris,24,25,2022-03-11,Monthly,Gas,Apartment,1,0,3,Low,Rent,South,Female,1
+C00654,Cole Jackson,55,96,2016-03-07,Monthly,Gas,House,1,1,3,Low,Own,South,Male,1
+C00655,Rachel Miller,30,66,2019-06-19,2-Year,Electricity,House,1,1,5,Medium,Own,North,Male,0
+C00656,Henry Anderson,34,64,2019-04-12,Monthly,Electricity,Apartment,0,1,1,High,Own,South,Male,0
+C00657,Beth Brown,69,92,2017-10-14,Monthly,Electricity,House,0,1,3,High,Rent,Central,Female,1
+C00658,Sam Robinson,70,76,2018-03-27,Annual,Electricity + Gas,House,0,1,1,Low,Rent,Central,Female,0
+C00659,Fiona Martin,68,9,2024-05-01,Monthly,Electricity + Gas,Condo,1,0,5,Medium,Rent,West,Male,0
+C00660,Tina Johnson,36,35,2022-07-07,Monthly,Electricity + Gas,Apartment,1,1,4,Low,Own,West,Female,0
+C00661,Olivia Thomas,56,22,2023-05-26,Monthly,Electricity + Water,Mobile Home,1,1,1,Medium,Own,West,Male,1
+C00662,David Smith,56,88,2017-08-26,Annual,Electricity + Gas,Mobile Home,0,1,4,High,Rent,East,Male,0
+C00663,Noah Moore,32,5,2024-10-09,Annual,Electricity,House,0,0,3,Medium,Own,East,Female,0
+C00664,Noah Jones,52,25,2022-07-28,Monthly,Gas,Townhouse,0,0,1,Low,Rent,West,Male,1
+C00665,Quinn Moore,51,72,2018-06-06,2-Year,Gas,Apartment,1,1,5,Medium,Own,West,Male,0
+C00666,Uma Brown,44,83,2018-12-02,2-Year,Electricity + Water,Townhouse,1,0,2,Medium,Rent,East,Female,0
+C00667,Alice Harris,64,60,2019-12-09,Annual,Gas,House,0,1,1,High,Rent,East,Male,0
+C00668,Beth Garcia,59,103,2016-12-15,Monthly,Electricity,House,1,0,4,Medium,Own,East,Female,0
+C00669,Iris Thomas,51,110,2015-01-01,Monthly,Water,House,0,0,2,High,Own,South,Female,1
+C00670,Olivia Martin,62,16,2023-11-05,2-Year,Electricity + Gas,Apartment,1,0,4,Medium,Rent,South,Female,1
+C00671,Wendy Williams,64,114,2015-11-23,Monthly,Electricity,Mobile Home,0,1,1,Low,Own,North,Female,0
+C00672,Zach Johnson,53,74,2018-10-18,Annual,Water,Townhouse,1,1,5,Medium,Own,East,Female,1
+C00673,Beth Smith,36,76,2018-09-17,Annual,Gas,Townhouse,0,0,3,Low,Own,West,Male,0
+C00674,Diana Williams,64,12,2023-05-28,Monthly,Electricity + Water,Mobile Home,1,1,3,Medium,Own,West,Female,1
+C00675,Uma Robinson,62,75,2018-09-07,Annual,Electricity + Water,Townhouse,1,1,5,Medium,Rent,Central,Female,0
+C00676,Beth Robinson,77,87,2017-07-26,2-Year,Gas,House,1,0,3,Low,Own,North,Female,0
+C00677,Zach Clark,30,70,2019-10-10,Annual,Electricity + Gas,Condo,1,0,1,Low,Own,West,Male,1
+C00678,Adrian Moore,45,11,2024-05-26,Monthly,Electricity + Gas,Apartment,0,0,3,Low,Rent,West,Female,1
+C00679,Henry Thomas,73,63,2019-09-22,2-Year,Water,House,0,0,4,Low,Own,East,Female,0
+C00680,Bob Taylor,50,112,2015-10-06,Annual,Electricity,Apartment,0,0,2,High,Own,South,Male,0
+C00681,Karen Lewis,74,87,2017-11-06,Annual,Gas,Condo,0,1,1,High,Rent,South,Female,0
+C00682,Diana Anderson,22,17,2023-03-16,Annual,Electricity,House,0,0,1,Low,Rent,West,Male,1
+C00683,Frank Jackson,23,115,2015-11-15,Annual,Water,Apartment,1,0,5,High,Rent,Central,Male,0
+C00684,Grace Davis,66,115,2015-03-07,Monthly,Electricity,House,0,0,1,Medium,Rent,West,Female,0
+C00685,Beth Robinson,42,21,2023-12-08,Monthly,Electricity + Gas,House,1,1,3,High,Own,East,Male,0
+C00686,Zach Martin,51,96,2016-01-26,Monthly,Water,House,0,1,5,Medium,Own,West,Male,1
+C00687,Frank Thomas,45,49,2020-03-22,Annual,Electricity + Water,Townhouse,1,0,2,Medium,Rent,North,Male,1
+C00688,Tina Taylor,44,71,2019-08-06,Annual,Gas,Condo,0,1,2,Medium,Rent,West,Male,1
+C00689,Olivia Taylor,74,53,2020-07-21,Annual,Electricity,House,1,1,4,High,Rent,North,Female,0
+C00690,Karen Williams,27,94,2017-09-05,Monthly,Water,House,1,0,4,Medium,Own,Central,Female,0
+C00691,Henry Martin,65,119,2015-05-13,Annual,Electricity,House,1,1,1,Medium,Own,Central,Female,0
+C00692,Mia Anderson,71,95,2017-01-01,2-Year,Electricity,House,1,1,3,Low,Own,East,Male,0
+C00693,Wendy Clark,58,111,2015-08-19,Monthly,Electricity + Water,Apartment,1,1,1,Medium,Rent,South,Female,0
+C00694,James Davis,44,113,2015-07-06,Annual,Electricity + Water,Townhouse,1,1,2,High,Rent,West,Female,0
+C00695,Grace Jones,30,11,2024-07-07,Annual,Water,Apartment,1,0,2,Medium,Own,West,Female,1
+C00696,Quinn Miller,60,31,2022-05-06,Annual,Electricity + Water,Apartment,1,1,5,Medium,Own,West,Male,0
+C00697,Liam Lewis,48,86,2017-11-06,Monthly,Electricity,Apartment,1,1,5,Medium,Own,East,Male,0
+C00698,James Clark,30,71,2019-10-03,Annual,Electricity,House,0,1,4,Medium,Own,South,Female,0
+C00699,Emma Garcia,42,6,2024-03-16,2-Year,Gas,House,1,1,4,Medium,Rent,North,Female,0
+C00700,Fiona White,75,12,2023-01-25,Annual,Electricity,Condo,1,1,1,High,Rent,South,Male,0
+C00701,Cole Robinson,36,62,2019-03-09,2-Year,Electricity + Water,Townhouse,1,1,1,High,Own,East,Female,0
+C00702,Uma Clark,31,74,2018-01-22,2-Year,Electricity,Condo,1,1,4,Medium,Rent,East,Male,0
+C00703,Uma Jones,60,20,2023-09-16,Monthly,Electricity + Gas,Condo,1,1,3,Medium,Rent,East,Male,1
+C00704,Cole Williams,33,21,2023-08-08,Annual,Electricity + Water,Apartment,0,1,3,Medium,Own,South,Female,0
+C00705,Ethan White,73,16,2023-06-02,Annual,Water,Condo,1,1,4,Low,Own,Central,Female,1
+C00706,Tina Wilson,70,68,2019-08-22,2-Year,Gas,Apartment,1,1,2,Medium,Own,South,Male,0
+C00707,David Anderson,77,1,2024-10-01,Monthly,Electricity + Gas,House,1,1,4,Low,Own,Central,Female,0
+C00708,Emma Moore,73,69,2019-10-12,Monthly,Electricity + Gas,House,1,1,4,Medium,Own,South,Female,0
+C00709,Diana White,35,57,2020-06-01,2-Year,Water,House,1,1,2,Low,Rent,East,Male,0
+C00710,Carol Johnson,33,56,2020-08-22,Monthly,Electricity + Gas,House,0,1,4,Medium,Own,West,Female,0
+C00711,Xander Moore,41,81,2018-07-28,Annual,Gas,Apartment,1,0,1,High,Own,South,Female,0
+C00712,Emma Clark,48,63,2019-12-10,Monthly,Water,Townhouse,0,1,2,Low,Rent,South,Female,1
+C00713,Frank Lewis,71,87,2017-10-09,2-Year,Electricity + Water,Townhouse,1,0,4,Medium,Own,South,Non-binary,0
+C00714,Yara White,63,91,2017-04-16,2-Year,Electricity + Gas,Apartment,1,0,5,High,Rent,Central,Female,0
+C00715,Carol White,58,110,2015-11-15,Monthly,Electricity,House,1,1,1,Medium,Rent,North,Male,0
+C00716,Mia Taylor,71,96,2016-05-11,Annual,Electricity + Gas,Townhouse,1,1,4,Low,Rent,East,Male,0
+C00717,Ethan Martin,58,62,2019-10-11,Monthly,Electricity + Water,Apartment,1,1,3,Medium,Rent,West,Female,0
+C00718,James Johnson,43,59,2020-12-06,Annual,Electricity + Water,House,0,1,4,Medium,Rent,West,Non-binary,0
+C00719,Cole Brown,45,29,2022-10-08,Annual,Electricity + Gas,House,0,1,4,Medium,Rent,East,Male,0
+C00720,Victor Williams,50,72,2018-02-17,Annual,Electricity,Apartment,1,1,1,Low,Own,North,Male,0
+C00721,Liam Johnson,26,17,2023-03-21,Monthly,Electricity + Gas,House,1,0,4,Medium,Own,North,Female,1
+C00722,Paul White,63,111,2015-10-22,Monthly,Electricity + Water,Condo,0,1,2,Medium,Own,East,Male,0
+C00723,Cole Martin,58,101,2016-02-15,Annual,Electricity + Water,Townhouse,1,0,1,Medium,Own,Central,Male,0
+C00724,Karen Anderson,62,15,2023-01-22,Annual,Electricity,Townhouse,1,0,3,Medium,Own,North,Female,0
+C00725,Xander Moore,51,94,2017-04-17,Annual,Gas,House,0,1,1,Low,Own,Central,Female,0
+C00726,Yara Jackson,65,14,2023-06-10,Monthly,Electricity + Gas,Condo,1,0,4,Medium,Own,West,Female,1
+C00727,Victor Lewis,75,86,2017-02-10,Monthly,Electricity,Townhouse,1,0,3,High,Own,North,Female,0
+C00728,David Clark,53,11,2024-02-15,2-Year,Electricity + Water,House,1,1,3,Medium,Own,South,Male,1
+C00729,Victor Williams,46,59,2020-05-09,Monthly,Electricity,Apartment,0,1,1,Medium,Rent,South,Female,1
+C00730,Victor Brown,27,79,2018-08-22,Monthly,Water,Apartment,1,1,4,Medium,Rent,Central,Male,0
+C00731,Yara Moore,65,87,2017-07-06,2-Year,Electricity + Water,Apartment,0,1,1,Medium,Rent,East,Male,0
+C00732,Quinn Lewis,72,50,2020-10-02,Monthly,Water,House,1,1,2,High,Own,South,Female,0
+C00733,James Taylor,61,110,2015-12-14,Annual,Water,Apartment,1,1,2,Medium,Rent,South,Female,0
+C00734,Frank Robinson,70,93,2017-01-03,Monthly,Gas,House,1,1,4,Low,Rent,East,Female,0
+C00735,James Anderson,70,25,2022-09-06,2-Year,Electricity + Water,House,0,0,3,High,Own,North,Male,0
+C00736,Tina Clark,66,80,2018-02-11,Annual,Electricity + Gas,House,1,1,5,Medium,Rent,South,Female,0
+C00737,Zach Jones,50,87,2017-05-01,2-Year,Electricity,Mobile Home,0,1,5,Medium,Own,North,Female,1
+C00738,Frank Moore,27,40,2021-05-07,Monthly,Gas,House,1,1,4,Low,Rent,West,Female,1
+C00739,Yara Clark,22,88,2017-09-16,Annual,Gas,Apartment,1,0,1,Low,Rent,West,Female,0
+C00740,Victor Jones,33,107,2016-04-11,Annual,Electricity + Gas,Apartment,1,0,4,Medium,Own,East,Male,0
+C00741,Frank Clark,46,98,2016-11-26,Monthly,Gas,Condo,1,1,2,Low,Rent,North,Female,1
+C00742,Beth Martin,63,91,2017-05-03,Monthly,Electricity + Gas,Apartment,1,0,5,Low,Own,South,Female,1
+C00743,Xander Smith,47,76,2018-10-21,Monthly,Electricity + Gas,Condo,0,1,5,High,Own,Central,Female,0
+C00744,Xander Moore,23,33,2022-12-17,2-Year,Gas,House,0,0,1,Medium,Own,South,Female,0
+C00745,Liam Miller,33,95,2017-07-19,Annual,Water,House,0,0,1,Low,Own,North,Female,0
+C00746,Victor Harris,76,44,2021-02-19,Annual,Gas,Apartment,1,1,4,Low,Own,North,Male,1
+C00747,Mia Davis,77,64,2019-09-02,Annual,Water,Apartment,1,0,1,Medium,Rent,Central,Male,1
+C00748,Iris Jones,43,38,2021-06-23,Annual,Gas,Condo,0,0,5,Medium,Own,North,Female,0
+C00749,Emma Moore,67,38,2021-05-10,Annual,Electricity + Water,Condo,1,0,3,High,Own,East,Non-binary,1
+C00750,Grace Martin,62,19,2023-06-19,Monthly,Gas,Apartment,0,1,3,Low,Rent,Central,Non-binary,1
+C00751,Carol Taylor,74,115,2015-04-09,Annual,Electricity,Mobile Home,0,0,5,Low,Own,West,Male,0
+C00752,Iris Lewis,71,18,2023-04-12,Monthly,Electricity,Apartment,1,1,2,Medium,Own,East,Male,0
+C00753,Yara Jones,57,11,2024-12-20,2-Year,Electricity + Water,House,0,0,3,Medium,Rent,South,Female,1
+C00754,Karen Garcia,44,112,2015-04-27,Annual,Electricity + Water,Apartment,0,0,5,Medium,Rent,North,Female,0
+C00755,Karen White,57,67,2019-06-25,Monthly,Gas,House,1,1,1,High,Own,North,Male,0
+C00756,Carol Jackson,39,53,2020-09-21,Annual,Water,Condo,0,1,1,Medium,Own,Central,Female,1
+C00757,Xander Davis,41,88,2017-03-16,Monthly,Electricity + Gas,House,1,1,1,Medium,Rent,North,Male,0
+C00758,Cole Lewis,56,46,2021-08-15,2-Year,Electricity,Apartment,1,1,2,High,Rent,North,Female,0
+C00759,Sam White,53,16,2023-11-28,2-Year,Electricity + Gas,Apartment,1,1,1,Low,Own,Central,Male,0
+C00760,Olivia Thompson,54,87,2017-10-06,2-Year,Water,House,1,1,1,High,Own,East,Male,0
+C00761,Paul Moore,43,21,2023-01-27,Monthly,Electricity + Water,House,1,0,5,Medium,Own,South,Male,0
+C00762,Ethan Miller,44,66,2019-05-19,Monthly,Electricity + Water,Townhouse,0,1,3,Medium,Rent,West,Female,0
+C00763,Xander Robinson,22,113,2015-01-18,Monthly,Electricity,House,1,1,2,High,Rent,East,Female,0
+C00764,Cole White,55,112,2015-08-17,Monthly,Gas,Apartment,1,0,3,Medium,Rent,Central,Female,0
+C00765,Sam Thomas,54,43,2021-04-23,Monthly,Electricity + Gas,Apartment,0,1,5,Medium,Own,East,Male,1
+C00766,Adrian Garcia,74,93,2017-11-20,Monthly,Electricity,House,1,1,3,Medium,Rent,West,Male,0
+C00767,Mia Lewis,50,73,2018-03-03,2-Year,Electricity + Gas,House,0,0,3,Medium,Rent,Central,Male,0
+C00768,Iris Wilson,48,58,2020-11-22,Monthly,Electricity,Townhouse,1,0,5,Medium,Own,East,Female,0
+C00769,David Clark,25,17,2023-05-21,Monthly,Electricity,Mobile Home,0,0,1,Low,Rent,South,Male,0
+C00770,Ethan Anderson,33,45,2021-12-26,Annual,Electricity,House,0,1,3,Medium,Own,Central,Female,0
+C00771,Grace Martin,40,78,2018-03-27,Annual,Gas,Mobile Home,1,1,4,Medium,Own,South,Female,0
+C00772,Henry Moore,43,118,2015-04-27,Annual,Water,Apartment,1,0,3,Medium,Rent,North,Female,0
+C00773,Frank Garcia,42,1,2024-05-02,Annual,Electricity,Apartment,1,0,5,Low,Own,East,Male,0
+C00774,Rachel White,44,86,2017-12-18,2-Year,Electricity + Water,Townhouse,0,0,5,Medium,Rent,Central,Female,0
+C00775,James Jackson,65,101,2016-09-27,Annual,Gas,Townhouse,0,0,2,Low,Own,North,Male,0
+C00776,Frank Davis,29,114,2015-10-28,Annual,Electricity,Condo,1,1,5,Low,Own,Central,Male,0
+C00777,Cole Anderson,40,51,2020-07-16,Annual,Gas,Apartment,1,1,2,Medium,Own,Central,Female,0
+C00778,Bob Jackson,31,15,2023-10-26,Monthly,Water,Apartment,0,0,2,Low,Own,Central,Female,0
+C00779,David Thomas,39,33,2022-08-25,Monthly,Electricity,Apartment,1,0,5,Medium,Own,East,Female,0
+C00780,Xander Davis,60,102,2016-09-01,Annual,Electricity,House,0,1,1,Medium,Rent,South,Male,0
+C00781,Yara Williams,24,105,2016-11-25,Monthly,Electricity + Water,Townhouse,0,0,2,Medium,Own,East,Non-binary,1
+C00782,Xander Davis,41,76,2018-12-18,Annual,Electricity + Gas,House,1,1,4,High,Own,North,Non-binary,0
+C00783,Bob Taylor,23,15,2023-07-17,Monthly,Gas,House,1,0,3,High,Rent,Central,Male,0
+C00784,Grace Clark,75,15,2023-06-05,Monthly,Water,House,1,1,5,Medium,Own,West,Female,0
+C00785,Victor Jones,62,57,2020-08-26,Monthly,Electricity + Water,House,1,0,2,High,Rent,East,Male,0
+C00786,Iris Johnson,35,71,2019-09-09,Annual,Gas,Apartment,0,1,3,High,Own,East,Female,1
+C00787,Sam Harris,33,4,2024-12-12,Monthly,Electricity + Gas,Apartment,0,0,1,Medium,Own,West,Female,1
+C00788,Iris Harris,27,82,2018-09-09,Annual,Electricity,Apartment,0,0,2,Medium,Rent,East,Female,0
+C00789,Cole Lewis,48,65,2019-12-28,2-Year,Gas,House,1,1,1,Low,Rent,Central,Female,0
+C00790,Alice Williams,64,2,2024-09-14,Monthly,Electricity + Gas,Apartment,1,0,4,Medium,Rent,Central,Male,1
+C00791,Bob Wilson,54,12,2023-12-04,Annual,Electricity,Apartment,0,0,2,Medium,Own,Central,Female,0
+C00792,Noah Jones,71,55,2020-10-01,Monthly,Electricity + Water,Townhouse,1,0,4,Low,Own,West,Female,0
+C00793,Beth Brown,41,86,2017-11-28,Monthly,Electricity + Water,Apartment,1,1,2,Medium,Rent,West,Male,1
+C00794,Sam Davis,37,99,2016-03-07,Annual,Gas,Apartment,1,0,3,High,Rent,South,Male,0
+C00795,Tina Brown,48,52,2020-12-22,2-Year,Gas,Apartment,0,0,5,Medium,Rent,North,Female,0
+C00796,David Davis,33,36,2021-05-01,Monthly,Electricity,Mobile Home,0,0,5,Low,Rent,East,Female,0
+C00797,Adrian Clark,76,116,2015-10-26,Annual,Electricity + Gas,Townhouse,1,1,1,Low,Rent,Central,Female,0
+C00798,Diana Williams,32,55,2020-05-19,Monthly,Electricity,Apartment,0,0,4,Medium,Own,North,Female,0
+C00799,Henry Harris,48,38,2021-06-07,Annual,Gas,Apartment,1,1,5,High,Rent,East,Female,0
+C00800,Bob Clark,51,53,2020-09-25,Annual,Electricity + Gas,House,1,1,4,High,Own,North,Male,1
+C00801,Paul Jones,25,2,2024-07-09,Annual,Water,Condo,1,1,1,Medium,Own,East,Male,0
+C00802,Sam Jackson,48,36,2021-09-28,Annual,Electricity + Gas,Apartment,0,1,4,Low,Rent,North,Female,0
+C00803,Alice Lewis,47,62,2019-01-17,Monthly,Gas,House,1,1,4,Low,Own,West,Female,0
+C00804,Wendy Davis,36,110,2015-11-13,Annual,Water,Mobile Home,1,1,4,Medium,Own,Central,Female,0
+C00805,Adrian Garcia,29,88,2017-05-02,Annual,Water,Townhouse,1,0,3,High,Rent,West,Female,0
+C00806,Frank Martin,24,93,2017-10-08,Annual,Water,House,0,1,3,Medium,Rent,West,Female,0
+C00807,Xander Williams,22,65,2019-04-02,Monthly,Electricity + Gas,House,0,1,4,Medium,Own,South,Female,1
+C00808,Bob Thomas,48,14,2023-08-24,Monthly,Electricity + Water,House,1,0,3,Medium,Rent,East,Female,1
+C00809,Ethan Johnson,27,47,2021-08-03,Monthly,Gas,Apartment,0,0,4,Medium,Own,North,Male,1
+C00810,Yara Anderson,75,119,2015-02-04,Monthly,Electricity + Water,House,1,0,4,Medium,Rent,South,Female,0
+C00811,Quinn Smith,35,6,2024-06-04,Monthly,Gas,Condo,1,0,2,Medium,Own,East,Female,0
+C00812,Wendy Williams,58,105,2016-08-28,Monthly,Gas,Condo,1,0,4,Medium,Own,West,Male,0
+C00813,Wendy Davis,59,82,2018-11-28,Annual,Electricity + Gas,Apartment,0,0,4,Medium,Own,North,Female,0
+C00814,Grace Robinson,49,34,2022-11-21,Monthly,Electricity + Gas,Apartment,1,0,3,High,Own,Central,Female,1
+C00815,Victor Jones,71,93,2017-05-03,Annual,Water,House,1,0,4,Medium,Own,East,Female,0
+C00816,Carol Anderson,28,100,2016-08-15,Annual,Gas,House,1,1,1,Low,Own,Central,Female,0
+C00817,Victor Clark,35,6,2024-03-27,Annual,Electricity + Water,Townhouse,1,0,2,Low,Rent,East,Male,0
+C00818,Liam White,36,13,2023-11-03,Annual,Gas,House,0,0,4,Medium,Own,East,Male,0
+C00819,Ethan Clark,29,80,2018-11-23,Annual,Electricity + Gas,House,0,0,5,Medium,Own,West,Male,0
+C00820,Liam Jones,38,119,2015-12-01,Annual,Electricity + Water,Apartment,1,0,4,Medium,Rent,Central,Male,0
+C00821,Emma White,39,3,2024-06-23,2-Year,Electricity + Gas,House,0,1,4,Medium,Rent,North,Female,0
+C00822,Carol Moore,64,80,2018-05-16,Annual,Water,Apartment,1,1,2,Medium,Rent,East,Female,0
+C00823,Mia Johnson,38,17,2023-10-25,Annual,Electricity + Water,Townhouse,1,0,4,Medium,Own,North,Female,1
+C00824,Mia Johnson,71,78,2018-09-12,Annual,Electricity + Water,Condo,1,0,2,Medium,Own,East,Male,0
+C00825,Uma Moore,65,75,2018-03-22,Annual,Electricity + Gas,Apartment,0,0,1,Medium,Rent,Central,Male,1
+C00826,Zach Thompson,72,11,2024-07-24,Monthly,Electricity + Gas,Condo,1,0,2,Medium,Rent,Central,Male,1
+C00827,Ethan Wilson,27,82,2018-08-10,Annual,Electricity,Apartment,0,0,4,Low,Own,South,Female,1
+C00828,Carol Clark,77,107,2016-06-18,Annual,Electricity + Gas,Condo,1,0,5,Medium,Rent,South,Male,0
+C00829,Mia Moore,56,103,2016-05-13,2-Year,Electricity + Water,Apartment,0,1,3,High,Rent,East,Female,0
+C00830,Wendy Johnson,77,4,2024-03-13,Annual,Electricity + Gas,House,1,0,5,High,Rent,South,Female,0
+C00831,Victor Wilson,41,30,2022-05-23,Annual,Gas,Condo,0,1,4,Medium,Own,North,Female,0
+C00832,Henry Anderson,75,29,2022-03-07,2-Year,Electricity,House,0,0,3,Medium,Rent,South,Male,1
+C00833,Beth Thomas,54,54,2020-04-04,Annual,Gas,House,1,1,5,Medium,Own,East,Male,0
+C00834,Cole Thomas,26,18,2023-03-14,Monthly,Gas,House,0,0,3,Medium,Rent,East,Female,0
+C00835,Victor Garcia,44,102,2016-05-24,Monthly,Electricity + Water,Apartment,0,1,3,Medium,Own,Central,Female,0
+C00836,Fiona Harris,29,93,2017-08-05,Monthly,Electricity + Gas,Apartment,1,1,4,High,Own,East,Male,0
+C00837,Xander Martin,74,97,2016-05-10,Monthly,Electricity,Apartment,1,0,4,Low,Own,South,Female,0
+C00838,Rachel Williams,39,24,2022-02-19,Monthly,Electricity,Condo,0,0,3,Low,Rent,West,Female,0
+C00839,Beth Williams,34,2,2024-10-14,Annual,Electricity + Water,House,0,1,3,Low,Rent,West,Male,1
+C00840,Beth Lewis,52,109,2015-06-17,Annual,Electricity + Water,Apartment,1,0,5,Low,Rent,East,Male,0
+C00841,Liam Thompson,45,35,2022-08-15,Monthly,Water,Apartment,0,1,1,High,Rent,East,Male,0
+C00842,Sam Taylor,27,79,2018-07-23,Annual,Electricity,Condo,1,1,1,Medium,Rent,South,Male,0
+C00843,Grace Williams,67,109,2015-07-25,Monthly,Electricity,House,1,1,3,Medium,Rent,Central,Male,0
+C00844,Uma Moore,69,5,2024-06-13,2-Year,Electricity,House,1,0,1,Medium,Own,Central,Female,0
+C00845,Tina White,63,1,2024-10-13,Monthly,Water,Apartment,1,0,2,Medium,Rent,North,Male,1
+C00846,Beth Garcia,56,1,2024-11-08,Annual,Water,Townhouse,1,0,3,Medium,Own,South,Female,0
+C00847,Cole Anderson,44,19,2023-11-13,Monthly,Electricity + Water,Townhouse,1,0,3,Low,Own,South,Female,1
+C00848,Cole Johnson,52,7,2024-06-24,Annual,Electricity,Apartment,1,0,2,Medium,Own,Central,Male,1
+C00849,Wendy Lewis,51,98,2016-05-15,Monthly,Electricity,Townhouse,1,0,2,Low,Own,North,Male,0
+C00850,Beth Wilson,31,73,2018-01-20,Annual,Electricity + Water,Apartment,0,0,4,High,Rent,South,Female,0
+C00851,David Williams,26,117,2015-06-12,Monthly,Electricity + Water,House,1,1,5,Low,Rent,South,Non-binary,0
+C00852,Zach Anderson,36,96,2016-12-20,2-Year,Water,House,0,1,4,Medium,Own,East,Female,0
+C00853,Karen Smith,47,115,2015-04-20,Annual,Electricity,House,1,1,3,High,Rent,South,Male,0
+C00854,James Lewis,30,29,2022-11-15,Annual,Electricity,Apartment,1,0,1,Low,Own,East,Male,1
+C00855,Cole Johnson,27,35,2022-10-27,Annual,Electricity,Apartment,1,1,2,Low,Own,West,Male,0
+C00856,Iris Williams,69,102,2016-08-25,2-Year,Water,Apartment,0,1,3,High,Own,Central,Female,0
+C00857,Paul Clark,42,30,2022-07-05,Monthly,Electricity + Water,Apartment,1,0,2,Medium,Own,North,Female,1
+C00858,Xander Anderson,54,7,2024-10-07,Monthly,Water,Apartment,1,0,4,Medium,Own,North,Female,1
+C00859,Yara Robinson,51,80,2018-02-27,Monthly,Gas,Townhouse,0,1,2,Low,Own,North,Female,1
+C00860,Carol Lewis,63,96,2016-02-12,Monthly,Water,Townhouse,0,1,5,Medium,Own,Central,Male,0
+C00861,James White,63,116,2015-03-09,Annual,Electricity,Apartment,0,1,2,Medium,Own,West,Female,0
+C00862,Xander Anderson,38,111,2015-10-23,2-Year,Electricity + Water,Apartment,1,1,3,High,Rent,East,Male,0
+C00863,Cole Williams,69,15,2023-06-17,2-Year,Electricity + Water,Apartment,1,0,4,Medium,Own,West,Female,0
+C00864,Iris Martin,42,92,2017-03-04,Annual,Water,Apartment,1,0,2,High,Own,East,Female,0
+C00865,Xander Thomas,68,101,2016-01-03,Annual,Electricity + Water,Apartment,0,1,4,Medium,Own,South,Female,0
+C00866,Uma Clark,44,84,2017-06-23,2-Year,Electricity + Gas,Apartment,1,1,3,Low,Own,East,Male,0
+C00867,Rachel Davis,28,98,2016-05-22,2-Year,Electricity + Gas,Townhouse,1,1,4,Medium,Own,West,Female,0
+C00868,Henry Smith,64,100,2016-03-10,Monthly,Gas,Apartment,1,1,3,Low,Own,North,Female,0
+C00869,Liam Harris,23,54,2020-01-25,Annual,Electricity + Water,House,1,1,5,Medium,Rent,West,Male,0
+C00870,Yara Thompson,65,5,2024-10-04,Annual,Water,Apartment,0,0,4,Medium,Rent,East,Male,0
+C00871,Henry Wilson,24,55,2020-10-25,Monthly,Electricity,Condo,1,1,1,Medium,Rent,North,Female,1
+C00872,Quinn White,33,25,2022-03-03,Monthly,Electricity + Water,House,1,0,3,Low,Rent,South,Male,0
+C00873,Noah Lewis,55,14,2023-06-18,2-Year,Electricity,Condo,1,1,5,Medium,Own,East,Male,0
+C00874,Sam Harris,74,15,2023-04-24,2-Year,Electricity + Gas,House,1,0,2,Medium,Own,South,Male,0
+C00875,Mia Brown,44,83,2018-05-18,2-Year,Electricity,Apartment,1,1,3,Medium,Own,South,Male,0
+C00876,Iris Williams,28,61,2019-02-22,Annual,Water,Apartment,1,1,4,Medium,Own,West,Male,0
+C00877,Cole Garcia,35,65,2019-12-10,Monthly,Electricity + Gas,House,0,0,2,Low,Own,East,Female,0
+C00878,Cole Williams,72,89,2017-09-09,Monthly,Electricity + Gas,Condo,0,0,3,Medium,Own,East,Male,0
+C00879,Uma Anderson,62,66,2019-11-08,Annual,Water,Apartment,0,1,3,Medium,Rent,West,Female,0
+C00880,Emma Thompson,27,75,2018-04-04,Annual,Water,Mobile Home,0,1,1,Medium,Own,North,Male,0
+C00881,Sam Moore,43,11,2024-11-08,Annual,Gas,House,1,0,1,Low,Own,South,Male,0
+C00882,Karen Clark,36,102,2016-07-07,Annual,Electricity + Water,Condo,1,0,3,Medium,Rent,North,Male,0
+C00883,Liam Anderson,31,54,2020-03-22,Monthly,Electricity + Gas,Condo,1,0,1,Medium,Own,Central,Female,1
+C00884,Olivia Brown,69,19,2023-04-06,Annual,Electricity,Apartment,0,1,5,Medium,Rent,North,Female,1
+C00885,Mia Jones,56,97,2016-10-05,Monthly,Electricity,House,1,1,3,High,Rent,Central,Female,0
+C00886,Paul Harris,32,88,2017-10-21,Monthly,Gas,Townhouse,1,1,4,High,Rent,North,Male,0
+C00887,Bob Anderson,58,7,2024-09-16,Monthly,Water,Apartment,1,1,2,Low,Own,South,Male,0
+C00888,Xander White,45,23,2023-03-07,Monthly,Electricity + Gas,Condo,1,0,2,Medium,Own,West,Male,0
+C00889,Iris Lewis,25,2,2024-08-20,2-Year,Gas,Apartment,0,0,3,Medium,Rent,Central,Female,0
+C00890,Frank Williams,47,33,2022-12-07,Monthly,Electricity + Gas,House,0,1,4,High,Rent,North,Male,0
+C00891,Tina Thomas,32,12,2023-01-22,Monthly,Electricity + Water,House,1,0,2,Low,Rent,South,Non-binary,0
+C00892,Ethan Martin,35,85,2017-04-01,Annual,Electricity + Gas,Townhouse,0,0,2,Medium,Own,Central,Female,0
+C00893,Adrian Jackson,71,63,2019-01-17,Annual,Electricity,Mobile Home,1,0,1,Medium,Own,South,Female,0
+C00894,Emma Jones,61,117,2015-02-17,Monthly,Electricity,House,1,1,3,Medium,Own,South,Female,0
+C00895,Uma Clark,29,90,2017-12-11,Monthly,Electricity + Gas,Townhouse,1,1,4,Medium,Own,West,Male,0
+C00896,Emma White,69,73,2018-03-20,Monthly,Electricity + Gas,Condo,0,1,3,Medium,Own,North,Female,1
+C00897,Diana Martin,54,61,2019-03-11,Annual,Electricity + Water,House,1,1,2,Low,Rent,Central,Male,1
+C00898,Wendy Jones,70,7,2024-01-19,Monthly,Electricity + Gas,House,1,1,2,Medium,Own,Central,Female,0
+C00899,Liam Jones,63,9,2024-12-07,Monthly,Water,Townhouse,0,1,2,High,Rent,Central,Female,0
+C00900,Beth Martin,41,74,2018-06-16,Monthly,Electricity + Gas,Apartment,1,1,2,High,Rent,South,Male,1
+C00901,David Brown,51,1,2024-10-22,Annual,Gas,House,1,1,2,Medium,Own,North,Female,1
+C00902,James Moore,51,6,2024-04-28,Monthly,Water,Condo,0,0,5,Medium,Own,East,Male,0
+C00903,Karen Garcia,62,27,2022-08-11,Annual,Water,Apartment,0,0,2,Low,Rent,South,Male,1
+C00904,Uma Davis,35,106,2016-11-14,Monthly,Water,Condo,0,1,2,High,Own,Central,Female,1
+C00905,Wendy Martin,40,55,2020-09-14,Annual,Electricity,Condo,0,0,4,Medium,Own,West,Male,0
+C00906,Sam Williams,35,85,2017-07-25,Monthly,Water,Condo,1,1,5,Medium,Rent,Central,Female,0
+C00907,Quinn Miller,38,49,2020-03-27,Monthly,Gas,Apartment,0,1,3,High,Rent,West,Female,0
+C00908,Rachel Jones,31,21,2023-03-19,Monthly,Water,House,0,0,4,Low,Rent,West,Female,1
+C00909,Tina Lewis,24,45,2021-08-24,Annual,Water,Apartment,1,1,1,Medium,Rent,North,Male,0
+C00910,Frank Martin,74,11,2024-06-03,2-Year,Water,House,1,1,3,Low,Own,North,Male,1
+C00911,Karen Robinson,26,92,2017-01-22,Monthly,Electricity + Water,Townhouse,0,1,1,Low,Rent,North,Non-binary,0
+C00912,James Garcia,71,22,2023-03-23,Monthly,Electricity + Gas,House,1,1,1,Medium,Rent,East,Male,0
+C00913,Victor Robinson,22,45,2021-06-21,2-Year,Electricity,Apartment,1,0,3,Medium,Rent,South,Female,0
+C00914,Carol Smith,65,117,2015-03-17,Annual,Water,House,0,1,2,High,Rent,Central,Male,0
+C00915,Frank Johnson,40,71,2019-07-26,Monthly,Water,House,0,1,1,Medium,Rent,North,Male,1
+C00916,Quinn Clark,50,55,2020-04-19,Monthly,Electricity,House,0,1,1,High,Rent,Central,Female,1
+C00917,Noah Robinson,37,65,2019-04-24,Annual,Electricity,Apartment,0,1,4,Medium,Own,West,Female,0
+C00918,Adrian Lewis,49,94,2017-02-06,Annual,Gas,Townhouse,1,1,3,Medium,Rent,North,Female,1
+C00919,Bob Harris,47,31,2022-07-19,Annual,Electricity + Water,House,0,0,2,High,Own,North,Female,0
+C00920,Sam Clark,51,76,2018-03-13,2-Year,Electricity + Gas,Condo,1,0,5,Medium,Rent,South,Male,0
+C00921,Tina Harris,44,104,2016-08-25,Annual,Electricity + Water,Condo,0,1,2,Medium,Rent,South,Male,0
+C00922,Paul Thomas,52,69,2019-12-25,Monthly,Electricity + Water,Apartment,1,0,5,Low,Rent,South,Male,0
+C00923,Tina White,68,54,2020-11-24,Annual,Electricity + Gas,Townhouse,0,1,2,Medium,Own,East,Female,0
+C00924,Emma Johnson,46,18,2023-09-07,Monthly,Water,Apartment,1,1,1,High,Own,North,Male,0
+C00925,Karen White,42,30,2022-10-14,Monthly,Gas,House,0,1,1,Medium,Own,North,Female,0
+C00926,Adrian Harris,29,113,2015-12-01,Monthly,Electricity,Apartment,1,1,2,Medium,Own,West,Male,1
+C00927,Diana Miller,42,65,2019-09-28,Monthly,Gas,House,1,0,1,Low,Own,Central,Female,0
+C00928,Victor Lewis,29,36,2021-04-08,Annual,Electricity + Gas,Condo,1,0,1,Medium,Rent,South,Female,1
+C00929,James Taylor,32,50,2020-07-18,Monthly,Electricity,Condo,1,1,2,Medium,Own,Central,Female,0
+C00930,Uma Anderson,75,69,2019-11-14,Monthly,Gas,Condo,0,1,5,Medium,Rent,South,Male,1
+C00931,Zach Jones,27,64,2019-09-26,Annual,Electricity,Apartment,1,0,2,High,Own,South,Non-binary,0
+C00932,Xander Martin,48,84,2017-05-23,Annual,Water,Apartment,1,1,2,Medium,Rent,North,Male,1
+C00933,Grace Taylor,68,31,2022-03-22,Annual,Electricity + Water,Mobile Home,1,1,5,High,Rent,East,Male,0
+C00934,Paul White,75,78,2018-02-19,Annual,Electricity + Water,House,1,0,2,Medium,Rent,East,Male,0
+C00935,Henry Wilson,30,53,2020-05-04,Annual,Gas,House,0,0,5,Medium,Rent,West,Male,0
+C00936,Cole Davis,31,112,2015-10-26,Monthly,Electricity + Gas,Apartment,1,0,4,Low,Rent,North,Female,0
+C00937,James Brown,42,19,2023-07-02,Annual,Electricity + Water,Apartment,1,1,5,Medium,Rent,North,Male,0
+C00938,David Moore,53,18,2023-01-13,Annual,Electricity + Gas,Apartment,1,1,3,Medium,Rent,East,Male,0
+C00939,Yara Lewis,75,55,2020-12-11,Monthly,Gas,House,1,1,3,Medium,Own,North,Female,0
+C00940,Adrian Davis,33,61,2019-05-11,Monthly,Gas,Apartment,0,0,2,Low,Own,North,Female,1
+C00941,Karen Taylor,31,83,2018-05-28,Monthly,Water,House,1,1,3,High,Rent,West,Female,0
+C00942,Uma Miller,36,49,2020-10-07,Annual,Electricity + Gas,House,1,1,4,Low,Own,Central,Female,0
+C00943,Karen Harris,70,109,2015-05-17,Monthly,Electricity + Water,House,0,1,5,Medium,Own,East,Male,0
+C00944,Diana Harris,23,57,2020-08-07,Monthly,Electricity + Water,Apartment,1,0,1,High,Rent,North,Female,0
+C00945,Tina Harris,43,16,2023-12-26,Annual,Electricity,Condo,1,0,1,Medium,Own,Central,Male,1
+C00946,Bob Williams,28,15,2023-07-21,2-Year,Water,Apartment,1,0,1,High,Rent,East,Male,1
+C00947,Zach Martin,30,116,2015-08-12,Monthly,Gas,Townhouse,0,1,4,Medium,Rent,West,Male,1
+C00948,Diana Davis,73,16,2023-05-03,2-Year,Electricity + Gas,Townhouse,1,0,1,High,Rent,North,Female,1
+C00949,Noah Robinson,22,113,2015-11-05,Monthly,Gas,Apartment,1,1,5,Medium,Rent,East,Male,1
+C00950,Wendy Johnson,40,34,2022-01-07,2-Year,Gas,Condo,0,1,2,Medium,Rent,North,Female,0
+C00951,David Moore,73,12,2023-04-12,2-Year,Gas,Townhouse,0,1,2,Low,Rent,West,Male,0
+C00952,Fiona Lewis,56,37,2021-12-25,Monthly,Electricity,Apartment,0,1,5,Medium,Rent,South,Male,0
+C00953,Ethan Moore,26,74,2018-06-04,Annual,Water,House,0,1,4,Low,Own,Central,Male,0
+C00954,Alice Brown,48,51,2020-03-17,2-Year,Electricity,House,1,0,3,High,Rent,North,Male,0
+C00955,Beth Jones,76,94,2017-05-10,2-Year,Gas,Mobile Home,0,1,5,Low,Rent,West,Male,1
+C00956,Quinn Anderson,44,73,2018-04-02,2-Year,Electricity,Townhouse,0,1,4,Low,Own,North,Female,0
+C00957,Zach Anderson,51,48,2020-07-18,Annual,Electricity,Condo,1,0,4,High,Own,West,Female,0
+C00958,Carol Thomas,51,76,2018-03-20,Monthly,Gas,Condo,1,0,2,Low,Rent,East,Male,0
+C00959,David Robinson,58,116,2015-05-27,Annual,Electricity + Water,House,1,1,5,Medium,Own,Central,Female,0
+C00960,Mia Anderson,32,50,2020-11-15,Annual,Electricity + Water,Townhouse,0,0,4,Medium,Rent,West,Male,0
+C00961,Sam Williams,69,19,2023-01-10,Annual,Gas,Apartment,1,1,5,Low,Own,South,Male,1
+C00962,Yara Martin,77,49,2020-10-24,Monthly,Electricity + Gas,Townhouse,1,1,5,Low,Own,North,Male,0
+C00963,Cole Thompson,29,100,2016-01-07,Annual,Electricity + Water,House,0,0,3,Medium,Rent,East,Female,0
+C00964,Rachel Lewis,67,26,2022-06-20,Monthly,Gas,House,0,0,2,Low,Own,East,Male,1
+C00965,Henry Jones,67,113,2015-09-27,Annual,Electricity + Water,Townhouse,1,1,5,Low,Own,North,Female,1
+C00966,Grace Thomas,63,71,2019-12-01,Monthly,Electricity,Townhouse,0,1,5,Low,Rent,East,Male,1
+C00967,Xander Taylor,42,72,2018-04-26,Annual,Gas,Apartment,1,1,1,Medium,Own,South,Female,0
+C00968,Xander Jones,48,38,2021-01-06,Annual,Gas,Apartment,0,1,4,Medium,Own,South,Male,0
+C00969,Mia Lewis,68,110,2015-10-14,Annual,Electricity,Apartment,1,0,4,Low,Rent,North,Female,1
+C00970,Zach Martin,30,5,2024-11-08,Annual,Electricity + Water,Mobile Home,1,1,4,Medium,Rent,South,Female,0
+C00971,Carol Johnson,68,36,2021-07-05,Monthly,Electricity + Water,Apartment,0,0,5,Medium,Rent,South,Male,0
+C00972,Carol Jones,73,50,2020-01-20,2-Year,Gas,Apartment,1,1,2,Low,Own,North,Male,0
+C00973,Victor Harris,60,57,2020-07-14,Annual,Electricity + Water,Apartment,1,0,5,Medium,Own,East,Female,0
+C00974,Diana Jones,41,57,2020-05-15,Monthly,Water,Apartment,1,1,4,High,Rent,South,Non-binary,0
+C00975,Iris Taylor,53,18,2023-06-14,Monthly,Electricity + Water,Apartment,0,1,1,Medium,Rent,North,Non-binary,1
+C00976,Uma Garcia,24,27,2022-01-21,Monthly,Electricity + Water,Apartment,0,1,3,Medium,Own,East,Male,0
+C00977,Zach Lewis,74,12,2023-04-28,Annual,Electricity + Gas,Condo,0,1,1,Medium,Rent,North,Female,0
+C00978,Tina Robinson,41,69,2019-12-15,2-Year,Electricity,Condo,0,0,5,Low,Own,Central,Male,0
+C00979,Victor Martin,25,42,2021-01-05,Annual,Electricity + Water,Condo,0,0,4,High,Rent,East,Male,0
+C00980,Fiona Robinson,66,68,2019-11-10,Monthly,Water,Apartment,1,0,5,High,Rent,Central,Female,1
+C00981,Tina Harris,58,71,2019-07-14,2-Year,Electricity + Water,Apartment,1,1,4,High,Rent,Central,Female,0
+C00982,Bob Anderson,56,84,2017-08-03,Monthly,Electricity + Water,Townhouse,0,0,2,Low,Rent,Central,Female,1
+C00983,Victor Brown,25,66,2019-12-07,2-Year,Electricity,Condo,0,0,3,Medium,Own,East,Female,0
+C00984,Adrian Robinson,64,78,2018-03-06,Monthly,Electricity + Gas,Apartment,0,0,5,Low,Rent,East,Male,0
+C00985,Tina Clark,57,70,2019-12-28,Annual,Electricity,Townhouse,0,0,1,Medium,Own,West,Female,0
+C00986,Bob Lewis,66,78,2018-04-12,2-Year,Electricity,Townhouse,1,0,5,Medium,Rent,North,Male,0
+C00987,Ethan Wilson,68,74,2018-05-25,Monthly,Electricity + Water,Townhouse,0,1,3,Medium,Rent,Central,Male,0
+C00988,Olivia Johnson,33,38,2021-06-16,Annual,Electricity + Water,Townhouse,0,0,3,Low,Own,South,Male,0
+C00989,Ethan Garcia,33,30,2022-08-15,2-Year,Electricity + Water,House,0,1,4,High,Own,North,Female,0
+C00990,Yara Jones,73,94,2017-04-27,Monthly,Electricity + Water,Apartment,0,1,1,Low,Own,South,Female,1
+C00991,Paul Johnson,51,41,2021-10-20,Monthly,Water,Apartment,1,0,1,Low,Own,South,Male,1
+C00992,Henry Miller,46,66,2019-01-07,Annual,Electricity + Gas,House,0,1,1,High,Own,North,Female,0
+C00993,Bob White,38,24,2022-08-08,Monthly,Electricity + Water,Condo,1,1,4,Medium,Rent,West,Non-binary,1
+C00994,Uma Jackson,57,52,2020-08-19,Monthly,Electricity + Gas,Apartment,0,1,1,Medium,Own,North,Female,1
+C00995,James Jackson,64,64,2019-07-01,Annual,Water,House,1,1,4,Medium,Rent,Central,Female,0
+C00996,Noah Jackson,22,75,2018-08-05,Annual,Gas,Condo,1,0,1,Low,Rent,East,Male,1
+C00997,Ethan Johnson,52,63,2019-09-03,Monthly,Water,Townhouse,1,0,4,Low,Rent,West,Female,0
+C00998,Iris Martin,77,43,2021-11-20,Monthly,Electricity + Water,Townhouse,1,1,5,Medium,Own,South,Female,0
+C00999,Noah Thompson,37,115,2015-03-13,Annual,Water,Apartment,1,0,3,Medium,Rent,North,Female,0
+C01000,Uma Harris,37,62,2019-06-01,Annual,Electricity + Gas,Condo,0,0,2,Medium,Rent,North,Female,0

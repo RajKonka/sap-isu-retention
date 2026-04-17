@@ -1,0 +1,3754 @@
+customer_id,channel,satisfaction_score
+C00001,Web Chat,3
+C00001,Web Chat,3
+C00001,Web Chat,3
+C00001,Email,2
+C00002,Web Chat,4
+C00003,Phone,3
+C00003,Email,4
+C00004,Web Chat,1
+C00004,Web Chat,1
+C00004,Web Chat,2
+C00004,Email,1
+C00004,Phone,2
+C00004,Web Chat,1
+C00005,Web Chat,3
+C00005,Web Chat,1
+C00005,Email,2
+C00005,Email,3
+C00005,Phone,2
+C00006,Email,3
+C00006,Web Chat,3
+C00006,Web Chat,4
+C00006,Web Chat,5
+C00007,Phone,2
+C00007,Phone,2
+C00007,Email,2
+C00007,Email,1
+C00007,Email,3
+C00007,Phone,1
+C00008,Phone,3
+C00008,Phone,4
+C00009,Web Chat,5
+C00010,Phone,3
+C00010,Web Chat,3
+C00011,Email,4
+C00011,Email,4
+C00011,Phone,3
+C00011,Phone,5
+C00011,Phone,3
+C00012,Phone,2
+C00012,Web Chat,1
+C00012,Web Chat,3
+C00012,Web Chat,2
+C00012,Web Chat,1
+C00012,Web Chat,1
+C00012,Web Chat,2
+C00012,Phone,2
+C00013,Web Chat,3
+C00013,Phone,5
+C00013,Email,5
+C00014,Web Chat,4
+C00015,Email,3
+C00015,Web Chat,3
+C00016,Email,5
+C00016,Phone,3
+C00016,Email,3
+C00016,Phone,3
+C00017,Phone,5
+C00017,Web Chat,4
+C00018,Phone,4
+C00019,Phone,3
+C00019,Web Chat,5
+C00019,Email,3
+C00019,Email,4
+C00019,Web Chat,3
+C00020,Web Chat,5
+C00021,Phone,3
+C00021,Phone,3
+C00021,Phone,3
+C00022,Web Chat,3
+C00022,Web Chat,5
+C00023,Web Chat,2
+C00023,Email,3
+C00023,Email,2
+C00023,Email,3
+C00023,Phone,3
+C00023,Web Chat,2
+C00023,Phone,3
+C00023,Email,1
+C00023,Email,2
+C00024,Web Chat,4
+C00025,Email,3
+C00026,Web Chat,2
+C00026,Web Chat,1
+C00026,Web Chat,3
+C00026,Email,3
+C00026,Phone,1
+C00026,Web Chat,2
+C00026,Web Chat,1
+C00026,Web Chat,2
+C00026,Phone,3
+C00027,Phone,5
+C00027,Phone,3
+C00027,Email,5
+C00027,Web Chat,4
+C00027,Web Chat,3
+C00028,Web Chat,5
+C00028,Web Chat,5
+C00029,Email,3
+C00029,Phone,3
+C00030,Email,5
+C00030,Web Chat,5
+C00030,Web Chat,4
+C00030,Email,3
+C00031,Phone,3
+C00031,Email,4
+C00031,Web Chat,5
+C00031,Phone,5
+C00031,Email,5
+C00032,Web Chat,3
+C00032,Phone,4
+C00032,Web Chat,5
+C00032,Phone,3
+C00032,Web Chat,4
+C00033,Web Chat,3
+C00033,Email,3
+C00033,Web Chat,2
+C00033,Web Chat,1
+C00033,Email,2
+C00033,Email,1
+C00033,Email,3
+C00034,Email,4
+C00034,Web Chat,3
+C00034,Web Chat,4
+C00034,Web Chat,5
+C00034,Web Chat,5
+C00035,Email,2
+C00035,Email,2
+C00035,Phone,2
+C00035,Web Chat,1
+C00035,Email,3
+C00035,Web Chat,2
+C00036,Email,3
+C00036,Web Chat,4
+C00036,Email,3
+C00036,Web Chat,3
+C00036,Email,4
+C00037,Web Chat,3
+C00037,Email,5
+C00037,Phone,5
+C00037,Web Chat,4
+C00038,Web Chat,4
+C00038,Phone,3
+C00038,Phone,4
+C00038,Web Chat,3
+C00038,Email,4
+C00039,Phone,5
+C00039,Phone,3
+C00039,Email,3
+C00039,Phone,5
+C00040,Phone,5
+C00041,Web Chat,5
+C00041,Phone,4
+C00041,Web Chat,4
+C00041,Phone,3
+C00042,Email,1
+C00042,Phone,1
+C00042,Email,3
+C00042,Email,2
+C00042,Phone,1
+C00042,Phone,1
+C00042,Phone,2
+C00042,Email,2
+C00043,Email,2
+C00043,Email,2
+C00043,Email,3
+C00043,Web Chat,1
+C00044,Email,4
+C00044,Web Chat,4
+C00044,Web Chat,5
+C00045,Email,4
+C00046,Email,5
+C00046,Email,5
+C00046,Email,3
+C00046,Web Chat,5
+C00046,Web Chat,3
+C00047,Email,1
+C00047,Email,1
+C00047,Email,1
+C00047,Email,1
+C00048,Email,4
+C00048,Email,4
+C00048,Phone,3
+C00049,Phone,5
+C00049,Email,4
+C00049,Email,5
+C00049,Email,3
+C00049,Email,5
+C00050,Phone,3
+C00050,Phone,5
+C00050,Phone,4
+C00050,Email,4
+C00050,Web Chat,5
+C00051,Email,5
+C00051,Email,4
+C00051,Web Chat,4
+C00052,Email,5
+C00052,Web Chat,4
+C00052,Phone,4
+C00052,Email,4
+C00053,Web Chat,4
+C00054,Phone,2
+C00054,Email,1
+C00054,Phone,2
+C00054,Email,1
+C00054,Email,1
+C00054,Email,2
+C00054,Email,1
+C00054,Email,2
+C00055,Phone,4
+C00055,Phone,4
+C00055,Phone,3
+C00055,Email,5
+C00055,Email,3
+C00056,Email,4
+C00056,Phone,3
+C00056,Web Chat,3
+C00056,Web Chat,5
+C00057,Web Chat,5
+C00058,Email,2
+C00058,Email,3
+C00058,Phone,3
+C00058,Phone,2
+C00058,Phone,3
+C00058,Phone,1
+C00058,Web Chat,1
+C00058,Email,1
+C00059,Web Chat,3
+C00060,Email,3
+C00060,Phone,2
+C00060,Web Chat,3
+C00060,Phone,1
+C00061,Email,3
+C00061,Email,5
+C00061,Phone,5
+C00061,Web Chat,4
+C00061,Phone,3
+C00062,Email,5
+C00062,Phone,3
+C00062,Phone,4
+C00062,Email,5
+C00062,Phone,3
+C00063,Phone,3
+C00063,Web Chat,3
+C00063,Email,3
+C00064,Email,5
+C00064,Phone,3
+C00064,Phone,4
+C00064,Web Chat,5
+C00065,Web Chat,5
+C00065,Email,4
+C00065,Phone,4
+C00065,Phone,3
+C00066,Phone,2
+C00066,Web Chat,2
+C00066,Email,3
+C00066,Web Chat,1
+C00066,Phone,2
+C00066,Web Chat,2
+C00066,Web Chat,2
+C00066,Web Chat,1
+C00067,Web Chat,5
+C00067,Phone,5
+C00067,Phone,5
+C00067,Web Chat,4
+C00068,Email,1
+C00068,Web Chat,1
+C00068,Phone,3
+C00068,Phone,2
+C00069,Email,3
+C00069,Web Chat,5
+C00069,Web Chat,5
+C00070,Phone,3
+C00070,Web Chat,3
+C00070,Email,2
+C00070,Web Chat,1
+C00070,Phone,3
+C00070,Web Chat,3
+C00071,Email,3
+C00071,Web Chat,4
+C00071,Email,4
+C00071,Web Chat,5
+C00072,Email,5
+C00073,Phone,4
+C00073,Email,5
+C00073,Email,5
+C00073,Phone,4
+C00074,Web Chat,4
+C00074,Email,3
+C00074,Phone,5
+C00074,Phone,5
+C00074,Email,4
+C00075,Email,5
+C00075,Web Chat,5
+C00076,Email,2
+C00076,Web Chat,3
+C00076,Phone,1
+C00076,Email,1
+C00076,Email,3
+C00077,Phone,5
+C00077,Email,5
+C00078,Phone,4
+C00079,Email,3
+C00079,Email,5
+C00079,Web Chat,5
+C00079,Email,4
+C00080,Email,3
+C00080,Web Chat,3
+C00081,Phone,4
+C00081,Web Chat,4
+C00081,Email,4
+C00081,Email,4
+C00082,Web Chat,5
+C00083,Web Chat,5
+C00083,Phone,3
+C00083,Web Chat,3
+C00083,Email,5
+C00083,Web Chat,4
+C00084,Phone,4
+C00084,Email,3
+C00085,Web Chat,2
+C00085,Web Chat,2
+C00085,Web Chat,2
+C00085,Phone,1
+C00085,Phone,2
+C00085,Web Chat,2
+C00085,Email,1
+C00086,Phone,5
+C00086,Phone,3
+C00087,Web Chat,4
+C00088,Web Chat,2
+C00088,Email,2
+C00088,Email,1
+C00088,Phone,1
+C00088,Web Chat,2
+C00088,Phone,3
+C00089,Phone,3
+C00089,Phone,5
+C00089,Email,5
+C00090,Web Chat,3
+C00090,Web Chat,3
+C00090,Phone,3
+C00090,Email,2
+C00090,Web Chat,1
+C00090,Email,1
+C00091,Web Chat,3
+C00091,Phone,4
+C00091,Email,4
+C00092,Phone,5
+C00092,Email,4
+C00092,Phone,3
+C00093,Phone,1
+C00093,Phone,3
+C00093,Phone,2
+C00093,Web Chat,2
+C00093,Web Chat,1
+C00094,Email,3
+C00095,Web Chat,2
+C00095,Email,3
+C00095,Email,1
+C00095,Email,3
+C00095,Web Chat,1
+C00095,Email,3
+C00095,Email,2
+C00095,Email,1
+C00095,Web Chat,1
+C00096,Email,4
+C00097,Phone,1
+C00097,Web Chat,2
+C00097,Email,1
+C00097,Phone,1
+C00097,Web Chat,1
+C00097,Email,2
+C00097,Web Chat,3
+C00098,Email,4
+C00098,Web Chat,4
+C00098,Web Chat,3
+C00098,Web Chat,3
+C00099,Phone,5
+C00099,Phone,3
+C00099,Phone,5
+C00099,Web Chat,5
+C00100,Web Chat,1
+C00100,Web Chat,2
+C00100,Phone,1
+C00100,Web Chat,1
+C00100,Email,2
+C00100,Web Chat,1
+C00101,Web Chat,3
+C00101,Email,5
+C00101,Web Chat,4
+C00101,Web Chat,3
+C00102,Email,3
+C00103,Phone,4
+C00103,Web Chat,5
+C00104,Email,5
+C00105,Phone,4
+C00105,Phone,5
+C00105,Web Chat,4
+C00105,Phone,3
+C00106,Phone,3
+C00106,Email,5
+C00107,Phone,5
+C00107,Web Chat,5
+C00107,Web Chat,5
+C00108,Email,4
+C00109,Web Chat,5
+C00109,Web Chat,4
+C00109,Email,5
+C00110,Web Chat,1
+C00110,Web Chat,3
+C00110,Email,2
+C00110,Phone,2
+C00110,Email,1
+C00110,Email,3
+C00110,Email,2
+C00111,Email,3
+C00111,Web Chat,3
+C00111,Phone,5
+C00111,Phone,5
+C00112,Email,5
+C00112,Phone,3
+C00112,Web Chat,4
+C00112,Phone,5
+C00113,Email,4
+C00113,Email,3
+C00113,Phone,4
+C00113,Web Chat,3
+C00114,Phone,4
+C00114,Web Chat,4
+C00114,Web Chat,5
+C00114,Web Chat,3
+C00114,Phone,3
+C00115,Email,3
+C00115,Phone,5
+C00115,Web Chat,4
+C00116,Phone,3
+C00116,Email,3
+C00116,Web Chat,4
+C00116,Web Chat,4
+C00117,Phone,4
+C00117,Email,4
+C00117,Phone,3
+C00117,Email,5
+C00117,Email,4
+C00118,Email,2
+C00118,Web Chat,2
+C00118,Email,2
+C00118,Email,2
+C00118,Web Chat,2
+C00118,Web Chat,3
+C00119,Web Chat,4
+C00119,Phone,3
+C00119,Email,5
+C00120,Phone,3
+C00120,Phone,4
+C00120,Phone,5
+C00120,Email,4
+C00120,Web Chat,5
+C00121,Phone,4
+C00121,Phone,5
+C00121,Web Chat,3
+C00122,Email,4
+C00122,Phone,5
+C00122,Email,4
+C00123,Web Chat,3
+C00123,Web Chat,3
+C00123,Web Chat,2
+C00123,Phone,3
+C00123,Phone,3
+C00123,Phone,2
+C00124,Phone,3
+C00124,Email,3
+C00124,Web Chat,5
+C00124,Web Chat,4
+C00125,Phone,4
+C00125,Phone,4
+C00125,Web Chat,3
+C00126,Email,3
+C00126,Email,5
+C00126,Email,5
+C00126,Web Chat,4
+C00127,Web Chat,3
+C00127,Web Chat,1
+C00127,Web Chat,2
+C00127,Email,1
+C00127,Phone,1
+C00127,Web Chat,2
+C00127,Web Chat,2
+C00128,Email,4
+C00128,Email,5
+C00128,Email,4
+C00129,Web Chat,4
+C00129,Email,4
+C00129,Web Chat,4
+C00129,Email,3
+C00130,Phone,3
+C00130,Web Chat,3
+C00130,Email,5
+C00131,Email,3
+C00131,Email,4
+C00131,Email,3
+C00131,Email,4
+C00131,Phone,5
+C00132,Web Chat,2
+C00132,Web Chat,3
+C00132,Phone,1
+C00132,Web Chat,3
+C00132,Web Chat,1
+C00132,Web Chat,2
+C00132,Web Chat,2
+C00132,Phone,3
+C00133,Email,4
+C00134,Web Chat,5
+C00135,Phone,4
+C00135,Email,3
+C00136,Web Chat,1
+C00136,Phone,1
+C00136,Email,1
+C00136,Web Chat,3
+C00136,Phone,3
+C00136,Email,2
+C00136,Email,1
+C00137,Web Chat,4
+C00137,Phone,5
+C00137,Web Chat,5
+C00138,Web Chat,4
+C00138,Email,4
+C00138,Email,5
+C00139,Web Chat,3
+C00139,Web Chat,2
+C00139,Web Chat,3
+C00139,Web Chat,2
+C00139,Email,1
+C00139,Phone,3
+C00140,Email,1
+C00140,Web Chat,2
+C00140,Phone,3
+C00140,Web Chat,1
+C00141,Email,4
+C00141,Web Chat,4
+C00141,Web Chat,4
+C00141,Email,4
+C00141,Email,3
+C00142,Phone,1
+C00142,Web Chat,2
+C00142,Phone,2
+C00142,Phone,3
+C00143,Phone,4
+C00143,Web Chat,4
+C00143,Email,4
+C00143,Email,4
+C00144,Phone,4
+C00144,Phone,4
+C00144,Phone,5
+C00144,Web Chat,4
+C00145,Email,5
+C00145,Web Chat,4
+C00145,Phone,3
+C00145,Phone,3
+C00146,Phone,3
+C00146,Web Chat,3
+C00146,Web Chat,5
+C00146,Web Chat,5
+C00146,Phone,3
+C00147,Web Chat,3
+C00147,Email,5
+C00147,Web Chat,5
+C00147,Phone,3
+C00148,Web Chat,4
+C00148,Web Chat,3
+C00148,Phone,5
+C00148,Phone,4
+C00148,Web Chat,4
+C00149,Web Chat,5
+C00149,Web Chat,4
+C00149,Web Chat,3
+C00149,Web Chat,3
+C00149,Email,4
+C00150,Web Chat,5
+C00150,Phone,3
+C00150,Web Chat,3
+C00150,Phone,4
+C00151,Phone,3
+C00151,Web Chat,3
+C00151,Email,3
+C00152,Phone,3
+C00152,Email,5
+C00152,Email,4
+C00152,Web Chat,3
+C00153,Web Chat,5
+C00154,Phone,3
+C00154,Phone,4
+C00154,Phone,4
+C00154,Email,3
+C00155,Web Chat,3
+C00155,Phone,3
+C00155,Phone,3
+C00155,Email,4
+C00155,Phone,3
+C00156,Web Chat,2
+C00156,Web Chat,1
+C00156,Phone,3
+C00156,Email,1
+C00156,Web Chat,3
+C00156,Web Chat,2
+C00156,Phone,3
+C00156,Phone,1
+C00156,Email,1
+C00157,Web Chat,1
+C00157,Web Chat,3
+C00157,Web Chat,2
+C00157,Email,1
+C00157,Web Chat,2
+C00158,Email,4
+C00159,Web Chat,4
+C00160,Email,3
+C00160,Phone,4
+C00160,Phone,4
+C00160,Web Chat,3
+C00161,Email,4
+C00161,Phone,4
+C00161,Email,4
+C00162,Email,3
+C00162,Email,2
+C00162,Email,3
+C00162,Web Chat,2
+C00162,Web Chat,3
+C00162,Email,2
+C00162,Web Chat,1
+C00163,Web Chat,5
+C00163,Phone,4
+C00163,Phone,4
+C00163,Email,3
+C00164,Email,4
+C00164,Web Chat,3
+C00164,Email,3
+C00165,Phone,2
+C00165,Email,3
+C00165,Email,2
+C00165,Phone,3
+C00165,Web Chat,3
+C00165,Phone,2
+C00166,Phone,5
+C00166,Web Chat,5
+C00166,Phone,4
+C00166,Phone,4
+C00167,Email,3
+C00168,Email,3
+C00168,Email,4
+C00168,Web Chat,3
+C00168,Phone,5
+C00168,Web Chat,3
+C00169,Email,3
+C00169,Email,5
+C00170,Web Chat,4
+C00170,Phone,3
+C00170,Email,4
+C00170,Phone,4
+C00171,Web Chat,3
+C00171,Phone,3
+C00171,Web Chat,5
+C00171,Email,4
+C00172,Web Chat,5
+C00173,Web Chat,3
+C00173,Web Chat,4
+C00174,Web Chat,2
+C00174,Phone,3
+C00174,Web Chat,2
+C00174,Email,2
+C00175,Web Chat,3
+C00176,Email,4
+C00176,Email,4
+C00176,Phone,5
+C00176,Email,3
+C00176,Email,5
+C00177,Web Chat,3
+C00178,Web Chat,3
+C00179,Phone,1
+C00179,Phone,3
+C00179,Phone,2
+C00179,Email,1
+C00179,Phone,1
+C00179,Email,2
+C00179,Email,1
+C00179,Phone,1
+C00180,Web Chat,4
+C00180,Web Chat,3
+C00180,Phone,3
+C00180,Phone,4
+C00180,Phone,3
+C00181,Web Chat,4
+C00182,Email,5
+C00182,Phone,5
+C00183,Phone,4
+C00184,Email,2
+C00184,Web Chat,3
+C00184,Email,2
+C00184,Phone,1
+C00184,Email,2
+C00184,Web Chat,2
+C00184,Email,1
+C00184,Web Chat,1
+C00185,Web Chat,5
+C00185,Phone,3
+C00185,Web Chat,5
+C00185,Phone,3
+C00185,Web Chat,5
+C00186,Web Chat,4
+C00186,Email,5
+C00186,Email,4
+C00186,Web Chat,3
+C00186,Email,5
+C00187,Web Chat,3
+C00187,Phone,5
+C00187,Phone,3
+C00188,Phone,4
+C00188,Web Chat,5
+C00188,Email,4
+C00188,Web Chat,4
+C00188,Email,3
+C00189,Email,1
+C00189,Email,1
+C00189,Web Chat,1
+C00189,Email,1
+C00189,Email,1
+C00189,Email,2
+C00189,Email,2
+C00189,Web Chat,1
+C00189,Email,1
+C00190,Phone,1
+C00190,Phone,1
+C00190,Email,1
+C00190,Web Chat,1
+C00190,Email,3
+C00190,Email,2
+C00190,Phone,1
+C00190,Phone,2
+C00191,Email,3
+C00191,Phone,3
+C00191,Phone,5
+C00191,Web Chat,3
+C00192,Email,4
+C00192,Email,3
+C00192,Phone,3
+C00192,Email,5
+C00193,Web Chat,3
+C00193,Web Chat,3
+C00193,Phone,5
+C00193,Phone,4
+C00193,Email,4
+C00194,Web Chat,2
+C00194,Email,2
+C00194,Email,1
+C00194,Email,2
+C00194,Web Chat,3
+C00194,Phone,3
+C00194,Web Chat,1
+C00194,Web Chat,3
+C00194,Web Chat,2
+C00195,Phone,5
+C00195,Web Chat,4
+C00195,Email,5
+C00196,Phone,5
+C00196,Phone,4
+C00197,Web Chat,5
+C00197,Email,4
+C00197,Web Chat,4
+C00197,Web Chat,3
+C00198,Phone,3
+C00198,Web Chat,3
+C00198,Phone,2
+C00198,Phone,1
+C00198,Web Chat,2
+C00198,Phone,1
+C00198,Email,3
+C00199,Web Chat,4
+C00199,Email,4
+C00199,Web Chat,4
+C00199,Web Chat,3
+C00200,Email,4
+C00200,Web Chat,5
+C00201,Phone,4
+C00201,Phone,5
+C00202,Phone,3
+C00202,Phone,3
+C00203,Email,2
+C00203,Phone,2
+C00203,Email,2
+C00203,Web Chat,1
+C00203,Email,1
+C00203,Phone,3
+C00203,Web Chat,1
+C00203,Email,2
+C00203,Web Chat,2
+C00204,Web Chat,5
+C00204,Email,5
+C00204,Web Chat,3
+C00205,Phone,1
+C00205,Web Chat,1
+C00205,Email,3
+C00205,Email,1
+C00205,Phone,1
+C00205,Email,2
+C00205,Phone,3
+C00206,Email,2
+C00206,Email,2
+C00206,Email,3
+C00206,Email,1
+C00206,Web Chat,3
+C00207,Email,4
+C00207,Email,3
+C00207,Phone,4
+C00207,Web Chat,3
+C00208,Phone,5
+C00208,Email,5
+C00208,Web Chat,4
+C00208,Web Chat,5
+C00209,Web Chat,4
+C00209,Email,3
+C00209,Web Chat,3
+C00209,Email,5
+C00210,Web Chat,3
+C00210,Phone,5
+C00211,Web Chat,4
+C00211,Email,3
+C00211,Email,3
+C00211,Web Chat,5
+C00211,Web Chat,3
+C00212,Phone,2
+C00212,Email,1
+C00212,Phone,3
+C00212,Email,2
+C00212,Phone,1
+C00212,Email,1
+C00212,Phone,2
+C00213,Phone,1
+C00213,Phone,1
+C00213,Phone,2
+C00213,Web Chat,1
+C00213,Web Chat,1
+C00213,Phone,1
+C00213,Email,2
+C00213,Web Chat,2
+C00214,Web Chat,4
+C00214,Phone,3
+C00214,Web Chat,3
+C00214,Email,4
+C00214,Phone,3
+C00215,Phone,2
+C00215,Email,2
+C00215,Email,2
+C00215,Web Chat,3
+C00216,Email,3
+C00216,Email,3
+C00216,Web Chat,5
+C00217,Phone,3
+C00217,Web Chat,3
+C00218,Web Chat,4
+C00218,Email,4
+C00218,Web Chat,3
+C00218,Phone,3
+C00218,Web Chat,3
+C00219,Email,3
+C00220,Email,5
+C00220,Email,5
+C00221,Phone,5
+C00221,Web Chat,4
+C00221,Phone,3
+C00221,Web Chat,4
+C00221,Web Chat,5
+C00222,Phone,3
+C00222,Web Chat,3
+C00223,Email,5
+C00223,Email,5
+C00223,Web Chat,3
+C00223,Web Chat,3
+C00223,Phone,3
+C00224,Phone,5
+C00225,Phone,3
+C00225,Phone,4
+C00225,Email,5
+C00225,Web Chat,5
+C00225,Email,5
+C00226,Web Chat,4
+C00227,Phone,4
+C00228,Web Chat,3
+C00228,Web Chat,3
+C00228,Web Chat,5
+C00229,Web Chat,5
+C00229,Email,3
+C00230,Web Chat,3
+C00230,Phone,2
+C00230,Phone,3
+C00230,Web Chat,3
+C00230,Phone,2
+C00230,Email,1
+C00230,Email,2
+C00231,Email,3
+C00231,Email,3
+C00231,Phone,3
+C00231,Web Chat,5
+C00231,Web Chat,3
+C00232,Email,3
+C00232,Email,2
+C00232,Email,1
+C00232,Email,1
+C00232,Phone,3
+C00233,Phone,5
+C00234,Phone,4
+C00234,Email,5
+C00234,Web Chat,3
+C00234,Email,5
+C00234,Phone,3
+C00235,Email,4
+C00235,Phone,3
+C00235,Phone,5
+C00235,Phone,5
+C00236,Phone,5
+C00237,Phone,1
+C00237,Web Chat,3
+C00237,Web Chat,1
+C00237,Phone,1
+C00237,Email,1
+C00237,Web Chat,3
+C00237,Web Chat,2
+C00237,Web Chat,3
+C00237,Phone,1
+C00238,Phone,2
+C00238,Phone,3
+C00238,Web Chat,1
+C00238,Email,2
+C00238,Email,2
+C00238,Web Chat,2
+C00239,Phone,3
+C00239,Email,5
+C00240,Email,3
+C00241,Email,3
+C00241,Web Chat,5
+C00241,Web Chat,4
+C00241,Phone,3
+C00242,Phone,3
+C00242,Email,4
+C00242,Email,5
+C00242,Web Chat,5
+C00242,Phone,4
+C00243,Email,2
+C00243,Phone,2
+C00243,Web Chat,2
+C00243,Email,2
+C00243,Email,1
+C00243,Email,1
+C00243,Phone,3
+C00243,Email,2
+C00244,Email,2
+C00244,Phone,2
+C00244,Web Chat,2
+C00244,Phone,2
+C00244,Phone,2
+C00244,Phone,2
+C00245,Email,5
+C00245,Phone,5
+C00245,Email,5
+C00245,Email,3
+C00246,Email,4
+C00246,Email,3
+C00246,Email,3
+C00247,Email,4
+C00247,Phone,4
+C00247,Email,5
+C00247,Phone,4
+C00248,Phone,2
+C00248,Web Chat,2
+C00248,Email,2
+C00248,Phone,2
+C00248,Email,3
+C00248,Phone,1
+C00248,Email,2
+C00248,Phone,2
+C00249,Phone,5
+C00249,Web Chat,5
+C00249,Web Chat,5
+C00250,Email,5
+C00250,Web Chat,5
+C00250,Web Chat,5
+C00250,Email,5
+C00251,Web Chat,4
+C00251,Web Chat,5
+C00251,Email,3
+C00252,Email,4
+C00253,Web Chat,3
+C00254,Phone,3
+C00254,Web Chat,4
+C00254,Phone,4
+C00254,Email,4
+C00255,Web Chat,5
+C00255,Email,4
+C00255,Email,3
+C00255,Email,4
+C00256,Phone,3
+C00256,Email,4
+C00257,Web Chat,3
+C00257,Phone,4
+C00257,Phone,3
+C00257,Phone,3
+C00258,Web Chat,3
+C00258,Email,4
+C00258,Phone,5
+C00258,Phone,3
+C00259,Web Chat,3
+C00260,Email,3
+C00260,Email,4
+C00260,Phone,5
+C00261,Web Chat,5
+C00262,Web Chat,4
+C00262,Phone,4
+C00262,Email,4
+C00262,Email,3
+C00263,Web Chat,4
+C00264,Email,3
+C00264,Web Chat,2
+C00264,Email,3
+C00264,Email,3
+C00265,Phone,5
+C00265,Phone,5
+C00265,Web Chat,5
+C00266,Web Chat,2
+C00266,Phone,1
+C00266,Web Chat,3
+C00266,Phone,1
+C00266,Email,1
+C00266,Email,3
+C00267,Phone,3
+C00267,Phone,4
+C00267,Phone,5
+C00267,Email,5
+C00267,Email,5
+C00268,Email,3
+C00269,Email,3
+C00270,Web Chat,3
+C00271,Web Chat,5
+C00271,Web Chat,5
+C00272,Phone,5
+C00272,Email,4
+C00273,Web Chat,5
+C00273,Email,5
+C00274,Email,5
+C00275,Web Chat,5
+C00275,Phone,4
+C00276,Phone,5
+C00276,Email,4
+C00276,Phone,4
+C00276,Phone,5
+C00276,Email,3
+C00277,Web Chat,3
+C00277,Web Chat,4
+C00277,Email,5
+C00278,Web Chat,4
+C00278,Web Chat,3
+C00278,Email,3
+C00278,Web Chat,4
+C00279,Email,5
+C00279,Phone,3
+C00280,Phone,5
+C00281,Phone,4
+C00282,Web Chat,4
+C00283,Phone,2
+C00283,Email,1
+C00283,Phone,1
+C00283,Web Chat,1
+C00283,Email,3
+C00283,Email,1
+C00283,Phone,2
+C00283,Email,1
+C00284,Email,3
+C00284,Web Chat,4
+C00284,Email,5
+C00285,Email,5
+C00285,Phone,4
+C00285,Web Chat,5
+C00286,Phone,2
+C00286,Phone,1
+C00286,Web Chat,2
+C00286,Web Chat,2
+C00287,Email,3
+C00287,Web Chat,4
+C00287,Phone,5
+C00287,Phone,3
+C00288,Phone,5
+C00288,Web Chat,3
+C00289,Web Chat,5
+C00289,Web Chat,5
+C00289,Email,4
+C00289,Phone,3
+C00289,Phone,3
+C00290,Email,5
+C00291,Phone,5
+C00292,Web Chat,2
+C00292,Phone,2
+C00292,Email,3
+C00292,Phone,1
+C00292,Phone,1
+C00292,Email,2
+C00292,Phone,3
+C00292,Email,3
+C00292,Email,3
+C00293,Web Chat,5
+C00293,Email,3
+C00293,Phone,4
+C00293,Web Chat,3
+C00294,Phone,5
+C00294,Phone,5
+C00295,Email,3
+C00295,Web Chat,3
+C00296,Phone,3
+C00296,Web Chat,4
+C00296,Email,4
+C00297,Phone,2
+C00297,Phone,3
+C00297,Web Chat,2
+C00297,Web Chat,1
+C00297,Email,2
+C00297,Web Chat,1
+C00297,Web Chat,2
+C00297,Email,3
+C00297,Email,2
+C00298,Email,5
+C00298,Phone,3
+C00298,Email,5
+C00298,Email,5
+C00298,Phone,3
+C00299,Email,5
+C00300,Web Chat,4
+C00300,Web Chat,5
+C00300,Web Chat,3
+C00301,Phone,3
+C00301,Phone,3
+C00301,Email,3
+C00301,Web Chat,4
+C00301,Web Chat,5
+C00302,Phone,5
+C00302,Phone,3
+C00302,Web Chat,5
+C00303,Phone,1
+C00303,Email,3
+C00303,Email,2
+C00303,Phone,3
+C00303,Web Chat,1
+C00303,Web Chat,2
+C00304,Phone,4
+C00304,Phone,5
+C00305,Email,3
+C00305,Phone,1
+C00305,Phone,1
+C00305,Phone,3
+C00305,Phone,2
+C00305,Phone,3
+C00305,Phone,1
+C00305,Web Chat,1
+C00305,Email,2
+C00306,Email,4
+C00307,Web Chat,5
+C00308,Web Chat,5
+C00308,Email,5
+C00308,Web Chat,5
+C00309,Phone,5
+C00309,Web Chat,5
+C00309,Email,3
+C00309,Phone,3
+C00309,Phone,5
+C00310,Email,5
+C00310,Web Chat,5
+C00311,Phone,3
+C00311,Phone,5
+C00311,Email,5
+C00311,Phone,5
+C00311,Phone,4
+C00312,Email,1
+C00312,Email,1
+C00312,Email,3
+C00312,Phone,1
+C00312,Phone,3
+C00312,Email,3
+C00312,Phone,1
+C00312,Email,3
+C00312,Email,2
+C00313,Web Chat,4
+C00313,Web Chat,5
+C00313,Web Chat,4
+C00313,Phone,5
+C00314,Phone,3
+C00314,Phone,4
+C00315,Email,5
+C00315,Email,5
+C00315,Phone,5
+C00315,Phone,3
+C00316,Web Chat,5
+C00316,Web Chat,5
+C00316,Phone,5
+C00317,Phone,4
+C00317,Phone,3
+C00317,Phone,3
+C00318,Email,3
+C00318,Phone,3
+C00318,Phone,4
+C00319,Email,2
+C00319,Phone,3
+C00319,Web Chat,1
+C00319,Phone,3
+C00319,Phone,3
+C00319,Web Chat,2
+C00319,Phone,1
+C00319,Phone,2
+C00320,Email,5
+C00320,Email,3
+C00320,Phone,4
+C00321,Web Chat,3
+C00321,Phone,5
+C00321,Phone,5
+C00322,Web Chat,5
+C00322,Web Chat,5
+C00323,Web Chat,5
+C00323,Phone,5
+C00323,Phone,3
+C00323,Phone,3
+C00323,Phone,3
+C00324,Email,4
+C00324,Web Chat,4
+C00325,Email,3
+C00325,Phone,2
+C00325,Phone,1
+C00325,Web Chat,3
+C00326,Phone,4
+C00326,Phone,3
+C00326,Phone,4
+C00327,Web Chat,3
+C00327,Phone,3
+C00327,Email,1
+C00327,Phone,1
+C00327,Web Chat,3
+C00328,Email,4
+C00328,Phone,4
+C00328,Phone,5
+C00328,Phone,5
+C00329,Phone,5
+C00329,Web Chat,4
+C00329,Web Chat,5
+C00329,Email,5
+C00329,Email,5
+C00330,Email,5
+C00330,Web Chat,4
+C00330,Email,3
+C00330,Email,5
+C00330,Phone,4
+C00331,Phone,5
+C00331,Email,5
+C00331,Phone,3
+C00332,Web Chat,4
+C00332,Email,4
+C00332,Email,4
+C00332,Email,4
+C00332,Web Chat,5
+C00333,Email,5
+C00333,Email,3
+C00333,Phone,3
+C00334,Phone,5
+C00334,Email,3
+C00335,Web Chat,2
+C00335,Web Chat,2
+C00335,Email,3
+C00335,Email,2
+C00335,Phone,1
+C00336,Email,4
+C00336,Phone,4
+C00337,Web Chat,3
+C00338,Phone,1
+C00338,Web Chat,2
+C00338,Web Chat,1
+C00338,Email,2
+C00338,Phone,2
+C00339,Email,3
+C00339,Email,3
+C00339,Web Chat,4
+C00340,Web Chat,4
+C00340,Email,5
+C00340,Web Chat,4
+C00340,Phone,3
+C00340,Email,3
+C00341,Web Chat,3
+C00341,Web Chat,5
+C00341,Web Chat,5
+C00341,Web Chat,3
+C00341,Web Chat,5
+C00342,Email,5
+C00342,Phone,5
+C00343,Web Chat,3
+C00343,Email,3
+C00343,Phone,1
+C00343,Email,3
+C00343,Email,3
+C00343,Phone,3
+C00343,Email,3
+C00343,Web Chat,3
+C00344,Phone,5
+C00345,Email,4
+C00345,Email,5
+C00345,Email,3
+C00345,Email,4
+C00346,Web Chat,4
+C00346,Phone,4
+C00347,Email,5
+C00347,Email,4
+C00348,Email,2
+C00348,Phone,3
+C00348,Email,2
+C00348,Phone,3
+C00348,Web Chat,2
+C00348,Web Chat,1
+C00348,Phone,2
+C00349,Web Chat,4
+C00349,Email,5
+C00349,Email,3
+C00350,Email,5
+C00350,Phone,3
+C00351,Email,5
+C00351,Email,3
+C00351,Email,5
+C00351,Phone,4
+C00351,Phone,4
+C00352,Email,5
+C00353,Web Chat,4
+C00353,Web Chat,5
+C00353,Email,3
+C00353,Phone,5
+C00354,Email,3
+C00354,Email,2
+C00354,Email,2
+C00354,Email,3
+C00354,Email,3
+C00354,Web Chat,3
+C00355,Email,2
+C00355,Web Chat,2
+C00355,Phone,1
+C00355,Email,1
+C00355,Phone,3
+C00355,Web Chat,1
+C00355,Web Chat,3
+C00356,Web Chat,3
+C00356,Web Chat,5
+C00356,Web Chat,3
+C00356,Email,5
+C00356,Phone,3
+C00357,Web Chat,3
+C00358,Web Chat,5
+C00358,Web Chat,4
+C00359,Email,3
+C00359,Web Chat,5
+C00359,Phone,4
+C00359,Phone,4
+C00360,Email,3
+C00360,Phone,5
+C00360,Web Chat,3
+C00361,Email,2
+C00361,Email,1
+C00361,Web Chat,3
+C00361,Phone,2
+C00361,Email,2
+C00362,Phone,4
+C00362,Email,4
+C00362,Email,3
+C00362,Phone,5
+C00363,Phone,3
+C00363,Web Chat,5
+C00363,Email,5
+C00363,Web Chat,5
+C00363,Web Chat,5
+C00364,Email,4
+C00364,Phone,3
+C00364,Web Chat,4
+C00364,Web Chat,4
+C00364,Web Chat,4
+C00365,Phone,3
+C00365,Email,3
+C00365,Email,5
+C00365,Phone,3
+C00365,Web Chat,3
+C00366,Email,5
+C00367,Email,4
+C00368,Web Chat,4
+C00368,Email,3
+C00368,Web Chat,3
+C00369,Web Chat,3
+C00369,Email,5
+C00369,Phone,3
+C00369,Web Chat,4
+C00370,Web Chat,3
+C00370,Phone,5
+C00371,Email,4
+C00371,Phone,4
+C00371,Email,5
+C00372,Web Chat,5
+C00372,Web Chat,4
+C00372,Phone,3
+C00372,Email,3
+C00373,Web Chat,4
+C00373,Email,3
+C00373,Web Chat,5
+C00374,Web Chat,4
+C00374,Phone,5
+C00375,Web Chat,5
+C00375,Web Chat,3
+C00375,Web Chat,4
+C00376,Web Chat,4
+C00376,Phone,5
+C00376,Email,5
+C00377,Phone,4
+C00377,Email,3
+C00377,Phone,3
+C00377,Web Chat,4
+C00377,Web Chat,4
+C00378,Phone,1
+C00378,Phone,2
+C00378,Email,3
+C00378,Web Chat,3
+C00378,Web Chat,1
+C00378,Phone,3
+C00379,Web Chat,2
+C00379,Email,2
+C00379,Phone,2
+C00379,Phone,3
+C00380,Phone,4
+C00380,Phone,4
+C00380,Email,3
+C00380,Phone,4
+C00381,Email,3
+C00381,Phone,4
+C00381,Email,3
+C00381,Phone,4
+C00381,Email,3
+C00382,Web Chat,3
+C00382,Phone,4
+C00382,Phone,5
+C00383,Phone,3
+C00383,Email,3
+C00384,Web Chat,3
+C00384,Web Chat,4
+C00385,Email,5
+C00385,Email,4
+C00385,Web Chat,4
+C00385,Web Chat,5
+C00386,Phone,4
+C00387,Web Chat,4
+C00387,Phone,5
+C00387,Email,5
+C00387,Web Chat,5
+C00388,Email,3
+C00388,Web Chat,4
+C00388,Phone,5
+C00388,Phone,3
+C00388,Phone,5
+C00389,Phone,4
+C00389,Email,4
+C00389,Email,5
+C00389,Phone,4
+C00390,Web Chat,3
+C00390,Email,1
+C00390,Email,2
+C00390,Email,1
+C00390,Phone,3
+C00391,Email,2
+C00391,Web Chat,3
+C00391,Email,3
+C00391,Phone,2
+C00391,Web Chat,2
+C00391,Web Chat,1
+C00391,Web Chat,1
+C00391,Phone,1
+C00391,Email,2
+C00392,Web Chat,4
+C00392,Email,5
+C00392,Email,5
+C00392,Email,3
+C00392,Phone,3
+C00393,Phone,5
+C00393,Web Chat,4
+C00394,Phone,4
+C00394,Email,4
+C00394,Phone,4
+C00394,Web Chat,5
+C00395,Web Chat,4
+C00395,Web Chat,5
+C00395,Web Chat,3
+C00395,Email,5
+C00395,Phone,5
+C00396,Phone,3
+C00396,Email,3
+C00396,Web Chat,5
+C00397,Email,5
+C00398,Web Chat,2
+C00398,Web Chat,3
+C00398,Phone,3
+C00398,Web Chat,3
+C00398,Phone,1
+C00398,Phone,2
+C00398,Web Chat,2
+C00399,Email,2
+C00399,Web Chat,3
+C00399,Email,2
+C00399,Web Chat,1
+C00399,Email,3
+C00399,Web Chat,1
+C00400,Email,3
+C00400,Phone,2
+C00400,Web Chat,3
+C00400,Email,2
+C00400,Email,2
+C00400,Web Chat,2
+C00400,Phone,2
+C00400,Email,3
+C00401,Web Chat,4
+C00402,Web Chat,1
+C00402,Phone,3
+C00402,Phone,3
+C00402,Email,2
+C00403,Phone,3
+C00403,Web Chat,3
+C00403,Phone,4
+C00403,Phone,4
+C00404,Phone,5
+C00404,Email,4
+C00405,Phone,2
+C00405,Phone,2
+C00405,Email,1
+C00405,Web Chat,2
+C00406,Phone,4
+C00406,Phone,5
+C00406,Email,3
+C00406,Web Chat,3
+C00406,Phone,3
+C00407,Web Chat,3
+C00407,Web Chat,3
+C00408,Email,3
+C00408,Web Chat,4
+C00409,Web Chat,4
+C00410,Phone,1
+C00410,Phone,1
+C00410,Phone,3
+C00410,Phone,1
+C00410,Phone,3
+C00410,Email,2
+C00410,Email,2
+C00410,Phone,3
+C00410,Email,1
+C00411,Web Chat,2
+C00411,Email,1
+C00411,Email,2
+C00411,Web Chat,2
+C00411,Phone,2
+C00412,Web Chat,3
+C00412,Email,5
+C00412,Web Chat,4
+C00412,Phone,4
+C00412,Email,3
+C00413,Phone,5
+C00413,Web Chat,4
+C00414,Web Chat,5
+C00414,Web Chat,3
+C00414,Email,4
+C00414,Phone,5
+C00414,Web Chat,4
+C00415,Phone,2
+C00415,Phone,3
+C00415,Email,2
+C00415,Email,1
+C00416,Web Chat,3
+C00417,Phone,1
+C00417,Phone,1
+C00417,Phone,2
+C00417,Email,3
+C00417,Web Chat,3
+C00417,Phone,3
+C00417,Phone,2
+C00417,Email,1
+C00417,Phone,1
+C00418,Email,3
+C00418,Web Chat,3
+C00418,Web Chat,3
+C00418,Web Chat,1
+C00418,Web Chat,1
+C00418,Web Chat,1
+C00418,Web Chat,2
+C00418,Phone,1
+C00418,Phone,2
+C00419,Phone,4
+C00419,Email,5
+C00419,Web Chat,4
+C00419,Phone,3
+C00419,Phone,4
+C00420,Phone,1
+C00420,Web Chat,3
+C00420,Web Chat,2
+C00420,Email,3
+C00420,Email,3
+C00420,Phone,1
+C00420,Email,1
+C00420,Web Chat,1
+C00421,Phone,5
+C00421,Web Chat,3
+C00421,Phone,3
+C00422,Web Chat,3
+C00422,Web Chat,4
+C00422,Phone,3
+C00423,Phone,5
+C00424,Email,5
+C00424,Phone,4
+C00425,Phone,5
+C00426,Phone,4
+C00426,Email,3
+C00426,Web Chat,4
+C00426,Web Chat,3
+C00427,Email,3
+C00428,Email,3
+C00428,Web Chat,2
+C00428,Email,2
+C00428,Phone,2
+C00429,Phone,5
+C00429,Phone,4
+C00430,Email,5
+C00431,Phone,3
+C00431,Phone,5
+C00432,Email,4
+C00432,Phone,3
+C00433,Web Chat,5
+C00433,Email,4
+C00433,Web Chat,4
+C00434,Web Chat,4
+C00434,Phone,3
+C00434,Email,5
+C00434,Web Chat,4
+C00434,Phone,4
+C00435,Phone,4
+C00435,Web Chat,4
+C00435,Email,4
+C00436,Phone,4
+C00437,Phone,3
+C00437,Email,2
+C00437,Email,1
+C00437,Phone,2
+C00437,Web Chat,1
+C00437,Phone,1
+C00437,Email,1
+C00437,Phone,1
+C00437,Phone,3
+C00438,Phone,1
+C00438,Web Chat,1
+C00438,Phone,2
+C00438,Web Chat,1
+C00439,Web Chat,5
+C00439,Email,4
+C00439,Phone,5
+C00439,Phone,5
+C00439,Email,5
+C00440,Email,5
+C00440,Web Chat,3
+C00440,Phone,5
+C00440,Phone,5
+C00441,Web Chat,4
+C00441,Web Chat,3
+C00441,Web Chat,5
+C00442,Phone,3
+C00442,Email,2
+C00442,Phone,2
+C00442,Phone,1
+C00442,Phone,3
+C00442,Web Chat,3
+C00442,Email,2
+C00442,Web Chat,2
+C00443,Email,4
+C00443,Email,4
+C00443,Phone,3
+C00444,Email,1
+C00444,Web Chat,1
+C00444,Phone,1
+C00444,Web Chat,1
+C00444,Phone,3
+C00444,Email,3
+C00444,Email,3
+C00444,Web Chat,3
+C00444,Email,3
+C00445,Email,5
+C00445,Email,5
+C00446,Email,5
+C00447,Email,2
+C00447,Phone,3
+C00447,Web Chat,1
+C00447,Phone,3
+C00447,Phone,2
+C00447,Web Chat,2
+C00448,Phone,4
+C00448,Phone,5
+C00448,Web Chat,3
+C00448,Email,3
+C00449,Email,4
+C00449,Web Chat,4
+C00449,Phone,4
+C00450,Web Chat,5
+C00451,Email,4
+C00451,Phone,3
+C00451,Web Chat,3
+C00452,Email,3
+C00452,Phone,3
+C00452,Phone,1
+C00452,Web Chat,3
+C00452,Phone,1
+C00453,Phone,5
+C00453,Email,3
+C00453,Email,5
+C00453,Phone,5
+C00453,Phone,4
+C00454,Web Chat,4
+C00454,Phone,5
+C00455,Phone,4
+C00455,Email,3
+C00456,Phone,3
+C00457,Email,3
+C00458,Phone,5
+C00458,Email,3
+C00458,Web Chat,5
+C00459,Web Chat,3
+C00459,Email,5
+C00459,Web Chat,5
+C00459,Phone,5
+C00460,Email,4
+C00460,Phone,4
+C00460,Email,4
+C00460,Web Chat,5
+C00460,Email,5
+C00461,Email,5
+C00461,Email,5
+C00462,Phone,4
+C00463,Email,1
+C00463,Phone,3
+C00463,Web Chat,3
+C00463,Email,2
+C00463,Web Chat,2
+C00463,Email,2
+C00464,Phone,4
+C00464,Phone,3
+C00464,Phone,4
+C00465,Web Chat,1
+C00465,Email,3
+C00465,Email,3
+C00465,Email,3
+C00465,Web Chat,1
+C00466,Phone,5
+C00467,Web Chat,4
+C00467,Email,3
+C00467,Web Chat,5
+C00467,Web Chat,4
+C00467,Web Chat,3
+C00468,Web Chat,4
+C00469,Web Chat,4
+C00470,Email,3
+C00470,Web Chat,5
+C00470,Web Chat,4
+C00470,Email,4
+C00471,Email,3
+C00471,Email,3
+C00471,Web Chat,2
+C00471,Email,3
+C00471,Web Chat,3
+C00471,Web Chat,2
+C00472,Web Chat,5
+C00472,Phone,4
+C00472,Phone,3
+C00472,Phone,4
+C00473,Email,4
+C00473,Phone,4
+C00473,Web Chat,3
+C00474,Web Chat,5
+C00474,Web Chat,4
+C00474,Web Chat,5
+C00474,Email,5
+C00474,Email,4
+C00475,Email,4
+C00475,Email,3
+C00475,Web Chat,4
+C00475,Email,5
+C00476,Phone,5
+C00476,Email,4
+C00476,Email,3
+C00476,Web Chat,4
+C00476,Email,5
+C00477,Phone,2
+C00477,Phone,3
+C00477,Email,2
+C00477,Web Chat,3
+C00477,Web Chat,1
+C00477,Phone,1
+C00477,Email,1
+C00478,Phone,3
+C00479,Email,2
+C00479,Email,2
+C00479,Phone,3
+C00479,Web Chat,2
+C00479,Email,2
+C00479,Email,1
+C00479,Email,3
+C00480,Phone,3
+C00481,Email,3
+C00481,Email,4
+C00482,Phone,5
+C00483,Email,3
+C00483,Phone,1
+C00483,Web Chat,3
+C00483,Phone,3
+C00483,Phone,2
+C00483,Email,3
+C00483,Web Chat,3
+C00483,Email,3
+C00484,Phone,1
+C00484,Phone,2
+C00484,Phone,2
+C00484,Email,2
+C00485,Web Chat,4
+C00485,Web Chat,3
+C00485,Email,5
+C00485,Phone,3
+C00485,Email,4
+C00486,Phone,5
+C00487,Web Chat,3
+C00487,Web Chat,1
+C00487,Email,3
+C00487,Phone,1
+C00487,Phone,3
+C00487,Phone,3
+C00487,Web Chat,2
+C00487,Email,1
+C00488,Email,4
+C00488,Web Chat,3
+C00488,Web Chat,3
+C00488,Phone,5
+C00488,Web Chat,3
+C00489,Email,4
+C00489,Phone,5
+C00489,Email,3
+C00489,Phone,4
+C00489,Web Chat,5
+C00490,Phone,1
+C00490,Phone,2
+C00490,Email,3
+C00490,Email,2
+C00491,Phone,3
+C00491,Phone,1
+C00491,Web Chat,3
+C00491,Web Chat,3
+C00491,Phone,3
+C00491,Phone,1
+C00491,Email,1
+C00491,Web Chat,1
+C00491,Phone,3
+C00492,Phone,5
+C00492,Phone,5
+C00493,Phone,4
+C00493,Web Chat,4
+C00493,Phone,5
+C00494,Phone,3
+C00494,Phone,3
+C00495,Web Chat,2
+C00495,Phone,2
+C00495,Email,3
+C00495,Phone,2
+C00495,Web Chat,3
+C00495,Email,3
+C00495,Email,3
+C00495,Email,1
+C00495,Phone,1
+C00496,Web Chat,5
+C00496,Phone,3
+C00496,Email,3
+C00496,Web Chat,3
+C00497,Web Chat,4
+C00497,Web Chat,3
+C00498,Email,5
+C00498,Phone,5
+C00498,Phone,5
+C00498,Email,4
+C00498,Phone,5
+C00499,Phone,5
+C00499,Web Chat,4
+C00499,Web Chat,3
+C00500,Email,3
+C00500,Email,4
+C00500,Web Chat,4
+C00500,Phone,3
+C00500,Phone,3
+C00501,Email,3
+C00501,Phone,2
+C00501,Web Chat,1
+C00501,Phone,3
+C00501,Phone,3
+C00502,Email,5
+C00502,Web Chat,5
+C00502,Phone,3
+C00502,Email,4
+C00502,Phone,5
+C00503,Email,4
+C00504,Email,4
+C00504,Phone,3
+C00505,Phone,5
+C00505,Web Chat,3
+C00505,Web Chat,3
+C00506,Web Chat,3
+C00506,Phone,3
+C00506,Phone,2
+C00506,Email,3
+C00507,Email,3
+C00507,Phone,4
+C00507,Web Chat,5
+C00507,Web Chat,5
+C00507,Web Chat,4
+C00508,Email,3
+C00508,Email,1
+C00508,Web Chat,2
+C00508,Phone,1
+C00508,Web Chat,2
+C00508,Email,3
+C00508,Web Chat,3
+C00509,Phone,5
+C00510,Phone,5
+C00510,Phone,4
+C00510,Web Chat,5
+C00510,Phone,5
+C00511,Phone,5
+C00511,Phone,4
+C00512,Email,5
+C00512,Phone,5
+C00513,Web Chat,5
+C00513,Email,3
+C00513,Web Chat,5
+C00514,Email,1
+C00514,Phone,2
+C00514,Email,2
+C00514,Phone,3
+C00515,Web Chat,4
+C00515,Email,3
+C00516,Phone,5
+C00516,Web Chat,3
+C00517,Phone,3
+C00517,Web Chat,5
+C00518,Email,3
+C00519,Email,5
+C00519,Email,4
+C00519,Web Chat,4
+C00519,Email,3
+C00520,Email,5
+C00520,Email,3
+C00520,Web Chat,5
+C00521,Web Chat,3
+C00521,Phone,4
+C00521,Web Chat,3
+C00521,Phone,3
+C00521,Phone,3
+C00522,Phone,5
+C00522,Web Chat,4
+C00522,Web Chat,4
+C00522,Web Chat,4
+C00522,Web Chat,4
+C00523,Web Chat,3
+C00523,Phone,3
+C00523,Phone,5
+C00523,Email,3
+C00524,Phone,5
+C00524,Email,5
+C00524,Email,5
+C00524,Web Chat,4
+C00525,Web Chat,4
+C00525,Web Chat,5
+C00526,Phone,5
+C00526,Web Chat,3
+C00527,Phone,3
+C00527,Email,4
+C00527,Web Chat,3
+C00527,Web Chat,4
+C00528,Phone,5
+C00528,Web Chat,5
+C00528,Phone,5
+C00528,Phone,3
+C00528,Phone,3
+C00529,Web Chat,3
+C00529,Web Chat,4
+C00529,Web Chat,4
+C00530,Web Chat,2
+C00530,Email,1
+C00530,Email,2
+C00530,Phone,1
+C00531,Web Chat,5
+C00531,Email,5
+C00531,Web Chat,5
+C00531,Web Chat,5
+C00531,Phone,3
+C00532,Email,4
+C00533,Email,4
+C00533,Web Chat,4
+C00533,Email,3
+C00533,Email,5
+C00533,Email,5
+C00534,Email,4
+C00534,Web Chat,3
+C00534,Web Chat,5
+C00534,Email,5
+C00534,Web Chat,4
+C00535,Phone,1
+C00535,Web Chat,3
+C00535,Email,1
+C00535,Phone,3
+C00535,Web Chat,1
+C00535,Web Chat,2
+C00535,Phone,3
+C00536,Email,2
+C00536,Web Chat,2
+C00536,Email,1
+C00536,Web Chat,1
+C00536,Web Chat,1
+C00536,Phone,2
+C00536,Web Chat,1
+C00537,Email,4
+C00537,Email,5
+C00538,Phone,3
+C00538,Web Chat,2
+C00538,Web Chat,1
+C00538,Web Chat,3
+C00538,Email,1
+C00538,Phone,3
+C00538,Email,1
+C00538,Phone,2
+C00538,Web Chat,3
+C00539,Phone,2
+C00539,Email,3
+C00539,Email,2
+C00539,Email,3
+C00539,Email,1
+C00539,Phone,2
+C00540,Phone,5
+C00540,Email,3
+C00540,Email,5
+C00541,Email,5
+C00541,Email,3
+C00541,Phone,4
+C00542,Phone,3
+C00543,Email,3
+C00543,Email,5
+C00543,Phone,5
+C00543,Email,4
+C00543,Email,4
+C00544,Phone,5
+C00544,Phone,4
+C00544,Email,5
+C00544,Web Chat,3
+C00544,Web Chat,4
+C00545,Phone,4
+C00546,Email,3
+C00546,Web Chat,5
+C00546,Web Chat,5
+C00546,Phone,4
+C00546,Phone,5
+C00547,Email,3
+C00547,Phone,3
+C00547,Web Chat,3
+C00547,Phone,3
+C00548,Web Chat,5
+C00548,Email,3
+C00548,Phone,5
+C00548,Email,5
+C00549,Web Chat,4
+C00549,Email,4
+C00550,Web Chat,4
+C00550,Web Chat,4
+C00551,Phone,4
+C00552,Web Chat,5
+C00552,Web Chat,4
+C00552,Email,4
+C00552,Email,3
+C00552,Email,4
+C00553,Email,1
+C00553,Email,1
+C00553,Email,1
+C00553,Phone,2
+C00554,Email,3
+C00554,Phone,1
+C00554,Web Chat,2
+C00554,Email,2
+C00554,Web Chat,3
+C00554,Phone,1
+C00554,Phone,3
+C00554,Web Chat,2
+C00554,Phone,3
+C00555,Email,5
+C00555,Phone,4
+C00556,Phone,4
+C00557,Email,4
+C00558,Web Chat,1
+C00558,Phone,2
+C00558,Phone,3
+C00558,Email,1
+C00558,Phone,2
+C00558,Email,2
+C00559,Web Chat,4
+C00559,Phone,4
+C00559,Email,3
+C00559,Phone,4
+C00560,Web Chat,3
+C00560,Email,4
+C00561,Email,5
+C00561,Phone,5
+C00562,Email,4
+C00562,Web Chat,4
+C00562,Phone,4
+C00563,Email,4
+C00563,Web Chat,3
+C00563,Email,5
+C00564,Email,4
+C00565,Email,4
+C00566,Email,4
+C00566,Web Chat,3
+C00566,Phone,5
+C00566,Email,5
+C00566,Phone,3
+C00567,Email,4
+C00567,Web Chat,3
+C00567,Email,3
+C00567,Phone,5
+C00568,Phone,1
+C00568,Email,1
+C00568,Phone,3
+C00568,Email,1
+C00568,Email,2
+C00568,Phone,1
+C00568,Phone,2
+C00569,Phone,3
+C00569,Phone,3
+C00570,Web Chat,3
+C00570,Phone,4
+C00570,Web Chat,4
+C00571,Email,4
+C00571,Web Chat,4
+C00571,Web Chat,4
+C00572,Email,4
+C00572,Email,4
+C00572,Phone,3
+C00572,Phone,3
+C00572,Phone,3
+C00573,Email,4
+C00574,Web Chat,4
+C00574,Web Chat,3
+C00574,Phone,4
+C00575,Web Chat,3
+C00575,Email,3
+C00575,Phone,5
+C00576,Phone,4
+C00576,Email,4
+C00576,Phone,3
+C00576,Phone,5
+C00577,Web Chat,5
+C00577,Email,5
+C00577,Email,4
+C00577,Phone,4
+C00578,Web Chat,3
+C00579,Web Chat,2
+C00579,Web Chat,3
+C00579,Phone,2
+C00579,Email,3
+C00579,Phone,3
+C00579,Phone,3
+C00579,Email,3
+C00580,Email,4
+C00580,Phone,3
+C00581,Web Chat,5
+C00582,Phone,5
+C00582,Phone,3
+C00582,Phone,3
+C00582,Email,4
+C00583,Phone,3
+C00583,Email,5
+C00583,Email,4
+C00583,Web Chat,4
+C00584,Phone,4
+C00584,Phone,4
+C00584,Email,3
+C00584,Web Chat,3
+C00585,Phone,4
+C00585,Web Chat,4
+C00586,Phone,4
+C00586,Email,4
+C00586,Email,3
+C00586,Web Chat,4
+C00586,Phone,3
+C00587,Email,4
+C00587,Phone,5
+C00587,Email,5
+C00588,Phone,1
+C00588,Phone,3
+C00588,Email,3
+C00588,Phone,1
+C00589,Phone,5
+C00590,Phone,3
+C00590,Phone,3
+C00590,Web Chat,5
+C00590,Phone,3
+C00590,Web Chat,5
+C00591,Phone,4
+C00591,Email,4
+C00592,Web Chat,3
+C00593,Email,3
+C00593,Phone,3
+C00593,Phone,4
+C00594,Phone,4
+C00594,Phone,4
+C00595,Email,4
+C00595,Phone,5
+C00596,Web Chat,2
+C00596,Web Chat,2
+C00596,Phone,2
+C00596,Phone,1
+C00596,Web Chat,2
+C00596,Phone,3
+C00596,Web Chat,1
+C00596,Phone,3
+C00597,Phone,5
+C00598,Email,3
+C00599,Web Chat,3
+C00600,Phone,5
+C00600,Email,4
+C00600,Web Chat,5
+C00600,Email,5
+C00600,Phone,4
+C00601,Web Chat,5
+C00602,Phone,4
+C00603,Phone,3
+C00603,Phone,4
+C00603,Web Chat,3
+C00604,Phone,3
+C00604,Phone,2
+C00604,Web Chat,2
+C00604,Web Chat,2
+C00604,Web Chat,3
+C00604,Email,1
+C00604,Email,1
+C00604,Phone,1
+C00605,Email,5
+C00605,Phone,3
+C00605,Phone,3
+C00606,Email,4
+C00606,Email,4
+C00606,Web Chat,5
+C00606,Web Chat,4
+C00607,Web Chat,5
+C00607,Email,4
+C00607,Web Chat,5
+C00608,Email,3
+C00608,Phone,5
+C00608,Web Chat,3
+C00608,Web Chat,4
+C00608,Email,4
+C00609,Email,4
+C00609,Web Chat,4
+C00609,Email,4
+C00610,Phone,1
+C00610,Web Chat,3
+C00610,Email,2
+C00610,Web Chat,3
+C00610,Web Chat,2
+C00611,Phone,3
+C00611,Phone,5
+C00611,Phone,4
+C00612,Email,4
+C00612,Email,3
+C00612,Web Chat,5
+C00612,Phone,4
+C00612,Phone,3
+C00613,Web Chat,4
+C00613,Phone,3
+C00613,Phone,3
+C00613,Email,3
+C00613,Web Chat,5
+C00614,Web Chat,1
+C00614,Email,1
+C00614,Email,3
+C00614,Web Chat,2
+C00614,Phone,2
+C00615,Email,5
+C00615,Email,5
+C00615,Email,5
+C00615,Email,3
+C00616,Email,5
+C00616,Web Chat,3
+C00616,Email,5
+C00617,Phone,4
+C00617,Email,3
+C00617,Phone,3
+C00617,Web Chat,5
+C00617,Phone,4
+C00618,Web Chat,3
+C00618,Email,5
+C00618,Email,3
+C00619,Phone,3
+C00619,Web Chat,3
+C00619,Web Chat,3
+C00619,Web Chat,3
+C00620,Phone,3
+C00621,Phone,3
+C00621,Web Chat,4
+C00621,Email,3
+C00621,Email,3
+C00622,Email,3
+C00622,Email,3
+C00622,Web Chat,3
+C00622,Email,2
+C00622,Email,1
+C00622,Phone,1
+C00622,Email,2
+C00622,Phone,1
+C00622,Web Chat,1
+C00623,Email,3
+C00623,Web Chat,4
+C00623,Email,5
+C00623,Phone,5
+C00623,Phone,4
+C00624,Phone,3
+C00624,Web Chat,5
+C00624,Phone,3
+C00624,Web Chat,3
+C00625,Phone,3
+C00625,Web Chat,5
+C00625,Web Chat,3
+C00626,Email,2
+C00626,Email,2
+C00626,Web Chat,1
+C00626,Phone,1
+C00626,Email,1
+C00626,Web Chat,1
+C00626,Phone,2
+C00626,Web Chat,2
+C00626,Web Chat,1
+C00627,Phone,3
+C00627,Phone,4
+C00628,Phone,4
+C00628,Phone,5
+C00628,Phone,5
+C00628,Web Chat,5
+C00628,Phone,5
+C00629,Email,1
+C00629,Email,3
+C00629,Web Chat,3
+C00629,Web Chat,1
+C00629,Web Chat,2
+C00629,Email,1
+C00629,Phone,2
+C00629,Email,1
+C00629,Web Chat,1
+C00630,Email,4
+C00630,Web Chat,5
+C00630,Email,4
+C00631,Phone,4
+C00631,Email,5
+C00632,Phone,5
+C00632,Phone,5
+C00633,Phone,4
+C00633,Phone,5
+C00633,Web Chat,4
+C00634,Email,4
+C00635,Phone,4
+C00635,Web Chat,3
+C00635,Email,3
+C00635,Web Chat,3
+C00636,Phone,4
+C00636,Phone,3
+C00636,Phone,4
+C00636,Email,4
+C00637,Web Chat,4
+C00637,Web Chat,4
+C00637,Web Chat,4
+C00638,Email,3
+C00638,Web Chat,5
+C00638,Web Chat,5
+C00638,Email,5
+C00639,Email,4
+C00639,Phone,3
+C00639,Email,5
+C00640,Phone,3
+C00640,Phone,1
+C00640,Email,3
+C00640,Phone,2
+C00640,Web Chat,2
+C00640,Email,1
+C00640,Phone,1
+C00640,Phone,2
+C00641,Phone,3
+C00641,Phone,3
+C00641,Web Chat,3
+C00641,Phone,5
+C00641,Email,4
+C00642,Email,4
+C00642,Phone,4
+C00642,Web Chat,3
+C00642,Web Chat,3
+C00643,Web Chat,2
+C00643,Web Chat,1
+C00643,Phone,2
+C00643,Phone,3
+C00643,Web Chat,1
+C00643,Web Chat,3
+C00643,Phone,3
+C00644,Phone,5
+C00644,Phone,5
+C00644,Email,3
+C00644,Email,4
+C00644,Email,4
+C00645,Web Chat,4
+C00645,Web Chat,5
+C00645,Web Chat,5
+C00645,Web Chat,4
+C00645,Email,4
+C00646,Email,5
+C00646,Web Chat,4
+C00646,Phone,3
+C00646,Phone,5
+C00647,Email,4
+C00647,Web Chat,4
+C00647,Web Chat,4
+C00648,Email,2
+C00648,Phone,1
+C00648,Email,3
+C00648,Web Chat,2
+C00648,Web Chat,1
+C00648,Phone,2
+C00648,Web Chat,2
+C00649,Email,2
+C00649,Email,3
+C00649,Email,3
+C00649,Web Chat,2
+C00649,Phone,3
+C00649,Email,3
+C00649,Phone,3
+C00650,Web Chat,3
+C00650,Phone,3
+C00650,Phone,5
+C00650,Phone,4
+C00651,Phone,4
+C00651,Email,3
+C00651,Web Chat,4
+C00651,Phone,5
+C00651,Email,5
+C00652,Email,3
+C00653,Phone,3
+C00654,Web Chat,3
+C00654,Email,3
+C00654,Email,3
+C00654,Email,3
+C00654,Phone,2
+C00654,Email,3
+C00654,Email,2
+C00654,Phone,1
+C00654,Email,2
+C00655,Phone,4
+C00655,Phone,5
+C00655,Email,4
+C00655,Phone,5
+C00656,Email,2
+C00656,Email,1
+C00656,Email,1
+C00656,Phone,2
+C00657,Phone,4
+C00657,Email,4
+C00658,Email,3
+C00658,Web Chat,3
+C00658,Email,2
+C00658,Email,2
+C00658,Email,3
+C00659,Web Chat,5
+C00660,Email,3
+C00660,Email,2
+C00660,Email,3
+C00660,Web Chat,1
+C00660,Email,1
+C00660,Web Chat,1
+C00660,Email,1
+C00660,Web Chat,1
+C00661,Email,4
+C00662,Phone,3
+C00663,Phone,4
+C00663,Email,4
+C00663,Web Chat,4
+C00664,Email,3
+C00664,Web Chat,5
+C00664,Email,3
+C00664,Phone,4
+C00665,Phone,3
+C00665,Email,1
+C00665,Email,1
+C00665,Web Chat,2
+C00665,Phone,2
+C00665,Email,3
+C00666,Phone,5
+C00666,Email,5
+C00666,Web Chat,5
+C00667,Phone,3
+C00667,Web Chat,3
+C00667,Email,3
+C00667,Email,5
+C00668,Email,5
+C00668,Web Chat,3
+C00668,Email,4
+C00669,Phone,5
+C00669,Phone,5
+C00669,Web Chat,3
+C00669,Phone,4
+C00670,Email,4
+C00670,Phone,5
+C00670,Email,3
+C00670,Email,5
+C00670,Web Chat,3
+C00671,Email,3
+C00671,Phone,5
+C00672,Web Chat,4
+C00672,Phone,5
+C00672,Web Chat,4
+C00673,Email,3
+C00673,Web Chat,5
+C00673,Phone,3
+C00673,Web Chat,4
+C00673,Email,5
+C00674,Web Chat,3
+C00674,Phone,3
+C00674,Email,2
+C00674,Web Chat,1
+C00674,Email,2
+C00674,Phone,3
+C00674,Phone,2
+C00674,Phone,2
+C00674,Web Chat,1
+C00675,Phone,5
+C00676,Email,5
+C00676,Email,5
+C00676,Web Chat,5
+C00676,Email,3
+C00676,Phone,5
+C00677,Phone,4
+C00677,Phone,4
+C00678,Phone,3
+C00678,Email,4
+C00678,Email,5
+C00678,Email,5
+C00679,Web Chat,2
+C00679,Web Chat,2
+C00679,Web Chat,3
+C00679,Web Chat,3
+C00679,Web Chat,1
+C00679,Web Chat,2
+C00680,Phone,3
+C00680,Email,4
+C00680,Email,3
+C00681,Email,5
+C00682,Web Chat,3
+C00682,Web Chat,2
+C00682,Email,3
+C00682,Phone,3
+C00682,Email,3
+C00683,Phone,3
+C00684,Web Chat,3
+C00684,Email,5
+C00684,Web Chat,3
+C00684,Web Chat,5
+C00685,Phone,5
+C00685,Email,4
+C00685,Phone,5
+C00685,Phone,4
+C00686,Phone,4
+C00686,Web Chat,5
+C00686,Web Chat,3
+C00686,Web Chat,5
+C00686,Phone,3
+C00687,Phone,1
+C00687,Email,1
+C00687,Email,3
+C00687,Web Chat,1
+C00687,Web Chat,1
+C00687,Phone,3
+C00688,Phone,2
+C00688,Phone,1
+C00688,Email,2
+C00688,Web Chat,1
+C00689,Web Chat,4
+C00689,Phone,5
+C00689,Web Chat,5
+C00689,Phone,3
+C00689,Web Chat,4
+C00690,Web Chat,5
+C00690,Web Chat,4
+C00690,Email,3
+C00690,Email,4
+C00691,Phone,4
+C00691,Web Chat,5
+C00691,Email,3
+C00691,Email,4
+C00692,Email,5
+C00693,Web Chat,4
+C00693,Email,3
+C00693,Phone,5
+C00693,Email,3
+C00693,Phone,3
+C00694,Email,3
+C00694,Web Chat,5
+C00694,Phone,4
+C00695,Web Chat,3
+C00696,Phone,5
+C00697,Web Chat,4
+C00697,Email,3
+C00698,Phone,4
+C00698,Phone,4
+C00698,Phone,4
+C00698,Phone,4
+C00699,Phone,5
+C00700,Phone,5
+C00700,Phone,5
+C00700,Phone,5
+C00701,Web Chat,5
+C00701,Web Chat,4
+C00701,Web Chat,5
+C00701,Email,5
+C00702,Web Chat,1
+C00702,Email,1
+C00702,Phone,1
+C00702,Email,1
+C00702,Email,1
+C00702,Web Chat,2
+C00702,Phone,1
+C00702,Phone,1
+C00702,Phone,1
+C00703,Email,1
+C00703,Email,3
+C00703,Web Chat,2
+C00703,Web Chat,2
+C00703,Email,3
+C00704,Phone,4
+C00704,Web Chat,4
+C00704,Phone,4
+C00705,Web Chat,4
+C00705,Web Chat,5
+C00705,Web Chat,3
+C00706,Email,4
+C00706,Email,4
+C00706,Web Chat,4
+C00707,Web Chat,4
+C00708,Web Chat,4
+C00708,Phone,3
+C00708,Web Chat,5
+C00708,Phone,4
+C00709,Email,4
+C00709,Phone,3
+C00709,Email,5
+C00709,Web Chat,3
+C00710,Web Chat,2
+C00710,Email,1
+C00710,Web Chat,1
+C00710,Email,2
+C00710,Email,3
+C00710,Web Chat,3
+C00710,Phone,2
+C00710,Phone,2
+C00710,Web Chat,3
+C00711,Email,3
+C00712,Email,5
+C00712,Email,3
+C00712,Web Chat,4
+C00712,Web Chat,4
+C00712,Phone,5
+C00713,Phone,4
+C00713,Phone,5
+C00713,Phone,3
+C00713,Email,5
+C00714,Web Chat,4
+C00714,Email,5
+C00714,Phone,3
+C00714,Web Chat,3
+C00714,Phone,3
+C00715,Email,4
+C00715,Phone,4
+C00715,Web Chat,4
+C00715,Phone,4
+C00716,Phone,5
+C00716,Phone,4
+C00716,Email,5
+C00716,Email,3
+C00717,Email,3
+C00717,Phone,2
+C00717,Email,1
+C00717,Email,2
+C00717,Web Chat,3
+C00717,Web Chat,1
+C00717,Web Chat,2
+C00718,Web Chat,5
+C00719,Web Chat,4
+C00719,Phone,5
+C00720,Web Chat,3
+C00720,Phone,4
+C00720,Phone,4
+C00720,Web Chat,3
+C00720,Web Chat,5
+C00721,Web Chat,5
+C00721,Web Chat,4
+C00721,Web Chat,4
+C00721,Web Chat,5
+C00721,Web Chat,5
+C00722,Phone,4
+C00722,Email,5
+C00723,Email,5
+C00723,Web Chat,3
+C00723,Phone,3
+C00723,Phone,4
+C00723,Email,3
+C00724,Phone,3
+C00725,Email,3
+C00725,Phone,5
+C00725,Phone,3
+C00725,Email,4
+C00726,Email,5
+C00726,Email,3
+C00727,Web Chat,3
+C00727,Email,4
+C00727,Phone,5
+C00728,Web Chat,5
+C00728,Phone,3
+C00728,Email,3
+C00728,Phone,5
+C00729,Web Chat,3
+C00730,Web Chat,5
+C00731,Web Chat,4
+C00731,Phone,5
+C00732,Email,5
+C00732,Web Chat,4
+C00732,Web Chat,4
+C00732,Phone,3
+C00733,Email,5
+C00733,Email,4
+C00733,Email,3
+C00733,Email,4
+C00733,Email,3
+C00734,Web Chat,5
+C00734,Phone,3
+C00735,Phone,5
+C00735,Phone,4
+C00736,Web Chat,4
+C00736,Web Chat,4
+C00736,Phone,4
+C00736,Phone,4
+C00737,Email,5
+C00737,Web Chat,3
+C00738,Email,5
+C00738,Email,3
+C00738,Email,5
+C00738,Email,4
+C00739,Phone,3
+C00739,Email,5
+C00739,Email,4
+C00739,Web Chat,3
+C00740,Email,4
+C00740,Phone,3
+C00740,Phone,4
+C00740,Web Chat,5
+C00741,Phone,1
+C00741,Phone,1
+C00741,Email,3
+C00741,Web Chat,3
+C00741,Phone,1
+C00742,Email,4
+C00743,Web Chat,5
+C00743,Web Chat,4
+C00744,Web Chat,3
+C00744,Web Chat,5
+C00745,Web Chat,3
+C00745,Web Chat,1
+C00745,Phone,2
+C00745,Email,2
+C00745,Web Chat,1
+C00745,Phone,1
+C00745,Email,2
+C00746,Phone,2
+C00746,Phone,1
+C00746,Email,1
+C00746,Web Chat,3
+C00746,Email,3
+C00746,Email,1
+C00747,Web Chat,4
+C00747,Email,4
+C00747,Phone,5
+C00747,Phone,3
+C00747,Web Chat,3
+C00748,Web Chat,1
+C00748,Email,1
+C00748,Email,3
+C00748,Email,3
+C00748,Email,3
+C00748,Web Chat,2
+C00748,Web Chat,2
+C00748,Web Chat,1
+C00749,Web Chat,3
+C00749,Phone,3
+C00749,Web Chat,1
+C00749,Phone,1
+C00749,Phone,1
+C00749,Email,3
+C00750,Phone,5
+C00750,Email,3
+C00750,Phone,3
+C00750,Web Chat,4
+C00750,Email,4
+C00751,Phone,3
+C00751,Email,1
+C00751,Web Chat,2
+C00751,Phone,2
+C00751,Email,3
+C00751,Phone,1
+C00752,Email,4
+C00752,Email,4
+C00752,Web Chat,4
+C00752,Web Chat,3
+C00753,Phone,5
+C00753,Web Chat,4
+C00753,Email,5
+C00754,Email,5
+C00754,Email,5
+C00754,Email,5
+C00755,Web Chat,3
+C00755,Phone,3
+C00755,Web Chat,4
+C00756,Email,3
+C00756,Phone,4
+C00756,Email,3
+C00756,Phone,5
+C00756,Phone,4
+C00757,Web Chat,3
+C00757,Web Chat,4
+C00757,Web Chat,3
+C00757,Web Chat,4
+C00757,Phone,5
+C00758,Email,4
+C00758,Phone,5
+C00758,Email,4
+C00758,Email,5
+C00759,Web Chat,1
+C00759,Phone,1
+C00759,Phone,3
+C00759,Email,2
+C00759,Web Chat,2
+C00759,Email,1
+C00759,Email,3
+C00760,Web Chat,3
+C00760,Phone,3
+C00760,Phone,4
+C00761,Web Chat,1
+C00761,Email,1
+C00761,Web Chat,1
+C00761,Email,2
+C00761,Email,3
+C00761,Email,1
+C00761,Web Chat,3
+C00762,Email,5
+C00762,Web Chat,5
+C00762,Phone,3
+C00762,Phone,4
+C00763,Phone,5
+C00764,Phone,4
+C00764,Phone,3
+C00764,Web Chat,5
+C00764,Email,3
+C00765,Phone,3
+C00765,Phone,2
+C00765,Email,1
+C00765,Phone,1
+C00765,Email,3
+C00765,Email,2
+C00766,Email,5
+C00766,Web Chat,3
+C00766,Web Chat,5
+C00766,Web Chat,3
+C00766,Phone,5
+C00767,Email,3
+C00767,Email,3
+C00768,Phone,5
+C00768,Web Chat,5
+C00768,Email,3
+C00769,Web Chat,3
+C00769,Web Chat,1
+C00769,Phone,3
+C00769,Phone,2
+C00770,Email,3
+C00771,Phone,2
+C00771,Web Chat,3
+C00771,Email,1
+C00771,Email,2
+C00771,Email,3
+C00771,Phone,2
+C00772,Phone,5
+C00772,Phone,5
+C00772,Web Chat,5
+C00773,Email,3
+C00773,Phone,4
+C00773,Phone,4
+C00774,Web Chat,5
+C00774,Web Chat,3
+C00774,Email,3
+C00774,Phone,5
+C00774,Web Chat,3
+C00775,Phone,3
+C00775,Web Chat,1
+C00775,Email,1
+C00775,Phone,3
+C00776,Web Chat,5
+C00776,Web Chat,3
+C00776,Phone,3
+C00777,Email,2
+C00777,Email,1
+C00777,Email,1
+C00777,Email,1
+C00777,Web Chat,2
+C00777,Phone,2
+C00777,Phone,3
+C00777,Web Chat,1
+C00778,Email,2
+C00778,Phone,2
+C00778,Email,3
+C00778,Phone,3
+C00779,Web Chat,2
+C00779,Web Chat,1
+C00779,Email,1
+C00779,Web Chat,3
+C00779,Web Chat,3
+C00780,Email,3
+C00780,Phone,2
+C00780,Phone,3
+C00780,Web Chat,3
+C00780,Phone,1
+C00781,Phone,3
+C00781,Email,5
+C00781,Phone,3
+C00782,Phone,3
+C00782,Phone,5
+C00782,Phone,3
+C00782,Phone,3
+C00783,Web Chat,3
+C00784,Email,5
+C00784,Phone,3
+C00784,Phone,3
+C00785,Email,4
+C00786,Web Chat,3
+C00786,Email,3
+C00786,Email,4
+C00786,Phone,3
+C00786,Web Chat,3
+C00787,Phone,5
+C00787,Email,5
+C00787,Web Chat,4
+C00787,Web Chat,5
+C00787,Email,5
+C00788,Web Chat,1
+C00788,Web Chat,2
+C00788,Email,3
+C00788,Email,1
+C00788,Phone,2
+C00788,Web Chat,2
+C00789,Web Chat,4
+C00789,Email,3
+C00789,Phone,5
+C00789,Web Chat,3
+C00789,Web Chat,5
+C00790,Web Chat,2
+C00790,Web Chat,2
+C00790,Email,2
+C00790,Phone,3
+C00790,Email,2
+C00791,Email,3
+C00791,Web Chat,2
+C00791,Web Chat,2
+C00791,Email,1
+C00791,Email,2
+C00791,Email,3
+C00791,Email,1
+C00792,Email,5
+C00792,Email,4
+C00792,Email,3
+C00792,Phone,4
+C00792,Web Chat,3
+C00793,Web Chat,5
+C00793,Web Chat,4
+C00793,Web Chat,5
+C00793,Email,4
+C00793,Web Chat,5
+C00794,Phone,2
+C00794,Phone,1
+C00794,Email,2
+C00794,Email,1
+C00794,Phone,2
+C00794,Phone,2
+C00795,Web Chat,2
+C00795,Web Chat,3
+C00795,Email,3
+C00795,Phone,3
+C00795,Phone,1
+C00796,Email,4
+C00796,Phone,4
+C00796,Web Chat,4
+C00796,Email,3
+C00797,Web Chat,5
+C00797,Web Chat,4
+C00798,Email,1
+C00798,Phone,2
+C00798,Email,2
+C00798,Web Chat,3
+C00798,Phone,1
+C00798,Web Chat,1
+C00798,Phone,1
+C00798,Phone,2
+C00799,Phone,3
+C00799,Web Chat,4
+C00799,Phone,4
+C00800,Email,3
+C00800,Phone,5
+C00800,Web Chat,3
+C00800,Web Chat,3
+C00801,Phone,5
+C00801,Email,3
+C00802,Phone,5
+C00802,Email,3
+C00802,Web Chat,3
+C00803,Email,4
+C00803,Email,5
+C00803,Web Chat,5
+C00803,Phone,4
+C00803,Email,4
+C00804,Phone,4
+C00804,Phone,5
+C00804,Email,5
+C00804,Email,4
+C00804,Web Chat,4
+C00805,Web Chat,3
+C00805,Phone,3
+C00805,Phone,4
+C00806,Email,4
+C00806,Phone,3
+C00807,Web Chat,5
+C00807,Web Chat,4
+C00808,Phone,3
+C00808,Phone,4
+C00808,Phone,3
+C00808,Email,5
+C00808,Web Chat,5
+C00809,Phone,5
+C00809,Email,3
+C00810,Phone,5
+C00810,Phone,4
+C00810,Web Chat,3
+C00811,Phone,4
+C00811,Phone,4
+C00812,Email,2
+C00812,Email,2
+C00812,Web Chat,1
+C00812,Web Chat,1
+C00813,Web Chat,3
+C00813,Phone,3
+C00813,Web Chat,4
+C00813,Email,4
+C00813,Email,5
+C00814,Email,5
+C00814,Web Chat,3
+C00814,Email,3
+C00815,Web Chat,5
+C00815,Phone,5
+C00815,Phone,4
+C00815,Email,4
+C00816,Email,3
+C00816,Web Chat,1
+C00816,Web Chat,3
+C00816,Web Chat,3
+C00817,Phone,3
+C00817,Email,3
+C00817,Email,1
+C00817,Phone,1
+C00818,Web Chat,4
+C00819,Phone,3
+C00820,Phone,4
+C00820,Email,5
+C00821,Web Chat,5
+C00821,Email,3
+C00821,Email,5
+C00821,Web Chat,4
+C00821,Phone,4
+C00822,Email,3
+C00823,Email,5
+C00823,Phone,3
+C00823,Web Chat,5
+C00823,Web Chat,4
+C00823,Email,5
+C00824,Web Chat,4
+C00825,Email,4
+C00826,Email,3
+C00826,Web Chat,1
+C00826,Phone,3
+C00826,Phone,1
+C00827,Phone,3
+C00828,Phone,4
+C00828,Phone,5
+C00828,Email,4
+C00828,Web Chat,3
+C00829,Phone,3
+C00829,Web Chat,3
+C00829,Email,4
+C00829,Email,5
+C00830,Email,5
+C00830,Phone,4
+C00831,Web Chat,5
+C00831,Phone,3
+C00831,Email,3
+C00831,Email,5
+C00832,Web Chat,2
+C00832,Email,2
+C00832,Email,3
+C00832,Web Chat,3
+C00832,Phone,1
+C00832,Web Chat,2
+C00833,Email,3
+C00833,Web Chat,4
+C00833,Phone,5
+C00833,Email,4
+C00834,Phone,3
+C00834,Phone,5
+C00834,Phone,3
+C00835,Web Chat,2
+C00835,Web Chat,3
+C00835,Web Chat,3
+C00835,Web Chat,2
+C00835,Phone,1
+C00836,Phone,3
+C00836,Web Chat,3
+C00836,Email,2
+C00836,Web Chat,1
+C00836,Phone,2
+C00836,Phone,1
+C00836,Email,2
+C00837,Web Chat,5
+C00838,Web Chat,4
+C00838,Email,4
+C00838,Phone,5
+C00838,Email,3
+C00838,Phone,3
+C00839,Web Chat,3
+C00839,Phone,4
+C00840,Web Chat,1
+C00840,Email,3
+C00840,Email,2
+C00840,Phone,1
+C00841,Phone,4
+C00841,Email,4
+C00841,Phone,4
+C00841,Email,4
+C00842,Web Chat,4
+C00842,Phone,3
+C00842,Web Chat,4
+C00842,Phone,4
+C00842,Web Chat,5
+C00843,Web Chat,5
+C00843,Web Chat,5
+C00843,Phone,3
+C00843,Phone,4
+C00844,Email,1
+C00844,Email,1
+C00844,Web Chat,1
+C00844,Phone,1
+C00844,Email,3
+C00844,Web Chat,3
+C00844,Web Chat,2
+C00844,Phone,3
+C00845,Phone,3
+C00845,Phone,5
+C00845,Phone,3
+C00845,Phone,5
+C00846,Web Chat,5
+C00847,Phone,3
+C00847,Web Chat,3
+C00848,Phone,3
+C00848,Web Chat,1
+C00848,Web Chat,3
+C00848,Web Chat,1
+C00849,Phone,3
+C00849,Phone,1
+C00849,Web Chat,2
+C00849,Email,2
+C00850,Web Chat,3
+C00850,Phone,3
+C00850,Web Chat,4
+C00850,Phone,4
+C00851,Email,1
+C00851,Web Chat,1
+C00851,Phone,3
+C00851,Phone,2
+C00851,Web Chat,2
+C00851,Web Chat,1
+C00851,Phone,3
+C00851,Email,2
+C00852,Web Chat,4
+C00853,Email,1
+C00853,Phone,2
+C00853,Email,2
+C00853,Web Chat,1
+C00853,Web Chat,2
+C00853,Phone,1
+C00853,Web Chat,1
+C00854,Web Chat,4
+C00854,Phone,3
+C00854,Web Chat,3
+C00854,Web Chat,4
+C00855,Phone,3
+C00855,Phone,4
+C00855,Email,3
+C00855,Web Chat,3
+C00856,Phone,5
+C00856,Web Chat,3
+C00856,Email,4
+C00856,Email,5
+C00857,Email,3
+C00857,Phone,3
+C00858,Phone,5
+C00858,Email,5
+C00859,Email,1
+C00859,Phone,2
+C00859,Web Chat,1
+C00859,Web Chat,2
+C00859,Phone,2
+C00859,Web Chat,2
+C00859,Phone,3
+C00859,Phone,2
+C00859,Phone,3
+C00860,Web Chat,4
+C00860,Web Chat,4
+C00860,Email,4
+C00860,Web Chat,3
+C00860,Phone,4
+C00861,Email,5
+C00862,Web Chat,5
+C00863,Email,5
+C00864,Email,3
+C00865,Web Chat,3
+C00865,Email,2
+C00865,Email,2
+C00865,Phone,3
+C00865,Email,2
+C00865,Web Chat,1
+C00866,Phone,2
+C00866,Phone,3
+C00866,Phone,2
+C00866,Phone,3
+C00866,Email,3
+C00866,Web Chat,3
+C00867,Web Chat,3
+C00867,Phone,3
+C00868,Web Chat,3
+C00868,Web Chat,2
+C00868,Phone,2
+C00868,Phone,2
+C00868,Web Chat,1
+C00868,Email,3
+C00868,Email,2
+C00868,Phone,1
+C00869,Web Chat,4
+C00870,Email,3
+C00870,Web Chat,4
+C00870,Web Chat,5
+C00870,Email,4
+C00870,Phone,4
+C00871,Phone,5
+C00871,Web Chat,4
+C00871,Web Chat,3
+C00872,Phone,5
+C00872,Web Chat,5
+C00872,Email,4
+C00872,Phone,5
+C00872,Web Chat,4
+C00873,Email,5
+C00873,Web Chat,3
+C00873,Phone,3
+C00873,Email,4
+C00874,Email,3
+C00874,Web Chat,3
+C00875,Email,2
+C00875,Web Chat,1
+C00875,Phone,3
+C00875,Web Chat,3
+C00876,Phone,4
+C00876,Email,3
+C00876,Email,4
+C00877,Email,3
+C00878,Email,4
+C00878,Web Chat,4
+C00878,Phone,3
+C00878,Web Chat,3
+C00879,Email,4
+C00879,Email,3
+C00879,Email,5
+C00879,Phone,3
+C00880,Web Chat,3
+C00880,Web Chat,4
+C00880,Web Chat,5
+C00881,Phone,3
+C00881,Email,3
+C00881,Phone,1
+C00881,Email,3
+C00881,Web Chat,2
+C00881,Web Chat,2
+C00881,Web Chat,3
+C00881,Web Chat,3
+C00882,Email,5
+C00882,Phone,4
+C00882,Phone,3
+C00883,Web Chat,3
+C00883,Web Chat,4
+C00884,Email,4
+C00884,Web Chat,4
+C00884,Phone,4
+C00884,Email,5
+C00885,Email,2
+C00885,Phone,1
+C00885,Web Chat,2
+C00885,Phone,2
+C00885,Phone,2
+C00886,Email,5
+C00887,Email,3
+C00887,Email,4
+C00887,Email,5
+C00887,Web Chat,5
+C00888,Web Chat,4
+C00888,Web Chat,5
+C00889,Phone,1
+C00889,Web Chat,3
+C00889,Web Chat,1
+C00889,Web Chat,3
+C00889,Phone,3
+C00889,Email,3
+C00889,Web Chat,1
+C00890,Email,4
+C00890,Phone,5
+C00891,Email,5
+C00892,Email,3
+C00892,Phone,2
+C00892,Phone,1
+C00892,Web Chat,3
+C00892,Web Chat,2
+C00892,Web Chat,2
+C00892,Web Chat,3
+C00892,Web Chat,1
+C00892,Web Chat,3
+C00893,Web Chat,4
+C00893,Phone,4
+C00893,Email,3
+C00893,Email,4
+C00894,Web Chat,4
+C00895,Web Chat,3
+C00895,Phone,2
+C00895,Email,1
+C00895,Web Chat,1
+C00895,Web Chat,1
+C00895,Phone,2
+C00895,Phone,2
+C00896,Email,4
+C00896,Email,3
+C00897,Web Chat,3
+C00898,Email,4
+C00898,Email,3
+C00898,Email,3
+C00899,Phone,3
+C00899,Email,5
+C00899,Email,4
+C00899,Web Chat,3
+C00900,Email,3
+C00900,Email,2
+C00900,Email,3
+C00900,Phone,3
+C00900,Web Chat,2
+C00900,Phone,2
+C00900,Web Chat,2
+C00900,Email,1
+C00900,Web Chat,3
+C00901,Web Chat,3
+C00901,Phone,4
+C00902,Email,4
+C00902,Phone,4
+C00902,Phone,4
+C00903,Web Chat,5
+C00903,Email,4
+C00903,Phone,5
+C00903,Email,3
+C00904,Phone,2
+C00904,Email,2
+C00904,Email,1
+C00904,Email,1
+C00904,Web Chat,3
+C00905,Web Chat,5
+C00905,Phone,3
+C00906,Web Chat,3
+C00906,Phone,5
+C00906,Phone,4
+C00907,Web Chat,3
+C00907,Email,4
+C00908,Email,3
+C00908,Email,3
+C00908,Phone,5
+C00908,Web Chat,5
+C00908,Web Chat,4
+C00909,Email,1
+C00909,Phone,1
+C00909,Web Chat,3
+C00909,Phone,1
+C00909,Email,1
+C00909,Web Chat,3
+C00910,Email,5
+C00910,Phone,3
+C00911,Phone,5
+C00911,Web Chat,4
+C00911,Email,4
+C00911,Phone,5
+C00911,Phone,4
+C00912,Web Chat,3
+C00912,Web Chat,4
+C00912,Phone,3
+C00912,Email,4
+C00913,Email,1
+C00913,Web Chat,3
+C00913,Web Chat,3
+C00913,Web Chat,2
+C00913,Phone,2
+C00913,Web Chat,3
+C00913,Email,2
+C00914,Web Chat,4
+C00914,Email,5
+C00914,Email,3
+C00914,Web Chat,3
+C00914,Email,5
+C00915,Phone,3
+C00915,Web Chat,3
+C00916,Phone,4
+C00916,Web Chat,5
+C00916,Phone,3
+C00917,Phone,4
+C00917,Web Chat,4
+C00918,Phone,5
+C00919,Phone,5
+C00919,Phone,5
+C00919,Phone,4
+C00920,Web Chat,4
+C00920,Phone,3
+C00920,Email,3
+C00920,Web Chat,5
+C00921,Phone,5
+C00921,Phone,3
+C00922,Web Chat,4
+C00922,Web Chat,3
+C00923,Email,3
+C00923,Web Chat,3
+C00924,Phone,3
+C00925,Email,3
+C00925,Email,5
+C00926,Phone,4
+C00926,Web Chat,5
+C00926,Phone,3
+C00926,Email,4
+C00926,Web Chat,5
+C00927,Web Chat,4
+C00927,Web Chat,3
+C00927,Email,4
+C00928,Phone,5
+C00928,Phone,5
+C00929,Phone,3
+C00929,Phone,1
+C00929,Phone,2
+C00929,Email,2
+C00929,Web Chat,3
+C00929,Phone,2
+C00930,Phone,4
+C00930,Web Chat,5
+C00931,Web Chat,4
+C00931,Phone,3
+C00931,Email,5
+C00932,Phone,4
+C00932,Phone,3
+C00932,Phone,5
+C00932,Email,4
+C00933,Web Chat,3
+C00933,Phone,2
+C00933,Phone,1
+C00933,Phone,1
+C00933,Email,2
+C00933,Phone,2
+C00933,Email,1
+C00934,Web Chat,3
+C00934,Web Chat,3
+C00934,Email,1
+C00934,Phone,2
+C00934,Email,2
+C00935,Web Chat,5
+C00935,Web Chat,5
+C00935,Email,5
+C00935,Email,4
+C00935,Phone,3
+C00936,Email,2
+C00936,Web Chat,1
+C00936,Web Chat,1
+C00936,Email,3
+C00936,Phone,3
+C00936,Web Chat,2
+C00936,Email,2
+C00936,Email,3
+C00936,Web Chat,1
+C00937,Phone,1
+C00937,Web Chat,1
+C00937,Email,1
+C00937,Email,1
+C00937,Email,3
+C00937,Web Chat,2
+C00937,Web Chat,3
+C00937,Email,1
+C00938,Email,4
+C00938,Web Chat,3
+C00938,Email,4
+C00938,Email,5
+C00939,Phone,2
+C00939,Web Chat,3
+C00939,Email,2
+C00939,Web Chat,1
+C00939,Email,1
+C00940,Phone,2
+C00940,Email,1
+C00940,Web Chat,1
+C00940,Email,2
+C00940,Email,1
+C00940,Email,3
+C00941,Phone,5
+C00942,Email,5
+C00942,Email,4
+C00942,Web Chat,4
+C00942,Phone,3
+C00943,Email,3
+C00944,Email,5
+C00944,Web Chat,4
+C00944,Email,4
+C00944,Web Chat,3
+C00945,Web Chat,4
+C00945,Web Chat,3
+C00945,Email,3
+C00946,Email,2
+C00946,Web Chat,3
+C00946,Phone,2
+C00946,Web Chat,3
+C00946,Web Chat,3
+C00946,Email,3
+C00946,Web Chat,2
+C00947,Phone,3
+C00947,Email,3
+C00947,Web Chat,5
+C00948,Web Chat,1
+C00948,Phone,2
+C00948,Web Chat,1
+C00948,Email,3
+C00948,Web Chat,1
+C00948,Web Chat,3
+C00948,Email,1
+C00949,Web Chat,5
+C00949,Phone,4
+C00950,Email,3
+C00950,Email,5
+C00951,Phone,4
+C00951,Email,4
+C00951,Email,4
+C00952,Email,1
+C00952,Web Chat,3
+C00952,Email,1
+C00952,Phone,1
+C00952,Phone,1
+C00952,Phone,1
+C00952,Web Chat,2
+C00952,Email,2
+C00952,Email,3
+C00953,Email,3
+C00953,Web Chat,4
+C00953,Email,4
+C00953,Phone,3
+C00953,Web Chat,3
+C00954,Web Chat,5
+C00954,Email,3
+C00955,Phone,3
+C00955,Phone,3
+C00955,Web Chat,5
+C00955,Email,3
+C00955,Web Chat,5
+C00956,Web Chat,5
+C00956,Phone,3
+C00956,Web Chat,4
+C00957,Web Chat,3
+C00957,Email,3
+C00958,Email,4
+C00959,Phone,1
+C00959,Web Chat,2
+C00959,Email,2
+C00959,Web Chat,1
+C00959,Web Chat,1
+C00959,Email,2
+C00959,Web Chat,2
+C00959,Phone,1
+C00960,Email,4
+C00960,Phone,5
+C00960,Web Chat,4
+C00961,Email,3
+C00961,Email,4
+C00961,Phone,4
+C00962,Email,4
+C00962,Web Chat,5
+C00963,Phone,4
+C00963,Web Chat,4
+C00963,Phone,5
+C00964,Web Chat,3
+C00964,Email,5
+C00964,Email,4
+C00965,Email,5
+C00965,Phone,3
+C00966,Web Chat,1
+C00966,Phone,1
+C00966,Phone,2
+C00966,Email,3
+C00966,Phone,1
+C00966,Email,3
+C00966,Phone,1
+C00966,Web Chat,1
+C00967,Phone,5
+C00968,Web Chat,3
+C00968,Phone,4
+C00969,Web Chat,5
+C00969,Email,3
+C00969,Email,3
+C00969,Phone,5
+C00969,Web Chat,3
+C00970,Email,4
+C00970,Phone,3
+C00970,Web Chat,4
+C00971,Email,3
+C00971,Email,3
+C00971,Web Chat,5
+C00971,Email,3
+C00971,Web Chat,4
+C00972,Web Chat,3
+C00973,Web Chat,3
+C00973,Phone,4
+C00973,Phone,5
+C00973,Web Chat,5
+C00973,Phone,4
+C00974,Phone,3
+C00974,Email,5
+C00974,Phone,3
+C00975,Email,4
+C00975,Web Chat,4
+C00975,Email,5
+C00975,Phone,3
+C00976,Email,4
+C00976,Phone,4
+C00976,Web Chat,5
+C00977,Phone,5
+C00978,Web Chat,3
+C00978,Web Chat,1
+C00978,Web Chat,3
+C00978,Phone,2
+C00978,Email,1
+C00978,Email,3
+C00979,Phone,5
+C00979,Web Chat,4
+C00980,Phone,4
+C00980,Web Chat,5
+C00981,Phone,3
+C00981,Email,4
+C00981,Phone,5
+C00981,Email,5
+C00982,Phone,4
+C00983,Phone,2
+C00983,Phone,1
+C00983,Email,2
+C00983,Web Chat,1
+C00983,Email,1
+C00983,Web Chat,2
+C00983,Web Chat,1
+C00984,Web Chat,4
+C00984,Web Chat,3
+C00985,Phone,4
+C00986,Phone,5
+C00986,Email,5
+C00986,Web Chat,4
+C00987,Email,1
+C00987,Phone,1
+C00987,Phone,3
+C00987,Web Chat,2
+C00988,Web Chat,5
+C00988,Phone,5
+C00988,Phone,3
+C00988,Phone,3
+C00988,Phone,3
+C00989,Web Chat,3
+C00989,Email,3
+C00989,Web Chat,3
+C00989,Phone,4
+C00990,Email,4
+C00991,Phone,4
+C00991,Email,5
+C00991,Email,4
+C00992,Phone,1
+C00992,Email,1
+C00992,Email,3
+C00992,Phone,3
+C00992,Web Chat,3
+C00992,Email,2
+C00992,Web Chat,3
+C00992,Email,1
+C00992,Phone,3
+C00993,Web Chat,3
+C00993,Email,3
+C00993,Phone,5
+C00993,Web Chat,4
+C00993,Phone,4
+C00994,Web Chat,4
+C00994,Email,5
+C00994,Email,5
+C00994,Phone,3
+C00994,Web Chat,4
+C00995,Phone,5
+C00995,Web Chat,5
+C00996,Web Chat,5
+C00996,Web Chat,5
+C00996,Email,4
+C00996,Email,4
+C00996,Email,3
+C00997,Email,4
+C00997,Phone,4
+C00998,Email,5
+C00998,Web Chat,4
+C00998,Email,5
+C00998,Phone,4
+C00998,Web Chat,3
+C00999,Web Chat,3
+C00999,Phone,5
+C01000,Web Chat,3

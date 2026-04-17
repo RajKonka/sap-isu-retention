@@ -1,0 +1,1001 @@
+customer_id,customer_name,region,contract_type,service_type,churned
+C00001,Henry Williams,Central,Monthly,Electricity + Water,1
+C00002,Adrian Anderson,North,Monthly,Electricity + Water,0
+C00003,Mia Smith,North,2-Year,Water,0
+C00004,Iris Clark,Central,Annual,Electricity + Water,1
+C00005,Alice Jones,South,Monthly,Electricity + Gas,1
+C00006,Carol Clark,Central,Annual,Electricity + Water,0
+C00007,Noah Johnson,North,Monthly,Electricity,1
+C00008,Rachel Jones,South,Annual,Electricity,0
+C00009,Olivia Jones,North,2-Year,Water,0
+C00010,Iris White,South,Annual,Electricity + Water,0
+C00011,Fiona Anderson,West,Monthly,Gas,0
+C00012,Iris Brown,South,Monthly,Electricity + Gas,1
+C00013,Paul Anderson,West,Annual,Electricity,0
+C00014,Mia Johnson,Central,Annual,Electricity + Gas,0
+C00015,Iris Martin,West,2-Year,Electricity + Water,0
+C00016,Frank Jackson,North,Monthly,Gas,0
+C00017,Victor Johnson,Central,Monthly,Electricity + Gas,0
+C00018,Adrian Wilson,North,Annual,Electricity,0
+C00019,Zach Miller,West,Annual,Gas,0
+C00020,Alice Johnson,West,Annual,Electricity,0
+C00021,Wendy Lewis,West,Annual,Gas,0
+C00022,Olivia White,North,Annual,Electricity,0
+C00023,Diana White,Central,Monthly,Electricity,1
+C00024,Wendy Thomas,North,Monthly,Gas,0
+C00025,Grace Lewis,Central,2-Year,Electricity,0
+C00026,Olivia Jones,West,Annual,Electricity + Water,1
+C00027,Emma Smith,North,Annual,Electricity,0
+C00028,Karen Lewis,East,Annual,Water,0
+C00029,Frank Jackson,North,Monthly,Electricity + Gas,0
+C00030,Emma Harris,South,Annual,Electricity,0
+C00031,Tina Thomas,South,2-Year,Electricity,0
+C00032,Carol Garcia,North,Monthly,Electricity + Water,0
+C00033,Noah Brown,East,Monthly,Electricity + Water,1
+C00034,Bob Wilson,North,Monthly,Electricity + Gas,0
+C00035,Paul Thompson,South,Monthly,Electricity,1
+C00036,Rachel Williams,Central,Annual,Gas,0
+C00037,Yara Thomas,South,Annual,Gas,0
+C00038,Karen Jones,Central,Monthly,Electricity + Gas,0
+C00039,Frank Miller,North,Annual,Gas,0
+C00040,Henry Jackson,South,2-Year,Electricity,0
+C00041,Fiona Smith,West,Annual,Gas,0
+C00042,David Anderson,Central,Annual,Electricity + Gas,1
+C00043,Zach Thompson,East,Monthly,Water,1
+C00044,Xander Jackson,Central,Annual,Gas,0
+C00045,Zach White,East,Monthly,Electricity,0
+C00046,Carol Thomas,Central,Annual,Water,0
+C00047,Olivia Thomas,East,Monthly,Electricity + Water,1
+C00048,James Williams,Central,Annual,Water,0
+C00049,Zach Anderson,North,2-Year,Gas,0
+C00050,Xander Johnson,Central,Annual,Electricity + Gas,0
+C00051,Tina Robinson,North,Monthly,Gas,0
+C00052,Sam Wilson,South,Annual,Water,0
+C00053,Tina Clark,West,Annual,Electricity + Water,0
+C00054,Carol White,North,Monthly,Electricity + Water,1
+C00055,Beth Thomas,West,Monthly,Electricity,0
+C00056,Mia Moore,East,Annual,Water,0
+C00057,Mia Davis,South,Monthly,Water,0
+C00058,Adrian Anderson,West,Monthly,Electricity,1
+C00059,Alice Moore,West,Annual,Water,0
+C00060,Yara Garcia,South,2-Year,Electricity + Water,1
+C00061,Diana Miller,West,Annual,Electricity + Gas,0
+C00062,Iris Garcia,East,Annual,Gas,0
+C00063,Yara Jones,South,2-Year,Electricity + Gas,0
+C00064,Beth Brown,South,Annual,Electricity + Gas,0
+C00065,Frank Moore,West,Annual,Gas,0
+C00066,James Wilson,East,Monthly,Electricity + Water,1
+C00067,Noah Jackson,East,Monthly,Water,0
+C00068,Iris Taylor,East,2-Year,Electricity + Gas,1
+C00069,Uma Wilson,East,Annual,Electricity + Gas,0
+C00070,James Brown,Central,2-Year,Electricity + Water,1
+C00071,Carol Thompson,West,Annual,Electricity + Gas,0
+C00072,Fiona Lewis,Central,Monthly,Water,0
+C00073,Grace Lewis,West,Annual,Gas,0
+C00074,Adrian Jones,Central,Annual,Water,0
+C00075,Paul Moore,South,Annual,Gas,0
+C00076,Frank Lewis,South,Monthly,Gas,1
+C00077,Yara Wilson,West,Annual,Gas,0
+C00078,Olivia Miller,East,Monthly,Electricity + Water,0
+C00079,Victor Davis,South,Annual,Gas,0
+C00080,Iris Moore,West,Annual,Electricity + Gas,0
+C00081,Diana Garcia,North,Annual,Electricity + Water,0
+C00082,Xander Johnson,East,Monthly,Electricity + Gas,0
+C00083,Xander Thompson,North,Annual,Electricity + Gas,0
+C00084,Paul Davis,East,2-Year,Electricity + Gas,0
+C00085,Paul Wilson,North,Monthly,Gas,1
+C00086,Mia Johnson,North,Annual,Electricity,0
+C00087,Paul Williams,East,Monthly,Water,0
+C00088,Frank Anderson,East,Monthly,Electricity,1
+C00089,Fiona Thomas,West,2-Year,Electricity + Gas,0
+C00090,Bob Anderson,Central,Monthly,Electricity,1
+C00091,Rachel Anderson,North,Monthly,Electricity + Gas,0
+C00092,Diana Thomas,West,Monthly,Water,0
+C00093,Rachel Harris,West,Annual,Gas,1
+C00094,Victor White,East,Annual,Electricity,0
+C00095,Zach Robinson,East,Annual,Water,1
+C00096,Rachel Clark,East,2-Year,Water,0
+C00097,Victor Miller,East,Monthly,Electricity + Water,1
+C00098,Xander Davis,North,2-Year,Electricity + Water,0
+C00099,Beth Anderson,East,Monthly,Water,0
+C00100,Ethan Wilson,West,Monthly,Gas,1
+C00101,Zach Thomas,Central,Monthly,Electricity + Water,0
+C00102,Yara Williams,West,Annual,Electricity,0
+C00103,Beth Miller,Central,Annual,Gas,0
+C00104,Rachel Jones,South,Annual,Electricity + Water,0
+C00105,Frank Garcia,North,Annual,Gas,0
+C00106,Victor Moore,Central,Annual,Electricity + Water,0
+C00107,Xander Smith,South,Monthly,Electricity + Gas,0
+C00108,Alice Robinson,South,2-Year,Electricity + Water,0
+C00109,Victor Lewis,North,Annual,Gas,0
+C00110,Tina Martin,South,Monthly,Gas,1
+C00111,Frank Taylor,South,Annual,Water,0
+C00112,Liam Thomas,East,2-Year,Electricity + Gas,0
+C00113,James Taylor,North,Annual,Gas,0
+C00114,Xander Robinson,Central,Annual,Gas,0
+C00115,Yara Thomas,East,2-Year,Gas,0
+C00116,Tina White,South,2-Year,Electricity + Gas,0
+C00117,Liam Brown,Central,Monthly,Electricity,0
+C00118,Paul Smith,East,2-Year,Electricity + Gas,1
+C00119,Diana Wilson,Central,2-Year,Electricity + Gas,0
+C00120,Iris Davis,South,2-Year,Electricity + Water,0
+C00121,Xander Robinson,South,Annual,Electricity,0
+C00122,Henry Wilson,North,Monthly,Electricity + Water,0
+C00123,Liam Thomas,North,Annual,Electricity + Water,1
+C00124,Henry Moore,South,Annual,Gas,0
+C00125,David Wilson,West,Monthly,Water,0
+C00126,Mia Davis,Central,Annual,Electricity + Water,0
+C00127,Karen Jackson,Central,Annual,Water,1
+C00128,Henry Moore,South,Monthly,Electricity + Water,0
+C00129,Uma Moore,East,Monthly,Electricity + Water,0
+C00130,Noah Johnson,East,Annual,Electricity + Water,0
+C00131,Cole Robinson,Central,Monthly,Electricity + Water,0
+C00132,Adrian Davis,West,Annual,Electricity + Water,1
+C00133,Diana Davis,East,Annual,Water,0
+C00134,Grace Smith,East,Annual,Gas,0
+C00135,Bob Thompson,Central,2-Year,Gas,0
+C00136,Henry Harris,South,2-Year,Electricity + Gas,1
+C00137,Wendy Garcia,North,Annual,Electricity + Water,0
+C00138,James Brown,Central,2-Year,Electricity + Water,0
+C00139,Frank Anderson,Central,Monthly,Water,1
+C00140,Cole Williams,South,2-Year,Electricity + Gas,1
+C00141,Rachel Taylor,East,Annual,Electricity,0
+C00142,Karen Miller,North,2-Year,Electricity,1
+C00143,Xander Wilson,Central,Annual,Electricity,0
+C00144,Liam Jackson,West,Annual,Water,0
+C00145,Diana Wilson,North,Annual,Electricity + Water,0
+C00146,Rachel Clark,North,2-Year,Electricity + Water,0
+C00147,Fiona Johnson,Central,2-Year,Electricity + Water,0
+C00148,Henry Harris,East,Monthly,Electricity + Gas,0
+C00149,Mia Clark,South,Annual,Electricity,0
+C00150,Karen Clark,South,Annual,Water,0
+C00151,Bob Martin,South,Monthly,Electricity + Water,0
+C00152,Adrian Taylor,South,Monthly,Gas,0
+C00153,James Davis,Central,2-Year,Electricity + Water,0
+C00154,Cole White,East,Annual,Electricity + Water,0
+C00155,Cole Jones,North,Monthly,Electricity + Water,0
+C00156,Beth Thomas,East,Monthly,Electricity,1
+C00157,Uma Jackson,Central,Monthly,Electricity + Water,1
+C00158,Mia Miller,East,Monthly,Gas,0
+C00159,Diana Smith,West,2-Year,Electricity + Gas,0
+C00160,Henry Wilson,Central,Monthly,Electricity + Gas,0
+C00161,David Clark,East,Annual,Water,0
+C00162,Carol Clark,Central,2-Year,Water,1
+C00163,Wendy Jones,West,Annual,Water,0
+C00164,Cole Thompson,North,2-Year,Gas,0
+C00165,Emma Smith,West,Monthly,Gas,1
+C00166,Xander Taylor,Central,2-Year,Electricity,0
+C00167,Carol Johnson,South,2-Year,Electricity + Gas,0
+C00168,Bob Jones,East,Annual,Electricity + Water,0
+C00169,Ethan Garcia,South,2-Year,Electricity + Water,0
+C00170,Iris Williams,East,2-Year,Gas,0
+C00171,Tina Garcia,East,2-Year,Electricity + Gas,0
+C00172,Uma White,West,Annual,Water,0
+C00173,Mia Brown,West,2-Year,Electricity + Water,0
+C00174,Beth Smith,West,Monthly,Water,1
+C00175,Tina Davis,East,Annual,Gas,0
+C00176,Henry Miller,Central,2-Year,Electricity + Water,0
+C00177,Zach Martin,North,2-Year,Electricity + Gas,0
+C00178,Frank Harris,North,2-Year,Electricity + Water,0
+C00179,Karen Johnson,South,Monthly,Electricity,1
+C00180,Mia Brown,North,2-Year,Electricity,0
+C00181,Mia Thomas,South,Annual,Electricity + Water,0
+C00182,Wendy Anderson,West,2-Year,Electricity,0
+C00183,James Martin,South,Annual,Water,0
+C00184,Zach Garcia,West,Monthly,Electricity,1
+C00185,Bob Lewis,North,Annual,Gas,0
+C00186,Liam Robinson,Central,Annual,Water,0
+C00187,Fiona Davis,West,Monthly,Gas,0
+C00188,Wendy Jones,Central,Monthly,Water,0
+C00189,Xander Lewis,West,Monthly,Electricity,1
+C00190,Wendy Miller,East,Monthly,Gas,1
+C00191,Paul Jones,East,Monthly,Gas,0
+C00192,Karen Jones,South,Annual,Electricity + Gas,0
+C00193,Cole Davis,East,Monthly,Gas,0
+C00194,Mia Martin,East,Monthly,Water,1
+C00195,Liam Smith,South,Annual,Electricity,0
+C00196,Sam Anderson,South,Monthly,Gas,0
+C00197,Ethan Davis,North,Monthly,Electricity,0
+C00198,Wendy Davis,North,Monthly,Water,1
+C00199,Iris Davis,North,Annual,Electricity + Water,0
+C00200,Beth Jackson,Central,2-Year,Electricity,0
+C00201,Frank Martin,East,Annual,Electricity + Gas,0
+C00202,Wendy Johnson,North,Monthly,Water,0
+C00203,Ethan Thomas,Central,Annual,Electricity,1
+C00204,Frank Johnson,South,Annual,Water,0
+C00205,Diana Johnson,North,Monthly,Electricity + Gas,1
+C00206,Liam Thomas,North,Monthly,Water,1
+C00207,Fiona Brown,East,Annual,Water,0
+C00208,Karen Miller,South,2-Year,Electricity,0
+C00209,Yara Johnson,Central,Monthly,Water,0
+C00210,Grace Smith,North,Monthly,Gas,0
+C00211,Fiona Brown,East,Monthly,Gas,0
+C00212,James Thomas,North,Annual,Electricity + Water,1
+C00213,Grace Anderson,East,Monthly,Water,1
+C00214,Olivia Thompson,East,Annual,Gas,0
+C00215,Liam Williams,North,Monthly,Gas,1
+C00216,Fiona Clark,Central,Annual,Electricity,0
+C00217,Beth Wilson,Central,Annual,Electricity,0
+C00218,Quinn Thomas,Central,Annual,Gas,0
+C00219,Ethan Miller,Central,Annual,Electricity + Gas,0
+C00220,Uma White,South,Annual,Water,0
+C00221,Quinn Jones,East,Annual,Gas,0
+C00222,James Miller,South,2-Year,Electricity + Water,0
+C00223,Noah Jones,North,2-Year,Gas,0
+C00224,James Garcia,South,Annual,Electricity + Water,0
+C00225,Bob Clark,West,Monthly,Electricity,0
+C00226,Grace Lewis,East,Annual,Water,0
+C00227,Sam Wilson,North,2-Year,Electricity,0
+C00228,James Anderson,West,Monthly,Electricity + Gas,0
+C00229,James Clark,Central,Annual,Electricity + Gas,0
+C00230,Liam Garcia,Central,Annual,Electricity,1
+C00231,Wendy Thomas,South,Annual,Electricity,0
+C00232,David Thomas,South,Annual,Electricity + Gas,1
+C00233,Liam Lewis,West,Monthly,Water,0
+C00234,Victor Miller,Central,Annual,Gas,0
+C00235,Xander Clark,East,Monthly,Water,0
+C00236,David Thomas,West,2-Year,Gas,0
+C00237,Paul Clark,East,Annual,Electricity,1
+C00238,Ethan Davis,Central,Monthly,Gas,1
+C00239,Emma Clark,South,Monthly,Gas,0
+C00240,Henry Thompson,South,Annual,Electricity + Water,0
+C00241,David Wilson,North,Annual,Gas,0
+C00242,Zach Harris,South,Annual,Electricity + Gas,0
+C00243,Rachel Brown,North,2-Year,Water,1
+C00244,Paul Smith,North,Annual,Gas,1
+C00245,Fiona Taylor,East,Annual,Electricity + Gas,0
+C00246,Olivia Thompson,East,Annual,Water,0
+C00247,Tina Brown,South,2-Year,Electricity + Water,0
+C00248,Uma Jones,South,Annual,Water,1
+C00249,Alice Williams,East,Annual,Electricity + Water,0
+C00250,Olivia Thomas,Central,Annual,Electricity,0
+C00251,Liam Thomas,North,Monthly,Water,0
+C00252,David Martin,West,Annual,Electricity + Gas,0
+C00253,Sam Thomas,North,Annual,Electricity + Gas,0
+C00254,Olivia Robinson,Central,Annual,Water,0
+C00255,Ethan Anderson,South,2-Year,Electricity + Gas,0
+C00256,Yara Williams,West,Annual,Gas,0
+C00257,Uma Wilson,West,Monthly,Electricity + Water,0
+C00258,Ethan Johnson,South,2-Year,Electricity + Gas,0
+C00259,Xander Taylor,South,Annual,Electricity + Gas,0
+C00260,Quinn Robinson,East,Monthly,Electricity,0
+C00261,Emma Garcia,North,Monthly,Water,0
+C00262,Emma Anderson,West,Monthly,Gas,0
+C00263,Frank Jackson,North,2-Year,Electricity + Water,0
+C00264,Rachel Williams,West,Annual,Electricity + Gas,1
+C00265,Emma Robinson,West,Annual,Electricity + Water,0
+C00266,Victor Taylor,West,Monthly,Electricity + Gas,1
+C00267,Beth Wilson,Central,Annual,Electricity + Gas,0
+C00268,Bob Robinson,North,2-Year,Water,0
+C00269,Frank Robinson,South,Annual,Water,0
+C00270,Yara Robinson,South,Annual,Electricity + Water,0
+C00271,Noah Robinson,Central,Annual,Electricity + Water,0
+C00272,Uma White,North,Annual,Water,0
+C00273,Fiona Anderson,North,Annual,Electricity,0
+C00274,Liam Johnson,South,Annual,Electricity,0
+C00275,Ethan Smith,South,Monthly,Gas,0
+C00276,Iris Smith,West,Annual,Gas,0
+C00277,Quinn Garcia,South,Monthly,Electricity + Gas,0
+C00278,Beth Garcia,South,Annual,Electricity + Water,0
+C00279,Alice Williams,South,2-Year,Gas,0
+C00280,Fiona Brown,North,Annual,Water,0
+C00281,Iris Williams,East,Monthly,Gas,0
+C00282,James Moore,Central,Monthly,Electricity + Water,0
+C00283,Emma Miller,South,Annual,Electricity + Gas,1
+C00284,Paul Jackson,North,Annual,Gas,0
+C00285,Zach White,South,2-Year,Electricity + Water,0
+C00286,Diana Thomas,South,Annual,Electricity + Water,1
+C00287,Carol Robinson,South,Monthly,Gas,0
+C00288,Ethan Miller,North,Annual,Electricity + Gas,0
+C00289,Emma Garcia,Central,Monthly,Electricity + Gas,0
+C00290,Beth Harris,Central,Monthly,Electricity + Gas,0
+C00291,Ethan Davis,North,Monthly,Electricity + Gas,0
+C00292,Frank Lewis,South,Monthly,Electricity + Water,1
+C00293,Liam Jones,East,Annual,Water,0
+C00294,Cole Clark,South,Monthly,Electricity + Gas,0
+C00295,Yara Smith,West,Annual,Electricity + Water,0
+C00296,Diana Taylor,Central,Monthly,Electricity + Gas,0
+C00297,Ethan Clark,South,2-Year,Electricity + Water,1
+C00298,Adrian Anderson,East,Annual,Water,0
+C00299,Paul Clark,South,Annual,Gas,0
+C00300,Noah Clark,Central,Annual,Water,0
+C00301,Tina Miller,South,Monthly,Water,0
+C00302,Henry Lewis,West,Monthly,Gas,0
+C00303,Frank Clark,East,Monthly,Electricity + Gas,1
+C00304,Yara Taylor,South,Monthly,Gas,0
+C00305,Tina Miller,North,Annual,Water,1
+C00306,Bob Martin,South,Annual,Electricity,0
+C00307,Victor Garcia,Central,Annual,Electricity,0
+C00308,Olivia Brown,East,2-Year,Electricity + Gas,0
+C00309,James Johnson,West,Monthly,Water,0
+C00310,Karen Brown,East,Monthly,Electricity + Gas,0
+C00311,Emma Anderson,East,Monthly,Water,0
+C00312,Bob Anderson,East,Monthly,Gas,1
+C00313,Fiona Thomas,South,Annual,Electricity,0
+C00314,Rachel Moore,East,Monthly,Electricity + Gas,0
+C00315,Diana Moore,East,Monthly,Electricity + Gas,0
+C00316,Ethan Smith,Central,Monthly,Electricity,0
+C00317,David Smith,South,Annual,Electricity + Gas,0
+C00318,Iris Jackson,East,Annual,Electricity + Gas,0
+C00319,Diana Thomas,West,2-Year,Electricity + Gas,1
+C00320,Tina Moore,South,2-Year,Water,0
+C00321,Beth Harris,East,Annual,Electricity,0
+C00322,Zach Moore,West,2-Year,Water,0
+C00323,Cole Robinson,South,Monthly,Gas,0
+C00324,Cole Moore,Central,Annual,Water,0
+C00325,Frank Jackson,North,Annual,Water,1
+C00326,Mia Thomas,South,2-Year,Gas,0
+C00327,Wendy Jackson,South,Monthly,Electricity + Water,1
+C00328,Carol Wilson,Central,Annual,Electricity + Water,0
+C00329,Victor Johnson,East,Monthly,Gas,0
+C00330,Bob Jackson,Central,Annual,Electricity + Water,0
+C00331,Paul Anderson,South,Monthly,Electricity + Gas,0
+C00332,Uma Davis,South,2-Year,Electricity + Water,0
+C00333,Ethan Miller,Central,2-Year,Water,0
+C00334,Carol Robinson,South,Monthly,Electricity,0
+C00335,Yara Wilson,North,2-Year,Gas,1
+C00336,Beth Lewis,West,Monthly,Electricity,0
+C00337,Liam White,Central,Annual,Electricity + Water,0
+C00338,Cole Williams,West,2-Year,Water,1
+C00339,Henry Clark,North,Annual,Electricity + Water,0
+C00340,Wendy Jones,West,Monthly,Electricity + Gas,0
+C00341,Yara Davis,South,Monthly,Electricity,0
+C00342,Uma Miller,North,Monthly,Gas,0
+C00343,David Anderson,Central,Monthly,Gas,1
+C00344,Diana Smith,West,Monthly,Electricity,0
+C00345,Liam Anderson,Central,Annual,Electricity + Gas,0
+C00346,Wendy Brown,Central,Annual,Electricity,0
+C00347,Karen Martin,West,Monthly,Gas,0
+C00348,Karen White,South,Monthly,Water,1
+C00349,Adrian Miller,South,Monthly,Electricity + Water,0
+C00350,Beth Moore,North,Annual,Electricity + Gas,0
+C00351,Paul Williams,West,Monthly,Water,0
+C00352,Uma Lewis,West,Annual,Electricity + Gas,0
+C00353,Sam Martin,Central,Monthly,Electricity + Gas,0
+C00354,Victor Lewis,North,2-Year,Gas,1
+C00355,Zach Anderson,Central,Annual,Electricity + Water,1
+C00356,Sam Jackson,South,Monthly,Gas,0
+C00357,Beth Davis,East,Monthly,Electricity + Water,0
+C00358,Tina Taylor,North,Annual,Water,0
+C00359,Quinn Moore,North,2-Year,Electricity + Water,0
+C00360,Olivia Moore,South,Annual,Electricity,0
+C00361,Quinn Williams,Central,Annual,Electricity + Gas,1
+C00362,Tina Lewis,West,Monthly,Electricity + Water,0
+C00363,Henry Thomas,North,Annual,Gas,0
+C00364,Paul Lewis,South,2-Year,Gas,0
+C00365,Paul Wilson,East,Annual,Water,0
+C00366,Rachel Robinson,East,Monthly,Electricity + Water,0
+C00367,Cole Moore,East,Annual,Gas,0
+C00368,Olivia Robinson,West,Annual,Electricity + Gas,0
+C00369,Rachel Jackson,East,2-Year,Water,0
+C00370,Quinn Smith,East,Annual,Electricity + Water,0
+C00371,Karen Jones,East,Annual,Water,0
+C00372,Olivia Johnson,Central,Annual,Electricity + Water,0
+C00373,Victor Martin,West,Monthly,Gas,0
+C00374,Adrian Jones,South,Monthly,Electricity + Water,0
+C00375,Ethan Miller,West,Monthly,Gas,0
+C00376,Rachel Brown,Central,Monthly,Gas,0
+C00377,Paul Garcia,West,Annual,Gas,0
+C00378,Grace Smith,South,Annual,Electricity,1
+C00379,Cole Jones,South,Monthly,Electricity + Gas,1
+C00380,David Garcia,West,Monthly,Water,0
+C00381,Henry Harris,North,2-Year,Electricity + Water,0
+C00382,Carol Harris,East,Monthly,Gas,0
+C00383,Uma Moore,Central,Annual,Water,0
+C00384,Wendy Miller,South,2-Year,Gas,0
+C00385,Sam Clark,South,Annual,Gas,0
+C00386,Adrian Anderson,South,Annual,Gas,0
+C00387,Victor Harris,Central,Annual,Gas,0
+C00388,Iris Jones,North,Annual,Water,0
+C00389,Carol Davis,North,Annual,Gas,0
+C00390,Alice Johnson,West,Annual,Electricity + Water,1
+C00391,Tina Wilson,East,Annual,Water,1
+C00392,Beth Moore,North,2-Year,Electricity,0
+C00393,Yara Williams,West,2-Year,Water,0
+C00394,James Lewis,West,Monthly,Electricity + Water,0
+C00395,Olivia Robinson,East,Annual,Gas,0
+C00396,David Smith,North,Monthly,Water,0
+C00397,James Anderson,North,Monthly,Water,0
+C00398,Grace Jones,East,Monthly,Gas,1
+C00399,Henry Miller,Central,Monthly,Electricity + Gas,1
+C00400,Diana Taylor,North,Monthly,Water,1
+C00401,Zach Anderson,West,2-Year,Gas,0
+C00402,Zach Miller,South,Annual,Electricity + Gas,1
+C00403,Victor Robinson,West,Monthly,Electricity + Water,0
+C00404,Victor Clark,West,Annual,Electricity + Water,0
+C00405,Ethan Smith,Central,Annual,Electricity + Water,1
+C00406,Beth Williams,Central,2-Year,Water,0
+C00407,Noah Williams,South,Monthly,Electricity + Water,0
+C00408,Quinn Anderson,Central,Annual,Electricity + Gas,0
+C00409,Tina Miller,East,Monthly,Electricity,0
+C00410,Quinn Taylor,Central,Monthly,Electricity,1
+C00411,Zach Thomas,East,Monthly,Electricity + Water,1
+C00412,Olivia Williams,South,2-Year,Water,0
+C00413,Emma Davis,North,Monthly,Electricity + Gas,0
+C00414,Xander Johnson,North,Annual,Electricity + Water,0
+C00415,Noah Moore,West,Monthly,Water,1
+C00416,Liam Miller,South,Monthly,Water,0
+C00417,Adrian Garcia,Central,Monthly,Gas,1
+C00418,Iris Johnson,Central,Monthly,Water,1
+C00419,Paul Miller,West,Annual,Water,0
+C00420,Tina White,Central,2-Year,Electricity + Water,1
+C00421,Sam Garcia,West,Annual,Gas,0
+C00422,Quinn Jackson,Central,2-Year,Water,0
+C00423,Noah Clark,South,Monthly,Electricity + Gas,0
+C00424,Grace Smith,West,Monthly,Electricity + Water,0
+C00425,Tina Davis,North,Monthly,Electricity + Water,0
+C00426,Cole Robinson,East,Monthly,Electricity + Gas,0
+C00427,Adrian Martin,South,Monthly,Electricity + Gas,0
+C00428,Zach Thompson,Central,2-Year,Water,1
+C00429,Bob Johnson,South,Annual,Electricity + Gas,0
+C00430,Uma Jones,Central,Monthly,Electricity + Gas,0
+C00431,Rachel Thomas,Central,Monthly,Electricity + Gas,0
+C00432,David Jones,South,Monthly,Electricity,0
+C00433,Frank Clark,South,Monthly,Electricity + Gas,0
+C00434,Fiona White,South,Monthly,Gas,0
+C00435,Sam Williams,East,Monthly,Electricity,0
+C00436,Diana Wilson,Central,Monthly,Gas,0
+C00437,Mia Johnson,Central,Monthly,Gas,1
+C00438,Tina Miller,West,2-Year,Gas,1
+C00439,Uma Johnson,East,Annual,Electricity + Gas,0
+C00440,James Davis,Central,Monthly,Electricity,0
+C00441,Xander Johnson,South,Monthly,Gas,0
+C00442,Karen Garcia,West,2-Year,Electricity,1
+C00443,Rachel Jackson,South,Monthly,Electricity + Water,0
+C00444,Zach Taylor,Central,Monthly,Gas,1
+C00445,Liam White,East,Monthly,Electricity,0
+C00446,Victor Garcia,East,Annual,Electricity,0
+C00447,Mia Miller,Central,Monthly,Electricity + Gas,1
+C00448,Iris Martin,Central,Annual,Electricity + Water,0
+C00449,James Lewis,South,Monthly,Gas,0
+C00450,Olivia Smith,East,Monthly,Electricity + Gas,0
+C00451,Iris Smith,South,Monthly,Electricity + Water,0
+C00452,Iris Taylor,Central,Annual,Electricity + Water,1
+C00453,Zach Robinson,North,Annual,Gas,0
+C00454,Grace Miller,South,Annual,Electricity + Gas,0
+C00455,Noah Smith,Central,Monthly,Electricity + Water,0
+C00456,Olivia Smith,East,Annual,Electricity + Gas,0
+C00457,Olivia Miller,West,Monthly,Electricity,0
+C00458,Quinn Jackson,North,Monthly,Water,0
+C00459,Diana White,West,2-Year,Water,0
+C00460,Emma Brown,Central,Annual,Electricity + Water,0
+C00461,Beth White,North,Annual,Electricity + Water,0
+C00462,Xander Smith,South,Monthly,Gas,0
+C00463,Cole Jackson,East,Monthly,Electricity + Water,1
+C00464,James Harris,North,2-Year,Gas,0
+C00465,Wendy Taylor,South,Monthly,Gas,1
+C00466,Paul Johnson,South,Annual,Water,0
+C00467,Liam Wilson,East,Annual,Electricity + Gas,0
+C00468,Xander Miller,Central,2-Year,Gas,0
+C00469,David Williams,West,Monthly,Electricity,0
+C00470,Liam Davis,East,Monthly,Electricity + Water,0
+C00471,Quinn Harris,Central,Monthly,Water,1
+C00472,Karen Davis,North,Annual,Water,0
+C00473,Bob Miller,North,Annual,Gas,0
+C00474,Rachel Jones,West,Annual,Gas,0
+C00475,Carol Jones,East,Monthly,Electricity,0
+C00476,Sam White,Central,Annual,Electricity,0
+C00477,Emma Robinson,Central,Monthly,Gas,1
+C00478,Bob Williams,West,2-Year,Water,0
+C00479,Diana Garcia,East,Monthly,Electricity,1
+C00480,Karen Jones,West,Monthly,Electricity + Gas,0
+C00481,Sam Johnson,South,Annual,Electricity + Water,0
+C00482,Xander Johnson,West,2-Year,Water,0
+C00483,Cole Jackson,South,Monthly,Electricity + Gas,1
+C00484,Quinn Thompson,East,Monthly,Electricity,1
+C00485,Diana Brown,East,Annual,Electricity,0
+C00486,Ethan Clark,East,2-Year,Electricity,0
+C00487,Fiona Taylor,West,Annual,Electricity + Water,1
+C00488,Quinn Jackson,South,Annual,Gas,0
+C00489,Grace Lewis,Central,2-Year,Electricity + Water,0
+C00490,Liam Wilson,East,Monthly,Gas,1
+C00491,David Thomas,West,Monthly,Gas,1
+C00492,Xander Clark,North,Monthly,Gas,0
+C00493,Olivia Thompson,West,Monthly,Water,0
+C00494,Cole Jones,North,Annual,Gas,0
+C00495,Ethan Clark,South,Monthly,Water,1
+C00496,James Taylor,East,Annual,Electricity + Water,0
+C00497,Emma Garcia,East,Annual,Electricity,0
+C00498,James Taylor,South,2-Year,Electricity,0
+C00499,Carol Robinson,North,Annual,Electricity + Water,0
+C00500,Victor Thomas,West,Monthly,Electricity + Gas,0
+C00501,Zach Thompson,West,Monthly,Water,1
+C00502,Sam Wilson,West,Monthly,Gas,0
+C00503,James Davis,South,Annual,Electricity + Gas,0
+C00504,Fiona Davis,Central,Annual,Gas,0
+C00505,Mia White,North,Monthly,Electricity + Gas,0
+C00506,Emma Garcia,East,Monthly,Electricity + Gas,1
+C00507,Grace Jones,North,Annual,Electricity + Water,0
+C00508,Frank Williams,Central,Monthly,Electricity + Water,1
+C00509,David Brown,South,Monthly,Electricity + Gas,0
+C00510,Diana Martin,West,Monthly,Water,0
+C00511,Carol Davis,East,Annual,Electricity + Water,0
+C00512,Wendy Thompson,Central,Annual,Water,0
+C00513,Adrian Lewis,North,2-Year,Gas,0
+C00514,David Williams,East,Monthly,Electricity + Water,1
+C00515,Diana Johnson,South,Monthly,Water,0
+C00516,Fiona Moore,West,Monthly,Gas,0
+C00517,Carol Clark,North,2-Year,Electricity + Water,0
+C00518,Olivia Lewis,South,Monthly,Water,0
+C00519,James Anderson,South,Monthly,Electricity + Water,0
+C00520,Grace Robinson,Central,2-Year,Electricity,0
+C00521,Quinn Anderson,North,Monthly,Gas,0
+C00522,Liam Lewis,West,Annual,Electricity,0
+C00523,Uma Brown,East,Monthly,Electricity,0
+C00524,Fiona Brown,West,Monthly,Electricity + Gas,0
+C00525,Liam Garcia,East,2-Year,Electricity,0
+C00526,James Harris,North,Annual,Water,0
+C00527,Yara Wilson,South,Annual,Water,0
+C00528,Paul Davis,East,Monthly,Water,0
+C00529,Diana Garcia,South,Annual,Electricity + Gas,0
+C00530,Karen Smith,Central,Monthly,Gas,1
+C00531,Xander Moore,East,2-Year,Gas,0
+C00532,James Jones,Central,Annual,Electricity + Water,0
+C00533,Henry Thomas,North,2-Year,Electricity + Gas,0
+C00534,Liam Thomas,Central,Monthly,Gas,0
+C00535,Uma Wilson,South,Annual,Gas,1
+C00536,Yara Miller,Central,Monthly,Gas,1
+C00537,Mia Smith,East,Monthly,Gas,0
+C00538,Mia Miller,West,Annual,Electricity,1
+C00539,Sam Moore,South,Monthly,Gas,1
+C00540,Tina White,West,2-Year,Electricity + Water,0
+C00541,Bob Moore,Central,2-Year,Electricity,0
+C00542,Fiona Martin,Central,Monthly,Electricity,0
+C00543,Victor Smith,West,Annual,Electricity,0
+C00544,Rachel White,East,Annual,Water,0
+C00545,Bob Garcia,South,Monthly,Water,0
+C00546,Alice Anderson,South,Annual,Gas,0
+C00547,Yara Martin,South,2-Year,Gas,1
+C00548,Wendy Williams,Central,Monthly,Gas,0
+C00549,Uma Miller,North,Annual,Electricity,0
+C00550,Cole Harris,North,Monthly,Gas,0
+C00551,Quinn Lewis,South,Annual,Water,0
+C00552,Liam Thomas,South,Annual,Gas,0
+C00553,Beth Clark,Central,Monthly,Electricity,1
+C00554,Noah Garcia,Central,2-Year,Gas,1
+C00555,Uma Jackson,South,2-Year,Electricity + Water,0
+C00556,Olivia Wilson,Central,2-Year,Electricity + Water,0
+C00557,Liam White,West,Annual,Electricity + Water,0
+C00558,Fiona Harris,South,Monthly,Electricity + Water,1
+C00559,Uma Garcia,East,Annual,Gas,0
+C00560,Karen Anderson,East,Annual,Electricity,0
+C00561,James Smith,Central,2-Year,Gas,0
+C00562,Adrian Williams,South,2-Year,Electricity,0
+C00563,Zach Anderson,Central,Monthly,Electricity,0
+C00564,Frank Jones,West,Annual,Electricity + Water,0
+C00565,Iris Smith,East,Monthly,Water,0
+C00566,Xander Robinson,South,2-Year,Water,0
+C00567,Karen Jones,East,Monthly,Gas,0
+C00568,Sam Brown,East,Monthly,Water,1
+C00569,Emma Taylor,Central,Annual,Electricity + Water,0
+C00570,Adrian Miller,South,Monthly,Gas,0
+C00571,Carol Jones,North,Monthly,Electricity + Gas,0
+C00572,Uma Taylor,Central,2-Year,Gas,0
+C00573,Zach Davis,East,Annual,Electricity + Water,0
+C00574,Beth Davis,Central,Monthly,Electricity + Water,0
+C00575,Diana Jones,East,Monthly,Electricity + Gas,0
+C00576,Adrian Garcia,North,Monthly,Gas,0
+C00577,Sam Garcia,East,Annual,Gas,0
+C00578,Carol Jackson,East,Annual,Gas,0
+C00579,Yara Williams,Central,Monthly,Water,1
+C00580,Victor Wilson,West,Monthly,Gas,0
+C00581,Bob Clark,South,Annual,Water,0
+C00582,Victor Brown,South,2-Year,Water,0
+C00583,Mia Miller,North,2-Year,Electricity + Gas,0
+C00584,Grace Davis,South,Monthly,Electricity + Gas,0
+C00585,Carol Johnson,South,Monthly,Gas,0
+C00586,Rachel Robinson,North,Monthly,Water,0
+C00587,Olivia Garcia,South,2-Year,Electricity + Gas,0
+C00588,Emma Clark,East,Annual,Water,1
+C00589,Frank Garcia,Central,2-Year,Electricity + Water,0
+C00590,James Brown,South,Annual,Water,0
+C00591,Liam Williams,East,Monthly,Electricity + Gas,0
+C00592,Xander Moore,North,Monthly,Electricity + Water,0
+C00593,Henry Anderson,South,2-Year,Electricity,0
+C00594,James Jackson,East,2-Year,Electricity + Gas,0
+C00595,Adrian Thompson,South,Annual,Electricity + Water,0
+C00596,Fiona Thomas,West,Monthly,Gas,1
+C00597,Tina Smith,North,Monthly,Water,0
+C00598,Grace Robinson,Central,Monthly,Electricity + Gas,0
+C00599,Henry Martin,North,Monthly,Electricity,0
+C00600,Uma Wilson,East,Annual,Electricity,0
+C00601,David Thomas,East,Annual,Electricity,0
+C00602,Tina Moore,South,Monthly,Electricity + Water,0
+C00603,Iris Smith,East,2-Year,Gas,0
+C00604,Carol Thomas,North,Annual,Electricity + Gas,1
+C00605,Liam Robinson,South,Annual,Electricity + Gas,0
+C00606,Fiona White,West,Annual,Electricity + Water,0
+C00607,Ethan Davis,West,Annual,Water,0
+C00608,Uma Martin,North,2-Year,Electricity + Water,0
+C00609,Uma Thomas,South,Annual,Electricity + Water,0
+C00610,Zach Moore,Central,Annual,Gas,1
+C00611,Zach Moore,West,2-Year,Gas,0
+C00612,Henry Lewis,South,Monthly,Electricity,0
+C00613,Beth Jones,East,Monthly,Electricity,0
+C00614,Noah Moore,North,Monthly,Water,1
+C00615,Liam Brown,North,2-Year,Electricity,0
+C00616,James Jackson,East,2-Year,Electricity + Gas,0
+C00617,James Garcia,East,2-Year,Water,0
+C00618,Emma Miller,West,Annual,Water,0
+C00619,Liam Smith,West,Annual,Electricity,0
+C00620,Tina Williams,West,Annual,Gas,0
+C00621,Carol Moore,East,Monthly,Electricity + Water,0
+C00622,Karen Lewis,South,Annual,Electricity,1
+C00623,Quinn Thompson,West,2-Year,Electricity + Water,0
+C00624,Noah Brown,Central,Monthly,Water,0
+C00625,Sam Harris,East,Annual,Water,0
+C00626,Henry Williams,North,Monthly,Electricity + Water,1
+C00627,Ethan Lewis,West,Annual,Electricity,0
+C00628,Cole Jones,Central,2-Year,Electricity + Water,0
+C00629,Adrian Robinson,North,Annual,Electricity,1
+C00630,Rachel Robinson,East,Annual,Water,0
+C00631,Grace Clark,South,Annual,Water,0
+C00632,Karen Martin,South,Annual,Gas,0
+C00633,Mia Brown,South,Monthly,Electricity + Gas,0
+C00634,Bob Johnson,West,Annual,Gas,0
+C00635,Olivia Jackson,South,Monthly,Gas,0
+C00636,Beth Jackson,South,Annual,Gas,0
+C00637,Bob Garcia,West,Monthly,Electricity + Gas,0
+C00638,Alice Johnson,North,Annual,Water,0
+C00639,Alice Anderson,South,Monthly,Electricity + Gas,0
+C00640,Mia Garcia,South,Monthly,Water,1
+C00641,Victor Miller,South,Monthly,Water,0
+C00642,Zach Miller,West,Monthly,Electricity + Gas,0
+C00643,Grace Smith,South,Annual,Electricity,1
+C00644,Uma Clark,Central,Annual,Electricity + Gas,0
+C00645,Carol Taylor,South,Monthly,Water,0
+C00646,Liam Wilson,East,Monthly,Electricity + Gas,0
+C00647,Paul Martin,Central,Annual,Gas,0
+C00648,Paul Thompson,East,Annual,Gas,1
+C00649,Alice Anderson,North,Annual,Electricity + Water,1
+C00650,Karen Jackson,East,2-Year,Electricity + Water,0
+C00651,Karen Robinson,West,Annual,Electricity,0
+C00652,David Johnson,North,2-Year,Gas,0
+C00653,Cole Thomas,South,Annual,Electricity,0
+C00654,Beth Garcia,East,Annual,Electricity + Water,1
+C00655,Diana Jackson,North,Annual,Gas,0
+C00656,Paul Davis,East,2-Year,Electricity,1
+C00657,Liam Thompson,North,Annual,Electricity,0
+C00658,Noah Martin,West,Monthly,Electricity + Gas,1
+C00659,Yara Miller,North,2-Year,Gas,0
+C00660,Noah Harris,North,2-Year,Electricity + Water,1
+C00661,Adrian Williams,Central,2-Year,Electricity + Water,0
+C00662,Victor Clark,South,Annual,Electricity,0
+C00663,Henry Clark,North,Annual,Electricity + Water,0
+C00664,Zach Garcia,East,Monthly,Water,0
+C00665,Zach White,West,Monthly,Electricity,1
+C00666,Grace Davis,South,Monthly,Electricity,0
+C00667,Beth Thompson,West,Monthly,Electricity,0
+C00668,Tina Brown,East,Monthly,Gas,0
+C00669,Alice Williams,North,Annual,Gas,0
+C00670,Mia Jones,East,2-Year,Electricity,0
+C00671,Karen Miller,Central,Monthly,Water,0
+C00672,Olivia Lewis,North,Annual,Gas,0
+C00673,James Brown,South,Annual,Electricity + Gas,0
+C00674,Olivia Anderson,South,Monthly,Gas,1
+C00675,Liam White,Central,Monthly,Water,0
+C00676,Emma Martin,East,Monthly,Electricity + Water,0
+C00677,Ethan Taylor,West,Monthly,Electricity + Water,0
+C00678,Bob Thomas,West,Monthly,Electricity + Water,0
+C00679,Ethan Harris,East,Monthly,Electricity + Gas,1
+C00680,Yara Brown,East,Annual,Gas,0
+C00681,Carol Jackson,East,Annual,Electricity,0
+C00682,Xander Robinson,North,Annual,Water,1
+C00683,Karen Smith,Central,Monthly,Gas,0
+C00684,Grace Clark,West,Monthly,Water,0
+C00685,Rachel Davis,Central,Monthly,Water,0
+C00686,Emma Lewis,South,Monthly,Gas,0
+C00687,Iris White,Central,Annual,Electricity + Water,1
+C00688,Cole Jackson,East,Monthly,Gas,1
+C00689,Henry White,North,Monthly,Electricity + Water,0
+C00690,Henry Anderson,Central,Annual,Water,0
+C00691,Adrian Robinson,West,Annual,Electricity + Gas,0
+C00692,Paul Thompson,East,2-Year,Gas,0
+C00693,Tina Anderson,South,Annual,Gas,0
+C00694,Fiona Garcia,Central,Monthly,Electricity,0
+C00695,Bob Jones,East,Annual,Water,0
+C00696,Zach Thomas,South,Monthly,Gas,0
+C00697,Xander Thomas,East,Annual,Electricity + Gas,0
+C00698,Yara Garcia,West,Monthly,Water,0
+C00699,Wendy Robinson,Central,Monthly,Electricity + Water,0
+C00700,Grace Jones,East,Annual,Gas,0
+C00701,Uma White,East,Annual,Water,0
+C00702,Noah Moore,Central,2-Year,Gas,1
+C00703,Karen Taylor,East,2-Year,Electricity,1
+C00704,Uma Davis,West,Annual,Electricity,0
+C00705,Rachel Jackson,West,Monthly,Electricity,0
+C00706,Alice White,South,2-Year,Gas,0
+C00707,Tina Jones,North,Annual,Electricity + Water,0
+C00708,Bob White,East,Monthly,Water,0
+C00709,Rachel Clark,East,Monthly,Electricity + Gas,0
+C00710,Ethan Jones,Central,Annual,Water,1
+C00711,Adrian Jackson,South,Monthly,Water,0
+C00712,Tina Williams,West,2-Year,Electricity + Water,0
+C00713,Cole Robinson,East,2-Year,Water,0
+C00714,Zach Harris,Central,2-Year,Electricity + Gas,0
+C00715,Bob Thompson,South,Annual,Electricity,0
+C00716,Alice Thompson,South,2-Year,Electricity + Gas,0
+C00717,Diana Moore,East,Annual,Gas,1
+C00718,Fiona Wilson,West,Monthly,Electricity + Gas,0
+C00719,Wendy Lewis,South,Monthly,Electricity + Water,0
+C00720,Sam Thomas,North,Monthly,Gas,0
+C00721,Rachel Williams,East,Monthly,Electricity + Water,0
+C00722,Mia Lewis,Central,Annual,Electricity + Water,0
+C00723,Tina Brown,Central,Monthly,Electricity + Gas,0
+C00724,Adrian White,East,2-Year,Electricity,0
+C00725,Paul Moore,East,Monthly,Electricity,0
+C00726,Diana Martin,North,2-Year,Water,0
+C00727,Victor Miller,South,Monthly,Electricity + Water,0
+C00728,Zach Robinson,South,Monthly,Electricity + Gas,0
+C00729,Grace Thomas,Central,Monthly,Electricity,0
+C00730,Sam Robinson,East,Monthly,Electricity + Water,0
+C00731,Bob Wilson,South,Monthly,Water,0
+C00732,Sam Taylor,East,Annual,Electricity,0
+C00733,Alice Lewis,West,Monthly,Water,0
+C00734,Karen Clark,West,Annual,Water,0
+C00735,Zach Smith,East,Annual,Electricity,0
+C00736,Uma Garcia,East,Annual,Electricity + Gas,0
+C00737,Henry Johnson,West,Annual,Electricity + Water,0
+C00738,Karen Thomas,West,Monthly,Electricity,0
+C00739,Iris White,North,Annual,Electricity + Gas,0
+C00740,Carol Thomas,Central,Annual,Electricity + Gas,0
+C00741,Zach Moore,West,Monthly,Electricity + Gas,1
+C00742,David Smith,West,Annual,Electricity + Gas,0
+C00743,Liam Wilson,East,Annual,Electricity,0
+C00744,Quinn Anderson,South,Monthly,Water,0
+C00745,Grace Davis,East,Annual,Electricity + Water,1
+C00746,Alice Thompson,West,2-Year,Water,1
+C00747,Mia Johnson,North,Annual,Electricity + Water,0
+C00748,Victor Harris,East,Annual,Water,1
+C00749,Tina Thompson,South,2-Year,Electricity + Water,1
+C00750,Paul Lewis,North,2-Year,Water,0
+C00751,Ethan Wilson,Central,Monthly,Electricity,1
+C00752,Grace Thompson,East,Annual,Electricity + Gas,0
+C00753,Wendy Jackson,South,Monthly,Electricity,0
+C00754,Paul Smith,Central,Annual,Water,0
+C00755,James White,North,Annual,Gas,0
+C00756,Xander Smith,East,Annual,Electricity + Gas,0
+C00757,David Smith,West,2-Year,Electricity + Water,0
+C00758,Noah Johnson,South,2-Year,Electricity + Gas,0
+C00759,Wendy Thomas,West,Monthly,Electricity,1
+C00760,Zach Brown,North,Annual,Electricity + Water,0
+C00761,Wendy Clark,South,Monthly,Electricity + Water,1
+C00762,Noah Smith,East,Annual,Electricity,0
+C00763,Wendy Thomas,North,2-Year,Electricity + Gas,0
+C00764,Sam Brown,South,Annual,Electricity + Water,0
+C00765,Quinn Robinson,East,Monthly,Electricity + Gas,1
+C00766,Mia White,West,2-Year,Electricity + Water,0
+C00767,Sam Jackson,West,2-Year,Gas,0
+C00768,Cole Robinson,North,2-Year,Water,0
+C00769,David Martin,North,Annual,Water,1
+C00770,Ethan Smith,South,Monthly,Electricity + Water,0
+C00771,Henry Martin,Central,Annual,Water,1
+C00772,Ethan Garcia,West,Annual,Electricity,0
+C00773,Adrian Clark,West,2-Year,Electricity + Gas,0
+C00774,Carol Smith,North,Annual,Electricity + Gas,0
+C00775,Henry Clark,East,Monthly,Water,1
+C00776,Noah Jackson,North,Annual,Gas,0
+C00777,Xander Brown,West,Monthly,Water,1
+C00778,David Davis,Central,Monthly,Water,1
+C00779,Rachel Moore,South,2-Year,Electricity + Gas,1
+C00780,Tina Wilson,North,Monthly,Gas,1
+C00781,Iris Lewis,West,Monthly,Gas,0
+C00782,Carol Thomas,West,Monthly,Water,0
+C00783,Ethan Wilson,North,Monthly,Electricity,0
+C00784,Victor Jackson,South,2-Year,Electricity + Gas,0
+C00785,Zach Anderson,Central,Annual,Electricity + Water,0
+C00786,Karen Moore,South,Annual,Electricity,0
+C00787,Carol Thomas,East,Annual,Electricity + Water,0
+C00788,James Jones,West,Monthly,Water,1
+C00789,Henry Taylor,North,Annual,Water,0
+C00790,Wendy Lewis,Central,Annual,Gas,1
+C00791,Beth Harris,West,2-Year,Water,1
+C00792,Iris Taylor,East,Monthly,Water,0
+C00793,Beth Garcia,East,Monthly,Water,0
+C00794,Liam Garcia,North,Monthly,Water,1
+C00795,Henry Lewis,East,2-Year,Gas,1
+C00796,Alice Taylor,Central,Monthly,Electricity + Water,0
+C00797,Paul Miller,South,2-Year,Gas,0
+C00798,Sam White,Central,Annual,Water,1
+C00799,Bob Wilson,East,2-Year,Electricity + Water,0
+C00800,Fiona Moore,East,Annual,Gas,0
+C00801,Ethan Thomas,West,Monthly,Electricity + Gas,0
+C00802,Tina Thompson,South,Monthly,Gas,0
+C00803,Sam Taylor,West,Annual,Electricity,0
+C00804,Xander Lewis,Central,Monthly,Electricity + Water,0
+C00805,Olivia Lewis,Central,Annual,Water,0
+C00806,Beth Taylor,East,Monthly,Gas,0
+C00807,Karen Brown,West,2-Year,Electricity + Gas,0
+C00808,Olivia Thompson,Central,Monthly,Electricity + Gas,0
+C00809,Olivia Taylor,Central,Annual,Electricity,0
+C00810,Alice Harris,South,Annual,Water,0
+C00811,Frank Jones,North,2-Year,Electricity + Gas,0
+C00812,Sam Taylor,Central,Annual,Electricity,1
+C00813,Wendy Miller,North,Annual,Electricity + Gas,0
+C00814,Grace Garcia,West,Monthly,Electricity,0
+C00815,David Smith,North,Monthly,Water,0
+C00816,Paul Thomas,East,Monthly,Water,1
+C00817,Iris Garcia,South,Monthly,Electricity + Water,1
+C00818,Frank Williams,North,2-Year,Electricity + Gas,0
+C00819,Ethan Davis,West,Annual,Electricity + Gas,0
+C00820,James Clark,South,Annual,Electricity,0
+C00821,Diana Harris,West,Monthly,Electricity + Gas,0
+C00822,Karen Jackson,Central,2-Year,Water,0
+C00823,Rachel Thompson,North,2-Year,Electricity + Water,0
+C00824,Paul Lewis,West,Annual,Electricity,0
+C00825,Wendy Thompson,East,2-Year,Gas,0
+C00826,Uma Taylor,South,Annual,Water,1
+C00827,Uma Garcia,South,Monthly,Electricity,0
+C00828,Liam Robinson,West,2-Year,Electricity,0
+C00829,Tina Garcia,Central,Monthly,Electricity + Gas,0
+C00830,Wendy Jones,Central,Monthly,Electricity + Gas,0
+C00831,Uma Brown,South,2-Year,Electricity,0
+C00832,Zach Brown,South,Monthly,Water,1
+C00833,Uma Harris,Central,Annual,Electricity + Gas,0
+C00834,Xander Lewis,South,2-Year,Gas,0
+C00835,Frank White,West,2-Year,Gas,1
+C00836,Emma Johnson,Central,2-Year,Gas,1
+C00837,Victor Johnson,North,2-Year,Electricity + Gas,0
+C00838,David Anderson,East,Annual,Electricity + Gas,0
+C00839,Tina Lewis,North,2-Year,Electricity,0
+C00840,Frank Wilson,East,Monthly,Electricity + Water,1
+C00841,Cole White,East,Monthly,Gas,0
+C00842,Tina Wilson,Central,Monthly,Water,0
+C00843,Ethan Davis,North,Annual,Water,0
+C00844,Xander Clark,East,Monthly,Gas,1
+C00845,Noah Anderson,West,Monthly,Electricity,0
+C00846,James Moore,West,Annual,Gas,0
+C00847,Cole Martin,East,Monthly,Water,0
+C00848,Sam Brown,Central,Monthly,Electricity + Gas,1
+C00849,Diana Brown,North,Monthly,Electricity,1
+C00850,Wendy Robinson,East,Monthly,Electricity + Gas,0
+C00851,Tina Robinson,East,Monthly,Electricity + Gas,1
+C00852,Diana Miller,West,Annual,Electricity + Water,0
+C00853,Quinn Moore,East,Monthly,Water,1
+C00854,Noah Johnson,East,Annual,Electricity + Gas,0
+C00855,Victor Davis,North,Monthly,Electricity,0
+C00856,Fiona Martin,North,Monthly,Gas,0
+C00857,Bob Davis,Central,Monthly,Electricity + Gas,0
+C00858,Mia Brown,South,Monthly,Electricity + Water,0
+C00859,Noah Jackson,East,Monthly,Electricity,1
+C00860,Frank Williams,South,2-Year,Electricity + Water,0
+C00861,Mia Davis,South,Annual,Water,0
+C00862,Liam Jackson,South,2-Year,Gas,0
+C00863,Carol Martin,East,Annual,Electricity + Gas,0
+C00864,Ethan Martin,South,Monthly,Water,0
+C00865,Liam Thompson,Central,2-Year,Electricity,1
+C00866,Emma Anderson,Central,Monthly,Electricity,1
+C00867,Liam Harris,South,2-Year,Electricity + Gas,0
+C00868,Ethan Miller,East,Monthly,Electricity + Water,1
+C00869,Alice Moore,Central,Annual,Gas,0
+C00870,Beth Garcia,Central,Annual,Electricity + Water,0
+C00871,Uma Williams,South,Monthly,Electricity,0
+C00872,Uma Garcia,East,Monthly,Gas,0
+C00873,Henry White,West,Annual,Water,0
+C00874,Tina Jackson,West,Annual,Electricity,0
+C00875,Uma Miller,East,Monthly,Water,1
+C00876,Uma Davis,East,Annual,Electricity,0
+C00877,Ethan Martin,North,Annual,Gas,0
+C00878,David Brown,Central,Annual,Electricity + Water,0
+C00879,Grace Anderson,West,Annual,Electricity,0
+C00880,Beth Harris,North,Monthly,Electricity + Gas,0
+C00881,Mia Moore,North,Monthly,Gas,1
+C00882,Rachel Thomas,South,Annual,Electricity + Gas,0
+C00883,Fiona Williams,Central,2-Year,Electricity + Water,0
+C00884,Ethan White,West,Annual,Water,0
+C00885,Yara Garcia,Central,Annual,Water,1
+C00886,Zach Robinson,West,2-Year,Electricity + Gas,0
+C00887,Emma Moore,West,Annual,Gas,0
+C00888,Olivia Miller,North,Annual,Water,0
+C00889,Zach Jones,North,Monthly,Electricity + Gas,1
+C00890,Quinn Thomas,East,Annual,Electricity + Water,0
+C00891,Beth Wilson,East,Annual,Gas,0
+C00892,Victor Johnson,South,2-Year,Gas,1
+C00893,Bob Johnson,South,Monthly,Electricity + Gas,0
+C00894,Henry Johnson,Central,Annual,Electricity + Gas,0
+C00895,Victor Harris,North,Monthly,Electricity + Water,1
+C00896,Olivia Robinson,West,Annual,Electricity + Gas,0
+C00897,Bob Thompson,West,2-Year,Water,0
+C00898,Olivia Taylor,East,2-Year,Water,0
+C00899,Karen Brown,South,Annual,Water,0
+C00900,Frank Thompson,West,Annual,Electricity + Gas,1
+C00901,Adrian Martin,West,Monthly,Electricity,0
+C00902,Sam Moore,Central,2-Year,Gas,0
+C00903,Karen Clark,West,Monthly,Electricity,0
+C00904,Sam Thomas,North,Annual,Electricity + Water,1
+C00905,Rachel Martin,Central,Annual,Electricity + Water,0
+C00906,Tina Lewis,West,Annual,Electricity + Water,0
+C00907,Diana Robinson,North,Annual,Electricity + Water,0
+C00908,Xander White,North,Monthly,Electricity + Water,0
+C00909,Karen Thompson,East,Annual,Water,1
+C00910,Xander Harris,Central,Annual,Electricity,0
+C00911,Victor Clark,North,2-Year,Electricity,0
+C00912,Wendy Martin,South,Monthly,Electricity + Gas,0
+C00913,Iris Martin,Central,Monthly,Electricity + Water,1
+C00914,Henry Robinson,South,Monthly,Electricity + Water,0
+C00915,David Garcia,South,Annual,Electricity + Water,0
+C00916,James Williams,North,2-Year,Water,0
+C00917,Cole Robinson,West,Annual,Electricity + Gas,0
+C00918,Diana Thompson,North,Monthly,Electricity + Gas,0
+C00919,Emma Jones,West,Annual,Water,0
+C00920,Tina Martin,Central,Annual,Electricity + Gas,0
+C00921,Mia Clark,South,Monthly,Water,0
+C00922,Cole Williams,West,Annual,Water,0
+C00923,Diana Smith,Central,Annual,Water,0
+C00924,Victor Robinson,Central,Monthly,Water,0
+C00925,Tina Wilson,North,Annual,Gas,0
+C00926,Victor Brown,South,Annual,Water,0
+C00927,Rachel Miller,Central,2-Year,Water,0
+C00928,Beth Harris,South,Monthly,Electricity,0
+C00929,Karen Martin,East,2-Year,Electricity + Gas,1
+C00930,Zach Martin,West,Monthly,Electricity + Gas,0
+C00931,Grace Williams,East,Annual,Electricity,0
+C00932,Liam Miller,West,2-Year,Water,0
+C00933,Bob Miller,East,2-Year,Gas,1
+C00934,Victor Jackson,Central,Annual,Water,1
+C00935,Henry Williams,North,Monthly,Gas,0
+C00936,Paul Lewis,South,Monthly,Electricity,1
+C00937,Fiona Thompson,East,Monthly,Electricity + Water,1
+C00938,Frank Wilson,East,Annual,Water,0
+C00939,Victor Robinson,West,Monthly,Electricity + Water,1
+C00940,Alice Smith,East,2-Year,Electricity,1
+C00941,Karen Brown,East,Monthly,Water,0
+C00942,Cole White,West,Annual,Gas,0
+C00943,David Anderson,South,Monthly,Electricity,0
+C00944,Uma Jones,Central,2-Year,Gas,0
+C00945,Beth Jackson,West,Monthly,Water,0
+C00946,Noah Davis,Central,Monthly,Electricity,1
+C00947,Xander Williams,Central,Monthly,Electricity,0
+C00948,Uma Martin,West,Annual,Electricity,1
+C00949,Bob White,East,Annual,Gas,0
+C00950,Alice Taylor,South,2-Year,Electricity + Gas,0
+C00951,Mia Jones,East,Monthly,Electricity + Gas,0
+C00952,Zach Smith,South,2-Year,Electricity + Gas,1
+C00953,Henry Brown,West,Monthly,Electricity,0
+C00954,Paul Robinson,West,Annual,Electricity + Water,0
+C00955,Frank Smith,South,Monthly,Gas,0
+C00956,Paul Thompson,South,Annual,Gas,0
+C00957,Iris Robinson,West,Annual,Water,0
+C00958,Ethan Moore,West,Annual,Electricity,0
+C00959,Iris Clark,North,2-Year,Water,1
+C00960,Uma Anderson,Central,Annual,Electricity + Gas,0
+C00961,Henry Davis,Central,Annual,Electricity,0
+C00962,Beth Johnson,West,2-Year,Water,0
+C00963,David Martin,West,Annual,Electricity + Gas,0
+C00964,Uma Thompson,West,2-Year,Electricity,0
+C00965,Grace Martin,Central,Annual,Electricity,0
+C00966,Henry Johnson,West,2-Year,Electricity,1
+C00967,Sam Taylor,West,Monthly,Gas,0
+C00968,David Jones,West,2-Year,Water,0
+C00969,Tina Miller,South,Annual,Electricity,0
+C00970,Diana Miller,East,Monthly,Electricity,0
+C00971,Zach Williams,North,Annual,Water,0
+C00972,Victor Martin,Central,2-Year,Gas,0
+C00973,Fiona Miller,South,Annual,Electricity,0
+C00974,Yara Thomas,North,Monthly,Gas,0
+C00975,Iris White,West,2-Year,Electricity + Water,0
+C00976,Frank Miller,West,Monthly,Electricity,0
+C00977,Wendy Martin,West,Annual,Gas,0
+C00978,Zach Robinson,North,Annual,Electricity + Water,1
+C00979,Paul Miller,West,Annual,Electricity + Water,0
+C00980,Wendy Davis,West,Annual,Water,0
+C00981,David Smith,East,Monthly,Electricity + Water,0
+C00982,Victor Thompson,West,Monthly,Gas,0
+C00983,Uma Jackson,North,Annual,Electricity,1
+C00984,Frank Anderson,East,Monthly,Gas,0
+C00985,Sam White,Central,Monthly,Gas,0
+C00986,Paul Williams,East,Annual,Water,0
+C00987,Victor Thomas,Central,Annual,Electricity + Gas,1
+C00988,Yara Davis,South,Monthly,Water,0
+C00989,Fiona Robinson,South,Annual,Electricity,0
+C00990,Liam Anderson,South,Monthly,Electricity + Gas,0
+C00991,Wendy Brown,East,2-Year,Gas,0
+C00992,Grace Thomas,North,Monthly,Electricity + Gas,1
+C00993,Sam Davis,North,2-Year,Electricity + Gas,0
+C00994,Zach Lewis,South,Annual,Gas,0
+C00995,Carol Jones,North,Annual,Electricity + Water,0
+C00996,Paul Harris,East,Annual,Electricity,0
+C00997,Fiona Garcia,North,Annual,Gas,0
+C00998,Diana Smith,South,2-Year,Gas,0
+C00999,Karen Thompson,South,Monthly,Gas,0
+C01000,Adrian Clark,North,2-Year,Electricity + Gas,0
