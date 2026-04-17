@@ -2,9 +2,13 @@ venv/
 __pycache__/
 *.pyc
 data/*.csv
+data/base_training/
+data/sessions/
 models/*.pkl
+models/sessions/
 reports/*.png
 reports/*.csv
+reports/sessions/
 .DS_Store
 *.pptx
 .env

@@ -20,13 +20,15 @@ from src.registration import check_data_limit, render_upgrade_wall, FREE_TIER_LI
 MAX_UPLOAD_MB = 50
 MAX_UPLOAD_BYTES = MAX_UPLOAD_MB * 1024 * 1024
 
+# Permanent pre-trained base model — used by Predict Only mode
+BASE_MODEL_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "models", "base")
+
+
 def _base_model_exists():
-    from config import get_session_dirs
-    sid = st.session_state.get("session_id")
-    d = get_session_dirs(sid).get("model_dir", MODEL_DIR) if sid else MODEL_DIR
-    return (os.path.exists(os.path.join(d, "best_model.pkl")) and
-            os.path.exists(os.path.join(d, "scaler.pkl")) and
-            os.path.exists(os.path.join(d, "model_metadata.pkl")))
+    """True when the permanent base model is present (always preferred over demo/session model)."""
+    return (os.path.exists(os.path.join(BASE_MODEL_DIR, "best_model.pkl")) and
+            os.path.exists(os.path.join(BASE_MODEL_DIR, "scaler.pkl")) and
+            os.path.exists(os.path.join(BASE_MODEL_DIR, "model_metadata.pkl")))
 
 def _render_history():
     """Show previous run history for this user."""
@@ -72,9 +74,9 @@ def render_upload_tab():
 
     has_base = _base_model_exists()
     if has_base:
-        st.markdown('<div style="background:#ecfdf5;border-left:4px solid #27ae60;padding:1rem;border-radius:0 8px 8px 0;margin-bottom:1rem;"><strong>✅ System is ready.</strong> Upload your customer data and get risk scores instantly.</div>', unsafe_allow_html=True)
+        st.markdown('<div style="background:#ecfdf5;border-left:4px solid #27ae60;padding:1rem;border-radius:0 8px 8px 0;margin-bottom:1rem;"><strong>✅ System is ready.</strong> Predict Only scores your customers against our pre-trained utility industry baseline model (15,000 customers, ROC AUC 0.80). Upload all three files for best accuracy.</div>', unsafe_allow_html=True)
     else:
-        st.warning("Please click Run Demo first to initialize the system.")
+        st.error("Base model not found. Please contact support or re-deploy the application.")
 
     _render_history()
 
@@ -215,7 +217,7 @@ Optional: `interaction_date`, `interaction_type`, `channel`, `duration_minutes`,
     if st.button(btn, type="primary", use_container_width=True, disabled=bool(all_missing)):
         if is_predict_only:
             if not has_base:
-                st.error("Please run the demo first to initialize the system."); return False
+                st.error("Base model not found. Please contact support."); return False
             result = _predict_only(loaded_dfs, table_assignments, all_mappings)
             return result
         else:
@@ -359,8 +361,6 @@ def _prepare_data(loaded_dfs, table_assignments, all_mappings, progress, status)
     return transformed, merged, engineered, cids
 
 def _predict_only(loaded_dfs, table_assignments, all_mappings):
-    dirs = _get_dirs()
-    _model_dir = dirs.get("model_dir", MODEL_DIR)
     progress = st.progress(0); status = st.empty()
     status.text("Processing your data...")
     progress.progress(10)
@@ -369,9 +369,10 @@ def _predict_only(loaded_dfs, table_assignments, all_mappings):
     progress.progress(50)
 
     status.text("Scoring your customers...")
-    model = joblib.load(os.path.join(_model_dir, "best_model.pkl"))
-    scaler = joblib.load(os.path.join(_model_dir, "scaler.pkl"))
-    metadata = joblib.load(os.path.join(_model_dir, "model_metadata.pkl"))
+    # Always use the permanent base model — never the demo/session model
+    model    = joblib.load(os.path.join(BASE_MODEL_DIR, "best_model.pkl"))
+    scaler   = joblib.load(os.path.join(BASE_MODEL_DIR, "scaler.pkl"))
+    metadata = joblib.load(os.path.join(BASE_MODEL_DIR, "model_metadata.pkl"))
     progress.progress(60)
 
     trained_features = metadata.get("feature_names", [])

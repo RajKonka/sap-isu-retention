@@ -32,42 +32,70 @@ INCOME_BKTS = ["Low","Medium","High"]
 CHANNELS    = ["Phone","Email","Web Chat"]
 COMP_CATS   = ["Billing","Technical","Service Quality","Outage","Meter Reading","Account Management"]
 
-POS_COMMENTS = [
-    "Very happy with the service, everything works great.",
-    "The support team was extremely helpful and resolved my issue quickly.",
-    "Excellent response time, I am very satisfied.",
-    "Great experience, the technician was professional and efficient.",
-    "My billing issue was resolved within hours. Highly recommend.",
-    "Love the online portal, makes managing my account super easy.",
-    "Quick and helpful customer service, thank you!",
-    "The new meter reading service is fantastic.",
-    "Very pleased with the resolution. Great team.",
-    "Outstanding service quality, no issues whatsoever.",
-]
-NEG_COMMENTS = [
-    "I am absolutely furious — my bill doubled for no reason and no one can explain it.",
-    "Terrible service, waited 3 weeks for someone to show up. Completely unacceptable.",
-    "This is the worst experience I have ever had. Planning to switch provider immediately.",
-    "My outage has been going on for 5 days and no one cares. Disgusting.",
-    "I have called 7 times and nobody fixes the problem. I want to cancel my account.",
-    "Billing errors again! Third month in a row. Completely incompetent.",
-    "The technician never showed up. I took a day off work for nothing.",
-    "My service was cut off without warning. I demand an explanation.",
-    "Unresponsive support and endless hold times. Absolutely awful.",
-    "I am done. Switching to a competitor as soon as possible. Nightmare.",
-]
-NEUT_COMMENTS = [
-    "The outage was resolved. It would have been nice to get a notification.",
-    "Service is generally okay. Had a minor billing discrepancy last month.",
-    "Technician arrived on time but the fix took longer than expected.",
-    "Nothing special to report. Service has been average.",
-    "Billing seems correct this month. Last month there was a small issue.",
-    "The support person was polite but couldn't fully resolve my issue.",
-    "Service interruption was brief. Would like better communication next time.",
-    "Account change was processed but took a few extra days.",
-    "Had to follow up twice to get my meter reading corrected.",
-    "No major problems but the website is a bit slow.",
-]
+# Comments are keyed by severity level (1-5), not by churn status.
+# This prevents data leakage — the model can't trivially learn "negative comment = churned".
+COMMENTS_BY_SEVERITY = {
+    1: [  # Low severity — informational, minor
+        "Calling to update my billing address.",
+        "I would like to check my current balance please.",
+        "Could you send me a copy of last month's bill?",
+        "I want to switch to paperless billing.",
+        "Just checking when my next meter read is scheduled.",
+        "Can you confirm my direct debit amount?",
+        "I need to change my contact phone number on the account.",
+        "Quick question about the new tariff letter I received.",
+        "Everything is fine, just updating my details.",
+        "I would like to know my current contract end date.",
+    ],
+    2: [  # Mild concern — noticeable but not urgent
+        "My bill was slightly higher than I expected this month.",
+        "The website was slow when I tried to log in yesterday.",
+        "I waited longer than usual for a callback but it came eventually.",
+        "The technician arrived a bit late but did a good job.",
+        "I had trouble navigating the new online portal at first.",
+        "There was a small discrepancy on my statement, now resolved.",
+        "Response time was a bit slower than last time I called.",
+        "The email confirmation for my account change took two days to arrive.",
+        "I was on hold for about 20 minutes which felt long.",
+        "My meter reading submission didn't go through on the first try.",
+    ],
+    3: [  # Moderate — frustrated but manageable
+        "I have been waiting over a week for someone to call me back.",
+        "My bill has errors and I have had to call twice about the same issue.",
+        "The technician did not show up at the agreed time without any notice.",
+        "I am not satisfied with how my previous complaint was handled.",
+        "The rate increase was not communicated clearly and came as a surprise.",
+        "My account was charged incorrectly and I am still waiting for a credit.",
+        "The customer service agent I spoke to was not very helpful.",
+        "I have been trying to get this resolved for two weeks now.",
+        "I feel like loyal customers are not being valued the way they should be.",
+        "The online chat bot could not help me and I had to call anyway.",
+    ],
+    4: [  # High severity — angry, potential churn signal
+        "I am very unhappy with the service. My complaint from last month is still open.",
+        "This is the third billing error in a row. I am losing patience.",
+        "I took a day off work for the technician and nobody came.",
+        "My power has been out for two days and nobody has given me an update.",
+        "I have escalated this complaint twice and it is still not resolved.",
+        "I am considering switching providers if this is not fixed immediately.",
+        "The level of service I am receiving is completely unacceptable.",
+        "I want a formal complaint registered. This has gone on too long.",
+        "Nobody in your company seems to take responsibility for anything.",
+        "I was treated rudely on my last call and I want this addressed.",
+    ],
+    5: [  # Critical — very angry, escalation, explicit churn intent
+        "I want to cancel my account. I have had enough of this terrible service.",
+        "This is absolutely disgraceful. I am filing a formal complaint with the regulator.",
+        "I have been without power for five days and your team does not care at all.",
+        "I am switching providers immediately. I cannot tolerate this incompetence.",
+        "Your company has overcharged me for months and nobody will fix it.",
+        "I am contacting my lawyer. This is negligent and completely unacceptable.",
+        "Three technicians, three no-shows. I have lost my patience entirely.",
+        "I want a full refund and I am cancelling everything today.",
+        "The worst customer experience I have ever had in my life.",
+        "I am going to leave a public review warning everyone about this company.",
+    ],
+}
 
 
 def make_customer_ids(n):
@@ -130,41 +158,45 @@ def make_customer_master(cids):
 
 
 def make_complaint_data(cids, master_df):
-    """Generate complaint rows — high-risk customers get more / nastier complaints."""
+    """
+    Generate complaint rows. Severity drives comment tone — NOT churn status.
+    Customers with more unresolved high-severity complaints are more likely to churn,
+    but the link is probabilistic, not deterministic (realistic noise).
+    """
     rows = []
-    churned_map = dict(zip(master_df["customer_id"], master_df["churned"]))
-    tenure_map  = dict(zip(master_df["customer_id"], master_df["account_tenure_months"]))
+    tenure_map    = dict(zip(master_df["customer_id"], master_df["account_tenure_months"]))
+    contract_map  = dict(zip(master_df["customer_id"], master_df["contract_type"]))
+    autopay_map   = dict(zip(master_df["customer_id"], master_df["has_autopay"]))
 
     for cid in cids:
-        is_churner = churned_map.get(cid, 0)
-        # Churners average 3-5 complaints, stayers 0-2
-        n_comp = rng.integers(3, 7) if is_churner else rng.integers(0, 3)
-        for _ in range(n_comp):
-            if is_churner:
-                comment = random.choice(NEG_COMMENTS if rng.random() < 0.7 else NEUT_COMMENTS)
-                severity = int(rng.integers(3, 6))
-                escalated = int(rng.random() < 0.4)
-                resolved  = int(rng.random() < 0.5)
-                res_days  = int(rng.integers(5, 30))
-            else:
-                comment = random.choice(
-                    POS_COMMENTS if rng.random() < 0.5 else
-                    (NEUT_COMMENTS if rng.random() < 0.7 else NEG_COMMENTS)
-                )
-                severity = int(rng.integers(1, 4))
-                escalated = int(rng.random() < 0.1)
-                resolved  = int(rng.random() < 0.9)
-                res_days  = int(rng.integers(0, 8))
+        tenure   = tenure_map.get(cid, 24)
+        contract = contract_map.get(cid, "Annual")
+        autopay  = autopay_map.get(cid, 1)
 
-            tenure = tenure_map.get(cid, 12)
-            comp_year = 2024 - rng.integers(0, min(tenure // 12 + 1, 3))
+        # Complaint volume: monthly contracts and short tenure get more complaints on average
+        base_complaints = 1.5
+        if contract == "Monthly": base_complaints += 0.8
+        if tenure < 12:           base_complaints += 0.6
+        if not autopay:           base_complaints += 0.3
+        n_comp = int(rng.poisson(base_complaints))
+
+        for _ in range(n_comp):
+            # Severity drawn independently — skewed toward lower values (realistic)
+            severity = int(rng.choice([1, 2, 3, 4, 5], p=[0.20, 0.28, 0.28, 0.15, 0.09]))
+
+            # Comment comes from severity bucket — no reference to churn at all
+            comment   = random.choice(COMMENTS_BY_SEVERITY[severity])
+            escalated = int(rng.random() < (0.05 + severity * 0.10))
+            resolved  = int(rng.random() < max(0.30, 1.0 - severity * 0.14))
+            res_days  = int(rng.integers(1, 5 + severity * 5))
+
+            comp_year  = 2024 - rng.integers(0, min(tenure // 12 + 1, 3))
             comp_month = rng.integers(1, 13)
             comp_day   = rng.integers(1, 29)
-            comp_date  = f"{comp_year}-{comp_month:02d}-{comp_day:02d}"
 
             rows.append({
                 "customer_id":          cid,
-                "complaint_date":       comp_date,
+                "complaint_date":       f"{comp_year}-{comp_month:02d}-{comp_day:02d}",
                 "complaint_category":   random.choice(COMP_CATS),
                 "comment":              comment,
                 "severity":             severity,
@@ -180,19 +212,32 @@ def make_complaint_data(cids, master_df):
 
 
 def make_interaction_data(cids, master_df):
-    """Generate interaction rows — 2-8 per customer."""
+    """
+    Generate interaction rows. Satisfaction is driven by tenure and contract type,
+    not directly by churn label — keeps the relationship realistic and noisy.
+    """
     rows = []
-    churned_map = dict(zip(master_df["customer_id"], master_df["churned"]))
+    tenure_map   = dict(zip(master_df["customer_id"], master_df["account_tenure_months"]))
+    contract_map = dict(zip(master_df["customer_id"], master_df["contract_type"]))
 
     for cid in cids:
-        is_churner = churned_map.get(cid, 0)
-        n_int = int(rng.integers(4, 10) if is_churner else rng.integers(1, 6))
+        tenure   = tenure_map.get(cid, 24)
+        contract = contract_map.get(cid, "Annual")
+
+        # Interaction volume driven by tenure (new customers contact more)
+        base_int = 3 if tenure < 12 else 2
+        n_int = int(rng.poisson(base_int)) + 1
+
+        # Satisfaction baseline: longer tenure = slightly higher satisfaction on average
+        sat_mean = 3.2 + min(tenure / 120, 0.8)
+        if contract == "Monthly": sat_mean -= 0.3
+
         for _ in range(n_int):
-            channel = random.choice(CHANNELS)
-            sat = int(rng.integers(1, 4) if is_churner else rng.integers(3, 6))
-            sat = min(max(sat, 1), 5)
-            dur = int(rng.integers(20, 90) if channel == "Phone" else rng.integers(5, 30))
-            resolved = int(rng.random() < (0.5 if is_churner else 0.9))
+            channel  = random.choice(CHANNELS)
+            # Add individual noise around the baseline — not every interaction reflects churn intent
+            sat = int(np.clip(round(rng.normal(sat_mean, 1.2)), 1, 5))
+            dur = int(rng.integers(15, 60) if channel == "Phone" else rng.integers(3, 20))
+            resolved = int(rng.random() < 0.82)
 
             yr  = rng.integers(2023, 2025)
             mo  = rng.integers(1, 13)
@@ -272,11 +317,10 @@ INTERACTION_RENAME_2 = {
 def generate_set_2(out_dir):
     print("Generating Set 2 (fuzzy column names)...")
     cids = make_customer_ids(N_CUSTOMERS)
-    master = make_customer_master(cids).rename(columns=CUSTOMER_MASTER_RENAME_2)
-    complaints_raw = make_complaint_data(cids, make_customer_master(cids))
-    interactions_raw = make_interaction_data(cids, make_customer_master(cids))
-    complaints = complaints_raw.rename(columns=COMPLAINT_RENAME_2)
-    interactions = interactions_raw.rename(columns=INTERACTION_RENAME_2)
+    master_raw = make_customer_master(cids)
+    master = master_raw.rename(columns=CUSTOMER_MASTER_RENAME_2)
+    complaints = make_complaint_data(cids, master_raw).rename(columns=COMPLAINT_RENAME_2)
+    interactions = make_interaction_data(cids, master_raw).rename(columns=INTERACTION_RENAME_2)
 
     os.makedirs(out_dir, exist_ok=True)
     master.to_csv(os.path.join(out_dir, "customer_master.csv"), index=False)
