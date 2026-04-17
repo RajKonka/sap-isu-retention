@@ -264,24 +264,26 @@ def generate_churn_labels(master_df, complaint_df, interaction_df):
     return churned
 
 
-def generate_all_data():
-    """Generate all 3 datasets and save to CSV."""
-    os.makedirs(DATA_DIR, exist_ok=True)
+def generate_all_data(dirs=None):
+    """Generate all 3 datasets and save to CSV. Pass dirs from get_session_dirs() for session isolation."""
+    d = dirs or {}
+    _data_dir          = d.get("data_dir",             DATA_DIR)
+    _customer_master   = d.get("customer_master_file",  CUSTOMER_MASTER_FILE)
+    _complaint_data    = d.get("complaint_data_file",   COMPLAINT_DATA_FILE)
+    _interaction_data  = d.get("interaction_data_file", INTERACTION_DATA_FILE)
 
-    # Generate
+    os.makedirs(_data_dir, exist_ok=True)
+
     master = generate_customer_master()
     complaints = generate_complaint_data(master["customer_id"].tolist())
     interactions = generate_interaction_data(master["customer_id"].tolist())
-
-    # Generate churn labels from behavior
     master["churned"] = generate_churn_labels(master, complaints, interactions)
 
-    # Save
-    master.to_csv(CUSTOMER_MASTER_FILE, index=False)
-    complaints.to_csv(COMPLAINT_DATA_FILE, index=False)
-    interactions.to_csv(INTERACTION_DATA_FILE, index=False)
+    master.to_csv(_customer_master, index=False)
+    complaints.to_csv(_complaint_data, index=False)
+    interactions.to_csv(_interaction_data, index=False)
 
-    print(f"\nAll data saved to {DATA_DIR}/")
+    print(f"\nAll data saved to {_data_dir}/")
     return {"master": master, "complaint": complaints, "interaction": interactions}
 
 

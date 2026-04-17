@@ -91,7 +91,7 @@ with tab_dash:
         status.text("Loading data...")
         progress.progress(5)
         from src.data_generator import generate_all_data
-        all_data = generate_all_data()
+        all_data = generate_all_data(dirs=session_dirs)
         st.session_state.data_generated = True
         progress.progress(12)
 
