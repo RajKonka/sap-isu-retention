@@ -3,7 +3,7 @@ Registration & Access Gate Module — V3
 - Collects name, email, company, phone before upload access
 - Stores leads in Google Sheets (via Google Forms webhook)
 - Sends email notification on new signup
-- Enforces 1,000 customer limit on free tier
+- Enforces 5,000 customer limit on free tier
 - Shows 'Contact Us' for larger datasets
 """
 import streamlit as st
@@ -17,7 +17,7 @@ import re
 from datetime import datetime
 
 # ─── Configuration ────────────────────────────────────────
-FREE_TIER_LIMIT = 1000  # Max customers in uploaded data
+FREE_TIER_LIMIT = 5000  # Max customers in uploaded data
 CONTACT_EMAIL = "raj.konka@vantiveinc.com"  # Replace with your email
 CONTACT_PHONE = "6824053943"  # Replace with your phone
 

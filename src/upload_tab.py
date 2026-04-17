@@ -15,7 +15,7 @@ from src.data_upload import (
     transform_dataframe, generate_missing_data, infer_churn_labels,
     EXPECTED_SCHEMAS,
 )
-from src.registration import check_data_limit, render_upgrade_wall
+from src.registration import check_data_limit, render_upgrade_wall, FREE_TIER_LIMIT
 
 MAX_UPLOAD_MB = 50
 MAX_UPLOAD_BYTES = MAX_UPLOAD_MB * 1024 * 1024
@@ -57,7 +57,7 @@ Optional: `complaint_date`, `complaint_category`, `severity`, `escalated`, `reso
 Required: `customer_id`
 Optional: `interaction_date`, `interaction_type`, `channel`, `duration_minutes`, `satisfaction_score`, `resolved`
         """)
-    st.caption("You can upload just one file — e.g. a customer list with feedback. Free tier: up to 5,000 customers.")
+    st.caption(f"You can upload just one file — e.g. a customer list with feedback. Free tier: up to {FREE_TIER_LIMIT:,} customers.")
     st.markdown("---")
 
     mode = st.radio("Mode", ["Predict Only (recommended)", "Full Analysis"], index=0,
@@ -65,7 +65,7 @@ Optional: `interaction_date`, `interaction_type`, `channel`, `duration_minutes`,
 
     is_predict_only = "Predict Only" in mode
     if is_predict_only:
-        st.info("Scores your customers using our pre-trained AI. Works with any dataset size up to 5,000.")
+        st.info(f"Scores your customers using our pre-trained AI. Works with any dataset size up to {FREE_TIER_LIMIT:,}.")
     else:
         st.info("Builds a custom model on your data. Best with 500+ customers.")
 
