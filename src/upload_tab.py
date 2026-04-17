@@ -301,7 +301,25 @@ def _predict_only(loaded_dfs, table_assignments, all_mappings):
     st.markdown("### Top At-Risk Customers")
     show_cols = [c for c in ["customer_id","churn_probability","risk_level","prediction","customer_name","region","account_tenure_months"] if c in res.columns]
     st.dataframe(res.head(20)[show_cols].style.format({"churn_probability":"{:.1%}"}), use_container_width=True)
-    st.download_button("📥 Download Full Results", res.to_csv(index=False), "risk_scores.csv", "text/csv", use_container_width=True)
+
+    from src.report_generator import generate_pdf_report, generate_excel_report
+    dl1, dl2, dl3 = st.columns(3)
+    with dl1:
+        st.download_button("📄 Download PDF Report", generate_pdf_report(res),
+                           "churn_report.pdf", "application/pdf", use_container_width=True)
+    with dl2:
+        try:
+            xlsx_bytes = generate_excel_report(res)
+            st.download_button("📊 Download Excel Report", xlsx_bytes,
+                               "churn_report.xlsx",
+                               "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                               use_container_width=True)
+        except RuntimeError as _exc:
+            st.button("📊 Excel (install openpyxl)", disabled=True, use_container_width=True)
+            st.caption(str(_exc))
+    with dl3:
+        st.download_button("📥 Download CSV", res.to_csv(index=False),
+                           "risk_scores.csv", "text/csv", use_container_width=True)
     return True
 
 def _retrain(loaded_dfs, table_assignments, all_mappings):
