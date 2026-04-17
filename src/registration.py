@@ -3,7 +3,7 @@ Registration & Access Gate Module — V3
 - Collects name, email, company, phone before upload access
 - Stores leads in Google Sheets (via Google Forms webhook)
 - Sends email notification on new signup
-- Enforces 5,000 customer limit on free tier
+- Enforces 1,000 customer limit on free tier
 - Shows 'Contact Us' for larger datasets
 """
 import streamlit as st
@@ -14,9 +14,9 @@ import requests
 from datetime import datetime
 
 # ─── Configuration ────────────────────────────────────────
-FREE_TIER_LIMIT = 5000  # Max customers in uploaded data
-CONTACT_EMAIL = "YOUR_EMAIL@vantiveinc.com"  # Replace with your email
-CONTACT_PHONE = "YOUR_PHONE"  # Replace with your phone
+FREE_TIER_LIMIT = 1000  # Max customers in uploaded data
+CONTACT_EMAIL = "raj.konka@vantiveinc.com"  # Replace with your email
+CONTACT_PHONE = "6824053943"  # Replace with your phone
 
 # Google Sheets webhook URL (from Google Apps Script — see setup instructions below)
 # Set this as environment variable GSHEET_WEBHOOK in Hugging Face Spaces settings
@@ -170,7 +170,7 @@ def render_contact_form():
             phone = st.text_input("Phone")
 
         dataset_size = st.selectbox("Estimated dataset size", [
-            "5,000 - 25,000 customers",
+            "1,000 - 25,000 customers",
             "25,000 - 100,000 customers",
             "100,000 - 500,000 customers",
             "500,000 - 1 million customers",

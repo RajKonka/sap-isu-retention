@@ -42,9 +42,15 @@ with st.sidebar:
     st.markdown("### Customer Retention Predictor")
     st.markdown("---")
 
-    api_key = st.text_input("API Key (optional)", type="password")
-    if api_key:
-        os.environ["ANTHROPIC_API_KEY"] = api_key
+    nuro_key = st.text_input("NuroStudio API Key", type="password",
+        help="Connect to NuroStudio for private AI")
+    if nuro_key:
+        os.environ["NUROSTUDIO_API_KEY"] = nuro_key
+
+    with st.expander("Other API Keys", expanded=False):
+        claude_key = st.text_input("Claude API Key (optional)", type="password")
+        if claude_key:
+            os.environ["ANTHROPIC_API_KEY"] = claude_key
 
     st.markdown("---")
 
