@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import os, sys
+import os, sys, uuid
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import *
@@ -33,6 +33,12 @@ def stage_msg(text):
     st.markdown(f'<div class="stage-box"><p>{text}</p></div>', unsafe_allow_html=True)
 
 # ─── Session State ────────────────────────────────────────
+if "session_id" not in st.session_state:
+    st.session_state.session_id = uuid.uuid4().hex
+    cleanup_old_sessions()          # housekeep stale dirs on each new session
+
+session_dirs = get_session_dirs(st.session_state.session_id)
+
 for key in ["data_generated", "models_trained", "predictor", "chatbot", "merged_data",
             "training_results", "chat_messages", "use_weights", "feature_weights"]:
     if key not in st.session_state:
@@ -167,9 +173,9 @@ with tab_dash:
         from src.eda import generate_eda_report
         from src.feature_engineering import engineer_features
 
-        merged, features, ids, _ = preprocess_pipeline()
-        generate_eda_report(merged)
-        engineered = engineer_features(merged)
+        merged, features, ids, _ = preprocess_pipeline(dirs=session_dirs)
+        generate_eda_report(merged, dirs=session_dirs)
+        engineered = engineer_features(merged, dirs=session_dirs)
         st.session_state.merged_data = merged
         progress.progress(50)
 
@@ -195,8 +201,8 @@ with tab_dash:
         progress.progress(55)
 
         from src.model_training import training_pipeline
-        df = pd.read_csv(FINAL_FEATURES_FILE)
-        results, trained_models, best_name, scaler = training_pipeline(df)
+        df = pd.read_csv(session_dirs["final_features_file"])
+        results, trained_models, best_name, scaler = training_pipeline(df, dirs=session_dirs)
         st.session_state.models_trained = True
         st.session_state.training_results = results
         progress.progress(85)
@@ -227,7 +233,7 @@ with tab_dash:
 
         from src.prediction_engine import ChurnPredictor
         from src.chatbot import RetentionChatbot
-        predictor = ChurnPredictor()
+        predictor = ChurnPredictor(dirs=session_dirs)
         chatbot = RetentionChatbot(predictor)
         st.session_state.predictor = predictor
         st.session_state.chatbot = chatbot
@@ -306,12 +312,13 @@ with tab_dash:
 
 with tab_eda:
     st.subheader("Customer Insights")
-    if os.path.exists(REPORT_DIR):
+    _session_report_dir = session_dirs["report_dir"]
+    if os.path.exists(_session_report_dir):
         try:
-            plots = sorted([f for f in os.listdir(REPORT_DIR) if f.endswith(".png")])
+            plots = sorted([f for f in os.listdir(_session_report_dir) if f.endswith(".png")])
             if plots:
                 for plot in plots:
-                    st.image(os.path.join(REPORT_DIR, plot), use_container_width=True)
+                    st.image(os.path.join(_session_report_dir, plot), use_container_width=True)
                     st.markdown("---")
             else:
                 st.info("No insight charts yet — run the demo to generate them.")

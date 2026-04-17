@@ -67,7 +67,7 @@ FEATURE_EXPLANATIONS = {
 }
 
 
-def engineer_features(df, feature_multipliers=None):
+def engineer_features(df, feature_multipliers=None, dirs=None):
     """
     Create engineered features from merged data.
     Optionally applies weight multipliers from user configuration.
@@ -124,9 +124,12 @@ def engineer_features(df, feature_multipliers=None):
         print(f"    {flag}: {pct:.1%} of customers flagged")
 
     # Save
-    os.makedirs(DATA_DIR, exist_ok=True)
-    df.to_csv(FINAL_FEATURES_FILE, index=False)
-    print(f"  Saved to: {FINAL_FEATURES_FILE}")
+    d = dirs or {}
+    _data_dir = d.get("data_dir", DATA_DIR)
+    _final_features = d.get("final_features_file", FINAL_FEATURES_FILE)
+    os.makedirs(_data_dir, exist_ok=True)
+    df.to_csv(_final_features, index=False)
+    print(f"  Saved to: {_final_features}")
 
     return df
 

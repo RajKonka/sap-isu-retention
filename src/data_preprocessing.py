@@ -226,17 +226,24 @@ def aggregate_interactions(df, customer_ids):
     return agg
 
 
-def preprocess_pipeline():
-    """Run the complete preprocessing pipeline."""
+def preprocess_pipeline(dirs=None):
+    """Run the complete preprocessing pipeline. Pass dirs from get_session_dirs() for isolation."""
+    d = dirs or {}
+    _customer_master   = d.get("customer_master_file",  CUSTOMER_MASTER_FILE)
+    _complaint_data    = d.get("complaint_data_file",   COMPLAINT_DATA_FILE)
+    _interaction_data  = d.get("interaction_data_file", INTERACTION_DATA_FILE)
+    _merged_data       = d.get("merged_data_file",      MERGED_DATA_FILE)
+    _data_dir          = d.get("data_dir",              DATA_DIR)
+
     print("=" * 60)
     print("DATA PREPROCESSING PIPELINE (V3 — Lean)")
     print("=" * 60)
 
     # Load
     print("\n[Step 1] Loading raw data...")
-    master = pd.read_csv(CUSTOMER_MASTER_FILE)
-    complaints = pd.read_csv(COMPLAINT_DATA_FILE)
-    interactions = pd.read_csv(INTERACTION_DATA_FILE)
+    master = pd.read_csv(_customer_master)
+    complaints = pd.read_csv(_complaint_data)
+    interactions = pd.read_csv(_interaction_data)
     print(f"  Customer Master: {len(master):,} rows")
     print(f"  Complaints: {len(complaints):,} rows")
     print(f"  Interactions: {len(interactions):,} rows")
@@ -276,10 +283,10 @@ def preprocess_pipeline():
     merged = merged.fillna(0)
 
     # Save
-    os.makedirs(DATA_DIR, exist_ok=True)
-    merged.to_csv(MERGED_DATA_FILE, index=False)
+    os.makedirs(_data_dir, exist_ok=True)
+    merged.to_csv(_merged_data, index=False)
     print(f"\n  Merged dataset: {merged.shape[0]:,} customers × {merged.shape[1]} columns")
-    print(f"  Saved to: {MERGED_DATA_FILE}")
+    print(f"  Saved to: {_merged_data}")
 
     # Extract feature names and label encoders for downstream
     feature_cols = [c for c in merged.columns if c not in ["customer_id", "customer_name", "account_start_date", TARGET_COLUMN]]

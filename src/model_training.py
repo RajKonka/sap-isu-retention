@@ -163,8 +163,9 @@ def get_best_model(results, trained_models):
     return best_name, trained_models[best_name]
 
 
-def plot_model_comparison(results, X_test, y_test, trained_models):
-    os.makedirs(REPORT_DIR, exist_ok=True)
+def plot_model_comparison(results, X_test, y_test, trained_models, dirs=None):
+    _report_dir = (dirs or {}).get("report_dir", REPORT_DIR)
+    os.makedirs(_report_dir, exist_ok=True)
     metrics_df = pd.DataFrame(results).T
 
     fig, ax = plt.subplots(figsize=(14, 6))
@@ -172,7 +173,7 @@ def plot_model_comparison(results, X_test, y_test, trained_models):
     ax.set_title("Model Performance Comparison", fontsize=16, fontweight="bold")
     ax.set_ylabel("Score"); ax.set_ylim(0, 1.05); ax.legend(loc="lower right")
     ax.set_xticklabels(ax.get_xticklabels(), rotation=30, ha="right")
-    plt.tight_layout(); plt.savefig(os.path.join(REPORT_DIR, "06_model_comparison.png"), bbox_inches="tight"); plt.close()
+    plt.tight_layout(); plt.savefig(os.path.join(_report_dir, "06_model_comparison.png"), bbox_inches="tight"); plt.close()
 
     fig, ax = plt.subplots(figsize=(10, 8))
     for name, model in trained_models.items():
@@ -184,7 +185,7 @@ def plot_model_comparison(results, X_test, y_test, trained_models):
     ax.plot([0, 1], [0, 1], "k--", alpha=0.5)
     ax.set_xlabel("False Positive Rate"); ax.set_ylabel("True Positive Rate")
     ax.set_title("ROC Curves", fontsize=16, fontweight="bold"); ax.legend(loc="lower right")
-    plt.tight_layout(); plt.savefig(os.path.join(REPORT_DIR, "07_roc_curves.png"), bbox_inches="tight"); plt.close()
+    plt.tight_layout(); plt.savefig(os.path.join(_report_dir, "07_roc_curves.png"), bbox_inches="tight"); plt.close()
 
     best_name = max(results, key=lambda k: results[k]["roc_auc"])
     best_model = trained_models[best_name]; y_pred = best_model.predict(X_test)
@@ -193,7 +194,7 @@ def plot_model_comparison(results, X_test, y_test, trained_models):
     sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", ax=ax, xticklabels=["Retained", "Churned"], yticklabels=["Retained", "Churned"])
     ax.set_title(f"Confusion Matrix - {best_name}", fontsize=14, fontweight="bold")
     ax.set_xlabel("Predicted"); ax.set_ylabel("Actual")
-    plt.tight_layout(); plt.savefig(os.path.join(REPORT_DIR, "08_confusion_matrix.png"), bbox_inches="tight"); plt.close()
+    plt.tight_layout(); plt.savefig(os.path.join(_report_dir, "08_confusion_matrix.png"), bbox_inches="tight"); plt.close()
 
     importances = None
     if hasattr(best_model, "feature_importances_"):
@@ -207,29 +208,34 @@ def plot_model_comparison(results, X_test, y_test, trained_models):
         fig, ax = plt.subplots(figsize=(12, 8))
         feat_imp.plot(kind="barh", ax=ax, color="#667eea", edgecolor="white")
         ax.set_title("Top 20 Feature Importances", fontsize=16, fontweight="bold"); ax.set_xlabel("Importance")
-        plt.tight_layout(); plt.savefig(os.path.join(REPORT_DIR, "09_feature_importance.png"), bbox_inches="tight"); plt.close()
+        plt.tight_layout(); plt.savefig(os.path.join(_report_dir, "09_feature_importance.png"), bbox_inches="tight"); plt.close()
 
     return metrics_df
 
 
-def save_models(trained_models, best_name, label_encoders, feature_names, feature_multipliers=None):
-    os.makedirs(MODEL_DIR, exist_ok=True)
+def save_models(trained_models, best_name, label_encoders, feature_names, feature_multipliers=None, dirs=None):
+    _model_dir = (dirs or {}).get("model_dir", MODEL_DIR)
+    os.makedirs(_model_dir, exist_ok=True)
     for name, model in trained_models.items():
         safe_name = name.lower().replace(" ", "_").replace("(", "").replace(")", "")
-        joblib.dump(model, os.path.join(MODEL_DIR, f"{safe_name}.pkl"))
-    joblib.dump(trained_models[best_name], os.path.join(MODEL_DIR, "best_model.pkl"))
+        joblib.dump(model, os.path.join(_model_dir, f"{safe_name}.pkl"))
+    joblib.dump(trained_models[best_name], os.path.join(_model_dir, "best_model.pkl"))
     metadata = {
         "best_model_name": best_name,
         "feature_names": list(feature_names),
         "label_encoders": label_encoders,
         "feature_multipliers": feature_multipliers or {},
     }
-    joblib.dump(metadata, os.path.join(MODEL_DIR, "model_metadata.pkl"))
-    print(f"\n  Models saved to: {MODEL_DIR}")
+    joblib.dump(metadata, os.path.join(_model_dir, "model_metadata.pkl"))
+    print(f"\n  Models saved to: {_model_dir}")
 
 
-def training_pipeline(df, feature_multipliers=None):
-    """Run training pipeline with optional feature weights."""
+def training_pipeline(df, feature_multipliers=None, dirs=None):
+    """Run training pipeline with optional feature weights and session isolation."""
+    d = dirs or {}
+    _model_dir  = d.get("model_dir",  MODEL_DIR)
+    _report_dir = d.get("report_dir", REPORT_DIR)
+
     print("=" * 60)
     print("ML TRAINING PIPELINE (V3)")
     print("=" * 60)
@@ -248,12 +254,12 @@ def training_pipeline(df, feature_multipliers=None):
     scaler = StandardScaler()
     X_train_scaled = pd.DataFrame(scaler.fit_transform(X_train), columns=X_train.columns, index=X_train.index)
     X_test_scaled = pd.DataFrame(scaler.transform(X_test), columns=X_test.columns, index=X_test.index)
-    os.makedirs(MODEL_DIR, exist_ok=True)
-    joblib.dump(scaler, os.path.join(MODEL_DIR, "scaler.pkl"))
+    os.makedirs(_model_dir, exist_ok=True)
+    joblib.dump(scaler, os.path.join(_model_dir, "scaler.pkl"))
     results, trained_models = train_models(X_train_scaled, y_train, X_test_scaled, y_test)
     best_name, _ = get_best_model(results, trained_models)
-    metrics_df = plot_model_comparison(results, X_test_scaled, y_test, trained_models)
-    save_models(trained_models, best_name, label_encoders, X.columns, feature_multipliers)
-    metrics_df.to_csv(os.path.join(REPORT_DIR, "model_results.csv"))
+    metrics_df = plot_model_comparison(results, X_test_scaled, y_test, trained_models, dirs=dirs)
+    save_models(trained_models, best_name, label_encoders, X.columns, feature_multipliers, dirs=dirs)
+    metrics_df.to_csv(os.path.join(_report_dir, "model_results.csv"))
     print("\nTRAINING COMPLETE")
     return results, trained_models, best_name, scaler

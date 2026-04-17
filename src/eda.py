@@ -15,10 +15,11 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import *
 
 
-def generate_eda_report(df):
+def generate_eda_report(df, dirs=None):
     """Generate EDA visualizations from merged data."""
+    _report_dir = (dirs or {}).get("report_dir", REPORT_DIR)
     print("Generating EDA report...")
-    os.makedirs(REPORT_DIR, exist_ok=True)
+    os.makedirs(_report_dir, exist_ok=True)
 
     # 1. Churn distribution
     fig, ax = plt.subplots(figsize=(8, 5))
@@ -31,7 +32,7 @@ def generate_eda_report(df):
         for i, v in enumerate([counts.get(0, 0), counts.get(1, 0)]):
             ax.text(i, v + 20, f"{v:,}", ha="center", fontweight="bold")
     plt.tight_layout()
-    plt.savefig(os.path.join(REPORT_DIR, "01_churn_distribution.png"), bbox_inches="tight")
+    plt.savefig(os.path.join(_report_dir, "01_churn_distribution.png"), bbox_inches="tight")
     plt.close()
 
     # 2. Tenure vs Churn
@@ -46,7 +47,7 @@ def generate_eda_report(df):
         ax.set_ylabel("Count")
         ax.legend()
         plt.tight_layout()
-        plt.savefig(os.path.join(REPORT_DIR, "02_tenure_vs_churn.png"), bbox_inches="tight")
+        plt.savefig(os.path.join(_report_dir, "02_tenure_vs_churn.png"), bbox_inches="tight")
         plt.close()
 
     # 3. Complaint count vs Churn
@@ -61,7 +62,7 @@ def generate_eda_report(df):
         ax.set_ylabel("Count")
         ax.legend()
         plt.tight_layout()
-        plt.savefig(os.path.join(REPORT_DIR, "03_complaints_vs_churn.png"), bbox_inches="tight")
+        plt.savefig(os.path.join(_report_dir, "03_complaints_vs_churn.png"), bbox_inches="tight")
         plt.close()
 
     # 4. Sentiment Score vs Churn
@@ -77,7 +78,7 @@ def generate_eda_report(df):
         ax.axvline(x=0, color="gray", linestyle="--", alpha=0.5)
         ax.legend()
         plt.tight_layout()
-        plt.savefig(os.path.join(REPORT_DIR, "04_sentiment_vs_churn.png"), bbox_inches="tight")
+        plt.savefig(os.path.join(_report_dir, "04_sentiment_vs_churn.png"), bbox_inches="tight")
         plt.close()
 
     # 5. Satisfaction vs Churn
@@ -92,7 +93,7 @@ def generate_eda_report(df):
         ax.set_ylabel("Count")
         ax.legend()
         plt.tight_layout()
-        plt.savefig(os.path.join(REPORT_DIR, "05_satisfaction_vs_churn.png"), bbox_inches="tight")
+        plt.savefig(os.path.join(_report_dir, "05_satisfaction_vs_churn.png"), bbox_inches="tight")
         plt.close()
 
     # Save statistics
@@ -101,6 +102,6 @@ def generate_eda_report(df):
         if TARGET_COLUMN in numeric_cols:
             numeric_cols.remove(TARGET_COLUMN)
         stats = df.groupby(TARGET_COLUMN)[numeric_cols].mean()
-        stats.to_csv(os.path.join(REPORT_DIR, "eda_statistics.csv"))
+        stats.to_csv(os.path.join(_report_dir, "eda_statistics.csv"))
 
-    print(f"  EDA report saved to {REPORT_DIR}/")
+    print(f"  EDA report saved to {_report_dir}/")

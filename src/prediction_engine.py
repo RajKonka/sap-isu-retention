@@ -13,7 +13,11 @@ from config import *
 
 
 class ChurnPredictor:
-    def __init__(self):
+    def __init__(self, dirs=None):
+        d = dirs or {}
+        self._model_dir       = d.get("model_dir",          MODEL_DIR)
+        self._merged_data_file = d.get("merged_data_file",  MERGED_DATA_FILE)
+        self._features_file    = d.get("final_features_file", FINAL_FEATURES_FILE)
         self.model = None
         self.scaler = None
         self.metadata = None
@@ -23,11 +27,11 @@ class ChurnPredictor:
 
     def _load_artifacts(self):
         try:
-            self.model = joblib.load(os.path.join(MODEL_DIR, "best_model.pkl"))
-            self.scaler = joblib.load(os.path.join(MODEL_DIR, "scaler.pkl"))
-            self.metadata = joblib.load(os.path.join(MODEL_DIR, "model_metadata.pkl"))
-            self.merged_data = pd.read_csv(MERGED_DATA_FILE)
-            self.feature_data = pd.read_csv(FINAL_FEATURES_FILE)
+            self.model = joblib.load(os.path.join(self._model_dir, "best_model.pkl"))
+            self.scaler = joblib.load(os.path.join(self._model_dir, "scaler.pkl"))
+            self.metadata = joblib.load(os.path.join(self._model_dir, "model_metadata.pkl"))
+            self.merged_data = pd.read_csv(self._merged_data_file)
+            self.feature_data = pd.read_csv(self._features_file)
             print(f"Loaded model: {self.metadata['best_model_name']}")
         except Exception as e:
             print(f"Warning: Could not load artifacts: {e}")

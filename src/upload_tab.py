@@ -21,9 +21,12 @@ MAX_UPLOAD_MB = 50
 MAX_UPLOAD_BYTES = MAX_UPLOAD_MB * 1024 * 1024
 
 def _base_model_exists():
-    return (os.path.exists(os.path.join(MODEL_DIR, "best_model.pkl")) and
-            os.path.exists(os.path.join(MODEL_DIR, "scaler.pkl")) and
-            os.path.exists(os.path.join(MODEL_DIR, "model_metadata.pkl")))
+    from config import get_session_dirs
+    sid = st.session_state.get("session_id")
+    d = get_session_dirs(sid).get("model_dir", MODEL_DIR) if sid else MODEL_DIR
+    return (os.path.exists(os.path.join(d, "best_model.pkl")) and
+            os.path.exists(os.path.join(d, "scaler.pkl")) and
+            os.path.exists(os.path.join(d, "model_metadata.pkl")))
 
 def render_upload_tab():
     st.subheader("📂 Upload Your Own Data")
@@ -176,8 +179,16 @@ Optional: `interaction_date`, `interaction_type`, `channel`, `duration_minutes`,
             return _retrain(loaded_dfs, table_assignments, all_mappings)
     return False
 
+def _get_dirs():
+    """Return session-scoped dirs, falling back to global config paths."""
+    from config import get_session_dirs
+    sid = st.session_state.get("session_id")
+    return get_session_dirs(sid) if sid else {}
+
 def _prepare_data(loaded_dfs, table_assignments, all_mappings, progress, status):
-    os.makedirs(DATA_DIR, exist_ok=True)
+    dirs = _get_dirs()
+    _data_dir = dirs.get("data_dir", DATA_DIR)
+    os.makedirs(_data_dir, exist_ok=True)
     transformed = {}
     for tt, fname in table_assignments.items():
         df = loaded_dfs[fname]
@@ -214,18 +225,24 @@ def _prepare_data(loaded_dfs, table_assignments, all_mappings, progress, status)
     if "customer_master" not in table_assignments:
         transformed["customer_master"] = generate_missing_data("customer_master", cids)
 
-    fmap = {"customer_master": CUSTOMER_MASTER_FILE, "complaint_data": COMPLAINT_DATA_FILE, "interaction_data": INTERACTION_DATA_FILE}
+    fmap = {
+        "customer_master":  dirs.get("customer_master_file",  CUSTOMER_MASTER_FILE),
+        "complaint_data":   dirs.get("complaint_data_file",   COMPLAINT_DATA_FILE),
+        "interaction_data": dirs.get("interaction_data_file", INTERACTION_DATA_FILE),
+    }
     for tt, fp in fmap.items():
         transformed[tt].to_csv(fp, index=False)
 
     status.text("Analyzing your data...")
     from src.data_preprocessing import preprocess_pipeline
     from src.feature_engineering import engineer_features
-    merged, features, ids, _ = preprocess_pipeline()
-    engineered = engineer_features(merged)
+    merged, features, ids, _ = preprocess_pipeline(dirs=dirs)
+    engineered = engineer_features(merged, dirs=dirs)
     return transformed, merged, engineered, cids
 
 def _predict_only(loaded_dfs, table_assignments, all_mappings):
+    dirs = _get_dirs()
+    _model_dir = dirs.get("model_dir", MODEL_DIR)
     progress = st.progress(0); status = st.empty()
     status.text("Processing your data...")
     progress.progress(10)
@@ -234,9 +251,9 @@ def _predict_only(loaded_dfs, table_assignments, all_mappings):
     progress.progress(50)
 
     status.text("Scoring your customers...")
-    model = joblib.load(os.path.join(MODEL_DIR, "best_model.pkl"))
-    scaler = joblib.load(os.path.join(MODEL_DIR, "scaler.pkl"))
-    metadata = joblib.load(os.path.join(MODEL_DIR, "model_metadata.pkl"))
+    model = joblib.load(os.path.join(_model_dir, "best_model.pkl"))
+    scaler = joblib.load(os.path.join(_model_dir, "scaler.pkl"))
+    metadata = joblib.load(os.path.join(_model_dir, "model_metadata.pkl"))
     progress.progress(60)
 
     trained_features = metadata.get("feature_names", [])
@@ -288,6 +305,7 @@ def _predict_only(loaded_dfs, table_assignments, all_mappings):
     return True
 
 def _retrain(loaded_dfs, table_assignments, all_mappings):
+    dirs = _get_dirs()
     progress = st.progress(0); status = st.empty()
     status.text("Processing your data...")
     progress.progress(10)
@@ -299,23 +317,26 @@ def _retrain(loaded_dfs, table_assignments, all_mappings):
     if n < 50:
         st.error(f"Only {n} customers. Full Analysis needs at least 50. Use Predict Only instead."); return False
 
-    master = pd.read_csv(CUSTOMER_MASTER_FILE)
+    _cm_file = dirs.get("customer_master_file",  CUSTOMER_MASTER_FILE)
+    _cd_file = dirs.get("complaint_data_file",   COMPLAINT_DATA_FILE)
+    _id_file = dirs.get("interaction_data_file", INTERACTION_DATA_FILE)
+    master = pd.read_csv(_cm_file)
     if "churned" not in master.columns or master["churned"].isna().all() or master["churned"].nunique() < 2:
         status.text("Analyzing customer behavior patterns...")
-        master["churned"] = infer_churn_labels(master, pd.read_csv(COMPLAINT_DATA_FILE), pd.read_csv(INTERACTION_DATA_FILE))
-        master.to_csv(CUSTOMER_MASTER_FILE, index=False)
+        master["churned"] = infer_churn_labels(master, pd.read_csv(_cd_file), pd.read_csv(_id_file))
+        master.to_csv(_cm_file, index=False)
         from src.data_preprocessing import preprocess_pipeline
         from src.feature_engineering import engineer_features
-        merged, _, _, _ = preprocess_pipeline()
-        engineered = engineer_features(merged)
+        merged, _, _, _ = preprocess_pipeline(dirs=dirs)
+        engineered = engineer_features(merged, dirs=dirs)
     progress.progress(55)
 
     status.text("Training custom models...")
     from src.model_training import training_pipeline
     from src.eda import generate_eda_report
-    generate_eda_report(merged)
+    generate_eda_report(merged, dirs=dirs)
     try:
-        results, trained_models, best_name, scaler = training_pipeline(engineered)
+        results, trained_models, best_name, scaler = training_pipeline(engineered, dirs=dirs)
     except ValueError as e:
         st.error(f"Cannot train model: {e}")
         return False
@@ -326,7 +347,7 @@ def _retrain(loaded_dfs, table_assignments, all_mappings):
 
     from src.prediction_engine import ChurnPredictor
     from src.chatbot import RetentionChatbot
-    predictor = ChurnPredictor()
+    predictor = ChurnPredictor(dirs=dirs)
     chatbot = RetentionChatbot(predictor)
     st.session_state.predictor = predictor
     st.session_state.chatbot = chatbot

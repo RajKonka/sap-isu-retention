@@ -3,6 +3,8 @@ SAP IS-U Customer Retention Prediction System — V3 Configuration
 Lean version: Only Customer Master + Complaints + Interactions
 """
 import os
+import time
+import shutil
 
 # ─── Directories ──────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -18,6 +20,38 @@ INTERACTION_DATA_FILE = os.path.join(DATA_DIR, "interaction_data.csv")
 # ─── Derived Files ────────────────────────────────────────
 MERGED_DATA_FILE = os.path.join(DATA_DIR, "merged_customer_data.csv")
 FINAL_FEATURES_FILE = os.path.join(DATA_DIR, "final_features.csv")
+
+# ─── Session Isolation ────────────────────────────────────
+def get_session_dirs(session_id):
+    """Return session-scoped file paths so concurrent users never share data or models."""
+    s_data = os.path.join(DATA_DIR, "sessions", session_id)
+    s_model = os.path.join(MODEL_DIR, "sessions", session_id)
+    s_report = os.path.join(REPORT_DIR, "sessions", session_id)
+    return {
+        "data_dir":              s_data,
+        "model_dir":             s_model,
+        "report_dir":            s_report,
+        "customer_master_file":  os.path.join(s_data, "customer_master.csv"),
+        "complaint_data_file":   os.path.join(s_data, "complaint_data.csv"),
+        "interaction_data_file": os.path.join(s_data, "interaction_data.csv"),
+        "merged_data_file":      os.path.join(s_data, "merged_customer_data.csv"),
+        "final_features_file":   os.path.join(s_data, "final_features.csv"),
+    }
+
+def cleanup_old_sessions(max_age_hours=24):
+    """Delete session directories older than max_age_hours to prevent disk fill."""
+    cutoff = time.time() - max_age_hours * 3600
+    for base in [DATA_DIR, MODEL_DIR, REPORT_DIR]:
+        sessions_root = os.path.join(base, "sessions")
+        if not os.path.exists(sessions_root):
+            continue
+        for sid in os.listdir(sessions_root):
+            sid_path = os.path.join(sessions_root, sid)
+            try:
+                if os.path.getmtime(sid_path) < cutoff:
+                    shutil.rmtree(sid_path)
+            except Exception:
+                pass
 
 # ─── Model Settings ───────────────────────────────────────
 TARGET_COLUMN = "churned"
