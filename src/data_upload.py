@@ -321,20 +321,21 @@ def auto_map_columns(df, table_type):
             # Fuzzy match against aliases
             for alias in aliases:
                 score = SequenceMatcher(None, df_col_clean, alias.lower()).ratio()
-                if score > best_score and score > 0.6:
+                if score > best_score and score > 0.75:
                     best_score = score
                     best_match = df_col
 
-            # Check if column name contains the expected name
+            # Check if column name contains the expected name (whole-word only)
             if best_score < 0.8:
                 for alias in aliases:
-                    if alias.lower() in df_col_clean or df_col_clean in alias.lower():
-                        if len(df_col_clean) > 2:  # Avoid matching tiny strings
+                    alias_clean = alias.lower().replace(" ", "_")
+                    if alias_clean in df_col_clean or df_col_clean in alias_clean:
+                        if len(df_col_clean) > 3 and len(alias_clean) > 3:
                             best_match = df_col
                             best_score = 0.85
                             break
 
-        if best_match and best_score > 0.5:
+        if best_match and best_score > 0.75:
             mapping[expected_col] = best_match
             used_cols.add(best_match)
 

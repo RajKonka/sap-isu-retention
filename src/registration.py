@@ -9,8 +9,11 @@ Registration & Access Gate Module — V3
 import streamlit as st
 import os
 import json
-import hashlib
+import secrets
+import fcntl
+import tempfile
 import requests
+import re
 from datetime import datetime
 
 # ─── Configuration ────────────────────────────────────────
@@ -75,12 +78,14 @@ def render_registration_gate():
             errors = []
             if not name or len(name.strip()) < 2:
                 errors.append("Please enter your full name")
-            if not email or "@" not in email or "." not in email:
+            if not email or not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email.strip()):
                 errors.append("Please enter a valid email address")
             if not company or len(company.strip()) < 2:
                 errors.append("Please enter your company name")
-            if not phone or len(phone.strip()) < 7:
-                errors.append("Please enter a valid phone number")
+            if not phone or len(re.sub(r'\D', '', phone)) < 10:
+                errors.append("Please enter a valid phone number (at least 10 digits)")
+            if not agree:
+                errors.append("Please agree to be contacted before continuing")
 
             if errors:
                 for e in errors:
@@ -94,16 +99,16 @@ def render_registration_gate():
                 "company": company.strip(),
                 "phone": phone.strip(),
                 "registered_at": datetime.now().isoformat(),
-                "session_id": hashlib.md5(f"{email}{datetime.now()}".encode()).hexdigest()[:12],
+                "session_id": secrets.token_hex(12),
             }
 
-            # Store in session
+            # Save first — only grant access if local save succeeded
+            saved = _save_lead(user_info)
+            if not saved:
+                st.warning("Registration saved in session but could not be written to disk. You can continue, but please contact us if issues persist.")
+
             st.session_state.user_registered = True
             st.session_state.user_info = user_info
-
-            # Save to all backends
-            _save_lead(user_info)
-
             st.success(f"✅ Welcome, {name}! You now have access to upload up to {FREE_TIER_LIMIT:,} customers.")
             st.rerun()
 
@@ -194,33 +199,44 @@ def render_contact_form():
 # ─── Backend: Save Leads ──────────────────────────────────
 
 def _save_lead(lead_data):
-    """Save lead to all configured backends."""
-    # 1. Local JSON backup
-    _save_to_local(lead_data)
+    """Save lead to all configured backends. Returns True if at least local save succeeded."""
+    local_ok = _save_to_local(lead_data)
 
-    # 2. Google Sheets webhook
     if GSHEET_WEBHOOK:
         _save_to_google_sheets(lead_data)
 
-    # 3. Email notification
     if EMAIL_WEBHOOK:
         _send_email_notification(lead_data)
 
+    return local_ok
+
 
 def _save_to_local(lead_data):
-    """Save lead to local JSON file."""
+    """Save lead to local JSON file with file locking and atomic write."""
     try:
         os.makedirs(os.path.dirname(LEADS_FILE), exist_ok=True)
-        leads = []
-        if os.path.exists(LEADS_FILE):
-            with open(LEADS_FILE, "r") as f:
-                leads = json.load(f)
-        leads.append(lead_data)
-        with open(LEADS_FILE, "w") as f:
-            json.dump(leads, f, indent=2)
+        lock_path = LEADS_FILE + ".lock"
+        with open(lock_path, "w") as lock_file:
+            fcntl.flock(lock_file, fcntl.LOCK_EX)
+            try:
+                leads = []
+                if os.path.exists(LEADS_FILE):
+                    with open(LEADS_FILE, "r") as f:
+                        data = json.load(f)
+                        leads = data if isinstance(data, list) else []
+                leads.append(lead_data)
+                dir_name = os.path.dirname(LEADS_FILE)
+                with tempfile.NamedTemporaryFile("w", dir=dir_name, delete=False, suffix=".tmp") as tmp:
+                    json.dump(leads, tmp, indent=2)
+                    tmp_path = tmp.name
+                os.replace(tmp_path, LEADS_FILE)
+            finally:
+                fcntl.flock(lock_file, fcntl.LOCK_UN)
         print(f"  Lead saved locally: {lead_data.get('email', 'unknown')}")
+        return True
     except Exception as e:
         print(f"  Warning: Could not save lead locally: {e}")
+        return False
 
 
 def _save_to_google_sheets(lead_data):

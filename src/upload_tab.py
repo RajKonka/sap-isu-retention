@@ -17,6 +17,9 @@ from src.data_upload import (
 )
 from src.registration import check_data_limit, render_upgrade_wall
 
+MAX_UPLOAD_MB = 50
+MAX_UPLOAD_BYTES = MAX_UPLOAD_MB * 1024 * 1024
+
 def _base_model_exists():
     return (os.path.exists(os.path.join(MODEL_DIR, "best_model.pkl")) and
             os.path.exists(os.path.join(MODEL_DIR, "scaler.pkl")) and
@@ -30,13 +33,29 @@ def render_upload_tab():
     else:
         st.warning("Please click Run Demo first to initialize the system.")
 
-    st.markdown("""
-    <div style="background: #f0f4ff; border-left: 4px solid #667eea; padding: 1rem; border-radius: 0 8px 8px 0; margin-bottom: 1rem;">
-        <strong>Supported formats:</strong> CSV, JSON, Excel, PDF, Word, TXT<br>
-        <strong>Free tier:</strong> Up to 5,000 customers<br>
-        <strong>Auto-detection:</strong> We'll match your columns automatically
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown("**Upload up to 3 file types — Excel or CSV works best. Column names don't need to match exactly, we'll auto-detect.**")
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown("""
+**👤 Customer Profiles**
+Required: `customer_id`
+Optional: `customer_name`, `region`, `contract_type`, `service_type`, `age`, `gender`, `account_tenure_months`, `income_bracket`, `has_autopay`, `churned`
+        """)
+    with col2:
+        st.markdown("""
+**💬 Feedback / Complaints**
+Required: `customer_id`, `comment`
+Optional: `complaint_date`, `complaint_category`, `severity`, `escalated`, `resolved`, `resolution_time_days`
+        """)
+    with col3:
+        st.markdown("""
+**📞 Service Interactions**
+Required: `customer_id`
+Optional: `interaction_date`, `interaction_type`, `channel`, `duration_minutes`, `satisfaction_score`, `resolved`
+        """)
+    st.caption("You can upload just one file — e.g. a customer list with feedback. Free tier: up to 5,000 customers.")
+    st.markdown("---")
 
     mode = st.radio("Mode", ["Predict Only (recommended)", "Full Analysis"], index=0,
         help="Predict Only scores your customers instantly. Full Analysis trains a custom model on your data.")
@@ -59,10 +78,18 @@ def render_upload_tab():
 
     loaded_dfs = {}
     for f in uploaded_files:
-        df, msg = read_file(f)
+        size_mb = f.size / 1024 / 1024
+        if f.size > MAX_UPLOAD_BYTES:
+            st.error(f"**{f.name}** is {size_mb:.1f} MB — max allowed is {MAX_UPLOAD_MB} MB. Split the file into smaller chunks and re-upload.")
+            continue
+        try:
+            df, msg = read_file(f)
+        except Exception as e:
+            st.error(f"**{f.name}** — could not read file: {e}")
+            continue
         if df is not None:
             loaded_dfs[f.name] = df
-            st.success(f"**{f.name}** — {len(df):,} rows × {len(df.columns)} columns")
+            st.success(f"**{f.name}** — {len(df):,} rows × {len(df.columns)} columns ({size_mb:.1f} MB)")
             if msg: st.caption(msg)
         else:
             st.error(f"**{f.name}** — {msg}")
@@ -124,14 +151,23 @@ def render_upload_tab():
                 sel = st.selectbox(label, df_cols, index=didx, key=f"cm_{tt}_{exp_col}")
                 if sel != "— Not matched —": mapping[exp_col] = sel
         missing = [friendly.get(r, r) for r in schema["required"] if r not in mapping]
-        if missing: st.warning(f"Missing: {', '.join(missing)}")
+        if missing: st.warning(f"Missing required: {', '.join(missing)}")
         else: st.success("✅ All required fields matched")
         all_mappings[tt] = mapping
         st.markdown("---")
 
+    all_missing = []
+    for tt, mapping in all_mappings.items():
+        schema = EXPECTED_SCHEMAS[tt]
+        for r in schema["required"]:
+            if r not in mapping:
+                all_missing.append(f"{labels.get(tt, tt)} → {friendly.get(r, r)}")
+
     st.markdown("### Step 4: Get Results")
     btn = "🔮 Score My Customers" if is_predict_only else "🔄 Run Full Analysis"
-    if st.button(btn, type="primary", use_container_width=True):
+    if all_missing:
+        st.error("Fix the missing required columns above before continuing:\n- " + "\n- ".join(all_missing))
+    if st.button(btn, type="primary", use_container_width=True, disabled=bool(all_missing)):
         if is_predict_only:
             if not has_base:
                 st.error("Please run the demo first to initialize the system."); return False
@@ -163,6 +199,15 @@ def _prepare_data(loaded_dfs, table_assignments, all_mappings, progress, status)
         return None, None, None, None
     st.caption(f"✅ {len(cids):,} customers found")
 
+    missing_tables = [tt for tt in EXPECTED_SCHEMAS if tt not in transformed]
+    if missing_tables:
+        friendly_names = {"customer_master": "Customer Profiles", "complaint_data": "Feedback / Complaints", "interaction_data": "Service Interactions"}
+        missing_labels = [friendly_names.get(t, t) for t in missing_tables]
+        st.warning(
+            f"**Heads up:** You didn't upload {', '.join(missing_labels)}. "
+            "The model will fill in placeholder values for these — predictions will be less accurate. "
+            "For best results, upload all three file types."
+        )
     for tt in EXPECTED_SCHEMAS:
         if tt not in transformed:
             transformed[tt] = generate_missing_data(tt, cids)
@@ -269,7 +314,11 @@ def _retrain(loaded_dfs, table_assignments, all_mappings):
     from src.model_training import training_pipeline
     from src.eda import generate_eda_report
     generate_eda_report(merged)
-    results, trained_models, best_name, scaler = training_pipeline(engineered)
+    try:
+        results, trained_models, best_name, scaler = training_pipeline(engineered)
+    except ValueError as e:
+        st.error(f"Cannot train model: {e}")
+        return False
     st.session_state.models_trained = True
     st.session_state.training_results = results
     st.session_state.merged_data = merged

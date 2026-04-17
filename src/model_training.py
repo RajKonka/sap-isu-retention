@@ -124,7 +124,10 @@ def train_models(X_train, y_train, X_test, y_test):
         y_pred = model.predict(X_test)
         y_prob = model.predict_proba(X_test)[:, 1] if hasattr(model, "predict_proba") else y_pred
         cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=RANDOM_STATE)
-        cv_scores = cross_val_score(model, X_train, y_train, cv=cv, scoring="roc_auc")
+        try:
+            cv_scores = cross_val_score(model, X_train, y_train, cv=cv, scoring="roc_auc")
+        except Exception:
+            cv_scores = np.array([0.5])
         results[name] = {
             "accuracy": accuracy_score(y_test, y_pred),
             "precision": precision_score(y_test, y_pred, zero_division=0),
@@ -231,6 +234,15 @@ def training_pipeline(df, feature_multipliers=None):
     print("ML TRAINING PIPELINE (V3)")
     print("=" * 60)
     X, y, label_encoders = prepare_data(df, feature_multipliers)
+
+    if len(X) < 50:
+        raise ValueError(f"Dataset too small ({len(X)} rows). Need at least 50 customers to train a model.")
+    if y.nunique() < 2:
+        raise ValueError(
+            "All customers in your data have the same churn label — the model needs both churned "
+            "and retained customers to learn from. Check your 'churned' column or use Predict Only mode."
+        )
+
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=TEST_SIZE, random_state=RANDOM_STATE, stratify=y)
     print(f"\n  Train: {X_train.shape[0]}, Test: {X_test.shape[0]}")
     scaler = StandardScaler()

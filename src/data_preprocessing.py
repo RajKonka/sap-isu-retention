@@ -97,7 +97,7 @@ def analyze_sentiment_vader(comments_series):
     results = []
     for comment in comments_series:
         if pd.isna(comment) or str(comment).strip() == "":
-            results.append({"compound": 0.0, "pos": 0.0, "neu": 1.0, "neg": 0.0, "label": "Neutral"})
+            results.append({"compound": float("nan"), "pos": float("nan"), "neu": float("nan"), "neg": float("nan"), "label": None})
             continue
         scores = sia.polarity_scores(str(comment))
         label = "Positive" if scores["compound"] >= 0.05 else ("Negative" if scores["compound"] <= -0.05 else "Neutral")
@@ -248,6 +248,15 @@ def preprocess_pipeline():
     interactions = clean_interaction_data(interactions)
 
     customer_ids = master["customer_id"]
+
+    # Warn about orphaned IDs (in complaints/interactions but not in master)
+    master_ids = set(customer_ids)
+    orphaned_complaints = set(complaints["customer_id"].dropna()) - master_ids
+    orphaned_interactions = set(interactions["customer_id"].dropna()) - master_ids
+    if orphaned_complaints:
+        print(f"  WARNING: {len(orphaned_complaints)} customer IDs in complaints not found in master — they will be ignored.")
+    if orphaned_interactions:
+        print(f"  WARNING: {len(orphaned_interactions)} customer IDs in interactions not found in master — they will be ignored.")
 
     # Aggregate with NLP
     print("\n[Step 3] Aggregating & running NLP...")

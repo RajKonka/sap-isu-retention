@@ -13,9 +13,14 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import *
 
-# NuroStudio API config
-NUROSTUDIO_API_URL = "https://nurostudio.ai/api/v1/run/0da47a3f-d469-406a-8cd9-735a1caeaef8"
+# NuroStudio API config — set NUROSTUDIO_API_URL in environment to override
+NUROSTUDIO_API_URL = os.environ.get(
+    "NUROSTUDIO_API_URL",
+    "https://nurostudio.ai/api/v1/run/0da47a3f-d469-406a-8cd9-735a1caeaef8",
+)
 NUROSTUDIO_API_KEY = os.environ.get("NUROSTUDIO_API_KEY", "")
+
+MAX_INPUT_CHARS = 5000
 
 
 class RetentionChatbot:
@@ -46,8 +51,14 @@ class RetentionChatbot:
         if self.mode == "fallback":
             print("Using local keyword matching (no API keys found)")
 
+    def get_mode_label(self):
+        """Human-readable label for the active backend."""
+        return {"nurostudio": "NuroStudio (private AI)", "claude": "Claude AI", "fallback": "Offline mode"}.get(self.mode, self.mode)
+
     def chat(self, message):
         """Route to appropriate backend."""
+        if len(message) > MAX_INPUT_CHARS:
+            message = message[:MAX_INPUT_CHARS] + "… [truncated]"
         # Check for customer lookup first
         cust_id = self._extract_customer_id(message)
         
@@ -143,6 +154,8 @@ Regions: {summary.get('regions', [])}
 {context}"""
 
         self.history.append({"role": "user", "content": message})
+        if len(self.history) > 50:
+            self.history = self.history[-50:]
         try:
             response = self.claude_client.messages.create(
                 model="claude-sonnet-4-20250514",
