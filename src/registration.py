@@ -5,11 +5,13 @@ Registration & Access Gate Module — V3
 - Sends email notification on new signup
 - Enforces 5,000 customer limit on free tier
 - Shows 'Contact Us' for larger datasets
+- Persistent accounts with hashed passwords so users can log back in
 """
 import streamlit as st
 import os
 import json
 import secrets
+import hashlib
 import fcntl
 import tempfile
 import requests
@@ -30,7 +32,79 @@ GSHEET_WEBHOOK = os.environ.get("GSHEET_WEBHOOK", "")
 EMAIL_WEBHOOK = os.environ.get("EMAIL_WEBHOOK", "")
 
 # Local backup file (in case webhooks fail)
-LEADS_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "leads.json")
+LEADS_FILE    = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "leads.json")
+ACCOUNTS_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "accounts.json")
+
+
+# ─── Account helpers ─────────────────────────────────────
+
+def _hash_password(password, salt=None):
+    salt = salt or secrets.token_hex(16)
+    key = hashlib.pbkdf2_hmac("sha256", password.encode(), salt.encode(), 260_000)
+    return key.hex(), salt
+
+def _load_accounts():
+    if not os.path.exists(ACCOUNTS_FILE):
+        return []
+    try:
+        with open(ACCOUNTS_FILE, "r") as f:
+            data = json.load(f)
+            return data if isinstance(data, list) else []
+    except Exception:
+        return []
+
+def _save_accounts(accounts):
+    os.makedirs(os.path.dirname(ACCOUNTS_FILE), exist_ok=True)
+    lock_path = ACCOUNTS_FILE + ".lock"
+    with open(lock_path, "w") as lock_file:
+        fcntl.flock(lock_file, fcntl.LOCK_EX)
+        try:
+            with tempfile.NamedTemporaryFile("w", dir=os.path.dirname(ACCOUNTS_FILE), delete=False, suffix=".tmp") as tmp:
+                json.dump(accounts, tmp, indent=2)
+                tmp_path = tmp.name
+            os.replace(tmp_path, ACCOUNTS_FILE)
+        finally:
+            fcntl.flock(lock_file, fcntl.LOCK_UN)
+
+def _get_account(email):
+    for acc in _load_accounts():
+        if acc.get("email") == email.strip().lower():
+            return acc
+    return None
+
+def _create_account(user_info, password):
+    """Create a new account. Returns False if email already exists."""
+    if _get_account(user_info["email"]):
+        return False
+    pw_hash, salt = _hash_password(password)
+    account = {
+        **user_info,
+        "password_hash": pw_hash,
+        "password_salt": salt,
+        "session_id": secrets.token_hex(16),   # permanent — maps to data dir
+        "registered_at": datetime.now().isoformat(),
+        "last_login": datetime.now().isoformat(),
+    }
+    accounts = _load_accounts()
+    accounts.append(account)
+    _save_accounts(accounts)
+    return account
+
+def _verify_login(email, password):
+    """Verify credentials. Returns account dict on success, None on failure."""
+    account = _get_account(email)
+    if not account:
+        return None
+    expected_hash, _ = _hash_password(password, account["password_salt"])
+    if not secrets.compare_digest(expected_hash, account["password_hash"]):
+        return None
+    # Update last_login
+    accounts = _load_accounts()
+    for acc in accounts:
+        if acc["email"] == email.strip().lower():
+            acc["last_login"] = datetime.now().isoformat()
+    _save_accounts(accounts)
+    return account
 
 
 def is_registered():
@@ -43,78 +117,106 @@ def get_user_info():
     return st.session_state.get("user_info", {})
 
 
+def _apply_login(account):
+    """Write account into session state and restore the user's permanent session_id."""
+    st.session_state.user_registered = True
+    st.session_state.user_info = {k: v for k, v in account.items()
+                                   if k not in ("password_hash", "password_salt")}
+    st.session_state.session_id = account["session_id"]
+
+
 def render_registration_gate():
     """
-    Show registration form. Returns True if user is registered, False if not yet.
+    Show Register / Sign In tabs. Returns True if user is authenticated.
     Call this at the top of the upload tab.
     """
     if is_registered():
         return True
 
     st.markdown("""
-    <div style="text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #f0f4ff 0%, #e8ecf8 100%); 
+    <div style="text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #f0f4ff 0%, #e8ecf8 100%);
                 border-radius: 12px; margin: 10px 0 20px 0;">
-        <h3 style="color: #0f3460; margin: 0 0 8px 0;">🔐 Quick Registration Required</h3>
+        <h3 style="color: #0f3460; margin: 0 0 8px 0;">🔐 Access Required</h3>
         <p style="color: #555; font-size: 14px; margin: 0;">
-            Enter your details to unlock data upload. Takes 10 seconds. No spam, we promise.
+            Register once to unlock data upload — or sign in if you've been here before.
         </p>
     </div>
     """, unsafe_allow_html=True)
 
-    with st.form("registration_form", clear_on_submit=False):
-        col1, col2 = st.columns(2)
-        with col1:
-            name = st.text_input("Full Name *", placeholder="John Smith")
-            email = st.text_input("Business Email *", placeholder="john@company.com")
-        with col2:
-            company = st.text_input("Company Name *", placeholder="Acme Utilities Inc.")
-            phone = st.text_input("Phone Number *", placeholder="+1 555-123-4567")
+    tab_register, tab_signin = st.tabs(["✨ New here? Register", "🔑 Returning? Sign In"])
 
-        agree = st.checkbox("I agree to be contacted about this product", value=True)
-        submitted = st.form_submit_button("🚀 Unlock Upload Access", use_container_width=True, type="primary")
+    # ── Register ──────────────────────────────────────────
+    with tab_register:
+        with st.form("registration_form", clear_on_submit=False):
+            col1, col2 = st.columns(2)
+            with col1:
+                name    = st.text_input("Full Name *", placeholder="John Smith")
+                email   = st.text_input("Business Email *", placeholder="john@company.com")
+                password = st.text_input("Password *", type="password", placeholder="Min 8 characters")
+            with col2:
+                company  = st.text_input("Company Name *", placeholder="Acme Utilities Inc.")
+                phone    = st.text_input("Phone Number *", placeholder="+1 555-123-4567")
+                password2 = st.text_input("Confirm Password *", type="password")
 
-        if submitted:
-            # Validate
-            errors = []
-            if not name or len(name.strip()) < 2:
-                errors.append("Please enter your full name")
-            if not email or not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email.strip()):
-                errors.append("Please enter a valid email address")
-            if not company or len(company.strip()) < 2:
-                errors.append("Please enter your company name")
-            if not phone or len(re.sub(r'\D', '', phone)) < 10:
-                errors.append("Please enter a valid phone number (at least 10 digits)")
-            if not agree:
-                errors.append("Please agree to be contacted before continuing")
+            agree = st.checkbox("I agree to be contacted about this product", value=True)
+            submitted = st.form_submit_button("🚀 Create Account & Unlock Access", use_container_width=True, type="primary")
 
-            if errors:
-                for e in errors:
-                    st.error(e)
-                return False
+            if submitted:
+                errors = []
+                if not name or len(name.strip()) < 2:
+                    errors.append("Please enter your full name")
+                if not email or not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email.strip()):
+                    errors.append("Please enter a valid email address")
+                if not company or len(company.strip()) < 2:
+                    errors.append("Please enter your company name")
+                if not phone or len(re.sub(r'\D', '', phone)) < 10:
+                    errors.append("Please enter a valid phone number (at least 10 digits)")
+                if not password or len(password) < 8:
+                    errors.append("Password must be at least 8 characters")
+                if password != password2:
+                    errors.append("Passwords do not match")
+                if not agree:
+                    errors.append("Please agree to be contacted before continuing")
+                if _get_account(email.strip().lower()):
+                    errors.append("An account with this email already exists — use Sign In instead")
 
-            # Save registration
-            user_info = {
-                "name": name.strip(),
-                "email": email.strip().lower(),
-                "company": company.strip(),
-                "phone": phone.strip(),
-                "registered_at": datetime.now().isoformat(),
-                "session_id": secrets.token_hex(12),
-            }
+                if errors:
+                    for e in errors: st.error(e)
+                else:
+                    user_info = {
+                        "name":    name.strip(),
+                        "email":   email.strip().lower(),
+                        "company": company.strip(),
+                        "phone":   phone.strip(),
+                    }
+                    account = _create_account(user_info, password)
+                    _save_lead({**user_info, "registered_at": account["registered_at"]})
+                    _apply_login(account)
+                    st.success(f"✅ Welcome, {name}! Your account is ready.")
+                    st.rerun()
 
-            # Save first — only grant access if local save succeeded
-            saved = _save_lead(user_info)
-            if not saved:
-                st.warning("Registration saved in session but could not be written to disk. You can continue, but please contact us if issues persist.")
+    # ── Sign In ───────────────────────────────────────────
+    with tab_signin:
+        with st.form("signin_form", clear_on_submit=False):
+            si_email    = st.text_input("Business Email", placeholder="john@company.com")
+            si_password = st.text_input("Password", type="password")
+            signin = st.form_submit_button("🔑 Sign In", use_container_width=True, type="primary")
 
-            st.session_state.user_registered = True
-            st.session_state.user_info = user_info
-            st.success(f"✅ Welcome, {name}! You now have access to upload up to {FREE_TIER_LIMIT:,} customers.")
-            st.rerun()
+            if signin:
+                if not si_email or not si_password:
+                    st.error("Please enter your email and password.")
+                else:
+                    account = _verify_login(si_email.strip().lower(), si_password)
+                    if account:
+                        _apply_login(account)
+                        st.success(f"✅ Welcome back, {account['name']}!")
+                        st.rerun()
+                    else:
+                        st.error("Incorrect email or password.")
 
     st.markdown("""
     <p style="text-align: center; color: #999; font-size: 11px; margin-top: 10px;">
-        Your data is secure. We only use this to follow up on your interest in the product.
+        Your data is secure. We only use your details to follow up on your interest in the product.
     </p>
     """, unsafe_allow_html=True)
 
