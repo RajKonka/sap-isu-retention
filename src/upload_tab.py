@@ -32,10 +32,10 @@ def _base_model_exists():
     # Files were wiped (e.g. by a git operation) — restore from git index
     try:
         import subprocess
-        root = os.path.dirname(BASE_MODEL_DIR)
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         result = subprocess.run(
             ["git", "restore", "models/base/"],
-            cwd=root, capture_output=True, timeout=15
+            cwd=project_root, capture_output=True, timeout=15
         )
         if result.returncode == 0:
             return all(os.path.exists(os.path.join(BASE_MODEL_DIR, f)) for f in required)
