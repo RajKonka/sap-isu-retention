@@ -4,6 +4,8 @@ __pycache__/
 data/*.csv
 data/*.json
 data/*.lock
+storage/*.json
+storage/*.lock
 data/base_training/
 data/sessions/
 data/sample_set_*/

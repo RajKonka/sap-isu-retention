@@ -31,9 +31,10 @@ GSHEET_WEBHOOK = os.environ.get("GSHEET_WEBHOOK", "")
 # Set this as environment variable EMAIL_WEBHOOK in Hugging Face Spaces settings
 EMAIL_WEBHOOK = os.environ.get("EMAIL_WEBHOOK", "")
 
-# Local backup file (in case webhooks fail)
-LEADS_FILE    = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "leads.json")
-ACCOUNTS_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "accounts.json")
+# Persistent storage — kept outside data/ which gets wiped by git operations
+_STORAGE_DIR  = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "storage")
+LEADS_FILE    = os.path.join(_STORAGE_DIR, "leads.json")
+ACCOUNTS_FILE = os.path.join(_STORAGE_DIR, "accounts.json")
 
 
 # ─── Account helpers ─────────────────────────────────────
