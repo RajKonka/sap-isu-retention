@@ -25,10 +25,23 @@ BASE_MODEL_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__
 
 
 def _base_model_exists():
-    """True when the permanent base model is present (always preferred over demo/session model)."""
-    return (os.path.exists(os.path.join(BASE_MODEL_DIR, "best_model.pkl")) and
-            os.path.exists(os.path.join(BASE_MODEL_DIR, "scaler.pkl")) and
-            os.path.exists(os.path.join(BASE_MODEL_DIR, "model_metadata.pkl")))
+    """True when the permanent base model is present. Auto-restores from git if missing."""
+    required = ["best_model.pkl", "scaler.pkl", "model_metadata.pkl"]
+    if all(os.path.exists(os.path.join(BASE_MODEL_DIR, f)) for f in required):
+        return True
+    # Files were wiped (e.g. by a git operation) — restore from git index
+    try:
+        import subprocess
+        root = os.path.dirname(BASE_MODEL_DIR)
+        result = subprocess.run(
+            ["git", "restore", "models/base/"],
+            cwd=root, capture_output=True, timeout=15
+        )
+        if result.returncode == 0:
+            return all(os.path.exists(os.path.join(BASE_MODEL_DIR, f)) for f in required)
+    except Exception:
+        pass
+    return False
 
 def _render_history():
     """Show previous run history for this user."""
