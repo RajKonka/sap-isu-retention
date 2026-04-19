@@ -533,7 +533,10 @@ def infer_churn_labels(master_df, complaint_df, interaction_df):
         tenure = master_df["account_tenure_months"].values
         scores += np.where(tenure < 6, 0.15, np.where(tenure < 12, 0.08, 0.0))
 
+    if "has_autopay" in master_df.columns:
+        scores -= master_df["has_autopay"].values * 0.08
+
     np.random.seed(RANDOM_STATE)
     scores += np.random.normal(0, 0.06, len(master_df))
-    prob = 1 / (1 + np.exp(-8 * (scores - 0.30)))
+    prob = 1 / (1 + np.exp(-8 * (scores - 0.45)))
     return (np.random.random(len(master_df)) < prob).astype(int)
