@@ -2,8 +2,11 @@ venv/
 __pycache__/
 *.pyc
 data/*.csv
+data/*.json
+data/*.lock
 data/base_training/
 data/sessions/
+data/sample_set_*/
 models/*.pkl
 models/sessions/
 reports/*.png

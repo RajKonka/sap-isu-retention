@@ -254,9 +254,14 @@ def generate_churn_labels(master_df, complaint_df, interaction_df):
     # ── Factor 4: Contract type ──
     churn_scores += np.where(master_df["contract_type"] == "Prepaid", 0.10, 0.0)
 
+    # ── Factor 5: Autopay (reduces churn) ──
+    if "has_autopay" in master_df.columns:
+        churn_scores -= master_df["has_autopay"].values * 0.08
+
     # Add noise and convert to probability
+    # Threshold at 0.45 (was 0.30) to target a realistic 20-25% churn rate
     churn_scores += np.random.normal(0, 0.06, len(master_df))
-    churn_prob = 1 / (1 + np.exp(-8 * (churn_scores - 0.30)))
+    churn_prob = 1 / (1 + np.exp(-8 * (churn_scores - 0.45)))
 
     churned = (np.random.random(len(master_df)) < churn_prob).astype(int)
     print(f"  Churn rate: {churned.mean():.2%} ({churned.sum()}/{len(master_df)})")
