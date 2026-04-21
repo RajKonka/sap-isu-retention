@@ -1,0 +1,901 @@
+customer_id,complaint_date,complaint_category,comment,severity,resolution_time_days,escalated,resolved
+C00437,2023-01-01,Other,I would like to update my contact details.,5,13,1,0
+C00382,2023-01-01,Meter Reading,Happy with the service overall.,4,17,1,0
+C00018,2023-01-01,Billing,The technician arrived on time and fixed the problem efficiently.,4,17,0,1
+C00399,2023-01-01,Technical,Calling to inquire about my current bill and payment options.,1,4,0,0
+C00410,2023-01-02,Outage,I need to schedule a meter reading appointment.,3,0,1,0
+C00045,2023-01-02,Outage,The technician arrived on time and fixed the problem efficiently.,3,6,1,1
+C00173,2023-01-02,Technical,Still waiting for the credit promised three weeks ago.,1,18,1,0
+C00442,2023-01-02,Service Quality,I am not happy with the service. My issue has been going on for too long.,1,16,1,1
+C00466,2023-01-03,Service Quality,The bill seems higher than expected. Quite frustrated.,2,19,0,0
+C00342,2023-01-03,Other,Calling to inquire about my current bill and payment options.,5,17,1,1
+C00273,2023-01-03,Meter Reading,The technician arrived on time and fixed the problem efficiently.,1,6,1,1
+C00101,2023-01-03,Service Quality,My meter reading was wrong and my bill is inflated.,5,7,1,0
+C00233,2023-01-04,Technical,"Everything is working great, thank you.",4,7,1,1
+C00302,2023-01-04,Other,Can you explain the tariff plans available?,2,8,1,1
+C00149,2023-01-04,Billing,Still waiting for the credit promised three weeks ago.,2,15,1,0
+C00134,2023-01-04,Meter Reading,Worst customer experience. I will be switching providers.,4,19,0,1
+C00445,2023-01-05,Other,I have been overcharged for the third time this year.,4,18,1,0
+C00333,2023-01-05,Service Quality,"Everything is working great, thank you.",4,11,0,0
+C00320,2023-01-05,Outage,I need to schedule a meter reading appointment.,4,7,1,1
+C00390,2023-01-05,Technical,Can you explain the tariff plans available?,3,0,0,0
+C00140,2023-01-06,Other,I need to schedule a meter reading appointment.,4,13,1,1
+C00365,2023-01-06,Service Quality,Still waiting for the credit promised three weeks ago.,5,4,0,1
+C00159,2023-01-06,Outage,"Everything is working great, thank you.",3,14,1,0
+C00318,2023-01-06,Service Quality,I need to schedule a meter reading appointment.,2,6,1,0
+C00364,2023-01-07,Technical,Still waiting for the credit promised three weeks ago.,4,8,0,1
+C00168,2023-01-07,Service Quality,The bill seems higher than expected. Quite frustrated.,4,11,0,0
+C00282,2023-01-07,Other,Happy with the service overall.,5,19,1,1
+C00480,2023-01-07,Meter Reading,Worst customer experience. I will be switching providers.,5,0,1,1
+C00431,2023-01-08,Outage,I would like to update my contact details.,1,6,0,0
+C00434,2023-01-08,Meter Reading,I called last week and was promised a callback that never came.,4,5,1,1
+C00442,2023-01-08,Technical,I have been overcharged for the third time this year.,3,3,1,0
+C00222,2023-01-08,Meter Reading,Still waiting for the credit promised three weeks ago.,4,17,0,0
+C00433,2023-01-09,Service Quality,My meter reading was wrong and my bill is inflated.,2,8,1,1
+C00217,2023-01-09,Outage,Very satisfied with the quick response to my query.,1,16,1,0
+C00227,2023-01-09,Technical,"Three technicians, three no-shows. I took time off work for nothing.",1,1,1,1
+C00024,2023-01-09,Outage,The bill seems higher than expected. Quite frustrated.,1,14,0,0
+C00194,2023-01-10,Outage,The representative was very helpful and resolved my issue quickly.,2,8,1,1
+C00349,2023-01-10,Service Quality,Calling to inquire about my current bill and payment options.,5,0,1,1
+C00186,2023-01-10,Meter Reading,Happy with the service overall.,2,18,0,1
+C00046,2023-01-10,Billing,Very satisfied with the quick response to my query.,1,1,0,0
+C00366,2023-01-11,Meter Reading,I need to schedule a meter reading appointment.,5,3,1,1
+C00478,2023-01-11,Service Quality,The technician arrived on time and fixed the problem efficiently.,1,0,0,1
+C00349,2023-01-11,Meter Reading,Very satisfied with the quick response to my query.,1,11,0,1
+C00495,2023-01-11,Meter Reading,I would like to update my contact details.,3,11,1,1
+C00335,2023-01-12,Meter Reading,Happy with the service overall.,1,17,0,1
+C00042,2023-01-12,Outage,"Everything is working great, thank you.",2,18,0,0
+C00259,2023-01-12,Meter Reading,I am not happy with the service. My issue has been going on for too long.,4,14,1,0
+C00348,2023-01-12,Meter Reading,I need to schedule a meter reading appointment.,5,6,0,1
+C00176,2023-01-13,Technical,The representative was very helpful and resolved my issue quickly.,4,5,0,0
+C00436,2023-01-13,Other,Happy with the service overall.,2,0,0,0
+C00467,2023-01-13,Technical,The technician arrived on time and fixed the problem efficiently.,3,3,0,0
+C00307,2023-01-13,Service Quality,The technician arrived on time and fixed the problem efficiently.,2,16,0,1
+C00418,2023-01-14,Outage,I have been overcharged for the third time this year.,1,8,0,1
+C00274,2023-01-14,Meter Reading,The representative was very helpful and resolved my issue quickly.,3,2,1,0
+C00153,2023-01-14,Meter Reading,Happy with the service overall.,4,12,0,1
+C00452,2023-01-14,Other,"Everything is working great, thank you.",4,18,1,0
+C00095,2023-01-15,Other,I have been overcharged for the third time this year.,3,5,0,0
+C00379,2023-01-15,Technical,I called last week and was promised a callback that never came.,2,10,1,0
+C00045,2023-01-15,Other,The technician arrived on time and fixed the problem efficiently.,5,6,0,0
+C00211,2023-01-15,Technical,My meter reading was wrong and my bill is inflated.,4,17,0,0
+C00174,2023-01-16,Service Quality,My meter reading was wrong and my bill is inflated.,3,13,0,0
+C00013,2023-01-16,Meter Reading,Worst customer experience. I will be switching providers.,5,15,1,1
+C00486,2023-01-16,Service Quality,I am not happy with the service. My issue has been going on for too long.,5,1,1,1
+C00133,2023-01-16,Meter Reading,"Everything is working great, thank you.",4,7,1,0
+C00427,2023-01-17,Billing,Very satisfied with the quick response to my query.,3,17,0,0
+C00205,2023-01-17,Meter Reading,The representative was very helpful and resolved my issue quickly.,1,0,1,1
+C00316,2023-01-17,Technical,"Three technicians, three no-shows. I took time off work for nothing.",4,12,1,0
+C00232,2023-01-17,Technical,The representative was very helpful and resolved my issue quickly.,4,12,1,1
+C00292,2023-01-18,Service Quality,Still waiting for the credit promised three weeks ago.,1,18,0,1
+C00392,2023-01-18,Outage,I need to schedule a meter reading appointment.,4,3,0,1
+C00199,2023-01-18,Meter Reading,Worst customer experience. I will be switching providers.,2,7,0,0
+C00134,2023-01-18,Meter Reading,The technician arrived on time and fixed the problem efficiently.,3,1,1,1
+C00115,2023-01-19,Other,I called last week and was promised a callback that never came.,5,16,1,0
+C00419,2023-01-19,Outage,I called last week and was promised a callback that never came.,3,11,1,0
+C00294,2023-01-19,Technical,Happy with the service overall.,2,16,0,0
+C00092,2023-01-19,Technical,Worst customer experience. I will be switching providers.,5,13,0,0
+C00206,2023-01-20,Service Quality,Worst customer experience. I will be switching providers.,1,4,1,1
+C00469,2023-01-20,Service Quality,Happy with the service overall.,2,17,1,1
+C00009,2023-01-20,Outage,Calling to inquire about my current bill and payment options.,5,19,1,0
+C00249,2023-01-20,Other,"Everything is working great, thank you.",3,2,1,0
+C00002,2023-01-21,Outage,The technician arrived on time and fixed the problem efficiently.,5,10,0,1
+C00213,2023-01-21,Service Quality,My meter reading was wrong and my bill is inflated.,5,9,0,1
+C00229,2023-01-21,Meter Reading,Very satisfied with the quick response to my query.,5,17,1,1
+C00317,2023-01-21,Meter Reading,"Everything is working great, thank you.",5,9,0,0
+C00373,2023-01-22,Outage,"Everything is working great, thank you.",4,1,1,0
+C00201,2023-01-22,Outage,I called last week and was promised a callback that never came.,5,19,1,0
+C00183,2023-01-22,Service Quality,I need to schedule a meter reading appointment.,3,1,0,1
+C00105,2023-01-22,Outage,I need to schedule a meter reading appointment.,5,7,1,0
+C00112,2023-01-23,Other,Can you explain the tariff plans available?,5,19,0,0
+C00500,2023-01-23,Service Quality,I am not happy with the service. My issue has been going on for too long.,2,5,0,0
+C00422,2023-01-23,Meter Reading,I would like to update my contact details.,4,19,0,1
+C00103,2023-01-23,Service Quality,Very satisfied with the quick response to my query.,3,11,0,0
+C00465,2023-01-24,Technical,I have been overcharged for the third time this year.,2,11,0,1
+C00309,2023-01-24,Billing,My meter reading was wrong and my bill is inflated.,3,10,1,1
+C00392,2023-01-24,Technical,Can you explain the tariff plans available?,4,11,1,0
+C00468,2023-01-24,Technical,I called last week and was promised a callback that never came.,1,5,1,0
+C00486,2023-01-25,Billing,I need to schedule a meter reading appointment.,1,4,0,0
+C00009,2023-01-25,Outage,I need to schedule a meter reading appointment.,4,13,0,1
+C00298,2023-01-25,Technical,The representative was very helpful and resolved my issue quickly.,1,7,0,0
+C00355,2023-01-25,Technical,Very satisfied with the quick response to my query.,3,6,1,1
+C00163,2023-01-26,Other,I need to schedule a meter reading appointment.,3,19,1,1
+C00123,2023-01-26,Other,I am not happy with the service. My issue has been going on for too long.,5,16,0,1
+C00088,2023-01-26,Meter Reading,I called last week and was promised a callback that never came.,3,16,1,1
+C00151,2023-01-26,Technical,Very satisfied with the quick response to my query.,2,16,1,1
+C00309,2023-01-27,Outage,Can you explain the tariff plans available?,3,1,0,1
+C00098,2023-01-27,Technical,Very satisfied with the quick response to my query.,3,10,1,1
+C00330,2023-01-27,Billing,I am not happy with the service. My issue has been going on for too long.,1,14,1,0
+C00381,2023-01-27,Technical,I am not happy with the service. My issue has been going on for too long.,5,15,1,0
+C00249,2023-01-28,Service Quality,"Everything is working great, thank you.",2,9,1,1
+C00227,2023-01-28,Other,Happy with the service overall.,4,2,0,0
+C00397,2023-01-28,Billing,Worst customer experience. I will be switching providers.,1,16,1,1
+C00104,2023-01-28,Billing,The representative was very helpful and resolved my issue quickly.,3,10,1,1
+C00232,2023-01-29,Billing,Very satisfied with the quick response to my query.,2,11,0,0
+C00199,2023-01-29,Billing,I would like to update my contact details.,5,17,1,0
+C00160,2023-01-29,Technical,I have been overcharged for the third time this year.,5,1,1,1
+C00325,2023-01-29,Billing,I would like to update my contact details.,4,5,0,0
+C00296,2023-01-30,Service Quality,The representative was very helpful and resolved my issue quickly.,2,14,0,1
+C00067,2023-01-30,Billing,"Everything is working great, thank you.",2,4,1,0
+C00016,2023-01-30,Billing,The representative was very helpful and resolved my issue quickly.,4,3,0,0
+C00237,2023-01-30,Other,Worst customer experience. I will be switching providers.,1,15,0,0
+C00312,2023-01-31,Service Quality,Worst customer experience. I will be switching providers.,5,5,0,1
+C00396,2023-01-31,Outage,I have been overcharged for the third time this year.,3,11,0,1
+C00008,2023-01-31,Service Quality,I have been overcharged for the third time this year.,2,17,0,0
+C00436,2023-01-31,Other,Happy with the service overall.,1,12,1,1
+C00342,2023-02-01,Billing,Worst customer experience. I will be switching providers.,2,11,0,1
+C00354,2023-02-01,Outage,Calling to inquire about my current bill and payment options.,4,1,0,0
+C00272,2023-02-01,Outage,I have been overcharged for the third time this year.,1,6,1,0
+C00237,2023-02-01,Technical,I called last week and was promised a callback that never came.,5,17,1,0
+C00258,2023-02-02,Service Quality,My meter reading was wrong and my bill is inflated.,1,15,1,0
+C00400,2023-02-02,Billing,I need to schedule a meter reading appointment.,4,3,0,0
+C00377,2023-02-02,Service Quality,Worst customer experience. I will be switching providers.,2,18,0,0
+C00380,2023-02-02,Technical,The representative was very helpful and resolved my issue quickly.,3,17,0,0
+C00050,2023-02-03,Outage,Still waiting for the credit promised three weeks ago.,1,16,0,0
+C00296,2023-02-03,Billing,Can you explain the tariff plans available?,3,7,0,0
+C00006,2023-02-03,Meter Reading,Worst customer experience. I will be switching providers.,4,19,0,0
+C00409,2023-02-03,Service Quality,Very satisfied with the quick response to my query.,1,19,0,0
+C00081,2023-02-04,Technical,Calling to inquire about my current bill and payment options.,2,10,1,1
+C00160,2023-02-04,Outage,I would like to update my contact details.,3,1,1,1
+C00146,2023-02-04,Service Quality,The representative was very helpful and resolved my issue quickly.,4,8,0,0
+C00139,2023-02-04,Service Quality,The representative was very helpful and resolved my issue quickly.,3,13,0,0
+C00464,2023-02-05,Outage,I would like to update my contact details.,2,15,1,1
+C00434,2023-02-05,Technical,Very satisfied with the quick response to my query.,2,17,1,0
+C00227,2023-02-05,Outage,I am not happy with the service. My issue has been going on for too long.,2,16,1,0
+C00100,2023-02-05,Billing,The technician arrived on time and fixed the problem efficiently.,3,0,1,0
+C00295,2023-02-06,Billing,The bill seems higher than expected. Quite frustrated.,5,15,1,0
+C00334,2023-02-06,Billing,Can you explain the tariff plans available?,1,3,1,1
+C00273,2023-02-06,Billing,"Everything is working great, thank you.",3,18,1,1
+C00427,2023-02-06,Technical,Happy with the service overall.,1,16,1,0
+C00201,2023-02-07,Outage,I would like to update my contact details.,5,9,1,1
+C00231,2023-02-07,Other,The representative was very helpful and resolved my issue quickly.,4,17,1,0
+C00481,2023-02-07,Technical,Very satisfied with the quick response to my query.,4,16,0,1
+C00451,2023-02-07,Other,The technician arrived on time and fixed the problem efficiently.,5,19,0,0
+C00411,2023-02-08,Outage,I need to schedule a meter reading appointment.,4,3,1,0
+C00068,2023-02-08,Service Quality,Still waiting for the credit promised three weeks ago.,1,3,1,1
+C00098,2023-02-08,Outage,Happy with the service overall.,3,13,0,0
+C00052,2023-02-08,Outage,Very satisfied with the quick response to my query.,1,12,1,1
+C00133,2023-02-09,Outage,Worst customer experience. I will be switching providers.,3,9,1,0
+C00057,2023-02-09,Other,I have been overcharged for the third time this year.,1,4,1,0
+C00099,2023-02-09,Technical,I am not happy with the service. My issue has been going on for too long.,4,13,1,1
+C00236,2023-02-09,Technical,"Three technicians, three no-shows. I took time off work for nothing.",4,3,1,0
+C00229,2023-02-10,Outage,I would like to update my contact details.,5,14,1,0
+C00277,2023-02-10,Meter Reading,The bill seems higher than expected. Quite frustrated.,2,16,0,0
+C00258,2023-02-10,Service Quality,I need to schedule a meter reading appointment.,1,0,0,1
+C00055,2023-02-10,Technical,The technician arrived on time and fixed the problem efficiently.,3,10,1,0
+C00282,2023-02-11,Other,The bill seems higher than expected. Quite frustrated.,2,17,1,1
+C00485,2023-02-11,Billing,I would like to update my contact details.,3,10,0,1
+C00021,2023-02-11,Outage,Calling to inquire about my current bill and payment options.,3,2,0,0
+C00295,2023-02-11,Billing,Happy with the service overall.,5,1,1,1
+C00485,2023-02-12,Billing,The technician arrived on time and fixed the problem efficiently.,3,7,0,1
+C00163,2023-02-12,Technical,I need to schedule a meter reading appointment.,3,12,0,1
+C00361,2023-02-12,Meter Reading,"Everything is working great, thank you.",3,10,1,0
+C00010,2023-02-12,Meter Reading,Can you explain the tariff plans available?,1,2,0,1
+C00103,2023-02-13,Service Quality,I am not happy with the service. My issue has been going on for too long.,1,10,0,1
+C00254,2023-02-13,Outage,The bill seems higher than expected. Quite frustrated.,4,12,0,0
+C00463,2023-02-13,Meter Reading,I have been overcharged for the third time this year.,3,10,1,1
+C00223,2023-02-13,Service Quality,Can you explain the tariff plans available?,1,12,0,0
+C00121,2023-02-14,Meter Reading,My meter reading was wrong and my bill is inflated.,2,6,1,1
+C00043,2023-02-14,Meter Reading,Very satisfied with the quick response to my query.,2,16,1,0
+C00434,2023-02-14,Outage,Still waiting for the credit promised three weeks ago.,4,6,0,0
+C00131,2023-02-14,Meter Reading,Very satisfied with the quick response to my query.,5,19,0,1
+C00444,2023-02-15,Service Quality,I am not happy with the service. My issue has been going on for too long.,1,13,1,1
+C00316,2023-02-15,Meter Reading,"Three technicians, three no-shows. I took time off work for nothing.",5,9,1,0
+C00033,2023-02-15,Outage,The technician arrived on time and fixed the problem efficiently.,1,19,0,1
+C00240,2023-02-15,Service Quality,I need to schedule a meter reading appointment.,5,17,1,0
+C00015,2023-02-16,Billing,"Everything is working great, thank you.",2,10,1,1
+C00041,2023-02-16,Meter Reading,Very satisfied with the quick response to my query.,3,3,0,1
+C00418,2023-02-16,Meter Reading,The bill seems higher than expected. Quite frustrated.,2,19,0,0
+C00226,2023-02-16,Outage,Worst customer experience. I will be switching providers.,1,2,0,1
+C00416,2023-02-17,Meter Reading,"Three technicians, three no-shows. I took time off work for nothing.",1,14,1,1
+C00170,2023-02-17,Service Quality,Happy with the service overall.,1,12,1,0
+C00082,2023-02-17,Other,I need to schedule a meter reading appointment.,5,8,1,0
+C00275,2023-02-17,Billing,I need to schedule a meter reading appointment.,4,3,0,0
+C00354,2023-02-18,Billing,The representative was very helpful and resolved my issue quickly.,5,3,0,1
+C00335,2023-02-18,Technical,Can you explain the tariff plans available?,3,6,1,0
+C00203,2023-02-18,Technical,My meter reading was wrong and my bill is inflated.,1,12,1,1
+C00301,2023-02-18,Billing,"Three technicians, three no-shows. I took time off work for nothing.",2,7,1,0
+C00485,2023-02-19,Technical,I am not happy with the service. My issue has been going on for too long.,4,3,1,1
+C00323,2023-02-19,Meter Reading,The representative was very helpful and resolved my issue quickly.,4,9,0,1
+C00394,2023-02-19,Other,I called last week and was promised a callback that never came.,2,9,1,0
+C00295,2023-02-19,Other,I would like to update my contact details.,3,8,0,1
+C00443,2023-02-20,Other,My meter reading was wrong and my bill is inflated.,4,2,0,0
+C00282,2023-02-20,Outage,Calling to inquire about my current bill and payment options.,1,18,0,1
+C00410,2023-02-20,Other,I am not happy with the service. My issue has been going on for too long.,4,19,1,1
+C00371,2023-02-20,Meter Reading,The technician arrived on time and fixed the problem efficiently.,2,16,1,1
+C00265,2023-02-21,Other,Still waiting for the credit promised three weeks ago.,2,13,1,1
+C00182,2023-02-21,Billing,The technician arrived on time and fixed the problem efficiently.,2,16,1,0
+C00051,2023-02-21,Other,The technician arrived on time and fixed the problem efficiently.,5,3,1,1
+C00063,2023-02-21,Billing,Happy with the service overall.,2,0,1,1
+C00416,2023-02-22,Technical,Happy with the service overall.,4,0,1,0
+C00180,2023-02-22,Outage,"Everything is working great, thank you.",1,15,0,0
+C00154,2023-02-22,Service Quality,Calling to inquire about my current bill and payment options.,5,2,0,1
+C00458,2023-02-22,Service Quality,Worst customer experience. I will be switching providers.,1,17,0,0
+C00135,2023-02-23,Meter Reading,"Three technicians, three no-shows. I took time off work for nothing.",4,6,0,0
+C00206,2023-02-23,Billing,I would like to update my contact details.,4,11,1,1
+C00306,2023-02-23,Other,"Everything is working great, thank you.",5,3,0,1
+C00245,2023-02-23,Billing,I have been overcharged for the third time this year.,5,18,1,0
+C00102,2023-02-24,Other,The representative was very helpful and resolved my issue quickly.,1,12,0,0
+C00054,2023-02-24,Other,Worst customer experience. I will be switching providers.,3,15,1,0
+C00275,2023-02-24,Other,The representative was very helpful and resolved my issue quickly.,5,2,1,1
+C00147,2023-02-24,Meter Reading,I am not happy with the service. My issue has been going on for too long.,4,19,1,0
+C00083,2023-02-25,Service Quality,The bill seems higher than expected. Quite frustrated.,4,15,0,1
+C00267,2023-02-25,Technical,My meter reading was wrong and my bill is inflated.,1,9,1,0
+C00441,2023-02-25,Technical,I need to schedule a meter reading appointment.,2,11,1,1
+C00037,2023-02-25,Other,Happy with the service overall.,3,10,0,0
+C00070,2023-02-26,Outage,I am not happy with the service. My issue has been going on for too long.,2,4,1,1
+C00010,2023-02-26,Billing,I called last week and was promised a callback that never came.,5,10,1,0
+C00234,2023-02-26,Billing,Very satisfied with the quick response to my query.,5,1,1,1
+C00062,2023-02-26,Other,My meter reading was wrong and my bill is inflated.,2,14,0,1
+C00471,2023-02-27,Service Quality,I would like to update my contact details.,1,19,1,1
+C00077,2023-02-27,Outage,I am not happy with the service. My issue has been going on for too long.,3,6,0,1
+C00363,2023-02-27,Service Quality,My meter reading was wrong and my bill is inflated.,2,16,0,0
+C00035,2023-02-27,Meter Reading,The technician arrived on time and fixed the problem efficiently.,4,17,1,1
+C00221,2023-02-28,Outage,I called last week and was promised a callback that never came.,1,3,1,1
+C00146,2023-02-28,Meter Reading,The representative was very helpful and resolved my issue quickly.,4,17,0,0
+C00030,2023-02-28,Outage,I called last week and was promised a callback that never came.,4,3,1,1
+C00123,2023-02-28,Billing,Calling to inquire about my current bill and payment options.,3,0,0,0
+C00033,2023-03-01,Technical,The technician arrived on time and fixed the problem efficiently.,1,3,1,1
+C00279,2023-03-01,Technical,The representative was very helpful and resolved my issue quickly.,3,6,1,0
+C00419,2023-03-01,Outage,I called last week and was promised a callback that never came.,2,15,0,0
+C00049,2023-03-01,Billing,Very satisfied with the quick response to my query.,2,3,1,0
+C00165,2023-03-02,Other,Happy with the service overall.,1,18,0,1
+C00227,2023-03-02,Meter Reading,I am not happy with the service. My issue has been going on for too long.,4,17,0,1
+C00083,2023-03-02,Service Quality,My meter reading was wrong and my bill is inflated.,2,12,1,0
+C00468,2023-03-02,Billing,I would like to update my contact details.,2,6,0,1
+C00153,2023-03-03,Billing,"Everything is working great, thank you.",1,6,0,0
+C00472,2023-03-03,Billing,I would like to update my contact details.,3,12,1,1
+C00065,2023-03-03,Service Quality,The bill seems higher than expected. Quite frustrated.,1,15,1,1
+C00334,2023-03-03,Other,"Three technicians, three no-shows. I took time off work for nothing.",4,13,0,1
+C00436,2023-03-04,Other,I called last week and was promised a callback that never came.,5,4,0,0
+C00389,2023-03-04,Service Quality,"Three technicians, three no-shows. I took time off work for nothing.",3,19,0,0
+C00237,2023-03-04,Other,I am not happy with the service. My issue has been going on for too long.,3,0,1,1
+C00466,2023-03-04,Technical,My meter reading was wrong and my bill is inflated.,4,15,1,0
+C00228,2023-03-05,Technical,Happy with the service overall.,4,2,0,1
+C00224,2023-03-05,Service Quality,Worst customer experience. I will be switching providers.,3,6,1,1
+C00015,2023-03-05,Service Quality,My meter reading was wrong and my bill is inflated.,5,3,0,0
+C00418,2023-03-05,Service Quality,The representative was very helpful and resolved my issue quickly.,4,11,0,1
+C00432,2023-03-06,Technical,"Everything is working great, thank you.",1,17,1,1
+C00406,2023-03-06,Other,Can you explain the tariff plans available?,3,8,1,1
+C00484,2023-03-06,Meter Reading,Calling to inquire about my current bill and payment options.,3,14,1,1
+C00485,2023-03-06,Other,The technician arrived on time and fixed the problem efficiently.,3,14,0,0
+C00024,2023-03-07,Technical,I called last week and was promised a callback that never came.,2,13,0,1
+C00019,2023-03-07,Service Quality,I have been overcharged for the third time this year.,4,7,1,0
+C00463,2023-03-07,Service Quality,My meter reading was wrong and my bill is inflated.,1,11,1,0
+C00062,2023-03-07,Technical,I have been overcharged for the third time this year.,5,5,1,0
+C00354,2023-03-08,Other,Can you explain the tariff plans available?,5,2,1,0
+C00385,2023-03-08,Service Quality,I am not happy with the service. My issue has been going on for too long.,1,8,1,0
+C00009,2023-03-08,Service Quality,Very satisfied with the quick response to my query.,5,12,0,0
+C00359,2023-03-08,Other,"Everything is working great, thank you.",4,10,0,0
+C00376,2023-03-09,Other,I would like to update my contact details.,1,10,1,1
+C00062,2023-03-09,Outage,Still waiting for the credit promised three weeks ago.,2,9,0,1
+C00136,2023-03-09,Outage,Still waiting for the credit promised three weeks ago.,5,15,1,1
+C00297,2023-03-09,Outage,Very satisfied with the quick response to my query.,4,5,0,0
+C00391,2023-03-10,Meter Reading,The representative was very helpful and resolved my issue quickly.,1,11,0,0
+C00052,2023-03-10,Outage,Calling to inquire about my current bill and payment options.,4,5,1,0
+C00008,2023-03-10,Service Quality,Can you explain the tariff plans available?,3,2,1,0
+C00078,2023-03-10,Meter Reading,"Three technicians, three no-shows. I took time off work for nothing.",1,18,0,0
+C00495,2023-03-11,Service Quality,The technician arrived on time and fixed the problem efficiently.,3,13,1,0
+C00332,2023-03-11,Other,Can you explain the tariff plans available?,1,13,1,0
+C00123,2023-03-11,Billing,I have been overcharged for the third time this year.,4,5,1,0
+C00200,2023-03-11,Billing,Very satisfied with the quick response to my query.,2,14,1,0
+C00296,2023-03-12,Service Quality,I have been overcharged for the third time this year.,3,10,0,0
+C00354,2023-03-12,Outage,Worst customer experience. I will be switching providers.,4,1,0,0
+C00106,2023-03-12,Technical,I have been overcharged for the third time this year.,3,15,0,1
+C00191,2023-03-12,Billing,"Everything is working great, thank you.",1,6,1,0
+C00236,2023-03-13,Technical,My meter reading was wrong and my bill is inflated.,2,19,1,1
+C00185,2023-03-13,Technical,I called last week and was promised a callback that never came.,2,6,0,0
+C00365,2023-03-13,Service Quality,The bill seems higher than expected. Quite frustrated.,5,13,1,1
+C00305,2023-03-13,Technical,I would like to update my contact details.,4,2,1,0
+C00267,2023-03-14,Technical,The technician arrived on time and fixed the problem efficiently.,3,13,0,1
+C00059,2023-03-14,Meter Reading,I am not happy with the service. My issue has been going on for too long.,3,14,0,1
+C00141,2023-03-14,Billing,I have been overcharged for the third time this year.,5,5,1,1
+C00169,2023-03-14,Billing,"Everything is working great, thank you.",4,8,1,0
+C00353,2023-03-15,Outage,Happy with the service overall.,3,11,1,1
+C00333,2023-03-15,Billing,My meter reading was wrong and my bill is inflated.,2,15,0,0
+C00111,2023-03-15,Outage,The bill seems higher than expected. Quite frustrated.,1,7,0,0
+C00172,2023-03-15,Outage,My meter reading was wrong and my bill is inflated.,4,12,1,1
+C00134,2023-03-16,Technical,I would like to update my contact details.,5,16,0,1
+C00367,2023-03-16,Other,I am not happy with the service. My issue has been going on for too long.,3,15,1,0
+C00418,2023-03-16,Outage,I need to schedule a meter reading appointment.,3,9,1,0
+C00468,2023-03-16,Billing,Very satisfied with the quick response to my query.,2,7,0,1
+C00250,2023-03-17,Other,The technician arrived on time and fixed the problem efficiently.,4,6,0,0
+C00302,2023-03-17,Meter Reading,Worst customer experience. I will be switching providers.,5,18,1,0
+C00242,2023-03-17,Other,Happy with the service overall.,3,12,1,1
+C00258,2023-03-17,Service Quality,I would like to update my contact details.,5,10,1,0
+C00228,2023-03-18,Billing,Happy with the service overall.,4,18,1,0
+C00405,2023-03-18,Meter Reading,"Three technicians, three no-shows. I took time off work for nothing.",1,11,0,1
+C00458,2023-03-18,Billing,My meter reading was wrong and my bill is inflated.,5,9,1,1
+C00436,2023-03-18,Meter Reading,I am not happy with the service. My issue has been going on for too long.,5,12,1,0
+C00147,2023-03-19,Other,Happy with the service overall.,4,4,1,1
+C00083,2023-03-19,Technical,Happy with the service overall.,4,11,0,1
+C00234,2023-03-19,Technical,Worst customer experience. I will be switching providers.,2,9,1,0
+C00180,2023-03-19,Service Quality,Still waiting for the credit promised three weeks ago.,4,15,1,1
+C00254,2023-03-20,Billing,I am not happy with the service. My issue has been going on for too long.,3,12,0,1
+C00310,2023-03-20,Outage,Very satisfied with the quick response to my query.,3,11,1,0
+C00116,2023-03-20,Service Quality,I would like to update my contact details.,1,16,0,1
+C00493,2023-03-20,Service Quality,"Everything is working great, thank you.",5,7,1,0
+C00191,2023-03-21,Outage,"Everything is working great, thank you.",5,16,1,0
+C00438,2023-03-21,Technical,The representative was very helpful and resolved my issue quickly.,2,7,1,1
+C00171,2023-03-21,Outage,Can you explain the tariff plans available?,4,13,1,1
+C00445,2023-03-21,Outage,Worst customer experience. I will be switching providers.,2,13,1,1
+C00251,2023-03-22,Billing,My meter reading was wrong and my bill is inflated.,5,3,0,0
+C00085,2023-03-22,Other,The representative was very helpful and resolved my issue quickly.,1,5,0,1
+C00202,2023-03-22,Outage,I called last week and was promised a callback that never came.,3,11,1,0
+C00356,2023-03-22,Meter Reading,Worst customer experience. I will be switching providers.,3,17,1,0
+C00237,2023-03-23,Meter Reading,I need to schedule a meter reading appointment.,2,12,0,0
+C00075,2023-03-23,Meter Reading,I called last week and was promised a callback that never came.,2,14,1,1
+C00090,2023-03-23,Billing,The technician arrived on time and fixed the problem efficiently.,4,3,1,1
+C00013,2023-03-23,Meter Reading,Can you explain the tariff plans available?,4,19,0,1
+C00248,2023-03-24,Technical,I need to schedule a meter reading appointment.,3,12,0,1
+C00150,2023-03-24,Other,Still waiting for the credit promised three weeks ago.,4,18,0,1
+C00356,2023-03-24,Technical,"Three technicians, three no-shows. I took time off work for nothing.",5,17,1,0
+C00201,2023-03-24,Other,Very satisfied with the quick response to my query.,2,12,1,0
+C00300,2023-03-25,Outage,"Everything is working great, thank you.",2,8,0,1
+C00415,2023-03-25,Billing,The representative was very helpful and resolved my issue quickly.,2,13,0,0
+C00381,2023-03-25,Billing,Still waiting for the credit promised three weeks ago.,5,8,0,1
+C00043,2023-03-25,Outage,The representative was very helpful and resolved my issue quickly.,4,6,0,0
+C00160,2023-03-26,Technical,Worst customer experience. I will be switching providers.,4,19,1,1
+C00358,2023-03-26,Other,"Everything is working great, thank you.",3,17,0,0
+C00411,2023-03-26,Technical,Calling to inquire about my current bill and payment options.,4,15,0,0
+C00182,2023-03-26,Outage,I would like to update my contact details.,2,16,0,0
+C00047,2023-03-27,Technical,I would like to update my contact details.,1,19,1,0
+C00252,2023-03-27,Service Quality,The representative was very helpful and resolved my issue quickly.,1,19,0,1
+C00151,2023-03-27,Technical,My meter reading was wrong and my bill is inflated.,2,2,1,1
+C00358,2023-03-27,Meter Reading,The representative was very helpful and resolved my issue quickly.,3,2,0,0
+C00269,2023-03-28,Meter Reading,I called last week and was promised a callback that never came.,2,1,0,0
+C00495,2023-03-28,Meter Reading,Happy with the service overall.,4,6,0,0
+C00375,2023-03-28,Technical,I am not happy with the service. My issue has been going on for too long.,5,5,1,1
+C00249,2023-03-28,Technical,Happy with the service overall.,1,7,1,0
+C00098,2023-03-29,Service Quality,"Three technicians, three no-shows. I took time off work for nothing.",5,14,1,0
+C00445,2023-03-29,Service Quality,The technician arrived on time and fixed the problem efficiently.,4,16,1,0
+C00250,2023-03-29,Meter Reading,My meter reading was wrong and my bill is inflated.,2,4,1,1
+C00059,2023-03-29,Other,I need to schedule a meter reading appointment.,1,12,1,1
+C00253,2023-03-30,Outage,I called last week and was promised a callback that never came.,1,19,1,0
+C00260,2023-03-30,Outage,I have been overcharged for the third time this year.,1,15,0,0
+C00193,2023-03-30,Outage,The representative was very helpful and resolved my issue quickly.,5,0,0,1
+C00408,2023-03-30,Billing,The bill seems higher than expected. Quite frustrated.,3,13,1,1
+C00163,2023-03-31,Technical,The technician arrived on time and fixed the problem efficiently.,2,0,0,1
+C00186,2023-03-31,Outage,Can you explain the tariff plans available?,3,11,1,1
+C00223,2023-03-31,Technical,I have been overcharged for the third time this year.,2,8,0,1
+C00347,2023-03-31,Technical,I have been overcharged for the third time this year.,3,7,0,0
+C00450,2023-04-01,Billing,My meter reading was wrong and my bill is inflated.,4,5,0,1
+C00103,2023-04-01,Outage,I called last week and was promised a callback that never came.,3,3,1,1
+C00039,2023-04-01,Other,I called last week and was promised a callback that never came.,5,3,1,0
+C00018,2023-04-01,Technical,Very satisfied with the quick response to my query.,2,19,0,0
+C00364,2023-04-02,Technical,Calling to inquire about my current bill and payment options.,5,11,0,0
+C00360,2023-04-02,Outage,I need to schedule a meter reading appointment.,4,1,0,1
+C00226,2023-04-02,Other,Calling to inquire about my current bill and payment options.,4,9,0,0
+C00226,2023-04-02,Meter Reading,Can you explain the tariff plans available?,2,1,0,0
+C00383,2023-04-03,Service Quality,I would like to update my contact details.,2,17,1,0
+C00301,2023-04-03,Technical,"Everything is working great, thank you.",3,5,1,0
+C00438,2023-04-03,Service Quality,The bill seems higher than expected. Quite frustrated.,5,6,1,1
+C00386,2023-04-03,Meter Reading,The bill seems higher than expected. Quite frustrated.,2,10,0,0
+C00265,2023-04-04,Service Quality,My meter reading was wrong and my bill is inflated.,1,12,1,1
+C00422,2023-04-04,Technical,I would like to update my contact details.,4,10,1,0
+C00108,2023-04-04,Billing,I am not happy with the service. My issue has been going on for too long.,3,2,1,1
+C00197,2023-04-04,Other,The technician arrived on time and fixed the problem efficiently.,1,5,1,0
+C00057,2023-04-05,Billing,I need to schedule a meter reading appointment.,5,13,0,0
+C00274,2023-04-05,Other,Worst customer experience. I will be switching providers.,4,16,1,1
+C00095,2023-04-05,Technical,The representative was very helpful and resolved my issue quickly.,3,14,0,0
+C00092,2023-04-05,Meter Reading,The bill seems higher than expected. Quite frustrated.,5,3,0,0
+C00049,2023-04-06,Billing,The bill seems higher than expected. Quite frustrated.,2,2,1,1
+C00464,2023-04-06,Other,I need to schedule a meter reading appointment.,2,19,1,0
+C00137,2023-04-06,Service Quality,I need to schedule a meter reading appointment.,5,0,0,0
+C00383,2023-04-06,Other,Very satisfied with the quick response to my query.,3,7,1,0
+C00356,2023-04-07,Technical,The representative was very helpful and resolved my issue quickly.,1,14,1,0
+C00033,2023-04-07,Meter Reading,Calling to inquire about my current bill and payment options.,2,2,1,1
+C00249,2023-04-07,Other,Very satisfied with the quick response to my query.,2,15,1,0
+C00497,2023-04-07,Technical,Can you explain the tariff plans available?,1,14,0,0
+C00033,2023-04-08,Other,The technician arrived on time and fixed the problem efficiently.,1,4,0,0
+C00213,2023-04-08,Outage,I need to schedule a meter reading appointment.,3,17,0,0
+C00224,2023-04-08,Billing,I called last week and was promised a callback that never came.,4,11,1,0
+C00129,2023-04-08,Billing,Calling to inquire about my current bill and payment options.,1,19,0,0
+C00390,2023-04-09,Billing,The technician arrived on time and fixed the problem efficiently.,1,5,1,0
+C00078,2023-04-09,Service Quality,My meter reading was wrong and my bill is inflated.,5,1,0,1
+C00443,2023-04-09,Billing,I need to schedule a meter reading appointment.,4,19,0,1
+C00418,2023-04-09,Outage,The bill seems higher than expected. Quite frustrated.,3,9,1,1
+C00292,2023-04-10,Meter Reading,Calling to inquire about my current bill and payment options.,3,11,0,0
+C00446,2023-04-10,Technical,Very satisfied with the quick response to my query.,2,8,1,0
+C00335,2023-04-10,Meter Reading,Happy with the service overall.,1,16,0,1
+C00342,2023-04-10,Outage,Calling to inquire about my current bill and payment options.,4,6,1,0
+C00363,2023-04-11,Billing,"Three technicians, three no-shows. I took time off work for nothing.",2,12,0,1
+C00472,2023-04-11,Outage,Worst customer experience. I will be switching providers.,1,10,1,0
+C00338,2023-04-11,Outage,Happy with the service overall.,2,4,0,1
+C00498,2023-04-11,Other,I need to schedule a meter reading appointment.,3,1,1,0
+C00080,2023-04-12,Service Quality,I would like to update my contact details.,1,7,0,1
+C00273,2023-04-12,Outage,The technician arrived on time and fixed the problem efficiently.,2,1,1,0
+C00314,2023-04-12,Outage,"Three technicians, three no-shows. I took time off work for nothing.",4,19,1,1
+C00419,2023-04-12,Technical,Very satisfied with the quick response to my query.,2,9,0,1
+C00140,2023-04-13,Billing,The bill seems higher than expected. Quite frustrated.,1,15,0,1
+C00481,2023-04-13,Meter Reading,The bill seems higher than expected. Quite frustrated.,2,2,1,0
+C00376,2023-04-13,Technical,Happy with the service overall.,2,5,0,0
+C00044,2023-04-13,Meter Reading,I would like to update my contact details.,2,13,0,1
+C00361,2023-04-14,Technical,The representative was very helpful and resolved my issue quickly.,5,11,1,1
+C00198,2023-04-14,Outage,I have been overcharged for the third time this year.,5,18,1,0
+C00006,2023-04-14,Service Quality,The technician arrived on time and fixed the problem efficiently.,5,1,0,1
+C00451,2023-04-14,Billing,Calling to inquire about my current bill and payment options.,3,8,1,1
+C00149,2023-04-15,Service Quality,The technician arrived on time and fixed the problem efficiently.,2,10,0,0
+C00187,2023-04-15,Billing,Can you explain the tariff plans available?,5,0,1,0
+C00228,2023-04-15,Technical,I have been overcharged for the third time this year.,2,1,0,0
+C00019,2023-04-15,Other,The representative was very helpful and resolved my issue quickly.,1,7,1,1
+C00223,2023-04-16,Meter Reading,The technician arrived on time and fixed the problem efficiently.,1,10,1,0
+C00077,2023-04-16,Meter Reading,Happy with the service overall.,5,9,0,0
+C00432,2023-04-16,Technical,I am not happy with the service. My issue has been going on for too long.,5,3,0,0
+C00199,2023-04-16,Other,My meter reading was wrong and my bill is inflated.,3,7,0,1
+C00401,2023-04-17,Technical,The technician arrived on time and fixed the problem efficiently.,1,7,1,1
+C00333,2023-04-17,Technical,Very satisfied with the quick response to my query.,4,2,0,0
+C00222,2023-04-17,Service Quality,Still waiting for the credit promised three weeks ago.,5,13,0,1
+C00489,2023-04-17,Outage,Very satisfied with the quick response to my query.,3,19,1,1
+C00174,2023-04-18,Billing,"Three technicians, three no-shows. I took time off work for nothing.",5,14,1,1
+C00009,2023-04-18,Meter Reading,Worst customer experience. I will be switching providers.,4,13,0,1
+C00186,2023-04-18,Outage,I am not happy with the service. My issue has been going on for too long.,3,7,1,1
+C00263,2023-04-18,Other,The bill seems higher than expected. Quite frustrated.,4,14,1,0
+C00027,2023-04-19,Billing,Happy with the service overall.,5,13,1,1
+C00246,2023-04-19,Meter Reading,The technician arrived on time and fixed the problem efficiently.,3,11,1,1
+C00466,2023-04-19,Outage,"Everything is working great, thank you.",2,19,1,0
+C00007,2023-04-19,Meter Reading,The bill seems higher than expected. Quite frustrated.,4,11,1,1
+C00324,2023-04-20,Billing,Can you explain the tariff plans available?,5,17,1,1
+C00008,2023-04-20,Service Quality,Can you explain the tariff plans available?,4,8,0,0
+C00188,2023-04-20,Meter Reading,Very satisfied with the quick response to my query.,3,13,0,1
+C00156,2023-04-20,Billing,Very satisfied with the quick response to my query.,3,13,0,1
+C00372,2023-04-21,Billing,Calling to inquire about my current bill and payment options.,2,0,1,1
+C00423,2023-04-21,Meter Reading,I have been overcharged for the third time this year.,2,5,1,0
+C00304,2023-04-21,Technical,The representative was very helpful and resolved my issue quickly.,4,3,1,1
+C00025,2023-04-21,Billing,"Three technicians, three no-shows. I took time off work for nothing.",3,17,0,1
+C00380,2023-04-22,Billing,The technician arrived on time and fixed the problem efficiently.,1,15,1,0
+C00225,2023-04-22,Service Quality,The technician arrived on time and fixed the problem efficiently.,1,5,1,0
+C00249,2023-04-22,Outage,The representative was very helpful and resolved my issue quickly.,3,14,0,1
+C00423,2023-04-22,Service Quality,I have been overcharged for the third time this year.,4,13,0,1
+C00270,2023-04-23,Outage,I would like to update my contact details.,4,10,0,1
+C00461,2023-04-23,Billing,Still waiting for the credit promised three weeks ago.,3,0,1,0
+C00483,2023-04-23,Technical,I need to schedule a meter reading appointment.,5,1,0,1
+C00067,2023-04-23,Meter Reading,Calling to inquire about my current bill and payment options.,5,8,0,1
+C00314,2023-04-24,Outage,I would like to update my contact details.,5,2,0,1
+C00045,2023-04-24,Other,"Three technicians, three no-shows. I took time off work for nothing.",1,3,1,0
+C00463,2023-04-24,Billing,"Everything is working great, thank you.",3,9,1,1
+C00170,2023-04-24,Service Quality,I have been overcharged for the third time this year.,1,3,1,1
+C00036,2023-04-25,Meter Reading,I need to schedule a meter reading appointment.,4,13,0,0
+C00228,2023-04-25,Outage,Happy with the service overall.,1,14,0,0
+C00127,2023-04-25,Service Quality,Calling to inquire about my current bill and payment options.,4,7,0,1
+C00209,2023-04-25,Outage,The bill seems higher than expected. Quite frustrated.,4,6,0,0
+C00292,2023-04-26,Technical,I am not happy with the service. My issue has been going on for too long.,5,2,0,1
+C00067,2023-04-26,Meter Reading,I called last week and was promised a callback that never came.,3,14,1,0
+C00384,2023-04-26,Other,Happy with the service overall.,5,10,1,0
+C00071,2023-04-26,Technical,Can you explain the tariff plans available?,3,18,0,0
+C00102,2023-04-27,Other,The bill seems higher than expected. Quite frustrated.,5,0,1,1
+C00321,2023-04-27,Billing,Can you explain the tariff plans available?,1,15,1,0
+C00029,2023-04-27,Other,Very satisfied with the quick response to my query.,3,6,0,1
+C00341,2023-04-27,Outage,Happy with the service overall.,5,2,1,0
+C00467,2023-04-28,Meter Reading,I would like to update my contact details.,3,10,1,0
+C00024,2023-04-28,Other,Happy with the service overall.,4,17,0,0
+C00245,2023-04-28,Service Quality,The bill seems higher than expected. Quite frustrated.,2,0,0,0
+C00178,2023-04-28,Other,Happy with the service overall.,5,14,1,1
+C00362,2023-04-29,Meter Reading,Can you explain the tariff plans available?,3,14,0,0
+C00408,2023-04-29,Meter Reading,"Everything is working great, thank you.",2,11,0,1
+C00110,2023-04-29,Outage,I would like to update my contact details.,1,11,0,1
+C00379,2023-04-29,Technical,My meter reading was wrong and my bill is inflated.,3,10,0,1
+C00107,2023-04-30,Other,I need to schedule a meter reading appointment.,2,0,1,1
+C00159,2023-04-30,Other,Very satisfied with the quick response to my query.,2,7,0,1
+C00114,2023-04-30,Service Quality,I am not happy with the service. My issue has been going on for too long.,4,19,0,1
+C00020,2023-04-30,Outage,Can you explain the tariff plans available?,1,16,0,0
+C00460,2023-05-01,Technical,Can you explain the tariff plans available?,1,7,1,0
+C00416,2023-05-01,Outage,"Everything is working great, thank you.",4,6,0,1
+C00451,2023-05-01,Outage,I have been overcharged for the third time this year.,3,17,0,1
+C00135,2023-05-01,Billing,I need to schedule a meter reading appointment.,4,5,1,1
+C00402,2023-05-02,Other,The technician arrived on time and fixed the problem efficiently.,2,13,1,0
+C00230,2023-05-02,Other,Happy with the service overall.,5,4,1,0
+C00155,2023-05-02,Technical,The technician arrived on time and fixed the problem efficiently.,1,6,1,0
+C00296,2023-05-02,Technical,I called last week and was promised a callback that never came.,5,9,1,1
+C00358,2023-05-03,Service Quality,I called last week and was promised a callback that never came.,3,4,1,1
+C00145,2023-05-03,Outage,The technician arrived on time and fixed the problem efficiently.,2,5,1,1
+C00112,2023-05-03,Billing,I would like to update my contact details.,1,19,0,0
+C00095,2023-05-03,Service Quality,Worst customer experience. I will be switching providers.,4,13,0,0
+C00494,2023-05-04,Billing,Very satisfied with the quick response to my query.,3,0,0,1
+C00465,2023-05-04,Other,The representative was very helpful and resolved my issue quickly.,1,14,1,0
+C00470,2023-05-04,Technical,Can you explain the tariff plans available?,5,8,0,0
+C00097,2023-05-04,Meter Reading,Still waiting for the credit promised three weeks ago.,4,15,1,0
+C00185,2023-05-05,Meter Reading,My meter reading was wrong and my bill is inflated.,3,15,1,0
+C00318,2023-05-05,Billing,"Everything is working great, thank you.",3,13,0,0
+C00290,2023-05-05,Technical,Worst customer experience. I will be switching providers.,2,5,0,1
+C00427,2023-05-05,Technical,The representative was very helpful and resolved my issue quickly.,3,18,0,1
+C00031,2023-05-06,Service Quality,I called last week and was promised a callback that never came.,5,7,1,1
+C00198,2023-05-06,Technical,"Everything is working great, thank you.",3,2,1,0
+C00376,2023-05-06,Billing,Can you explain the tariff plans available?,5,1,1,1
+C00279,2023-05-06,Outage,Calling to inquire about my current bill and payment options.,2,9,0,1
+C00069,2023-05-07,Outage,My meter reading was wrong and my bill is inflated.,3,7,0,1
+C00294,2023-05-07,Technical,Calling to inquire about my current bill and payment options.,1,2,0,0
+C00181,2023-05-07,Billing,The representative was very helpful and resolved my issue quickly.,5,11,0,0
+C00078,2023-05-07,Outage,My meter reading was wrong and my bill is inflated.,4,16,1,1
+C00128,2023-05-08,Service Quality,Calling to inquire about my current bill and payment options.,1,7,0,0
+C00095,2023-05-08,Meter Reading,Happy with the service overall.,2,9,0,1
+C00462,2023-05-08,Meter Reading,I need to schedule a meter reading appointment.,5,4,1,0
+C00246,2023-05-08,Outage,The technician arrived on time and fixed the problem efficiently.,3,6,0,0
+C00449,2023-05-09,Outage,My meter reading was wrong and my bill is inflated.,4,3,0,0
+C00404,2023-05-09,Other,Calling to inquire about my current bill and payment options.,4,8,0,1
+C00376,2023-05-09,Service Quality,Still waiting for the credit promised three weeks ago.,1,17,0,0
+C00496,2023-05-09,Outage,I am not happy with the service. My issue has been going on for too long.,1,17,0,0
+C00302,2023-05-10,Technical,I have been overcharged for the third time this year.,5,2,1,1
+C00143,2023-05-10,Billing,The representative was very helpful and resolved my issue quickly.,3,17,1,0
+C00402,2023-05-10,Billing,The bill seems higher than expected. Quite frustrated.,5,10,0,0
+C00353,2023-05-10,Technical,The technician arrived on time and fixed the problem efficiently.,1,17,0,1
+C00115,2023-05-11,Outage,Still waiting for the credit promised three weeks ago.,4,19,0,1
+C00235,2023-05-11,Meter Reading,"Everything is working great, thank you.",2,18,1,0
+C00436,2023-05-11,Service Quality,Calling to inquire about my current bill and payment options.,4,6,0,0
+C00313,2023-05-11,Billing,I am not happy with the service. My issue has been going on for too long.,5,15,0,1
+C00071,2023-05-12,Meter Reading,I would like to update my contact details.,2,13,0,0
+C00492,2023-05-12,Technical,"Everything is working great, thank you.",4,1,1,1
+C00307,2023-05-12,Outage,Calling to inquire about my current bill and payment options.,1,2,0,1
+C00495,2023-05-12,Meter Reading,Very satisfied with the quick response to my query.,2,18,1,0
+C00212,2023-05-13,Outage,"Everything is working great, thank you.",1,14,1,1
+C00303,2023-05-13,Outage,"Everything is working great, thank you.",5,1,0,1
+C00075,2023-05-13,Other,The representative was very helpful and resolved my issue quickly.,1,15,0,0
+C00215,2023-05-13,Outage,Still waiting for the credit promised three weeks ago.,2,18,1,1
+C00052,2023-05-14,Technical,"Three technicians, three no-shows. I took time off work for nothing.",3,4,0,1
+C00262,2023-05-14,Other,Very satisfied with the quick response to my query.,3,18,1,1
+C00222,2023-05-14,Service Quality,Very satisfied with the quick response to my query.,2,4,0,0
+C00459,2023-05-14,Other,"Everything is working great, thank you.",2,19,0,0
+C00065,2023-05-15,Meter Reading,I called last week and was promised a callback that never came.,1,9,1,0
+C00398,2023-05-15,Other,I have been overcharged for the third time this year.,3,19,1,0
+C00264,2023-05-15,Billing,The technician arrived on time and fixed the problem efficiently.,4,0,1,0
+C00201,2023-05-15,Outage,Can you explain the tariff plans available?,5,11,0,0
+C00352,2023-05-16,Technical,Very satisfied with the quick response to my query.,3,9,0,1
+C00339,2023-05-16,Service Quality,Calling to inquire about my current bill and payment options.,1,9,1,1
+C00322,2023-05-16,Technical,I have been overcharged for the third time this year.,1,15,0,0
+C00218,2023-05-16,Billing,The technician arrived on time and fixed the problem efficiently.,3,10,0,1
+C00348,2023-05-17,Technical,I would like to update my contact details.,4,15,0,0
+C00462,2023-05-17,Technical,Can you explain the tariff plans available?,5,5,0,0
+C00381,2023-05-17,Technical,Very satisfied with the quick response to my query.,1,17,1,0
+C00283,2023-05-17,Technical,"Three technicians, three no-shows. I took time off work for nothing.",1,12,0,0
+C00244,2023-05-18,Other,I need to schedule a meter reading appointment.,1,9,1,0
+C00245,2023-05-18,Service Quality,The bill seems higher than expected. Quite frustrated.,4,18,0,0
+C00469,2023-05-18,Other,Calling to inquire about my current bill and payment options.,3,10,0,0
+C00075,2023-05-18,Technical,The representative was very helpful and resolved my issue quickly.,5,3,1,1
+C00285,2023-05-19,Billing,The technician arrived on time and fixed the problem efficiently.,2,12,1,1
+C00452,2023-05-19,Technical,Happy with the service overall.,2,17,1,0
+C00249,2023-05-19,Meter Reading,Can you explain the tariff plans available?,4,15,0,1
+C00464,2023-05-19,Meter Reading,"Three technicians, three no-shows. I took time off work for nothing.",3,13,0,0
+C00496,2023-05-20,Meter Reading,The technician arrived on time and fixed the problem efficiently.,2,1,0,1
+C00175,2023-05-20,Billing,The technician arrived on time and fixed the problem efficiently.,1,1,1,0
+C00445,2023-05-20,Technical,Can you explain the tariff plans available?,4,7,0,0
+C00289,2023-05-20,Service Quality,I need to schedule a meter reading appointment.,5,9,1,0
+C00305,2023-05-21,Outage,The representative was very helpful and resolved my issue quickly.,4,6,0,1
+C00413,2023-05-21,Meter Reading,Very satisfied with the quick response to my query.,5,2,0,0
+C00313,2023-05-21,Technical,I called last week and was promised a callback that never came.,2,3,0,0
+C00303,2023-05-21,Service Quality,Very satisfied with the quick response to my query.,2,1,0,1
+C00475,2023-05-22,Other,I called last week and was promised a callback that never came.,5,10,1,0
+C00354,2023-05-22,Other,I would like to update my contact details.,5,15,0,1
+C00440,2023-05-22,Service Quality,Worst customer experience. I will be switching providers.,5,19,1,0
+C00103,2023-05-22,Outage,I need to schedule a meter reading appointment.,3,6,1,1
+C00273,2023-05-23,Other,I need to schedule a meter reading appointment.,3,9,0,0
+C00023,2023-05-23,Technical,I am not happy with the service. My issue has been going on for too long.,1,1,1,1
+C00411,2023-05-23,Service Quality,I am not happy with the service. My issue has been going on for too long.,2,18,1,1
+C00496,2023-05-23,Other,Very satisfied with the quick response to my query.,2,3,1,0
+C00018,2023-05-24,Other,I called last week and was promised a callback that never came.,1,0,0,1
+C00332,2023-05-24,Other,Worst customer experience. I will be switching providers.,3,19,1,0
+C00001,2023-05-24,Meter Reading,The technician arrived on time and fixed the problem efficiently.,4,8,0,1
+C00164,2023-05-24,Meter Reading,Happy with the service overall.,1,7,1,1
+C00115,2023-05-25,Other,Calling to inquire about my current bill and payment options.,5,7,0,0
+C00092,2023-05-25,Outage,The representative was very helpful and resolved my issue quickly.,2,0,0,0
+C00354,2023-05-25,Technical,"Three technicians, three no-shows. I took time off work for nothing.",4,8,1,1
+C00139,2023-05-25,Meter Reading,I am not happy with the service. My issue has been going on for too long.,2,0,0,0
+C00349,2023-05-26,Service Quality,Very satisfied with the quick response to my query.,5,4,1,1
+C00162,2023-05-26,Service Quality,"Everything is working great, thank you.",1,0,0,0
+C00121,2023-05-26,Technical,Happy with the service overall.,5,11,0,0
+C00458,2023-05-26,Meter Reading,The representative was very helpful and resolved my issue quickly.,4,16,1,1
+C00489,2023-05-27,Billing,The technician arrived on time and fixed the problem efficiently.,1,8,0,1
+C00289,2023-05-27,Outage,I would like to update my contact details.,5,3,0,0
+C00085,2023-05-27,Meter Reading,Can you explain the tariff plans available?,3,5,0,0
+C00157,2023-05-27,Outage,"Everything is working great, thank you.",2,7,0,1
+C00225,2023-05-28,Technical,The representative was very helpful and resolved my issue quickly.,2,18,1,0
+C00383,2023-05-28,Meter Reading,Still waiting for the credit promised three weeks ago.,1,8,0,0
+C00084,2023-05-28,Technical,The technician arrived on time and fixed the problem efficiently.,4,4,0,0
+C00426,2023-05-28,Meter Reading,"Everything is working great, thank you.",4,10,1,0
+C00022,2023-05-29,Other,Calling to inquire about my current bill and payment options.,2,16,1,1
+C00188,2023-05-29,Meter Reading,The representative was very helpful and resolved my issue quickly.,4,8,0,1
+C00497,2023-05-29,Technical,I am not happy with the service. My issue has been going on for too long.,1,11,0,1
+C00447,2023-05-29,Outage,"Three technicians, three no-shows. I took time off work for nothing.",5,17,0,0
+C00108,2023-05-30,Technical,I am not happy with the service. My issue has been going on for too long.,4,10,1,0
+C00300,2023-05-30,Billing,I called last week and was promised a callback that never came.,5,16,1,1
+C00150,2023-05-30,Outage,I would like to update my contact details.,2,0,0,0
+C00045,2023-05-30,Technical,I need to schedule a meter reading appointment.,4,5,1,0
+C00414,2023-05-31,Other,I need to schedule a meter reading appointment.,1,2,1,1
+C00244,2023-05-31,Meter Reading,Still waiting for the credit promised three weeks ago.,3,14,1,0
+C00470,2023-05-31,Outage,Very satisfied with the quick response to my query.,1,13,0,1
+C00398,2023-05-31,Technical,The technician arrived on time and fixed the problem efficiently.,1,17,1,1
+C00072,2023-06-01,Technical,Still waiting for the credit promised three weeks ago.,1,4,0,1
+C00257,2023-06-01,Technical,I called last week and was promised a callback that never came.,1,13,0,1
+C00175,2023-06-01,Meter Reading,Happy with the service overall.,2,8,1,0
+C00463,2023-06-01,Outage,Worst customer experience. I will be switching providers.,3,15,1,0
+C00371,2023-06-02,Service Quality,Very satisfied with the quick response to my query.,5,5,0,0
+C00037,2023-06-02,Meter Reading,Still waiting for the credit promised three weeks ago.,2,7,0,0
+C00140,2023-06-02,Meter Reading,I need to schedule a meter reading appointment.,2,18,0,0
+C00436,2023-06-02,Meter Reading,Calling to inquire about my current bill and payment options.,3,7,0,0
+C00423,2023-06-03,Other,"Three technicians, three no-shows. I took time off work for nothing.",2,12,1,0
+C00045,2023-06-03,Billing,I would like to update my contact details.,4,5,0,0
+C00359,2023-06-03,Technical,Calling to inquire about my current bill and payment options.,2,11,0,0
+C00084,2023-06-03,Billing,I would like to update my contact details.,1,5,1,1
+C00320,2023-06-04,Billing,Still waiting for the credit promised three weeks ago.,3,15,0,1
+C00160,2023-06-04,Other,Still waiting for the credit promised three weeks ago.,2,19,1,1
+C00444,2023-06-04,Outage,I have been overcharged for the third time this year.,1,5,0,0
+C00061,2023-06-04,Technical,Still waiting for the credit promised three weeks ago.,1,8,1,0
+C00118,2023-06-05,Technical,The representative was very helpful and resolved my issue quickly.,4,13,1,0
+C00389,2023-06-05,Technical,The bill seems higher than expected. Quite frustrated.,1,19,0,0
+C00455,2023-06-05,Technical,The representative was very helpful and resolved my issue quickly.,5,18,0,0
+C00445,2023-06-05,Meter Reading,Happy with the service overall.,5,4,0,1
+C00495,2023-06-06,Other,Still waiting for the credit promised three weeks ago.,3,13,0,1
+C00045,2023-06-06,Billing,Calling to inquire about my current bill and payment options.,2,13,1,1
+C00005,2023-06-06,Meter Reading,Still waiting for the credit promised three weeks ago.,4,6,0,0
+C00104,2023-06-06,Technical,I would like to update my contact details.,2,18,1,0
+C00020,2023-06-07,Technical,My meter reading was wrong and my bill is inflated.,1,12,0,0
+C00380,2023-06-07,Technical,I need to schedule a meter reading appointment.,2,14,1,0
+C00017,2023-06-07,Billing,Happy with the service overall.,4,10,0,0
+C00391,2023-06-07,Other,The technician arrived on time and fixed the problem efficiently.,3,1,0,0
+C00064,2023-06-08,Service Quality,I called last week and was promised a callback that never came.,2,5,1,1
+C00047,2023-06-08,Technical,Worst customer experience. I will be switching providers.,5,6,0,1
+C00101,2023-06-08,Meter Reading,I called last week and was promised a callback that never came.,2,13,0,1
+C00065,2023-06-08,Billing,Very satisfied with the quick response to my query.,2,19,1,1
+C00351,2023-06-09,Service Quality,The bill seems higher than expected. Quite frustrated.,4,6,1,1
+C00057,2023-06-09,Technical,The bill seems higher than expected. Quite frustrated.,4,12,0,1
+C00500,2023-06-09,Outage,I am not happy with the service. My issue has been going on for too long.,3,17,0,0
+C00280,2023-06-09,Outage,Worst customer experience. I will be switching providers.,3,10,1,0
+C00142,2023-06-10,Meter Reading,Still waiting for the credit promised three weeks ago.,3,8,0,1
+C00385,2023-06-10,Technical,Can you explain the tariff plans available?,1,12,1,0
+C00277,2023-06-10,Service Quality,I have been overcharged for the third time this year.,5,13,1,1
+C00094,2023-06-10,Meter Reading,I called last week and was promised a callback that never came.,3,4,0,0
+C00056,2023-06-11,Other,"Everything is working great, thank you.",5,12,0,0
+C00264,2023-06-11,Billing,"Everything is working great, thank you.",5,16,1,0
+C00358,2023-06-11,Outage,I called last week and was promised a callback that never came.,4,4,0,0
+C00128,2023-06-11,Technical,Happy with the service overall.,4,15,1,0
+C00209,2023-06-12,Technical,"Everything is working great, thank you.",1,13,0,0
+C00061,2023-06-12,Meter Reading,The representative was very helpful and resolved my issue quickly.,1,15,1,0
+C00002,2023-06-12,Service Quality,"Everything is working great, thank you.",3,15,1,1
+C00155,2023-06-12,Technical,My meter reading was wrong and my bill is inflated.,3,17,1,1
+C00191,2023-06-13,Outage,I am not happy with the service. My issue has been going on for too long.,2,4,0,0
+C00321,2023-06-13,Other,I would like to update my contact details.,2,18,1,0
+C00253,2023-06-13,Technical,Can you explain the tariff plans available?,5,0,0,1
+C00347,2023-06-13,Other,I am not happy with the service. My issue has been going on for too long.,5,7,0,0
+C00424,2023-06-14,Other,Worst customer experience. I will be switching providers.,4,2,1,1
+C00406,2023-06-14,Other,Worst customer experience. I will be switching providers.,3,10,0,1
+C00240,2023-06-14,Other,I need to schedule a meter reading appointment.,1,6,1,1
+C00196,2023-06-14,Meter Reading,Can you explain the tariff plans available?,5,19,1,0
+C00318,2023-06-15,Technical,I would like to update my contact details.,5,3,0,1
+C00049,2023-06-15,Outage,My meter reading was wrong and my bill is inflated.,1,15,0,1
+C00403,2023-06-15,Technical,Very satisfied with the quick response to my query.,4,2,0,1
+C00293,2023-06-15,Service Quality,Calling to inquire about my current bill and payment options.,3,13,1,1
+C00143,2023-06-16,Outage,The bill seems higher than expected. Quite frustrated.,2,19,0,1
+C00500,2023-06-16,Technical,Can you explain the tariff plans available?,1,3,1,0
+C00192,2023-06-16,Service Quality,My meter reading was wrong and my bill is inflated.,2,19,1,0
+C00315,2023-06-16,Technical,"Everything is working great, thank you.",1,3,1,0
+C00168,2023-06-17,Outage,I called last week and was promised a callback that never came.,1,4,1,1
+C00191,2023-06-17,Technical,My meter reading was wrong and my bill is inflated.,1,7,0,1
+C00140,2023-06-17,Meter Reading,The bill seems higher than expected. Quite frustrated.,2,2,1,0
+C00189,2023-06-17,Service Quality,I have been overcharged for the third time this year.,4,7,0,1
+C00261,2023-06-18,Outage,I am not happy with the service. My issue has been going on for too long.,3,8,1,1
+C00201,2023-06-18,Other,"Three technicians, three no-shows. I took time off work for nothing.",2,17,0,0
+C00209,2023-06-18,Meter Reading,Still waiting for the credit promised three weeks ago.,1,6,1,1
+C00134,2023-06-18,Outage,My meter reading was wrong and my bill is inflated.,4,10,0,1
+C00280,2023-06-19,Service Quality,Very satisfied with the quick response to my query.,1,12,1,0
+C00111,2023-06-19,Service Quality,The technician arrived on time and fixed the problem efficiently.,5,10,0,0
+C00439,2023-06-19,Billing,"Everything is working great, thank you.",4,12,1,1
+C00322,2023-06-19,Meter Reading,I called last week and was promised a callback that never came.,5,1,1,0
+C00153,2023-06-20,Other,I called last week and was promised a callback that never came.,5,17,1,1
+C00411,2023-06-20,Technical,Calling to inquire about my current bill and payment options.,2,14,1,1
+C00352,2023-06-20,Service Quality,The technician arrived on time and fixed the problem efficiently.,4,19,0,0
+C00034,2023-06-20,Service Quality,Happy with the service overall.,2,14,1,0
+C00292,2023-06-21,Other,Still waiting for the credit promised three weeks ago.,2,6,0,1
+C00159,2023-06-21,Billing,Very satisfied with the quick response to my query.,2,6,1,0
+C00429,2023-06-21,Billing,The representative was very helpful and resolved my issue quickly.,5,18,0,0
+C00074,2023-06-21,Billing,I called last week and was promised a callback that never came.,1,18,1,0
+C00099,2023-06-22,Other,The technician arrived on time and fixed the problem efficiently.,2,0,0,1
+C00402,2023-06-22,Outage,"Everything is working great, thank you.",2,18,0,1
+C00396,2023-06-22,Other,Very satisfied with the quick response to my query.,3,9,1,0
+C00254,2023-06-22,Billing,The bill seems higher than expected. Quite frustrated.,2,1,1,1
+C00101,2023-06-23,Billing,The representative was very helpful and resolved my issue quickly.,3,14,0,0
+C00429,2023-06-23,Outage,The representative was very helpful and resolved my issue quickly.,1,12,1,1
+C00008,2023-06-23,Other,My meter reading was wrong and my bill is inflated.,4,14,0,0
+C00471,2023-06-23,Billing,"Everything is working great, thank you.",2,19,0,1
+C00401,2023-06-24,Billing,The representative was very helpful and resolved my issue quickly.,4,15,0,1
+C00357,2023-06-24,Billing,"Everything is working great, thank you.",1,15,0,0
+C00006,2023-06-24,Other,My meter reading was wrong and my bill is inflated.,5,7,0,0
+C00054,2023-06-24,Billing,Calling to inquire about my current bill and payment options.,1,8,0,1
+C00239,2023-06-25,Service Quality,The representative was very helpful and resolved my issue quickly.,1,11,1,1
+C00169,2023-06-25,Meter Reading,I would like to update my contact details.,2,9,0,0
+C00059,2023-06-25,Technical,I would like to update my contact details.,5,17,1,0
+C00226,2023-06-25,Other,Calling to inquire about my current bill and payment options.,3,6,1,1
+C00239,2023-06-26,Other,The technician arrived on time and fixed the problem efficiently.,5,14,0,0
+C00423,2023-06-26,Technical,Calling to inquire about my current bill and payment options.,3,2,0,0
+C00357,2023-06-26,Technical,I am not happy with the service. My issue has been going on for too long.,5,1,0,0
+C00015,2023-06-26,Service Quality,Still waiting for the credit promised three weeks ago.,1,6,1,1
+C00065,2023-06-27,Other,The representative was very helpful and resolved my issue quickly.,3,19,1,0
+C00440,2023-06-27,Meter Reading,Happy with the service overall.,3,12,1,0
+C00450,2023-06-27,Outage,I need to schedule a meter reading appointment.,1,17,0,1
+C00042,2023-06-27,Technical,Worst customer experience. I will be switching providers.,4,17,0,1
+C00164,2023-06-28,Billing,I have been overcharged for the third time this year.,3,3,0,1
+C00329,2023-06-28,Technical,Very satisfied with the quick response to my query.,1,2,1,0
+C00250,2023-06-28,Technical,Happy with the service overall.,5,14,0,0
+C00097,2023-06-28,Service Quality,I would like to update my contact details.,5,11,1,1
+C00199,2023-06-29,Technical,Very satisfied with the quick response to my query.,2,15,0,0
+C00199,2023-06-29,Service Quality,"Three technicians, three no-shows. I took time off work for nothing.",2,7,1,0
+C00275,2023-06-29,Other,"Three technicians, three no-shows. I took time off work for nothing.",3,3,0,0
+C00276,2023-06-29,Billing,The representative was very helpful and resolved my issue quickly.,3,5,0,1
+C00342,2023-06-30,Other,The bill seems higher than expected. Quite frustrated.,3,7,0,0
+C00285,2023-06-30,Meter Reading,Still waiting for the credit promised three weeks ago.,3,13,1,1
+C00405,2023-06-30,Other,I have been overcharged for the third time this year.,4,14,0,0
+C00464,2023-06-30,Service Quality,I am not happy with the service. My issue has been going on for too long.,1,12,0,0
+C00243,2023-07-01,Service Quality,Very satisfied with the quick response to my query.,5,2,0,1
+C00060,2023-07-01,Service Quality,My meter reading was wrong and my bill is inflated.,1,10,0,1
+C00497,2023-07-01,Billing,I have been overcharged for the third time this year.,1,4,1,1
+C00304,2023-07-01,Outage,The technician arrived on time and fixed the problem efficiently.,2,12,1,0
+C00232,2023-07-02,Billing,I need to schedule a meter reading appointment.,2,11,1,0
+C00265,2023-07-02,Technical,I need to schedule a meter reading appointment.,1,17,0,0
+C00266,2023-07-02,Technical,Still waiting for the credit promised three weeks ago.,3,11,0,1
+C00389,2023-07-02,Service Quality,I have been overcharged for the third time this year.,2,4,0,0
+C00193,2023-07-03,Outage,The technician arrived on time and fixed the problem efficiently.,4,14,1,1
+C00437,2023-07-03,Outage,I called last week and was promised a callback that never came.,3,3,0,1
+C00392,2023-07-03,Outage,I have been overcharged for the third time this year.,3,18,0,1
+C00327,2023-07-03,Outage,"Three technicians, three no-shows. I took time off work for nothing.",5,6,0,1
+C00124,2023-07-04,Meter Reading,I need to schedule a meter reading appointment.,1,3,0,0
+C00226,2023-07-04,Other,I would like to update my contact details.,1,11,1,0
+C00324,2023-07-04,Billing,Very satisfied with the quick response to my query.,3,14,1,1
+C00081,2023-07-04,Technical,Worst customer experience. I will be switching providers.,2,12,0,1
+C00137,2023-07-05,Technical,The technician arrived on time and fixed the problem efficiently.,1,10,0,1
+C00387,2023-07-05,Meter Reading,The bill seems higher than expected. Quite frustrated.,1,1,1,1
+C00137,2023-07-05,Technical,The technician arrived on time and fixed the problem efficiently.,4,15,1,0
+C00240,2023-07-05,Service Quality,"Three technicians, three no-shows. I took time off work for nothing.",5,17,1,0
+C00453,2023-07-06,Service Quality,I called last week and was promised a callback that never came.,2,10,0,1
+C00465,2023-07-06,Other,The representative was very helpful and resolved my issue quickly.,1,3,0,0
+C00012,2023-07-06,Other,I would like to update my contact details.,2,16,0,1
+C00254,2023-07-06,Service Quality,Still waiting for the credit promised three weeks ago.,3,17,0,0
+C00487,2023-07-07,Technical,The technician arrived on time and fixed the problem efficiently.,3,13,0,1
+C00313,2023-07-07,Other,Calling to inquire about my current bill and payment options.,1,7,0,0
+C00002,2023-07-07,Service Quality,The technician arrived on time and fixed the problem efficiently.,1,17,0,1
+C00244,2023-07-07,Outage,Can you explain the tariff plans available?,4,13,1,0
+C00088,2023-07-08,Service Quality,The representative was very helpful and resolved my issue quickly.,4,16,0,1
+C00169,2023-07-08,Technical,Happy with the service overall.,3,15,1,1
+C00457,2023-07-08,Service Quality,The technician arrived on time and fixed the problem efficiently.,3,19,1,1
+C00164,2023-07-08,Service Quality,I have been overcharged for the third time this year.,5,3,1,1
+C00174,2023-07-09,Other,Very satisfied with the quick response to my query.,5,2,1,1
+C00193,2023-07-09,Billing,I am not happy with the service. My issue has been going on for too long.,4,11,1,0
+C00445,2023-07-09,Service Quality,Calling to inquire about my current bill and payment options.,2,4,0,0
+C00416,2023-07-09,Other,Happy with the service overall.,2,15,0,1
+C00252,2023-07-10,Service Quality,Worst customer experience. I will be switching providers.,5,4,1,0
+C00196,2023-07-10,Other,"Three technicians, three no-shows. I took time off work for nothing.",1,4,1,0
+C00425,2023-07-10,Service Quality,"Three technicians, three no-shows. I took time off work for nothing.",4,1,1,0
+C00302,2023-07-10,Other,"Everything is working great, thank you.",5,14,0,1
+C00407,2023-07-11,Meter Reading,I need to schedule a meter reading appointment.,3,3,1,0
+C00166,2023-07-11,Service Quality,I would like to update my contact details.,4,19,0,0
+C00177,2023-07-11,Other,"Everything is working great, thank you.",2,17,0,1
+C00459,2023-07-11,Billing,I am not happy with the service. My issue has been going on for too long.,3,1,1,1
+C00014,2023-07-12,Billing,Calling to inquire about my current bill and payment options.,4,6,1,0
+C00444,2023-07-12,Meter Reading,The representative was very helpful and resolved my issue quickly.,1,10,1,1
+C00351,2023-07-12,Other,I am not happy with the service. My issue has been going on for too long.,2,3,1,1
+C00069,2023-07-12,Meter Reading,The representative was very helpful and resolved my issue quickly.,5,19,0,0
+C00078,2023-07-13,Technical,Still waiting for the credit promised three weeks ago.,1,7,0,1
+C00441,2023-07-13,Service Quality,The representative was very helpful and resolved my issue quickly.,1,0,1,0
+C00061,2023-07-13,Technical,"Everything is working great, thank you.",4,4,1,0
+C00159,2023-07-13,Billing,The representative was very helpful and resolved my issue quickly.,1,13,1,1
+C00112,2023-07-14,Billing,I need to schedule a meter reading appointment.,5,12,1,0
+C00263,2023-07-14,Outage,Happy with the service overall.,1,12,1,0
+C00406,2023-07-14,Technical,Worst customer experience. I will be switching providers.,5,2,1,1
+C00438,2023-07-14,Technical,The bill seems higher than expected. Quite frustrated.,5,6,1,1
+C00169,2023-07-15,Meter Reading,Calling to inquire about my current bill and payment options.,5,4,0,1
+C00097,2023-07-15,Other,The representative was very helpful and resolved my issue quickly.,5,5,1,1
+C00412,2023-07-15,Service Quality,I am not happy with the service. My issue has been going on for too long.,4,6,0,1
+C00120,2023-07-15,Technical,Can you explain the tariff plans available?,1,8,1,0
+C00458,2023-07-16,Service Quality,Very satisfied with the quick response to my query.,2,12,1,0
+C00243,2023-07-16,Other,I have been overcharged for the third time this year.,1,3,0,0
+C00159,2023-07-16,Technical,I need to schedule a meter reading appointment.,4,18,1,0
+C00497,2023-07-16,Billing,"Everything is working great, thank you.",1,14,1,1
+C00116,2023-07-17,Billing,Very satisfied with the quick response to my query.,1,8,1,1
+C00187,2023-07-17,Service Quality,Still waiting for the credit promised three weeks ago.,3,3,0,1
+C00290,2023-07-17,Outage,Very satisfied with the quick response to my query.,1,3,0,1
+C00433,2023-07-17,Billing,Calling to inquire about my current bill and payment options.,4,1,1,1
+C00469,2023-07-18,Billing,Happy with the service overall.,4,19,1,1
+C00284,2023-07-18,Outage,Calling to inquire about my current bill and payment options.,3,19,1,0
+C00277,2023-07-18,Meter Reading,Very satisfied with the quick response to my query.,1,9,1,0
+C00383,2023-07-18,Billing,"Everything is working great, thank you.",2,5,1,0
+C00345,2023-07-19,Outage,"Everything is working great, thank you.",4,16,1,0
+C00195,2023-07-19,Meter Reading,I have been overcharged for the third time this year.,5,0,0,1
+C00080,2023-07-19,Billing,"Everything is working great, thank you.",1,0,1,0
+C00415,2023-07-19,Technical,The technician arrived on time and fixed the problem efficiently.,4,13,1,1
+C00021,2023-07-20,Meter Reading,"Everything is working great, thank you.",2,6,1,0
+C00373,2023-07-20,Outage,Still waiting for the credit promised three weeks ago.,1,11,1,0
+C00398,2023-07-20,Technical,The representative was very helpful and resolved my issue quickly.,1,6,1,0
+C00261,2023-07-20,Service Quality,Still waiting for the credit promised three weeks ago.,5,5,1,0
+C00106,2023-07-21,Service Quality,I need to schedule a meter reading appointment.,4,1,1,1
+C00238,2023-07-21,Billing,The bill seems higher than expected. Quite frustrated.,2,2,1,1
+C00179,2023-07-21,Other,Still waiting for the credit promised three weeks ago.,4,2,1,0
+C00029,2023-07-21,Meter Reading,I called last week and was promised a callback that never came.,5,13,0,1
+C00481,2023-07-22,Other,Very satisfied with the quick response to my query.,1,8,0,1
+C00451,2023-07-22,Meter Reading,I am not happy with the service. My issue has been going on for too long.,5,18,0,0
+C00231,2023-07-22,Service Quality,I would like to update my contact details.,1,3,0,1
+C00267,2023-07-22,Outage,"Three technicians, three no-shows. I took time off work for nothing.",2,16,1,0
+C00049,2023-07-23,Other,I would like to update my contact details.,5,9,0,0
+C00374,2023-07-23,Other,Calling to inquire about my current bill and payment options.,5,19,0,0
+C00310,2023-07-23,Outage,My meter reading was wrong and my bill is inflated.,5,3,0,0
+C00311,2023-07-23,Outage,The technician arrived on time and fixed the problem efficiently.,1,17,1,0
+C00293,2023-07-24,Billing,I called last week and was promised a callback that never came.,3,11,0,0
+C00334,2023-07-24,Outage,Still waiting for the credit promised three weeks ago.,2,5,1,0
+C00229,2023-07-24,Technical,Calling to inquire about my current bill and payment options.,1,16,1,0
+C00423,2023-07-24,Technical,I need to schedule a meter reading appointment.,1,13,0,1
+C00102,2023-07-25,Other,I am not happy with the service. My issue has been going on for too long.,5,18,0,1
+C00216,2023-07-25,Outage,I have been overcharged for the third time this year.,3,13,1,0
+C00366,2023-07-25,Meter Reading,I need to schedule a meter reading appointment.,5,17,1,0
+C00270,2023-07-25,Billing,Still waiting for the credit promised three weeks ago.,5,3,0,0
+C00296,2023-07-26,Billing,Very satisfied with the quick response to my query.,5,3,0,1
+C00152,2023-07-26,Meter Reading,The technician arrived on time and fixed the problem efficiently.,1,1,1,1
+C00185,2023-07-26,Service Quality,The technician arrived on time and fixed the problem efficiently.,2,6,1,0
+C00167,2023-07-26,Meter Reading,Worst customer experience. I will be switching providers.,4,7,0,0
+C00455,2023-07-27,Meter Reading,Calling to inquire about my current bill and payment options.,4,13,1,1
+C00440,2023-07-27,Other,I called last week and was promised a callback that never came.,3,8,0,1
+C00432,2023-07-27,Meter Reading,The technician arrived on time and fixed the problem efficiently.,5,19,1,0
+C00213,2023-07-27,Other,Can you explain the tariff plans available?,5,18,0,0
+C00047,2023-07-28,Other,"Everything is working great, thank you.",1,17,1,1
+C00475,2023-07-28,Service Quality,I would like to update my contact details.,2,18,0,0
+C00165,2023-07-28,Other,I need to schedule a meter reading appointment.,1,7,1,0
+C00261,2023-07-28,Billing,Calling to inquire about my current bill and payment options.,5,5,0,1
+C00218,2023-07-29,Service Quality,Worst customer experience. I will be switching providers.,5,8,0,1
+C00328,2023-07-29,Other,The bill seems higher than expected. Quite frustrated.,4,14,0,0
+C00045,2023-07-29,Other,The representative was very helpful and resolved my issue quickly.,3,11,0,0
+C00473,2023-07-29,Other,Worst customer experience. I will be switching providers.,1,8,1,1
+C00145,2023-07-30,Technical,I would like to update my contact details.,4,3,0,1
+C00193,2023-07-30,Service Quality,Very satisfied with the quick response to my query.,3,7,0,1
+C00471,2023-07-30,Other,Worst customer experience. I will be switching providers.,3,12,1,1
+C00066,2023-07-30,Other,The bill seems higher than expected. Quite frustrated.,5,4,1,0
+C00345,2023-07-31,Billing,I would like to update my contact details.,3,11,1,0
+C00038,2023-07-31,Technical,Still waiting for the credit promised three weeks ago.,5,8,1,1
+C00386,2023-07-31,Billing,Worst customer experience. I will be switching providers.,5,12,0,1
+C00122,2023-07-31,Service Quality,Still waiting for the credit promised three weeks ago.,3,19,0,1
+C00219,2023-08-01,Meter Reading,The representative was very helpful and resolved my issue quickly.,3,17,0,1
+C00404,2023-08-01,Billing,I need to schedule a meter reading appointment.,5,14,0,0
+C00360,2023-08-01,Billing,I need to schedule a meter reading appointment.,5,12,1,0
+C00113,2023-08-01,Outage,I need to schedule a meter reading appointment.,3,4,0,0
+C00473,2023-08-02,Billing,Calling to inquire about my current bill and payment options.,4,3,0,0
+C00268,2023-08-02,Service Quality,Calling to inquire about my current bill and payment options.,3,19,0,1
+C00144,2023-08-02,Other,Still waiting for the credit promised three weeks ago.,5,8,0,0
+C00010,2023-08-02,Other,Calling to inquire about my current bill and payment options.,1,10,1,0
+C00444,2023-08-03,Technical,Very satisfied with the quick response to my query.,1,4,0,0
+C00167,2023-08-03,Meter Reading,I need to schedule a meter reading appointment.,5,1,1,1
+C00434,2023-08-03,Service Quality,Worst customer experience. I will be switching providers.,2,12,1,0
+C00116,2023-08-03,Service Quality,I have been overcharged for the third time this year.,3,1,1,0
+C00382,2023-08-04,Outage,Still waiting for the credit promised three weeks ago.,5,14,1,1
+C00082,2023-08-04,Meter Reading,"Three technicians, three no-shows. I took time off work for nothing.",5,1,1,0
+C00089,2023-08-04,Other,I have been overcharged for the third time this year.,3,4,1,0
+C00114,2023-08-04,Technical,Worst customer experience. I will be switching providers.,1,17,0,1
+C00112,2023-08-05,Other,Very satisfied with the quick response to my query.,5,18,0,1
+C00276,2023-08-05,Meter Reading,Happy with the service overall.,5,16,1,0
+C00465,2023-08-05,Other,The bill seems higher than expected. Quite frustrated.,4,18,1,1
+C00426,2023-08-05,Meter Reading,The bill seems higher than expected. Quite frustrated.,3,3,0,1
+C00146,2023-08-06,Billing,Happy with the service overall.,1,19,0,1
+C00203,2023-08-06,Meter Reading,Very satisfied with the quick response to my query.,5,12,0,1
+C00456,2023-08-06,Meter Reading,Still waiting for the credit promised three weeks ago.,5,15,1,0
+C00108,2023-08-06,Billing,"Three technicians, three no-shows. I took time off work for nothing.",3,12,0,0
+C00027,2023-08-07,Meter Reading,I called last week and was promised a callback that never came.,4,17,0,1
+C00292,2023-08-07,Service Quality,"Three technicians, three no-shows. I took time off work for nothing.",3,2,0,0
+C00389,2023-08-07,Outage,Still waiting for the credit promised three weeks ago.,3,10,1,1
+C00194,2023-08-07,Service Quality,I have been overcharged for the third time this year.,4,14,0,0
+C00290,2023-08-08,Outage,The bill seems higher than expected. Quite frustrated.,2,16,0,0
+C00302,2023-08-08,Technical,The representative was very helpful and resolved my issue quickly.,2,7,0,0
+C00235,2023-08-08,Service Quality,Can you explain the tariff plans available?,2,8,1,1
+C00391,2023-08-08,Other,Very satisfied with the quick response to my query.,5,16,1,1
+C00464,2023-08-09,Other,Can you explain the tariff plans available?,4,5,0,1
+C00011,2023-08-09,Outage,Calling to inquire about my current bill and payment options.,4,18,0,0
+C00401,2023-08-09,Technical,I would like to update my contact details.,3,15,0,0
+C00326,2023-08-09,Other,The technician arrived on time and fixed the problem efficiently.,3,15,0,1
+C00218,2023-08-10,Meter Reading,Can you explain the tariff plans available?,4,1,0,0
+C00193,2023-08-10,Outage,Very satisfied with the quick response to my query.,2,16,0,0
+C00264,2023-08-10,Service Quality,Can you explain the tariff plans available?,3,1,1,0
+C00372,2023-08-10,Billing,Happy with the service overall.,3,0,1,1
+C00285,2023-08-11,Service Quality,My meter reading was wrong and my bill is inflated.,5,3,1,1
+C00278,2023-08-11,Service Quality,My meter reading was wrong and my bill is inflated.,4,14,0,1
+C00121,2023-08-11,Meter Reading,The technician arrived on time and fixed the problem efficiently.,4,14,0,1
+C00219,2023-08-11,Meter Reading,I am not happy with the service. My issue has been going on for too long.,2,8,1,0
+C00223,2023-08-12,Other,I called last week and was promised a callback that never came.,2,0,0,0
+C00025,2023-08-12,Service Quality,I would like to update my contact details.,2,8,1,1
+C00332,2023-08-12,Billing,Worst customer experience. I will be switching providers.,5,18,1,1
+C00258,2023-08-12,Meter Reading,The technician arrived on time and fixed the problem efficiently.,4,9,1,0
+C00224,2023-08-13,Other,I called last week and was promised a callback that never came.,1,12,1,1
+C00492,2023-08-13,Billing,The representative was very helpful and resolved my issue quickly.,4,15,1,1
+C00092,2023-08-13,Other,"Everything is working great, thank you.",2,3,1,1
+C00264,2023-08-13,Billing,I would like to update my contact details.,2,2,0,0

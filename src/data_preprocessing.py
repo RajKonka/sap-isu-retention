@@ -162,6 +162,17 @@ def aggregate_complaints(df, customer_ids):
     """Aggregate complaint data per customer including NLP sentiment."""
     print("  Aggregating complaints + running NLP sentiment...")
 
+    if df.empty or "comment" not in df.columns:
+        empty = pd.DataFrame(index=customer_ids)
+        for col in ["complaint_count","avg_complaint_severity","max_complaint_severity",
+                    "avg_resolution_time_days","escalation_count","unresolved_complaints",
+                    "avg_sentiment_score","min_sentiment_score","max_sentiment_score",
+                    "sentiment_std","avg_sentiment_pos","avg_sentiment_neg",
+                    "negative_sentiment_ratio","positive_sentiment_ratio","escalation_rate"]:
+            empty[col] = 0
+        empty["most_common_complaint_category"] = "None"
+        return empty
+
     # Run VADER on all comments
     sentiment_df = analyze_sentiment_vader(df["comment"])
     df = pd.concat([df.reset_index(drop=True), sentiment_df], axis=1)
@@ -199,6 +210,15 @@ def aggregate_complaints(df, customer_ids):
 def aggregate_interactions(df, customer_ids):
     """Aggregate interaction data per customer."""
     print("  Aggregating interactions...")
+
+    if df.empty or "satisfaction_score" not in df.columns:
+        empty = pd.DataFrame(index=customer_ids)
+        for col in ["total_interactions","avg_satisfaction_score","min_satisfaction_score",
+                    "avg_interaction_duration","unresolved_count","unresolved_ratio",
+                    "channel_phone_ratio","channel_email_ratio","channel_web_chat_ratio"]:
+            empty[col] = 0
+        empty["avg_satisfaction_score"] = 3.0
+        return empty
 
     # Channel dummies for ratio calculation
     channel_dummies = pd.get_dummies(df["channel"], prefix="channel")

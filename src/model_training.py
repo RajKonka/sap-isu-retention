@@ -262,4 +262,4 @@ def training_pipeline(df, feature_multipliers=None, dirs=None):
     save_models(trained_models, best_name, label_encoders, X.columns, feature_multipliers, dirs=dirs)
     metrics_df.to_csv(os.path.join(_report_dir, "model_results.csv"))
     print("\nTRAINING COMPLETE")
-    return results, trained_models, best_name, scaler
+    return results, trained_models, best_name, scaler, list(X_test.index)

@@ -41,9 +41,24 @@ session_dirs = get_session_dirs(st.session_state.session_id)
 
 for key in ["data_generated", "models_trained", "predictor", "chatbot", "merged_data",
             "training_results", "chat_messages", "use_weights", "feature_weights",
-            "prediction_results", "prediction_pdf", "prediction_xlsx"]:
+            "prediction_results", "prediction_pdf", "prediction_xlsx",
+            "nuro_api_key", "claude_api_key",
+            "upload_predictor", "upload_chatbot", "active_view"]:
     if key not in st.session_state:
         st.session_state[key] = False if key in ["data_generated", "models_trained", "use_weights"] else ([] if key == "chat_messages" else None)
+
+if st.session_state.active_view is None:
+    st.session_state.active_view = "demo"
+
+def _active_predictor():
+    if st.session_state.active_view == "upload" and st.session_state.upload_predictor:
+        return st.session_state.upload_predictor
+    return st.session_state.predictor
+
+def _active_chatbot():
+    if st.session_state.active_view == "upload" and st.session_state.upload_chatbot:
+        return st.session_state.upload_chatbot
+    return st.session_state.chatbot
 
 # ─── Sidebar ─────────────────────────────────────────────
 with st.sidebar:
@@ -51,15 +66,32 @@ with st.sidebar:
     st.markdown("### Customer Retention Predictor")
     st.markdown("---")
 
+    # Keys stored in session_state — isolated per user, not shared via os.environ
     nuro_key = st.text_input("NuroStudio API Key", type="password",
-        help="Connect to NuroStudio for private AI")
-    if nuro_key:
-        os.environ["NUROSTUDIO_API_KEY"] = nuro_key
+        value=st.session_state.nuro_api_key or "",
+        help="Connect to NuroStudio for private AI. Stored only for your session.")
 
     with st.expander("Other API Keys", expanded=False):
-        claude_key = st.text_input("Claude API Key (optional)", type="password")
-        if claude_key:
-            os.environ["ANTHROPIC_API_KEY"] = claude_key
+        claude_key = st.text_input("Claude API Key (optional)", type="password",
+            value=st.session_state.claude_api_key or "",
+            help="Falls back to Claude if NuroStudio key is not provided.")
+
+    # Detect key changes — reinitialise chatbot if keys changed
+    keys_changed = (
+        nuro_key != (st.session_state.nuro_api_key or "") or
+        claude_key != (st.session_state.claude_api_key or "")
+    )
+    if keys_changed:
+        st.session_state.nuro_api_key  = nuro_key  or None
+        st.session_state.claude_api_key = claude_key or None
+        # Reinitialise chatbot with new keys so it picks up the change immediately
+        if st.session_state.predictor:
+            from src.chatbot import RetentionChatbot
+            st.session_state.chatbot = RetentionChatbot(
+                st.session_state.predictor,
+                nuro_key=st.session_state.nuro_api_key,
+                claude_key=st.session_state.claude_api_key,
+            )
 
     st.markdown("---")
 
@@ -69,6 +101,21 @@ with st.sidebar:
 
 # ─── Main Content ────────────────────────────────────────
 st.markdown('<div class="main-header">⚡ Customer Retention Prediction System</div>', unsafe_allow_html=True)
+
+# ─── Data Source Switcher (only when upload data exists) ──
+if st.session_state.upload_predictor:
+    st.markdown("**Viewing data for:**")
+    view_choice = st.radio(
+        "active_view_radio", ["📊 Demo Data", "📂 Your Upload"],
+        index=0 if st.session_state.active_view == "demo" else 1,
+        horizontal=True, label_visibility="collapsed",
+    )
+    st.session_state.active_view = "demo" if "Demo" in view_choice else "upload"
+    if st.session_state.active_view == "upload":
+        st.success("Showing your uploaded customer data across all tabs.")
+    else:
+        st.info("Showing demo data. Switch to 'Your Upload' to see your customers.")
+    st.markdown("---")
 
 # ─── Tabs (always at top) ─────────────────────────────────
 tab_dash, tab_eda, tab_customers, tab_chatbot, tab_upload = st.tabs([
@@ -203,9 +250,10 @@ with tab_dash:
 
         from src.model_training import training_pipeline
         df = pd.read_csv(session_dirs["final_features_file"])
-        results, trained_models, best_name, scaler = training_pipeline(df, dirs=session_dirs)
+        results, trained_models, best_name, scaler, test_indices = training_pipeline(df, dirs=session_dirs)
         st.session_state.models_trained = True
         st.session_state.training_results = results
+        st.session_state.demo_test_indices = test_indices
         progress.progress(85)
 
         with st.expander("📈 Prediction Accuracy", expanded=True):
@@ -235,7 +283,13 @@ with tab_dash:
         from src.prediction_engine import ChurnPredictor
         from src.chatbot import RetentionChatbot
         predictor = ChurnPredictor(dirs=session_dirs)
-        chatbot = RetentionChatbot(predictor)
+        chatbot = RetentionChatbot(
+            predictor,
+            nuro_key=st.session_state.get("nuro_api_key"),
+            claude_key=st.session_state.get("claude_api_key"),
+        )
+        # Restrict top-risk list to test-set customers only — no leakage
+        predictor._test_indices = st.session_state.get("demo_test_indices")
         st.session_state.predictor = predictor
         st.session_state.chatbot = chatbot
         progress.progress(100)
@@ -261,8 +315,8 @@ with tab_dash:
     </div>
         """, unsafe_allow_html=True)
 
-    if st.session_state.predictor:
-        predictor = st.session_state.predictor
+    if _active_predictor():
+        predictor = _active_predictor()
         summary = predictor.get_data_summary()
         segments = predictor.get_segment_analysis()
         overall = segments.get("overall", {})
@@ -313,34 +367,66 @@ with tab_dash:
 
 with tab_eda:
     st.subheader("Customer Insights")
-    _session_report_dir = session_dirs["report_dir"]
-    if os.path.exists(_session_report_dir):
+    _base_report_dir = session_dirs["report_dir"]
+    _upload_report_dir = os.path.join(_base_report_dir, "upload")
+    _report_dir = _upload_report_dir if st.session_state.active_view == "upload" else _base_report_dir
+
+    if os.path.exists(_report_dir):
         try:
-            plots = sorted([f for f in os.listdir(_session_report_dir) if f.endswith(".png")])
+            plots = sorted([f for f in os.listdir(_report_dir) if f.endswith(".png")])
             if plots:
                 for plot in plots:
-                    st.image(os.path.join(_session_report_dir, plot), use_container_width=True)
+                    st.image(os.path.join(_report_dir, plot), use_container_width=True)
                     st.markdown("---")
             else:
-                st.info("No insight charts yet — run the demo to generate them.")
+                hint = "Score your customers in the Upload tab to generate insights." if st.session_state.active_view == "upload" else "Run the demo to generate insights."
+                st.info(hint)
         except Exception as e:
             st.error(f"Could not load charts: {e}")
     else:
-        st.markdown("""
+        hint = "Score your customers in the Upload tab to generate insights." if st.session_state.active_view == "upload" else "Run Demo in the sidebar to analyse sample data and populate this tab."
+        st.markdown(f"""
         <div style="background:#f0f4ff;border:2px dashed #667eea;border-radius:12px;padding:2rem;text-align:center;margin:2rem 0;">
             <h3 style="color:#667eea;margin:0 0 0.5rem 0;">📈 Insights not generated yet</h3>
-            <p style="color:#555;margin:0;">Click <strong>Run Demo</strong> in the sidebar to analyse sample data and populate this tab.</p>
+            <p style="color:#555;margin:0;">{hint}</p>
         </div>
         """, unsafe_allow_html=True)
 
 with tab_customers:
     st.subheader("Customer Risk Lookup")
-    if st.session_state.predictor:
-        predictor = st.session_state.predictor
+    if _active_predictor():
+        predictor = _active_predictor()
+
         c1, c2 = st.columns([1, 2])
         with c1:
             cid = st.text_input("Customer ID", value="CUST0000001")
             search = st.button("🔍 Analyze", type="primary")
+
+            st.markdown("---")
+            ai_recs_on = st.toggle(
+                "AI Recommendations",
+                value=st.session_state.get("ai_recs_enabled", False),
+                help="ON — NuroStudio/Claude generates a personalised recommendation based on this customer's full profile.\nOFF — Rule-based recommendations using fixed thresholds.",
+            )
+            st.session_state.ai_recs_enabled = ai_recs_on
+            if ai_recs_on:
+                chatbot_available = _active_chatbot() is not None
+                if chatbot_available:
+                    mode = _active_chatbot().mode
+                    mode_label = _active_chatbot().get_mode_label()
+                    badge_color = {"nurostudio": "#27ae60", "claude": "#667eea", "fallback": "#888"}.get(mode, "#888")
+                    st.markdown(
+                        f'<span style="background:{badge_color};color:white;padding:2px 10px;'
+                        f'border-radius:12px;font-size:0.75rem;">● {mode_label}</span>',
+                        unsafe_allow_html=True,
+                    )
+                    if mode == "fallback":
+                        st.warning("AI assistant is in offline mode — no API key found. AI recommendations unavailable. Showing rule-based instead.")
+                        ai_recs_on = False
+                else:
+                    st.warning("AI assistant not initialised. Run Demo first. Showing rule-based recommendations.")
+                    ai_recs_on = False
+
         if search and cid:
             result = predictor.get_retention_recommendations(cid)
             if "error" in result:
@@ -349,18 +435,63 @@ with tab_customers:
             else:
                 with c2:
                     risk_emoji = {"HIGH": "🔴", "MEDIUM": "🟡", "LOW": "🟢"}.get(result["risk_level"], "⚪")
-                    st.markdown(f"### {risk_emoji} Risk: **{result['risk_level']}** | Churn Probability: **{result['churn_probability']:.1%}**")
+                    st.markdown(
+                        f"### {risk_emoji} Risk: **{result['risk_level']}** | "
+                        f"Churn Probability: **{result['churn_probability']:.1%}**"
+                    )
                 st.markdown("---")
                 info = result["customer_info"]
                 cols = st.columns(4)
                 for i, (k, v) in enumerate(info.items()):
-                    with cols[i % 4]: st.metric(k.replace("_", " ").title(), v)
+                    with cols[i % 4]:
+                        st.metric(k.replace("_", " ").title(), v)
                 st.markdown("---")
-                st.markdown("### Recommended Actions")
-                for rec in result.get("recommendations", []):
-                    icon = {"HIGH": "🔴", "MEDIUM": "🟡", "LOW": "🟢"}.get(rec["priority"], "⚪")
-                    with st.expander(f"{icon} {rec['action']}"):
-                        st.write(rec["detail"])
+
+                if ai_recs_on:
+                    # ── AI-generated recommendations ──────────────────
+                    st.markdown("### 🤖 AI Recommendations")
+                    st.caption(f"Generated by {_active_chatbot().get_mode_label()} based on this customer's full profile.")
+
+                    # Build a focused prompt — the chatbot's _build_context already
+                    # injects the customer data; we just ask for recommendations.
+                    prompt = (
+                        f"Customer {cid} has a churn probability of {result['churn_probability']:.1%} "
+                        f"and is rated {result['risk_level']} risk.\n\n"
+                        f"Their profile:\n"
+                        f"- Tenure: {info.get('tenure_months', 'N/A')} months\n"
+                        f"- Complaints: {info.get('complaint_count', 'N/A')}\n"
+                        f"- Avg satisfaction: {info.get('satisfaction_score', 'N/A')}/5\n"
+                        f"- Avg sentiment score: {info.get('avg_sentiment_score', 'N/A')} (scale -1 to +1)\n"
+                        f"- Negative sentiment ratio: {info.get('negative_sentiment_ratio', 'N/A')}\n"
+                        f"- Composite risk score: {info.get('composite_risk_score', 'N/A')}/8\n"
+                        f"- Region: {info.get('region', 'N/A')}\n"
+                        f"- Service type: {info.get('service_type', 'N/A')}\n"
+                        f"- Contract type: {info.get('contract_type', 'N/A')}\n\n"
+                        f"Based ONLY on this data, give 3 to 5 specific, prioritised retention recommendations "
+                        f"for this customer. For each one state: the action, why it applies to THIS customer "
+                        f"specifically (reference their actual numbers), and what the agent should say or do. "
+                        f"Do not give generic advice. Do not invent any data not listed above."
+                    )
+
+                    with st.spinner("Generating AI recommendations..."):
+                        try:
+                            ai_response = _active_chatbot().chat(prompt)
+                            st.markdown(ai_response)
+                        except Exception as e:
+                            st.error(f"AI recommendation failed: {e}")
+                            st.markdown("**Falling back to rule-based recommendations:**")
+                            for rec in result.get("recommendations", []):
+                                icon = {"HIGH": "🔴", "MEDIUM": "🟡", "LOW": "🟢"}.get(rec["priority"], "⚪")
+                                with st.expander(f"{icon} {rec['action']}"):
+                                    st.write(rec["detail"])
+                else:
+                    # ── Rule-based recommendations ────────────────────
+                    st.markdown("### Recommended Actions")
+                    st.caption("Rule-based — toggle AI Recommendations for personalised analysis.")
+                    for rec in result.get("recommendations", []):
+                        icon = {"HIGH": "🔴", "MEDIUM": "🟡", "LOW": "🟢"}.get(rec["priority"], "⚪")
+                        with st.expander(f"{icon} {rec['action']}"):
+                            st.write(rec["detail"])
     else:
         st.markdown("""
         <div style="background:#f0f4ff;border:2px dashed #667eea;border-radius:12px;padding:2rem;text-align:center;margin:2rem 0;">
@@ -371,8 +502,8 @@ with tab_customers:
 
 with tab_chatbot:
     st.subheader("💬 AI Retention Assistant")
-    if st.session_state.chatbot:
-        chatbot = st.session_state.chatbot
+    if _active_chatbot():
+        chatbot = _active_chatbot()
         mode_colors = {"nurostudio": "#27ae60", "claude": "#667eea", "fallback": "#888"}
         mode_color = mode_colors.get(chatbot.mode, "#888")
         st.markdown(f'<span style="background:{mode_color};color:white;padding:2px 10px;border-radius:12px;font-size:0.8rem;">● {chatbot.get_mode_label()}</span>', unsafe_allow_html=True)

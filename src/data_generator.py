@@ -259,9 +259,9 @@ def generate_churn_labels(master_df, complaint_df, interaction_df):
         churn_scores -= master_df["has_autopay"].values * 0.08
 
     # Add noise and convert to probability
-    # Threshold at 0.45 (was 0.30) to target a realistic 20-25% churn rate
-    churn_scores += np.random.normal(0, 0.06, len(master_df))
-    churn_prob = 1 / (1 + np.exp(-8 * (churn_scores - 0.45)))
+    # Steepness 3 (was 8) + higher noise = realistic spread (30%-75% range, no 99%+)
+    churn_scores += np.random.normal(0, 0.12, len(master_df))
+    churn_prob = 1 / (1 + np.exp(-3 * (churn_scores - 0.45)))
 
     churned = (np.random.random(len(master_df)) < churn_prob).astype(int)
     print(f"  Churn rate: {churned.mean():.2%} ({churned.sum()}/{len(master_df)})")

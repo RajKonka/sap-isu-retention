@@ -23,6 +23,7 @@ class ChurnPredictor:
         self.metadata = None
         self.merged_data = None
         self.feature_data = None
+        self._test_indices = None  # set after demo retrain to prevent leakage
         self._load_artifacts()
 
     def _load_artifacts(self):
@@ -38,8 +39,7 @@ class ChurnPredictor:
 
     def _prepare_features(self, df_row):
         trained = self.metadata.get("feature_names", [])
-        cols = [c for c in trained if c in df_row.columns and c != TARGET_COLUMN]
-        X = df_row[cols].copy()
+        X = df_row.copy()
         le_dict = self.metadata.get("label_encoders", {})
         for col in X.columns:
             if X[col].dtype == object:
@@ -49,17 +49,20 @@ class ChurnPredictor:
                     X[col] = X[col].astype(str).apply(lambda v: le.transform([v])[0] if v in cs else 0)
                 else:
                     X[col] = pd.to_numeric(X[col], errors="coerce").fillna(0)
-        # Apply multipliers if saved
         multipliers = self.metadata.get("feature_multipliers", {})
         for col, m in multipliers.items():
             if col in X.columns:
                 X[col] = X[col] * m
-        return X.fillna(0).apply(pd.to_numeric, errors="coerce").fillna(0)
+        X = X.fillna(0).apply(pd.to_numeric, errors="coerce").fillna(0)
+        # Pad any features the model expects but this data doesn't have
+        for col in trained:
+            if col not in X.columns:
+                X[col] = 0
+        return X[[c for c in trained if c in X.columns]]
 
     def _prepare_bulk_features(self):
         trained = self.metadata.get("feature_names", [])
-        cols = [c for c in trained if c in self.feature_data.columns and c != TARGET_COLUMN]
-        X = self.feature_data[cols].copy()
+        X = self.feature_data.copy()
         le_dict = self.metadata.get("label_encoders", {})
         for col in X.columns:
             if X[col].dtype == object:
@@ -73,7 +76,12 @@ class ChurnPredictor:
         for col, m in multipliers.items():
             if col in X.columns:
                 X[col] = X[col] * m
-        return X.fillna(0).apply(pd.to_numeric, errors="coerce").fillna(0)
+        X = X.fillna(0).apply(pd.to_numeric, errors="coerce").fillna(0)
+        # Pad any features the model expects but this data doesn't have
+        for col in trained:
+            if col not in X.columns:
+                X[col] = 0
+        return X[[c for c in trained if c in X.columns]]
 
     def predict_customer(self, customer_id):
         if self.merged_data is None:
@@ -82,6 +90,8 @@ class ChurnPredictor:
         if customer.empty:
             return {"error": f"Customer {customer_id} not found"}
         features = self.feature_data[self.feature_data["customer_id"] == customer_id]
+        if features.empty:
+            return {"error": f"Feature data not available for {customer_id}. Try re-uploading your data."}
         X = self._prepare_features(features)
         X_scaled = self.scaler.transform(X)
         prob = self.model.predict_proba(X_scaled)[0]
@@ -112,11 +122,20 @@ class ChurnPredictor:
         if self.feature_data is None:
             return []
         X = self._prepare_bulk_features()
+
+        # In demo retrain mode, restrict to test-set rows only to prevent leakage
+        if self._test_indices is not None:
+            valid = [i for i in self._test_indices if i in X.index]
+            X = X.loc[valid]
+            merged_subset = self.merged_data.loc[self.merged_data.index.isin(valid)].copy()
+        else:
+            merged_subset = self.merged_data.copy()
+
         X_scaled = self.scaler.transform(X)
         probs = self.model.predict_proba(X_scaled)[:, 1]
         cols_to_show = ["customer_id", "customer_name", "region", "account_tenure_months", "service_type"]
-        cols_available = [c for c in cols_to_show if c in self.merged_data.columns]
-        risk_df = self.merged_data[cols_available].copy()
+        cols_available = [c for c in cols_to_show if c in merged_subset.columns]
+        risk_df = merged_subset[cols_available].copy()
         risk_df["churn_probability"] = probs
         risk_df["risk_level"] = pd.cut(probs, bins=[0, 0.4, 0.7, 1.0], labels=["LOW", "MEDIUM", "HIGH"])
         return risk_df.nlargest(n, "churn_probability").to_dict("records")

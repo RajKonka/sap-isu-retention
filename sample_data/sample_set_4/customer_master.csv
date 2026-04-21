@@ -1,0 +1,501 @@
+customer_id,customer_name,age,account_tenure_months,account_start_date,contract_type,service_type,dwelling_type,has_autopay,paperless_billing,family_size,income_bracket,home_ownership,region,gender
+C00001,Victoria Taylor,52,70,2015-01-01,Bi-Annual,Gas,Townhouse,0,1,4,Medium,Own,Central,Male
+C00002,Rachel Anderson,54,16,2015-01-04,Annual,Gas,Townhouse,0,0,3,High,Rent,Central,Female
+C00003,Emma Taylor,21,47,2015-01-07,Annual,Electricity,Commercial,0,0,4,Low,Rent,North,Female
+C00004,Andrew Clark,35,105,2015-01-10,Annual,Electricity + Gas,Commercial,0,0,4,Medium,Rent,Central,Male
+C00005,Victoria Thomas,36,105,2015-01-13,Monthly,Gas,Apartment,0,0,3,Low,Own,Central,Male
+C00006,Daniel Anderson,34,36,2015-01-16,Annual,Gas,Townhouse,1,0,4,High,Rent,Central,Female
+C00007,Tom Garcia,46,87,2015-01-19,Monthly,Electricity + Water,Townhouse,1,0,1,Medium,Rent,West,Female
+C00008,Victoria Anderson,23,52,2015-01-22,Bi-Annual,Electricity + Water,Commercial,0,0,4,Low,Own,Central,Female
+C00009,Sophie Moore,19,58,2015-01-25,Annual,Water,Townhouse,0,0,5,Medium,Own,West,Female
+C00010,Michael Thomas,27,4,2015-01-28,Annual,Water,Apartment,0,0,5,High,Own,East,Male
+C00011,Daniel Robinson,51,88,2015-01-31,Annual,Electricity + Gas,Townhouse,1,0,4,High,Own,North,Female
+C00012,Daniel Jones,64,87,2015-02-03,Monthly,Electricity + Gas,House,1,1,1,Low,Own,North,Male
+C00013,Tom Miller,44,96,2015-02-06,Bi-Annual,Electricity + Gas,House,1,0,1,Low,Own,Central,Female
+C00014,Daniel Davis,54,53,2015-02-09,Monthly,Electricity + Water,Townhouse,0,0,4,High,Rent,East,Female
+C00015,Jessica Garcia,33,42,2015-02-12,Monthly,Electricity + Gas,Commercial,1,1,1,Low,Rent,East,Female
+C00016,Andrew Davis,41,108,2015-02-15,Annual,Water,Commercial,1,1,2,High,Rent,South,Male
+C00017,Rachel Robinson,24,88,2015-02-18,Monthly,Electricity + Gas,Commercial,1,0,2,Medium,Rent,East,Female
+C00018,Jessica Davis,64,33,2015-02-21,Monthly,Electricity + Gas,Townhouse,0,1,2,Low,Rent,East,Male
+C00019,Jessica Harris,36,109,2015-02-24,Annual,Electricity,Apartment,1,0,3,Medium,Own,South,Male
+C00020,Rachel Smith,32,11,2015-02-27,Monthly,Gas,House,0,0,2,Medium,Own,Central,Female
+C00021,Sarah Garcia,69,109,2015-03-02,Bi-Annual,Water,House,0,1,1,Low,Own,South,Female
+C00022,Sophie White,52,83,2015-03-05,Monthly,Electricity + Water,Apartment,0,0,3,High,Rent,South,Female
+C00023,Sarah Moore,58,84,2015-03-08,Annual,Water,House,1,0,5,Medium,Rent,North,Male
+C00024,Rachel Thompson,55,64,2015-03-11,Monthly,Electricity + Water,Apartment,1,0,3,High,Rent,North,Male
+C00025,Sarah Wilson,26,82,2015-03-14,Bi-Annual,Electricity + Water,Commercial,0,0,5,High,Rent,Central,Female
+C00026,Olivia Thomas,25,21,2015-03-17,Annual,Water,Townhouse,1,0,3,High,Rent,North,Male
+C00027,Kevin Anderson,40,84,2015-03-20,Bi-Annual,Electricity,Commercial,1,1,4,Medium,Rent,East,Female
+C00028,Amy Anderson,75,14,2015-03-23,Bi-Annual,Electricity,House,1,1,2,Low,Rent,South,Male
+C00029,Olivia Jackson,31,104,2015-03-26,Bi-Annual,Gas,Commercial,0,1,3,Medium,Rent,North,Male
+C00030,Emma Taylor,38,105,2015-03-29,Bi-Annual,Electricity + Gas,Townhouse,0,0,1,High,Own,Central,Female
+C00031,Andrew Brown,52,97,2015-04-01,Bi-Annual,Gas,House,0,1,3,Low,Rent,Central,Female
+C00032,Sarah Johnson,23,57,2015-04-04,Bi-Annual,Electricity + Gas,Apartment,0,0,1,High,Own,North,Male
+C00033,James Garcia,65,71,2015-04-07,Bi-Annual,Electricity + Gas,Apartment,1,0,5,Medium,Own,West,Female
+C00034,Olivia Johnson,29,10,2015-04-10,Annual,Gas,House,1,0,3,High,Own,Central,Male
+C00035,Kevin Williams,24,31,2015-04-13,Bi-Annual,Water,Commercial,0,0,4,High,Rent,West,Male
+C00036,Olivia Garcia,54,1,2015-04-16,Annual,Gas,Commercial,1,0,1,Low,Own,West,Female
+C00037,Amy Anderson,46,68,2015-04-19,Monthly,Electricity + Water,Townhouse,1,0,2,Low,Rent,South,Male
+C00038,Chris Miller,62,117,2015-04-22,Annual,Electricity + Water,Apartment,0,0,2,High,Own,Central,Female
+C00039,Jessica Harris,65,115,2015-04-25,Monthly,Gas,Commercial,1,1,1,Medium,Own,West,Female
+C00040,Laura Clark,45,77,2015-04-28,Annual,Electricity,Townhouse,0,1,2,Low,Rent,East,Female
+C00041,Rachel Miller,79,99,2015-05-01,Monthly,Electricity,Apartment,1,1,3,Medium,Rent,East,Female
+C00042,Victoria Jones,27,28,2015-05-04,Annual,Electricity + Water,Apartment,0,1,2,Low,Rent,East,Female
+C00043,Jessica Jackson,63,88,2015-05-07,Bi-Annual,Gas,House,0,1,5,Medium,Rent,West,Female
+C00044,Daniel Anderson,62,99,2015-05-10,Monthly,Electricity + Water,Townhouse,1,1,4,Low,Rent,North,Male
+C00045,Daniel Harris,26,14,2015-05-13,Bi-Annual,Electricity,Townhouse,0,0,3,High,Own,South,Male
+C00046,Daniel Thomas,65,113,2015-05-16,Monthly,Water,Commercial,0,0,1,High,Rent,Central,Female
+C00047,Mark Garcia,19,113,2015-05-19,Bi-Annual,Water,Commercial,1,0,1,High,Own,East,Male
+C00048,Hannah Robinson,50,78,2015-05-22,Monthly,Electricity,Apartment,0,1,4,Low,Own,East,Female
+C00049,Mark Anderson,54,74,2015-05-25,Monthly,Gas,Apartment,0,1,2,High,Own,East,Male
+C00050,Olivia White,39,13,2015-05-28,Monthly,Electricity,Commercial,0,1,4,Low,Own,North,Female
+C00051,Kevin Jackson,32,85,2015-05-31,Bi-Annual,Water,Commercial,1,0,5,Medium,Rent,East,Female
+C00052,Chris Harris,62,99,2015-06-03,Annual,Gas,House,0,0,2,Medium,Rent,Central,Female
+C00053,Daniel Harris,51,85,2015-06-06,Bi-Annual,Electricity,Commercial,1,1,2,High,Own,East,Male
+C00054,Emma Wilson,31,118,2015-06-09,Annual,Gas,Apartment,0,0,1,High,Rent,South,Male
+C00055,Tom Smith,42,54,2015-06-12,Bi-Annual,Electricity,Apartment,0,1,3,Medium,Rent,Central,Female
+C00056,Paul Moore,23,52,2015-06-15,Bi-Annual,Electricity + Gas,Apartment,0,0,5,High,Rent,Central,Male
+C00057,Mark Thompson,43,32,2015-06-18,Bi-Annual,Electricity + Gas,Commercial,0,0,2,Low,Rent,North,Female
+C00058,Daniel Williams,43,90,2015-06-21,Bi-Annual,Electricity + Water,House,1,0,2,High,Rent,West,Male
+C00059,Michael Harris,72,1,2015-06-24,Annual,Electricity,Townhouse,1,0,2,High,Own,West,Male
+C00060,Sophie Jackson,76,68,2015-06-27,Monthly,Electricity + Gas,Townhouse,0,1,3,High,Own,West,Male
+C00061,Sarah White,29,55,2015-06-30,Bi-Annual,Gas,Apartment,0,1,3,Medium,Rent,West,Female
+C00062,Hannah Jones,32,84,2015-07-03,Bi-Annual,Electricity + Gas,Townhouse,1,1,4,Low,Rent,East,Female
+C00063,Hannah Johnson,66,118,2015-07-06,Monthly,Electricity + Gas,Townhouse,1,1,3,High,Rent,West,Female
+C00064,Sophie Garcia,30,86,2015-07-09,Bi-Annual,Electricity + Water,Apartment,1,1,5,High,Rent,East,Male
+C00065,Olivia Thomas,60,103,2015-07-12,Bi-Annual,Gas,House,0,0,1,Medium,Own,South,Female
+C00066,Rachel Davis,30,92,2015-07-15,Bi-Annual,Water,Apartment,1,1,3,Low,Own,West,Male
+C00067,David Garcia,18,83,2015-07-18,Monthly,Electricity,Apartment,0,0,3,Medium,Rent,Central,Male
+C00068,Sophie Davis,70,28,2015-07-21,Bi-Annual,Electricity + Gas,Townhouse,1,1,4,Medium,Rent,South,Male
+C00069,Victoria White,20,16,2015-07-24,Annual,Gas,House,1,1,5,Medium,Own,South,Male
+C00070,Chris Garcia,50,73,2015-07-27,Bi-Annual,Gas,Commercial,0,1,1,Medium,Rent,East,Female
+C00071,James Taylor,65,53,2015-07-30,Bi-Annual,Electricity,Commercial,1,1,4,Low,Own,West,Male
+C00072,James Wilson,71,45,2015-08-02,Bi-Annual,Electricity,Apartment,1,1,3,Low,Rent,Central,Female
+C00073,David Clark,36,37,2015-08-05,Monthly,Gas,Townhouse,1,0,2,Low,Rent,East,Male
+C00074,Victoria Thompson,65,22,2015-08-08,Monthly,Water,House,0,0,3,High,Rent,West,Male
+C00075,Mark White,33,117,2015-08-11,Monthly,Electricity + Water,Townhouse,0,1,2,Low,Rent,West,Male
+C00076,Chris Anderson,45,108,2015-08-14,Annual,Electricity + Gas,Townhouse,0,0,2,High,Own,West,Female
+C00077,Sarah Davis,41,17,2015-08-17,Annual,Electricity + Water,Townhouse,1,0,5,Low,Own,South,Female
+C00078,Mark Jackson,65,118,2015-08-20,Annual,Electricity + Water,Townhouse,0,0,3,High,Rent,East,Female
+C00079,Sophie Martin,24,116,2015-08-23,Annual,Electricity + Water,Commercial,1,0,2,Low,Rent,Central,Male
+C00080,Daniel Williams,66,23,2015-08-26,Monthly,Electricity + Gas,House,1,0,1,Medium,Own,East,Male
+C00081,Hannah Smith,48,22,2015-08-29,Monthly,Water,Commercial,1,1,4,Medium,Own,West,Male
+C00082,Chris Moore,71,6,2015-09-01,Annual,Electricity + Gas,Townhouse,0,1,2,Low,Rent,East,Male
+C00083,James Garcia,50,73,2015-09-04,Bi-Annual,Electricity,House,1,0,2,Medium,Rent,East,Male
+C00084,Kevin Thompson,52,113,2015-09-07,Bi-Annual,Electricity,Commercial,1,0,4,High,Rent,East,Male
+C00085,Chris Garcia,64,26,2015-09-10,Monthly,Electricity,Townhouse,0,0,5,High,Rent,East,Female
+C00086,Olivia Robinson,69,33,2015-09-13,Annual,Electricity,Commercial,1,1,1,Medium,Rent,South,Female
+C00087,Andrew Taylor,55,38,2015-09-16,Monthly,Electricity + Water,Apartment,0,1,1,High,Own,West,Female
+C00088,Laura Martin,52,89,2015-09-19,Monthly,Electricity,Townhouse,1,0,1,Medium,Rent,Central,Male
+C00089,Olivia Moore,61,55,2015-09-22,Monthly,Electricity,House,0,1,1,Medium,Own,Central,Male
+C00090,Chris White,39,35,2015-09-25,Bi-Annual,Electricity + Gas,Commercial,1,1,5,Medium,Own,Central,Female
+C00091,James Clark,73,21,2015-09-28,Monthly,Electricity,Apartment,1,0,5,High,Own,South,Female
+C00092,Rachel Brown,69,72,2015-10-01,Annual,Water,Apartment,0,1,1,Medium,Rent,South,Female
+C00093,Paul Garcia,54,81,2015-10-04,Bi-Annual,Water,House,0,0,4,Low,Rent,Central,Female
+C00094,Chris Taylor,35,77,2015-10-07,Monthly,Water,Apartment,0,1,3,High,Own,South,Male
+C00095,Jessica Davis,68,31,2015-10-10,Monthly,Electricity + Gas,Apartment,0,1,4,Medium,Rent,West,Female
+C00096,David Martin,21,67,2015-10-13,Monthly,Electricity + Water,Townhouse,1,1,3,High,Rent,Central,Female
+C00097,Sarah Robinson,38,16,2015-10-16,Annual,Gas,Commercial,0,1,3,High,Rent,West,Female
+C00098,Hannah Anderson,46,109,2015-10-19,Annual,Electricity,House,0,1,5,Low,Rent,West,Female
+C00099,Chris Williams,19,97,2015-10-22,Annual,Electricity + Water,Townhouse,1,0,5,Medium,Own,West,Male
+C00100,Kevin Davis,53,18,2015-10-25,Annual,Electricity,Townhouse,1,1,2,Medium,Rent,South,Male
+C00101,Amy Miller,77,15,2015-10-28,Monthly,Electricity + Gas,Apartment,1,1,2,Low,Own,East,Male
+C00102,Tom Thomas,29,33,2015-10-31,Bi-Annual,Electricity + Gas,Townhouse,1,1,5,Medium,Rent,East,Female
+C00103,James Garcia,52,1,2015-11-03,Bi-Annual,Electricity + Gas,Townhouse,0,0,1,Low,Rent,North,Female
+C00104,Mark Johnson,71,33,2015-11-06,Monthly,Electricity + Water,Apartment,0,0,4,High,Own,North,Female
+C00105,Emma Taylor,23,60,2015-11-09,Annual,Water,Townhouse,1,0,5,Low,Rent,North,Male
+C00106,Sophie Garcia,40,12,2015-11-12,Bi-Annual,Gas,Apartment,1,0,5,Medium,Own,West,Female
+C00107,Andrew Moore,61,61,2015-11-15,Bi-Annual,Gas,House,1,1,5,Low,Own,West,Male
+C00108,Mark Miller,37,79,2015-11-18,Monthly,Electricity + Gas,Apartment,0,0,3,High,Rent,East,Male
+C00109,Daniel Harris,41,98,2015-11-21,Monthly,Electricity + Water,House,0,1,2,High,Rent,West,Male
+C00110,Laura Garcia,75,11,2015-11-24,Annual,Electricity + Water,House,1,0,2,Low,Own,North,Female
+C00111,James White,53,6,2015-11-27,Monthly,Gas,House,1,0,1,High,Rent,South,Female
+C00112,Mark Williams,29,94,2015-11-30,Monthly,Gas,Commercial,1,1,3,Low,Own,Central,Male
+C00113,Jessica Harris,27,58,2015-12-03,Annual,Water,Apartment,1,1,5,Medium,Own,West,Male
+C00114,Jessica Clark,31,3,2015-12-06,Annual,Electricity,House,0,0,4,High,Own,North,Male
+C00115,Daniel Garcia,40,57,2015-12-09,Monthly,Gas,Townhouse,0,0,3,Medium,Own,West,Female
+C00116,Kevin Clark,38,36,2015-12-12,Monthly,Water,Commercial,1,0,3,Medium,Own,West,Male
+C00117,Paul Thomas,27,33,2015-12-15,Monthly,Water,House,0,0,3,High,Own,Central,Female
+C00118,Olivia Anderson,71,6,2015-12-18,Bi-Annual,Electricity,Townhouse,1,0,1,Low,Rent,West,Female
+C00119,Sophie Garcia,34,116,2015-12-21,Monthly,Gas,Townhouse,1,0,3,High,Own,South,Male
+C00120,Chris Jackson,63,11,2015-12-24,Bi-Annual,Gas,House,0,1,1,High,Own,North,Male
+C00121,Tom Wilson,39,78,2015-12-27,Bi-Annual,Electricity + Water,Commercial,1,0,2,Low,Own,West,Male
+C00122,Amy Anderson,71,55,2015-12-30,Annual,Electricity + Water,Commercial,0,0,4,High,Rent,South,Male
+C00123,Daniel Moore,43,5,2016-01-02,Monthly,Electricity + Gas,Apartment,0,1,1,Medium,Own,Central,Male
+C00124,Laura Harris,43,82,2016-01-05,Annual,Electricity + Gas,Commercial,1,0,3,High,Own,South,Female
+C00125,Olivia Taylor,55,96,2016-01-08,Annual,Electricity + Water,House,1,1,1,Low,Own,North,Male
+C00126,Mark Miller,63,111,2016-01-11,Monthly,Electricity,House,1,1,5,Low,Rent,Central,Male
+C00127,Rachel Miller,57,8,2016-01-14,Monthly,Gas,Townhouse,0,0,3,High,Own,Central,Female
+C00128,Mark Anderson,45,17,2016-01-17,Bi-Annual,Gas,Apartment,0,0,5,High,Own,North,Female
+C00129,Laura Clark,60,112,2016-01-20,Annual,Electricity + Gas,Commercial,1,1,5,High,Rent,South,Female
+C00130,Tom Williams,33,103,2016-01-23,Bi-Annual,Electricity,Townhouse,0,1,4,Low,Own,North,Female
+C00131,James Smith,47,95,2016-01-26,Annual,Electricity + Gas,Townhouse,0,0,5,High,Rent,North,Male
+C00132,Daniel Wilson,27,69,2016-01-29,Annual,Electricity + Gas,Townhouse,0,1,5,Low,Rent,Central,Female
+C00133,Tom Brown,60,13,2016-02-01,Monthly,Electricity + Gas,Commercial,0,1,4,High,Rent,Central,Male
+C00134,David Robinson,76,19,2016-02-04,Bi-Annual,Water,Apartment,0,1,1,Medium,Rent,East,Male
+C00135,Sarah Anderson,71,60,2016-02-07,Bi-Annual,Water,Apartment,0,1,5,Low,Rent,West,Female
+C00136,Laura Martin,58,71,2016-02-10,Monthly,Water,Commercial,0,0,5,Medium,Rent,Central,Male
+C00137,Michael Martin,75,57,2016-02-13,Monthly,Electricity + Gas,Apartment,1,1,3,High,Own,Central,Female
+C00138,Tom Smith,42,73,2016-02-16,Monthly,Gas,House,0,0,2,High,Rent,North,Female
+C00139,Tom Thompson,67,57,2016-02-19,Annual,Water,House,1,0,2,Low,Own,West,Male
+C00140,Laura Wilson,23,72,2016-02-22,Bi-Annual,Gas,Townhouse,1,1,5,Low,Own,North,Female
+C00141,Sophie Jones,40,83,2016-02-25,Bi-Annual,Gas,Commercial,1,1,4,Low,Rent,East,Male
+C00142,Olivia Thompson,65,5,2016-02-28,Monthly,Electricity,House,1,0,4,Medium,Own,East,Male
+C00143,Chris Martin,22,44,2016-03-02,Bi-Annual,Gas,House,1,1,2,Medium,Rent,South,Female
+C00144,Mark Thompson,31,34,2016-03-05,Monthly,Gas,Townhouse,1,1,3,Medium,Rent,North,Male
+C00145,Hannah Thompson,28,29,2016-03-08,Bi-Annual,Water,Townhouse,0,0,4,Low,Own,North,Male
+C00146,David Clark,55,67,2016-03-11,Monthly,Gas,Commercial,1,1,2,High,Rent,Central,Male
+C00147,Emma Garcia,30,113,2016-03-14,Annual,Water,Commercial,0,1,3,Low,Own,West,Female
+C00148,Kevin Jones,52,100,2016-03-17,Bi-Annual,Electricity,Townhouse,1,0,1,Medium,Own,East,Male
+C00149,Hannah Johnson,65,28,2016-03-20,Bi-Annual,Electricity,House,1,1,2,Low,Rent,West,Female
+C00150,Sarah White,75,93,2016-03-23,Monthly,Electricity + Gas,House,1,0,3,High,Own,South,Female
+C00151,Rachel Davis,58,34,2016-03-26,Bi-Annual,Electricity + Gas,Townhouse,1,0,3,High,Own,Central,Female
+C00152,Michael Jackson,73,42,2016-03-29,Monthly,Electricity + Gas,House,0,0,3,Low,Own,South,Male
+C00153,Kevin Martin,19,4,2016-04-01,Annual,Gas,House,1,1,1,Low,Own,Central,Male
+C00154,Hannah Garcia,78,119,2016-04-04,Monthly,Water,Apartment,0,0,3,Low,Own,North,Female
+C00155,Andrew Clark,44,112,2016-04-07,Annual,Gas,Townhouse,0,0,4,Low,Rent,South,Female
+C00156,Emma Anderson,54,11,2016-04-10,Monthly,Electricity + Water,House,1,0,2,Low,Rent,Central,Female
+C00157,Laura Thompson,55,38,2016-04-13,Monthly,Electricity + Water,Apartment,1,1,3,Medium,Own,Central,Male
+C00158,Emma Taylor,60,52,2016-04-16,Bi-Annual,Electricity + Water,Commercial,1,0,1,Low,Rent,Central,Male
+C00159,Chris Robinson,68,7,2016-04-19,Bi-Annual,Electricity,Apartment,1,0,4,Low,Rent,South,Female
+C00160,Hannah Moore,26,57,2016-04-22,Annual,Water,House,0,1,4,Low,Rent,South,Male
+C00161,Hannah Martin,77,15,2016-04-25,Annual,Gas,Commercial,1,1,3,High,Rent,North,Male
+C00162,Sarah Davis,60,37,2016-04-28,Annual,Electricity,House,1,1,4,Medium,Rent,North,Female
+C00163,Rachel Smith,49,77,2016-05-01,Annual,Gas,Apartment,1,1,1,Low,Own,Central,Female
+C00164,Daniel White,73,67,2016-05-04,Annual,Electricity + Water,Commercial,0,1,2,Low,Own,East,Female
+C00165,Jessica Williams,35,63,2016-05-07,Monthly,Electricity,Commercial,1,0,4,High,Rent,South,Male
+C00166,David Robinson,19,108,2016-05-10,Bi-Annual,Water,Commercial,1,1,4,Medium,Own,North,Male
+C00167,Laura Anderson,57,8,2016-05-13,Bi-Annual,Electricity,Commercial,1,1,4,High,Own,West,Male
+C00168,Amy Davis,60,40,2016-05-16,Monthly,Gas,Apartment,1,0,4,High,Own,East,Female
+C00169,Amy Harris,60,87,2016-05-19,Monthly,Electricity,House,0,0,1,Medium,Rent,West,Female
+C00170,Victoria Clark,56,89,2016-05-22,Monthly,Electricity,House,1,0,1,High,Rent,South,Male
+C00171,Paul Wilson,71,99,2016-05-25,Bi-Annual,Gas,Commercial,0,1,1,Low,Rent,East,Female
+C00172,Andrew White,72,75,2016-05-28,Annual,Electricity + Gas,Apartment,0,1,3,Low,Rent,East,Male
+C00173,Sophie Wilson,51,36,2016-05-31,Annual,Electricity + Gas,Apartment,1,1,5,Low,Rent,West,Female
+C00174,Tom Williams,70,15,2016-06-03,Monthly,Water,Townhouse,1,1,3,Medium,Rent,Central,Male
+C00175,Laura Brown,41,113,2016-06-06,Bi-Annual,Electricity,Commercial,0,0,2,High,Own,Central,Female
+C00176,Chris Thompson,49,11,2016-06-09,Monthly,Electricity + Water,Commercial,1,1,1,Low,Rent,West,Female
+C00177,Jessica Moore,72,56,2016-06-12,Bi-Annual,Electricity + Water,House,1,1,1,Medium,Own,North,Male
+C00178,Sophie Miller,40,66,2016-06-15,Annual,Gas,Townhouse,1,1,2,High,Own,West,Female
+C00179,Emma Miller,66,93,2016-06-18,Monthly,Gas,Apartment,0,0,2,Medium,Own,East,Female
+C00180,David Miller,53,94,2016-06-21,Annual,Gas,Townhouse,0,0,3,High,Own,West,Female
+C00181,Sarah Garcia,30,56,2016-06-24,Monthly,Water,Townhouse,0,0,3,Medium,Own,South,Female
+C00182,Kevin Harris,63,110,2016-06-27,Annual,Water,Commercial,1,0,2,Medium,Rent,West,Female
+C00183,Tom White,21,26,2016-06-30,Bi-Annual,Electricity,Apartment,1,0,5,High,Rent,South,Female
+C00184,James Anderson,51,61,2016-07-03,Annual,Gas,Commercial,1,0,4,Medium,Rent,East,Male
+C00185,Rachel Harris,57,103,2016-07-06,Bi-Annual,Electricity + Gas,House,1,0,1,Medium,Own,South,Female
+C00186,Victoria Williams,70,108,2016-07-09,Annual,Electricity,House,0,0,1,Medium,Own,North,Female
+C00187,Mark Martin,20,106,2016-07-12,Monthly,Water,Townhouse,0,1,2,Low,Own,East,Female
+C00188,James Jones,40,27,2016-07-15,Annual,Electricity + Gas,Townhouse,1,0,4,Medium,Own,West,Male
+C00189,Sarah Williams,52,16,2016-07-18,Monthly,Electricity,Apartment,0,0,1,Medium,Rent,East,Male
+C00190,James Taylor,66,44,2016-07-21,Annual,Electricity + Gas,Townhouse,1,0,3,Low,Rent,East,Female
+C00191,Tom Davis,43,13,2016-07-24,Monthly,Electricity + Water,Townhouse,0,0,5,High,Rent,East,Male
+C00192,Michael White,47,39,2016-07-27,Annual,Water,Apartment,1,1,4,High,Own,East,Male
+C00193,Olivia Harris,56,36,2016-07-30,Monthly,Electricity + Water,Townhouse,0,1,3,Medium,Own,Central,Female
+C00194,Daniel Martin,40,94,2016-08-02,Monthly,Electricity,Commercial,0,1,3,Low,Rent,North,Male
+C00195,Laura Brown,58,72,2016-08-05,Annual,Electricity + Water,Apartment,0,0,1,Low,Own,South,Female
+C00196,Emma Jackson,51,40,2016-08-08,Monthly,Gas,House,0,0,1,Low,Rent,Central,Male
+C00197,Andrew Miller,75,59,2016-08-11,Bi-Annual,Gas,House,0,1,4,High,Own,East,Female
+C00198,Rachel Jackson,70,101,2016-08-14,Annual,Electricity + Water,Townhouse,0,1,2,Low,Rent,North,Male
+C00199,Chris White,57,43,2016-08-17,Bi-Annual,Water,House,0,0,1,Medium,Own,East,Male
+C00200,Tom Martin,64,16,2016-08-20,Monthly,Electricity + Water,House,1,1,4,High,Own,South,Male
+C00201,Kevin Wilson,33,50,2016-08-23,Bi-Annual,Electricity + Gas,Apartment,0,1,3,Low,Rent,East,Male
+C00202,David Taylor,51,35,2016-08-26,Monthly,Electricity,House,1,0,4,High,Own,South,Male
+C00203,Sarah Anderson,32,80,2016-08-29,Bi-Annual,Electricity,Apartment,1,1,1,Medium,Rent,West,Male
+C00204,Paul Taylor,57,103,2016-09-01,Bi-Annual,Electricity,House,1,0,1,High,Own,North,Male
+C00205,Jessica Martin,18,23,2016-09-04,Annual,Gas,Commercial,0,0,3,High,Rent,Central,Female
+C00206,Amy Miller,22,17,2016-09-07,Monthly,Electricity + Gas,Townhouse,0,1,1,High,Rent,East,Male
+C00207,Jessica Martin,70,86,2016-09-10,Monthly,Electricity + Gas,House,0,0,5,Medium,Rent,North,Male
+C00208,Chris Brown,68,88,2016-09-13,Bi-Annual,Electricity + Water,House,1,1,3,High,Rent,Central,Male
+C00209,Sophie White,56,89,2016-09-16,Annual,Water,Townhouse,1,1,5,High,Own,East,Female
+C00210,Rachel White,77,47,2016-09-19,Bi-Annual,Water,Commercial,0,1,5,Medium,Own,South,Male
+C00211,Hannah Anderson,78,105,2016-09-22,Annual,Water,House,0,0,1,High,Own,North,Male
+C00212,Amy Garcia,71,7,2016-09-25,Monthly,Gas,Townhouse,0,1,3,Medium,Own,West,Male
+C00213,Jessica Thomas,64,46,2016-09-28,Monthly,Electricity + Water,Commercial,0,0,5,Low,Rent,East,Male
+C00214,David Jones,73,95,2016-10-01,Annual,Water,Townhouse,1,0,2,Medium,Own,West,Male
+C00215,Olivia Johnson,41,3,2016-10-04,Bi-Annual,Gas,Commercial,1,1,3,Medium,Own,West,Female
+C00216,Andrew Harris,32,97,2016-10-07,Annual,Electricity,Commercial,0,1,5,High,Rent,North,Male
+C00217,Daniel Wilson,58,92,2016-10-10,Monthly,Electricity + Gas,House,0,0,1,Low,Own,North,Male
+C00218,Andrew Jones,50,30,2016-10-13,Annual,Electricity + Gas,Commercial,0,0,1,Medium,Rent,West,Female
+C00219,Michael White,59,30,2016-10-16,Monthly,Electricity,House,0,1,1,Low,Own,Central,Female
+C00220,Amy Davis,55,25,2016-10-19,Monthly,Electricity,Commercial,1,0,2,Low,Rent,North,Female
+C00221,Sarah Anderson,33,3,2016-10-22,Bi-Annual,Water,Commercial,1,0,3,Low,Rent,East,Female
+C00222,David Miller,65,4,2016-10-25,Annual,Electricity + Gas,Apartment,0,1,5,Low,Own,West,Female
+C00223,Tom Williams,31,46,2016-10-28,Bi-Annual,Electricity,House,0,1,2,Low,Own,South,Female
+C00224,Daniel Jones,78,106,2016-10-31,Monthly,Electricity + Water,Commercial,0,0,2,Low,Own,Central,Male
+C00225,Laura Garcia,66,86,2016-11-03,Monthly,Gas,Commercial,1,1,5,Medium,Rent,South,Male
+C00226,Andrew Taylor,53,25,2016-11-06,Annual,Electricity,House,1,1,4,Medium,Own,Central,Male
+C00227,James Jackson,51,94,2016-11-09,Bi-Annual,Water,House,0,0,1,Medium,Own,East,Male
+C00228,Andrew Clark,34,69,2016-11-12,Annual,Gas,Commercial,1,1,4,Medium,Rent,West,Male
+C00229,Paul Anderson,64,57,2016-11-15,Annual,Water,Commercial,1,0,5,High,Rent,East,Male
+C00230,Emma Clark,77,16,2016-11-18,Monthly,Electricity,Apartment,0,0,3,Medium,Rent,North,Male
+C00231,David Brown,51,19,2016-11-21,Annual,Gas,Townhouse,1,1,2,Low,Rent,South,Male
+C00232,Olivia Johnson,36,113,2016-11-24,Annual,Gas,Apartment,0,0,4,Medium,Own,South,Female
+C00233,Tom Williams,76,84,2016-11-27,Annual,Electricity,Commercial,0,1,3,Medium,Own,West,Male
+C00234,Amy Wilson,56,68,2016-11-30,Bi-Annual,Electricity + Water,House,0,0,2,Medium,Rent,West,Female
+C00235,Hannah Davis,71,63,2016-12-03,Monthly,Water,Apartment,1,0,4,Low,Own,North,Male
+C00236,James Harris,58,105,2016-12-06,Monthly,Electricity,Apartment,1,0,5,High,Own,West,Male
+C00237,Michael Smith,58,82,2016-12-09,Monthly,Water,House,1,0,2,Low,Own,North,Female
+C00238,Olivia Anderson,25,61,2016-12-12,Monthly,Water,Commercial,0,1,1,Low,Rent,North,Male
+C00239,Kevin Clark,57,114,2016-12-15,Bi-Annual,Electricity,Townhouse,1,0,4,Medium,Own,Central,Male
+C00240,Mark Miller,78,92,2016-12-18,Bi-Annual,Electricity + Gas,Townhouse,1,0,1,High,Rent,East,Male
+C00241,Rachel Taylor,31,87,2016-12-21,Annual,Water,Apartment,0,1,2,Low,Own,South,Male
+C00242,Andrew Thomas,42,92,2016-12-24,Monthly,Gas,Commercial,1,1,2,Medium,Own,East,Male
+C00243,Emma Thomas,42,113,2016-12-27,Monthly,Gas,House,0,0,4,High,Rent,West,Male
+C00244,Michael Taylor,45,50,2016-12-30,Annual,Electricity,Commercial,1,1,3,Medium,Rent,Central,Male
+C00245,Amy Wilson,21,92,2017-01-02,Bi-Annual,Electricity,House,0,1,2,Medium,Rent,North,Male
+C00246,Hannah Davis,23,115,2017-01-05,Annual,Electricity + Gas,Commercial,1,0,2,Low,Own,East,Female
+C00247,Sarah Williams,70,11,2017-01-08,Monthly,Water,House,1,1,1,High,Rent,South,Male
+C00248,Rachel Harris,21,48,2017-01-11,Annual,Electricity + Gas,Townhouse,0,0,4,Medium,Rent,Central,Female
+C00249,Tom Robinson,37,56,2017-01-14,Bi-Annual,Gas,Commercial,0,0,3,Low,Own,West,Female
+C00250,Tom Brown,41,48,2017-01-17,Bi-Annual,Electricity,Apartment,1,0,2,High,Rent,West,Male
+C00251,Kevin Brown,44,4,2017-01-20,Bi-Annual,Gas,Commercial,1,0,5,Low,Own,South,Male
+C00252,Chris Clark,77,87,2017-01-23,Annual,Gas,Apartment,1,1,2,Medium,Own,Central,Female
+C00253,Amy Smith,37,31,2017-01-26,Bi-Annual,Electricity + Water,Townhouse,0,0,5,Medium,Own,South,Female
+C00254,Kevin Martin,76,31,2017-01-29,Monthly,Electricity + Gas,Apartment,1,1,1,High,Rent,South,Female
+C00255,Mark Clark,74,119,2017-02-01,Bi-Annual,Electricity + Gas,Townhouse,0,0,1,High,Rent,North,Female
+C00256,Amy White,44,90,2017-02-04,Monthly,Water,Townhouse,0,1,1,Low,Own,East,Female
+C00257,Jessica Garcia,57,88,2017-02-07,Annual,Gas,Apartment,0,1,1,Medium,Own,East,Female
+C00258,Kevin Harris,74,13,2017-02-10,Monthly,Electricity + Water,House,0,0,3,Medium,Rent,North,Female
+C00259,Emma Thomas,66,52,2017-02-13,Annual,Electricity,Townhouse,0,1,3,High,Rent,East,Male
+C00260,Andrew White,56,8,2017-02-16,Annual,Electricity,Apartment,1,1,1,Medium,Rent,East,Male
+C00261,Tom Moore,47,68,2017-02-19,Monthly,Electricity,Townhouse,1,1,1,High,Own,West,Male
+C00262,Olivia Miller,58,75,2017-02-22,Annual,Gas,Townhouse,1,0,1,High,Own,North,Male
+C00263,Hannah Robinson,38,18,2017-02-25,Monthly,Electricity + Gas,Apartment,1,1,4,High,Rent,Central,Female
+C00264,Andrew Anderson,40,25,2017-02-28,Annual,Electricity,Apartment,0,1,3,Low,Own,North,Female
+C00265,Rachel Miller,53,8,2017-03-03,Bi-Annual,Electricity + Gas,Commercial,1,0,2,Low,Own,South,Male
+C00266,Victoria Brown,75,14,2017-03-06,Bi-Annual,Electricity + Gas,Commercial,1,1,5,Medium,Own,North,Male
+C00267,Emma Jackson,73,4,2017-03-09,Bi-Annual,Electricity,House,0,0,1,Low,Rent,North,Male
+C00268,Andrew Williams,28,41,2017-03-12,Bi-Annual,Electricity + Gas,Commercial,1,1,3,High,Rent,South,Female
+C00269,Tom Anderson,40,79,2017-03-15,Monthly,Water,Apartment,1,0,5,High,Own,West,Male
+C00270,Hannah Taylor,31,77,2017-03-18,Annual,Gas,Apartment,0,0,4,Medium,Own,North,Female
+C00271,Rachel Clark,76,39,2017-03-21,Bi-Annual,Water,Commercial,0,1,3,Low,Rent,North,Male
+C00272,James Martin,45,29,2017-03-24,Annual,Electricity + Water,Townhouse,1,1,5,Medium,Own,South,Female
+C00273,Paul Miller,69,33,2017-03-27,Bi-Annual,Electricity,Townhouse,0,0,1,Low,Rent,West,Male
+C00274,Sarah Moore,30,65,2017-03-30,Annual,Electricity + Gas,Commercial,0,0,4,Low,Own,South,Female
+C00275,Sarah Clark,67,103,2017-04-02,Annual,Electricity + Water,Townhouse,1,0,5,Low,Own,Central,Male
+C00276,Paul Martin,43,7,2017-04-05,Bi-Annual,Water,Townhouse,1,1,3,Medium,Own,North,Female
+C00277,Olivia Johnson,73,111,2017-04-08,Bi-Annual,Electricity + Gas,Commercial,1,0,2,Low,Own,North,Male
+C00278,Sarah White,25,80,2017-04-11,Monthly,Electricity + Gas,Apartment,0,0,4,High,Rent,South,Male
+C00279,Amy Harris,75,46,2017-04-14,Monthly,Electricity + Gas,Townhouse,1,1,4,Medium,Own,North,Male
+C00280,Amy Clark,30,21,2017-04-17,Bi-Annual,Gas,Apartment,1,1,5,Medium,Rent,North,Female
+C00281,Olivia Martin,33,49,2017-04-20,Annual,Electricity,Commercial,1,0,5,Low,Rent,East,Female
+C00282,Olivia Robinson,46,17,2017-04-23,Annual,Electricity + Gas,Commercial,1,1,2,Medium,Rent,West,Male
+C00283,Kevin Clark,18,36,2017-04-26,Bi-Annual,Electricity,Commercial,1,1,5,Medium,Own,Central,Male
+C00284,Laura Williams,43,79,2017-04-29,Annual,Electricity,House,1,0,1,Medium,Own,East,Male
+C00285,Chris Robinson,35,1,2017-05-02,Bi-Annual,Electricity,Townhouse,1,1,2,Medium,Own,North,Male
+C00286,Jessica Smith,52,63,2017-05-05,Annual,Gas,House,1,1,5,High,Rent,East,Female
+C00287,Hannah Jackson,58,29,2017-05-08,Annual,Electricity,Apartment,0,0,1,Medium,Rent,South,Male
+C00288,Olivia Thompson,66,49,2017-05-11,Annual,Electricity + Water,Commercial,1,0,3,Medium,Rent,North,Male
+C00289,Tom Davis,42,91,2017-05-14,Annual,Electricity + Water,Townhouse,0,1,1,Medium,Rent,East,Female
+C00290,Sarah Thompson,44,67,2017-05-17,Monthly,Electricity + Water,Townhouse,0,0,2,Medium,Rent,South,Female
+C00291,Tom Jackson,70,55,2017-05-20,Monthly,Electricity + Gas,Townhouse,0,1,3,High,Own,East,Female
+C00292,Paul Jackson,73,80,2017-05-23,Annual,Electricity,Townhouse,0,1,2,Medium,Own,South,Female
+C00293,Hannah Anderson,59,81,2017-05-26,Annual,Electricity + Gas,House,1,1,2,Low,Rent,East,Female
+C00294,Sarah Williams,37,25,2017-05-29,Bi-Annual,Water,Commercial,0,0,4,High,Own,West,Male
+C00295,Chris Clark,47,63,2017-06-01,Bi-Annual,Electricity + Water,Townhouse,0,1,5,High,Rent,West,Male
+C00296,Mark Jackson,62,65,2017-06-04,Monthly,Electricity + Gas,House,0,1,2,High,Own,Central,Female
+C00297,Paul Thompson,21,74,2017-06-07,Bi-Annual,Water,Apartment,0,0,3,Low,Rent,North,Female
+C00298,Rachel Miller,38,13,2017-06-10,Bi-Annual,Gas,Commercial,1,1,1,Medium,Own,West,Female
+C00299,James Williams,78,112,2017-06-13,Monthly,Electricity + Water,Townhouse,1,1,1,High,Own,South,Male
+C00300,James Jackson,54,29,2017-06-16,Bi-Annual,Water,House,0,0,1,Low,Rent,North,Female
+C00301,David Jones,43,54,2017-06-19,Annual,Gas,Apartment,1,0,5,High,Own,South,Female
+C00302,Emma Harris,40,89,2017-06-22,Monthly,Electricity + Water,Commercial,1,0,2,High,Own,North,Female
+C00303,Paul Thomas,65,101,2017-06-25,Annual,Water,Apartment,0,1,4,High,Rent,Central,Female
+C00304,Emma Robinson,79,5,2017-06-28,Annual,Electricity + Gas,House,0,1,4,Low,Rent,West,Male
+C00305,Tom Thompson,50,33,2017-07-01,Monthly,Electricity + Gas,Apartment,0,1,1,Medium,Own,Central,Male
+C00306,Rachel Miller,20,64,2017-07-04,Annual,Electricity + Gas,Apartment,0,1,1,High,Own,Central,Female
+C00307,Emma Jones,43,36,2017-07-07,Annual,Electricity + Gas,Apartment,0,1,4,Medium,Rent,North,Male
+C00308,Jessica Smith,41,102,2017-07-10,Bi-Annual,Electricity + Water,Apartment,0,1,2,High,Rent,North,Female
+C00309,Chris Taylor,62,51,2017-07-13,Monthly,Gas,House,1,1,3,High,Own,West,Female
+C00310,Mark Smith,44,67,2017-07-16,Annual,Electricity,House,0,1,5,Low,Own,North,Male
+C00311,Emma Moore,79,69,2017-07-19,Monthly,Water,House,0,1,5,High,Own,Central,Female
+C00312,Mark Miller,61,20,2017-07-22,Monthly,Electricity + Gas,Commercial,1,0,5,Medium,Own,South,Female
+C00313,Victoria Miller,44,18,2017-07-25,Bi-Annual,Electricity + Water,Apartment,1,0,2,Low,Own,West,Female
+C00314,Sophie Thompson,72,43,2017-07-28,Monthly,Electricity,Commercial,1,0,3,High,Own,North,Female
+C00315,Paul Harris,77,69,2017-07-31,Monthly,Electricity + Gas,House,0,1,5,Medium,Own,West,Female
+C00316,Laura Jackson,78,49,2017-08-03,Annual,Electricity,Commercial,1,1,1,High,Rent,Central,Female
+C00317,Kevin Wilson,56,63,2017-08-06,Monthly,Electricity,Townhouse,0,0,5,Low,Rent,West,Female
+C00318,Hannah Anderson,52,46,2017-08-09,Annual,Gas,Townhouse,0,0,5,High,Own,North,Female
+C00319,Victoria Thomas,37,51,2017-08-12,Monthly,Gas,Townhouse,1,1,5,Low,Rent,South,Female
+C00320,Mark Miller,48,31,2017-08-15,Bi-Annual,Gas,Townhouse,1,1,4,High,Rent,West,Male
+C00321,Amy Martin,32,94,2017-08-18,Annual,Water,Apartment,0,1,3,High,Rent,West,Female
+C00322,Sarah Williams,74,84,2017-08-21,Annual,Water,Apartment,0,1,5,High,Own,North,Male
+C00323,Chris Johnson,49,38,2017-08-24,Annual,Gas,House,1,0,4,Low,Own,West,Male
+C00324,Chris Smith,58,103,2017-08-27,Bi-Annual,Water,Apartment,0,1,4,High,Rent,Central,Male
+C00325,Hannah Robinson,36,92,2017-08-30,Bi-Annual,Electricity + Gas,Townhouse,0,1,1,Medium,Own,South,Male
+C00326,Michael Garcia,33,77,2017-09-02,Monthly,Water,Commercial,1,1,2,Medium,Rent,North,Female
+C00327,Sophie Johnson,70,103,2017-09-05,Monthly,Electricity + Gas,Apartment,0,1,3,Medium,Own,North,Female
+C00328,Andrew Thomas,76,108,2017-09-08,Annual,Electricity + Gas,House,0,1,5,Medium,Own,West,Female
+C00329,Sarah Thomas,50,79,2017-09-11,Bi-Annual,Water,Townhouse,0,1,5,Medium,Own,Central,Female
+C00330,Jessica Jones,41,72,2017-09-14,Annual,Gas,Townhouse,0,1,1,High,Rent,West,Male
+C00331,Andrew Clark,33,58,2017-09-17,Monthly,Electricity + Water,Townhouse,1,1,1,Medium,Rent,North,Female
+C00332,Hannah Jones,43,20,2017-09-20,Annual,Gas,Apartment,1,1,4,Low,Rent,South,Female
+C00333,Emma Wilson,37,49,2017-09-23,Monthly,Gas,Townhouse,0,0,2,High,Own,South,Male
+C00334,Daniel Anderson,68,116,2017-09-26,Monthly,Electricity + Gas,House,1,0,5,Low,Rent,South,Female
+C00335,Chris Jackson,50,89,2017-09-29,Bi-Annual,Water,Commercial,0,0,2,High,Own,East,Female
+C00336,Amy Davis,23,17,2017-10-02,Monthly,Water,House,1,1,4,Low,Rent,East,Female
+C00337,Chris Brown,55,80,2017-10-05,Monthly,Water,Apartment,1,0,5,Low,Own,South,Female
+C00338,Paul Wilson,79,51,2017-10-08,Bi-Annual,Electricity,Apartment,0,0,1,High,Rent,North,Male
+C00339,Sophie Moore,29,11,2017-10-11,Annual,Electricity,Commercial,0,1,5,Low,Own,East,Male
+C00340,Andrew Jackson,57,51,2017-10-14,Monthly,Electricity + Gas,Commercial,0,1,5,High,Own,East,Male
+C00341,Chris Robinson,58,39,2017-10-17,Monthly,Gas,Commercial,0,0,1,Low,Own,West,Female
+C00342,Hannah Clark,62,48,2017-10-20,Annual,Electricity + Water,Apartment,1,1,2,Medium,Rent,South,Male
+C00343,Sarah Clark,53,117,2017-10-23,Monthly,Electricity + Water,House,0,1,5,Low,Own,West,Male
+C00344,David Moore,66,62,2017-10-26,Bi-Annual,Electricity + Water,Apartment,1,0,1,Low,Own,North,Male
+C00345,Chris Jones,42,46,2017-10-29,Annual,Gas,House,1,0,2,Low,Rent,Central,Male
+C00346,Rachel Taylor,54,23,2017-11-01,Bi-Annual,Electricity + Water,Commercial,0,0,2,Medium,Rent,North,Male
+C00347,Hannah Miller,69,33,2017-11-04,Monthly,Electricity + Gas,House,1,1,4,High,Own,North,Male
+C00348,James Moore,68,18,2017-11-07,Bi-Annual,Gas,House,1,0,2,Low,Rent,West,Female
+C00349,Tom Anderson,46,10,2017-11-10,Monthly,Electricity + Gas,Apartment,0,0,5,Low,Rent,South,Male
+C00350,Jessica White,73,81,2017-11-13,Annual,Electricity + Water,Commercial,0,1,1,High,Rent,West,Female
+C00351,Rachel Anderson,62,68,2017-11-16,Bi-Annual,Electricity,Commercial,1,0,3,Low,Rent,North,Male
+C00352,Kevin Miller,72,24,2017-11-19,Annual,Water,Apartment,0,0,1,Medium,Own,Central,Male
+C00353,Paul Clark,68,59,2017-11-22,Bi-Annual,Electricity + Gas,Commercial,1,1,3,Medium,Own,East,Female
+C00354,Laura Davis,58,92,2017-11-25,Annual,Electricity,Commercial,1,0,3,Medium,Own,North,Female
+C00355,David Clark,41,32,2017-11-28,Monthly,Electricity + Gas,Commercial,0,1,2,Low,Rent,East,Female
+C00356,Paul Jones,22,18,2017-12-01,Monthly,Electricity + Gas,Apartment,0,0,2,Medium,Own,North,Male
+C00357,Kevin Jones,43,112,2017-12-04,Bi-Annual,Water,Apartment,1,0,4,Low,Rent,North,Female
+C00358,Andrew Martin,46,83,2017-12-07,Bi-Annual,Electricity + Water,Townhouse,0,1,2,Medium,Own,Central,Male
+C00359,Paul Miller,75,118,2017-12-10,Monthly,Gas,Apartment,1,0,2,Low,Own,North,Female
+C00360,Mark Smith,44,35,2017-12-13,Bi-Annual,Water,House,0,0,5,High,Rent,Central,Female
+C00361,Amy Davis,73,49,2017-12-16,Monthly,Electricity,Townhouse,1,1,3,Low,Rent,North,Male
+C00362,Mark Clark,39,67,2017-12-19,Annual,Electricity,Commercial,1,1,3,Medium,Rent,East,Male
+C00363,Laura Smith,44,99,2017-12-22,Bi-Annual,Electricity + Gas,Commercial,0,0,3,Medium,Rent,South,Female
+C00364,Daniel Davis,62,109,2017-12-25,Annual,Electricity,House,0,1,3,Medium,Own,North,Male
+C00365,Michael Taylor,20,37,2017-12-28,Monthly,Electricity + Gas,Commercial,1,1,1,High,Own,Central,Male
+C00366,Sarah Thomas,36,112,2017-12-31,Annual,Gas,House,1,0,5,High,Own,North,Male
+C00367,Sarah Garcia,44,32,2018-01-03,Bi-Annual,Gas,House,0,1,4,Medium,Rent,Central,Female
+C00368,Victoria Harris,53,55,2018-01-06,Monthly,Water,Apartment,1,1,1,Low,Own,West,Female
+C00369,Paul Jackson,78,50,2018-01-09,Monthly,Water,Commercial,1,1,2,Medium,Rent,East,Female
+C00370,David Thompson,72,98,2018-01-12,Bi-Annual,Water,Townhouse,1,0,1,Low,Rent,South,Female
+C00371,Daniel Clark,20,64,2018-01-15,Monthly,Electricity + Gas,Apartment,0,0,2,Low,Own,North,Female
+C00372,Daniel Wilson,55,58,2018-01-18,Bi-Annual,Electricity + Water,Townhouse,0,1,1,High,Own,West,Male
+C00373,Sophie Williams,20,89,2018-01-21,Annual,Gas,Townhouse,1,1,4,Low,Rent,West,Male
+C00374,Chris Brown,65,70,2018-01-24,Monthly,Electricity,Apartment,1,1,4,Low,Rent,Central,Female
+C00375,Rachel White,75,101,2018-01-27,Annual,Gas,Apartment,0,0,1,Low,Rent,South,Male
+C00376,Michael Moore,46,18,2018-01-30,Bi-Annual,Electricity + Gas,Commercial,1,0,2,High,Own,South,Male
+C00377,Laura Taylor,25,12,2018-02-02,Bi-Annual,Water,Commercial,0,1,3,Medium,Own,South,Female
+C00378,Chris Clark,27,21,2018-02-05,Annual,Water,House,0,0,5,Medium,Own,South,Male
+C00379,Amy Harris,32,68,2018-02-08,Monthly,Water,Commercial,1,0,4,Medium,Own,Central,Male
+C00380,Michael Garcia,62,27,2018-02-11,Monthly,Water,Commercial,1,0,3,Medium,Own,East,Male
+C00381,Laura Clark,61,73,2018-02-14,Monthly,Gas,Townhouse,1,1,1,Medium,Own,North,Female
+C00382,Victoria Miller,66,88,2018-02-17,Monthly,Gas,Townhouse,1,1,1,Low,Own,Central,Male
+C00383,Paul Harris,68,58,2018-02-20,Monthly,Gas,Townhouse,0,0,5,Medium,Rent,West,Female
+C00384,Michael Davis,74,53,2018-02-23,Annual,Gas,Commercial,0,0,1,Low,Rent,South,Female
+C00385,Kevin White,19,20,2018-02-26,Bi-Annual,Water,Apartment,0,0,1,Low,Own,East,Male
+C00386,Chris Moore,53,21,2018-03-01,Annual,Water,House,0,1,5,Medium,Rent,East,Female
+C00387,Laura Moore,21,54,2018-03-04,Monthly,Electricity + Gas,House,0,1,5,Low,Rent,Central,Male
+C00388,Olivia Davis,42,109,2018-03-07,Bi-Annual,Electricity + Water,Commercial,1,1,1,Medium,Rent,North,Female
+C00389,Tom Taylor,38,55,2018-03-10,Annual,Electricity + Gas,Townhouse,0,0,4,High,Own,Central,Female
+C00390,Laura Clark,73,30,2018-03-13,Bi-Annual,Electricity + Gas,Townhouse,0,0,4,Medium,Rent,Central,Male
+C00391,Rachel Brown,48,108,2018-03-16,Annual,Water,House,1,0,1,High,Rent,South,Female
+C00392,Emma Thompson,73,55,2018-03-19,Bi-Annual,Electricity + Gas,Townhouse,1,1,4,Low,Rent,West,Female
+C00393,Chris Smith,48,80,2018-03-22,Annual,Electricity,House,0,0,4,High,Rent,North,Female
+C00394,Victoria Brown,36,32,2018-03-25,Monthly,Water,House,1,1,3,Medium,Own,Central,Female
+C00395,Rachel Thompson,25,72,2018-03-28,Bi-Annual,Gas,House,1,0,3,High,Rent,South,Female
+C00396,Paul Robinson,70,37,2018-03-31,Monthly,Electricity,Apartment,1,0,5,Low,Own,West,Male
+C00397,James Miller,30,62,2018-04-03,Monthly,Electricity + Gas,Apartment,1,1,2,High,Rent,West,Male
+C00398,Mark Jones,29,28,2018-04-06,Bi-Annual,Water,Apartment,1,1,3,Low,Rent,West,Male
+C00399,Mark White,24,7,2018-04-09,Annual,Gas,Townhouse,1,0,4,Low,Rent,South,Male
+C00400,Michael Harris,54,81,2018-04-12,Monthly,Gas,Apartment,0,0,4,Medium,Own,Central,Female
+C00401,Paul Williams,71,93,2018-04-15,Annual,Electricity + Water,Apartment,1,0,1,Medium,Rent,Central,Female
+C00402,Mark Taylor,28,45,2018-04-18,Monthly,Electricity + Water,Apartment,0,0,3,Low,Own,Central,Male
+C00403,Laura Brown,18,52,2018-04-21,Monthly,Electricity + Water,House,1,0,5,Low,Rent,North,Female
+C00404,Olivia Anderson,35,62,2018-04-24,Annual,Electricity + Gas,Townhouse,0,0,1,Medium,Own,South,Male
+C00405,Amy Harris,42,24,2018-04-27,Annual,Electricity + Gas,Apartment,0,1,1,High,Own,South,Female
+C00406,Rachel Garcia,29,48,2018-04-30,Monthly,Water,Townhouse,1,1,3,High,Rent,East,Female
+C00407,Paul Thompson,59,116,2018-05-03,Annual,Water,Commercial,0,1,1,Medium,Own,West,Male
+C00408,Emma Johnson,53,49,2018-05-06,Bi-Annual,Electricity + Gas,Commercial,1,1,5,Medium,Rent,Central,Male
+C00409,Paul Brown,26,81,2018-05-09,Annual,Gas,Commercial,1,1,5,Medium,Own,East,Male
+C00410,Rachel Smith,54,77,2018-05-12,Annual,Electricity,Apartment,1,0,4,Low,Rent,West,Female
+C00411,Emma Clark,73,102,2018-05-15,Monthly,Gas,Townhouse,0,1,5,Low,Own,North,Female
+C00412,Andrew Taylor,78,115,2018-05-18,Annual,Water,House,1,0,5,Low,Own,Central,Female
+C00413,Paul Martin,68,15,2018-05-21,Annual,Electricity,Apartment,0,0,5,Medium,Own,West,Male
+C00414,Sophie Martin,30,51,2018-05-24,Monthly,Electricity,Townhouse,1,1,2,Low,Own,West,Female
+C00415,Emma Jackson,22,18,2018-05-27,Bi-Annual,Electricity + Gas,Townhouse,0,1,1,High,Own,Central,Male
+C00416,Olivia Martin,61,33,2018-05-30,Bi-Annual,Electricity + Water,Townhouse,0,0,4,Low,Own,North,Female
+C00417,Sophie Davis,44,82,2018-06-02,Monthly,Water,House,0,0,5,High,Own,North,Female
+C00418,Olivia Miller,69,24,2018-06-05,Bi-Annual,Electricity,Commercial,0,1,2,Medium,Rent,South,Male
+C00419,Daniel Harris,51,33,2018-06-08,Bi-Annual,Electricity,House,0,1,4,High,Rent,South,Female
+C00420,Tom Miller,72,59,2018-06-11,Bi-Annual,Electricity + Gas,Commercial,1,0,5,Low,Own,Central,Female
+C00421,Jessica Garcia,33,37,2018-06-14,Bi-Annual,Electricity + Water,House,0,1,2,High,Own,East,Female
+C00422,Hannah White,20,93,2018-06-17,Annual,Electricity + Gas,House,0,1,5,High,Rent,East,Female
+C00423,James Garcia,37,42,2018-06-20,Bi-Annual,Electricity + Water,House,1,1,2,High,Rent,South,Male
+C00424,Emma Harris,30,101,2018-06-23,Monthly,Electricity,Apartment,0,1,1,Medium,Own,North,Male
+C00425,Hannah Clark,28,65,2018-06-26,Bi-Annual,Gas,Apartment,0,1,2,Medium,Own,Central,Female
+C00426,Rachel Jones,38,57,2018-06-29,Bi-Annual,Water,House,0,0,2,Medium,Own,West,Male
+C00427,Chris Jones,62,83,2018-07-02,Monthly,Electricity,Commercial,1,0,2,High,Rent,Central,Male
+C00428,Hannah Davis,51,21,2018-07-05,Bi-Annual,Electricity + Gas,Commercial,0,0,3,Medium,Rent,South,Male
+C00429,Paul Smith,41,103,2018-07-08,Annual,Electricity + Water,Apartment,0,1,3,Medium,Rent,Central,Female
+C00430,James Williams,41,86,2018-07-11,Monthly,Electricity + Water,Townhouse,0,0,4,Low,Own,Central,Female
+C00431,Olivia Miller,76,2,2018-07-14,Monthly,Water,Commercial,0,0,4,Low,Own,North,Male
+C00432,Daniel Jackson,77,32,2018-07-17,Annual,Electricity + Gas,Apartment,0,1,1,High,Own,South,Female
+C00433,Sarah Harris,26,103,2018-07-20,Monthly,Electricity + Gas,Townhouse,1,1,4,High,Rent,East,Male
+C00434,David Thomas,60,13,2018-07-23,Monthly,Electricity + Water,Apartment,1,0,4,Medium,Own,West,Female
+C00435,James Jackson,65,96,2018-07-26,Monthly,Electricity + Gas,Apartment,1,0,4,High,Own,West,Female
+C00436,David Harris,34,27,2018-07-29,Monthly,Electricity + Water,Commercial,0,1,4,Medium,Rent,North,Male
+C00437,Mark Miller,36,75,2018-08-01,Annual,Gas,House,1,1,5,Low,Rent,South,Female
+C00438,Andrew Thomas,78,71,2018-08-04,Annual,Water,Commercial,1,1,4,High,Own,North,Female
+C00439,Rachel Thompson,38,114,2018-08-07,Bi-Annual,Electricity + Water,Apartment,0,1,3,Low,Own,Central,Male
+C00440,Victoria Williams,68,49,2018-08-10,Bi-Annual,Gas,Apartment,1,1,3,Low,Own,East,Female
+C00441,Michael Thomas,56,98,2018-08-13,Annual,Gas,Townhouse,1,0,1,Low,Rent,North,Female
+C00442,Olivia Moore,66,93,2018-08-16,Monthly,Electricity + Gas,Commercial,1,0,1,Medium,Rent,Central,Male
+C00443,Laura Moore,68,101,2018-08-19,Bi-Annual,Electricity,Townhouse,1,1,1,High,Own,Central,Female
+C00444,Sophie Moore,40,68,2018-08-22,Bi-Annual,Electricity + Gas,Apartment,0,0,3,Medium,Own,North,Male
+C00445,Sophie Wilson,38,46,2018-08-25,Monthly,Water,Townhouse,0,0,5,Medium,Own,North,Female
+C00446,David White,74,45,2018-08-28,Monthly,Electricity + Gas,House,0,1,3,Low,Rent,North,Male
+C00447,Kevin Miller,20,94,2018-08-31,Annual,Water,Apartment,1,1,1,Low,Own,West,Male
+C00448,Sarah Jones,62,23,2018-09-03,Bi-Annual,Electricity + Gas,Commercial,0,1,1,High,Rent,Central,Male
+C00449,Chris Taylor,55,80,2018-09-06,Bi-Annual,Electricity,House,1,0,4,Medium,Own,Central,Male
+C00450,Chris Harris,22,102,2018-09-09,Monthly,Electricity + Gas,Townhouse,0,1,3,Medium,Own,South,Female
+C00451,Jessica Martin,35,21,2018-09-12,Annual,Electricity,Apartment,1,0,3,High,Rent,South,Male
+C00452,Daniel Jones,67,21,2018-09-15,Annual,Electricity + Gas,Townhouse,0,1,2,Medium,Own,Central,Male
+C00453,Hannah Davis,29,9,2018-09-18,Bi-Annual,Electricity,House,1,0,2,Medium,Rent,West,Female
+C00454,Laura Garcia,77,116,2018-09-21,Monthly,Water,Townhouse,1,0,5,Medium,Rent,South,Female
+C00455,Rachel Smith,57,73,2018-09-24,Monthly,Gas,House,0,0,1,Medium,Rent,Central,Female
+C00456,Sarah Miller,62,58,2018-09-27,Bi-Annual,Electricity + Gas,Apartment,0,1,3,Medium,Own,East,Female
+C00457,Victoria Garcia,73,35,2018-09-30,Bi-Annual,Electricity + Water,Townhouse,1,1,1,Medium,Rent,East,Female
+C00458,Mark Thompson,50,73,2018-10-03,Monthly,Gas,Commercial,1,0,5,Low,Rent,Central,Male
+C00459,Rachel Jones,38,49,2018-10-06,Annual,Water,Commercial,0,0,1,High,Own,West,Female
+C00460,Laura Clark,76,114,2018-10-09,Bi-Annual,Electricity + Water,Commercial,0,1,5,Medium,Rent,West,Female
+C00461,Victoria Johnson,64,18,2018-10-12,Annual,Electricity + Gas,Townhouse,1,1,3,High,Own,East,Female
+C00462,Paul Smith,48,109,2018-10-15,Monthly,Electricity + Gas,Townhouse,1,0,3,High,Own,South,Male
+C00463,Tom Harris,22,82,2018-10-18,Bi-Annual,Electricity + Gas,Apartment,1,0,2,High,Rent,South,Female
+C00464,Andrew Jones,60,49,2018-10-21,Monthly,Electricity,Commercial,0,1,5,Medium,Own,South,Male
+C00465,Hannah Brown,21,34,2018-10-24,Annual,Electricity,House,1,0,3,High,Rent,West,Female
+C00466,Paul Robinson,77,112,2018-10-27,Bi-Annual,Water,Townhouse,0,0,4,Medium,Own,West,Female
+C00467,Olivia Robinson,41,97,2018-10-30,Monthly,Electricity + Water,Apartment,1,0,4,High,Own,South,Male
+C00468,Michael Miller,36,50,2018-11-02,Bi-Annual,Electricity,Commercial,0,0,3,Medium,Rent,North,Male
+C00469,Victoria Moore,49,55,2018-11-05,Bi-Annual,Electricity + Water,House,1,0,2,Medium,Rent,Central,Female
+C00470,Kevin Brown,74,15,2018-11-08,Monthly,Electricity + Gas,Commercial,0,0,4,Low,Own,East,Male
+C00471,Olivia Jackson,18,116,2018-11-11,Bi-Annual,Electricity,Commercial,1,0,1,Low,Rent,West,Male
+C00472,Paul Clark,40,12,2018-11-14,Annual,Gas,Townhouse,1,1,1,Medium,Own,South,Male
+C00473,Andrew Johnson,24,100,2018-11-17,Monthly,Water,Townhouse,0,0,1,High,Rent,East,Male
+C00474,Hannah Smith,57,84,2018-11-20,Annual,Electricity + Water,House,1,0,1,Medium,Rent,West,Male
+C00475,Rachel Smith,21,63,2018-11-23,Annual,Electricity + Water,Commercial,1,1,5,High,Own,West,Male
+C00476,Paul Jackson,65,62,2018-11-26,Bi-Annual,Electricity,Townhouse,1,1,5,Low,Own,Central,Male
+C00477,Tom Miller,43,39,2018-11-29,Bi-Annual,Electricity + Water,House,0,0,3,Medium,Rent,East,Male
+C00478,Victoria Clark,56,108,2018-12-02,Annual,Electricity,Apartment,1,0,2,Medium,Rent,North,Male
+C00479,Rachel Robinson,77,87,2018-12-05,Annual,Electricity + Gas,House,1,1,4,Medium,Rent,North,Female
+C00480,Tom Williams,60,64,2018-12-08,Monthly,Gas,Apartment,1,0,4,Medium,Rent,West,Male
+C00481,Olivia Clark,61,66,2018-12-11,Bi-Annual,Electricity + Water,House,1,0,1,Low,Own,Central,Male
+C00482,Tom Thompson,42,95,2018-12-14,Bi-Annual,Gas,Townhouse,1,1,3,Low,Rent,South,Female
+C00483,Sophie Wilson,50,79,2018-12-17,Annual,Electricity + Water,House,0,0,3,Low,Rent,North,Female
+C00484,Andrew Thomas,48,115,2018-12-20,Annual,Electricity + Gas,Commercial,1,1,3,Low,Own,South,Male
+C00485,David Anderson,36,18,2018-12-23,Bi-Annual,Gas,Apartment,0,1,2,High,Rent,East,Female
+C00486,Michael Anderson,69,119,2018-12-26,Bi-Annual,Electricity + Water,Apartment,0,1,2,High,Own,South,Male
+C00487,Laura Brown,41,110,2018-12-29,Monthly,Gas,Commercial,0,0,3,High,Rent,West,Female
+C00488,Emma Thompson,76,9,2019-01-01,Annual,Electricity + Gas,House,0,1,5,Medium,Rent,West,Male
+C00489,Andrew Johnson,66,32,2019-01-04,Bi-Annual,Gas,Commercial,0,0,5,Medium,Own,South,Male
+C00490,Kevin Thompson,18,117,2019-01-07,Annual,Water,Apartment,1,1,5,High,Own,East,Male
+C00491,Sarah Smith,27,119,2019-01-10,Monthly,Electricity,House,1,1,2,Medium,Rent,West,Male
+C00492,Amy White,51,63,2019-01-13,Monthly,Electricity,Townhouse,1,1,1,Low,Rent,West,Male
+C00493,Chris Thompson,34,12,2019-01-16,Annual,Gas,Commercial,0,0,2,High,Own,Central,Female
+C00494,Kevin Robinson,35,50,2019-01-19,Monthly,Electricity + Water,Commercial,1,1,3,High,Rent,East,Female
+C00495,Laura Thomas,65,17,2019-01-22,Bi-Annual,Electricity + Water,Commercial,0,0,4,High,Own,North,Male
+C00496,Jessica Williams,58,99,2019-01-25,Annual,Water,Apartment,1,0,4,Medium,Rent,South,Male
+C00497,Amy Moore,55,35,2019-01-28,Annual,Electricity,House,0,1,1,Medium,Rent,South,Male
+C00498,Hannah Miller,30,94,2019-01-31,Annual,Electricity + Water,House,0,0,1,Medium,Own,North,Male
+C00499,Emma Clark,52,70,2019-02-03,Annual,Gas,Townhouse,0,1,3,Low,Rent,South,Female
+C00500,Jessica Smith,20,103,2019-02-06,Monthly,Electricity,Commercial,1,0,3,Low,Own,North,Male

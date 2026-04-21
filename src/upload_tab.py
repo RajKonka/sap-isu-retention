@@ -25,23 +25,9 @@ BASE_MODEL_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__
 
 
 def _base_model_exists():
-    """True when the permanent base model is present. Auto-restores from git if missing."""
+    """True when the permanent base model files are present on disk."""
     required = ["best_model.pkl", "scaler.pkl", "model_metadata.pkl"]
-    if all(os.path.exists(os.path.join(BASE_MODEL_DIR, f)) for f in required):
-        return True
-    # Files were wiped (e.g. by a git operation) — restore from git index
-    try:
-        import subprocess
-        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        result = subprocess.run(
-            ["git", "restore", "models/base/"],
-            cwd=project_root, capture_output=True, timeout=15
-        )
-        if result.returncode == 0:
-            return all(os.path.exists(os.path.join(BASE_MODEL_DIR, f)) for f in required)
-    except Exception:
-        pass
-    return False
+    return all(os.path.exists(os.path.join(BASE_MODEL_DIR, f)) for f in required)
 
 def _render_history():
     """Show previous run history for this user."""
@@ -100,7 +86,7 @@ def render_upload_tab():
         st.markdown("""
 **👤 Customer Profiles**
 Required: `customer_id`
-Optional: `customer_name`, `region`, `contract_type`, `service_type`, `age`, `gender`, `account_tenure_months`, `income_bracket`, `has_autopay`, `churned`
+Optional: `customer_name`, `region`, `contract_type`, `service_type`, `age`, `gender`, `account_tenure_months`, `income_bracket`, `has_autopay`
         """)
     with col2:
         st.markdown("""
@@ -115,17 +101,6 @@ Required: `customer_id`
 Optional: `interaction_date`, `interaction_type`, `channel`, `duration_minutes`, `satisfaction_score`, `resolved`
         """)
     st.caption(f"You can upload just one file — e.g. a customer list with feedback. Free tier: up to {FREE_TIER_LIMIT:,} customers.")
-    st.markdown("---")
-
-    mode = st.radio("Mode", ["Predict Only (recommended)", "Full Analysis"], index=0,
-        help="Predict Only scores your customers instantly. Full Analysis trains a custom model on your data.")
-
-    is_predict_only = "Predict Only" in mode
-    if is_predict_only:
-        st.info(f"Scores your customers using our pre-trained AI. Works with any dataset size up to {FREE_TIER_LIMIT:,}.")
-    else:
-        st.info("Builds a custom model on your data. Best with 500+ customers.")
-
     st.markdown("---")
     st.markdown("### Step 1: Upload Files")
     uploaded_files = st.file_uploader("Drop files here",
@@ -185,7 +160,7 @@ Optional: `interaction_date`, `interaction_type`, `channel`, `duration_minutes`,
         "region": "Region", "service_type": "Service Type", "contract_type": "Contract Type",
         "dwelling_type": "Property Type", "account_tenure_months": "Months as Customer",
         "has_autopay": "Auto-Pay", "paperless_billing": "Paperless Billing", "family_size": "Family Size",
-        "income_bracket": "Income Level", "home_ownership": "Home Ownership", "churned": "Left (Yes/No)",
+        "income_bracket": "Income Level", "home_ownership": "Home Ownership",
         "comment": "Customer Comment/Feedback", "complaint_date": "Date", "complaint_category": "Category",
         "severity": "Severity/Rating", "escalated": "Escalated", "resolved": "Resolved",
         "resolution_time_days": "Resolution Days", "interaction_date": "Date", "interaction_type": "Type",
@@ -224,17 +199,30 @@ Optional: `interaction_date`, `interaction_type`, `channel`, `duration_minutes`,
                 all_missing.append(f"{labels.get(tt, tt)} → {friendly.get(r, r)}")
 
     st.markdown("### Step 4: Get Results")
-    btn = "🔮 Score My Customers" if is_predict_only else "🔄 Run Full Analysis"
+    st.info(
+        "Upload your customer data and our pre-trained model will score every customer instantly. "
+        f"Pre-trained on 15,000 utility industry customers — no setup required."
+    )
+
     if all_missing:
         st.error("Fix the missing required columns above before continuing:\n- " + "\n- ".join(all_missing))
-    if st.button(btn, type="primary", use_container_width=True, disabled=bool(all_missing)):
-        if is_predict_only:
-            if not has_base:
-                st.error("Base model not found. Please contact support."); return False
-            result = _predict_only(loaded_dfs, table_assignments, all_mappings)
-            return result
-        else:
-            return _retrain(loaded_dfs, table_assignments, all_mappings)
+
+    if st.button("🔮 Score My Customers", type="primary", use_container_width=True, disabled=bool(all_missing)):
+        if not has_base:
+            st.error("Base model not found. Please contact support."); return False
+        result = _predict_only(loaded_dfs, table_assignments, all_mappings)
+        return result
+
+    st.markdown("---")
+    st.markdown("#### 🔒 Custom Model Training *(Premium)*")
+    st.markdown(
+        "Train a model exclusively on your historical data for predictions tailored to your customer base. "
+        "Requires your own labelled data (customers you know have churned or stayed)."
+    )
+    if st.button("🏗️ Train My Own Model", disabled=True, use_container_width=True,
+                 help="Upgrade to a paid plan to unlock custom model training on your own historical data."):
+        pass
+    st.caption("Available on Professional and Enterprise plans. [Contact us to upgrade.](#)")
 
     # Re-render results from session state so download buttons survive reruns
     if st.session_state.get("prediction_results") is not None:
@@ -432,6 +420,38 @@ def _predict_only(loaded_dfs, table_assignments, all_mappings):
         st.session_state.prediction_xlsx = None
     _save_run_to_history(res)
 
+    # Generate EDA charts for uploaded data into a separate subdir
+    try:
+        from src.eda import generate_eda_report
+        dirs = _get_dirs()
+        upload_report_dir = os.path.join(dirs.get("report_dir", "reports"), "upload")
+        os.makedirs(upload_report_dir, exist_ok=True)
+        upload_eda_dirs = dict(dirs)
+        upload_eda_dirs["report_dir"] = upload_report_dir
+        generate_eda_report(merged, dirs=upload_eda_dirs)
+    except Exception:
+        pass
+
+    # Build a predictor + chatbot on the uploaded data so all main tabs can use it
+    try:
+        dirs = _get_dirs()
+        upload_dirs = dict(dirs)
+        upload_dirs["model_dir"] = BASE_MODEL_DIR  # score using base model
+        from src.prediction_engine import ChurnPredictor
+        from src.chatbot import RetentionChatbot
+        upload_predictor = ChurnPredictor(dirs=upload_dirs)
+        upload_chatbot = RetentionChatbot(
+            upload_predictor,
+            nuro_key=st.session_state.get("nuro_api_key"),
+            claude_key=st.session_state.get("claude_api_key"),
+        )
+        st.session_state.upload_predictor = upload_predictor
+        st.session_state.upload_chatbot   = upload_chatbot
+        st.session_state.active_view      = "upload"  # auto-switch main tabs to uploaded data
+    except Exception:
+        st.session_state.upload_predictor = None
+        st.session_state.upload_chatbot   = None
+
     _render_results(res,
                     st.session_state.prediction_pdf,
                     st.session_state.prediction_xlsx)
@@ -439,34 +459,98 @@ def _predict_only(loaded_dfs, table_assignments, all_mappings):
 
 
 def _render_results(res, pdf_bytes, xlsx_bytes):
-    n_h = (res["risk_level"]=="HIGH").sum()
-    n_m = (res["risk_level"]=="MEDIUM").sum()
-    n_l = (res["risk_level"]=="LOW").sum()
-    c1,c2,c3,c4 = st.columns(4)
-    with c1: st.metric("Total", f"{len(res):,}")
-    with c2: st.metric("🔴 High Risk", f"{n_h:,}")
-    with c3: st.metric("🟡 Medium Risk", f"{n_m:,}")
-    with c4: st.metric("🟢 Low Risk", f"{n_l:,}")
+    tab_summary, tab_lookup, tab_ai = st.tabs(["📊 Results Summary", "🔍 Customer Lookup", "🤖 Ask AI"])
 
-    st.markdown("### Top At-Risk Customers")
-    show_cols = [c for c in ["customer_id","churn_probability","risk_level","prediction","customer_name","region","account_tenure_months"] if c in res.columns]
-    st.dataframe(res.head(20)[show_cols].style.format({"churn_probability":"{:.1%}"}), use_container_width=True)
+    with tab_summary:
+        n_h = (res["risk_level"]=="HIGH").sum()
+        n_m = (res["risk_level"]=="MEDIUM").sum()
+        n_l = (res["risk_level"]=="LOW").sum()
+        c1,c2,c3,c4 = st.columns(4)
+        with c1: st.metric("Total Customers", f"{len(res):,}")
+        with c2: st.metric("🔴 High Risk", f"{n_h:,}")
+        with c3: st.metric("🟡 Medium Risk", f"{n_m:,}")
+        with c4: st.metric("🟢 Low Risk", f"{n_l:,}")
 
-    dl1, dl2, dl3 = st.columns(3)
-    with dl1:
-        st.download_button("📄 Download PDF Report", pdf_bytes,
-                           "churn_report.pdf", "application/pdf", use_container_width=True)
-    with dl2:
-        if xlsx_bytes:
-            st.download_button("📊 Download Excel Report", xlsx_bytes,
-                               "churn_report.xlsx",
-                               "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                               use_container_width=True)
+        st.markdown("#### Top At-Risk Customers")
+        show_cols = [c for c in ["customer_id","customer_name","churn_probability","risk_level","prediction","region","account_tenure_months"] if c in res.columns]
+        st.dataframe(res.head(20)[show_cols].style.format({"churn_probability":"{:.1%}"}), use_container_width=True)
+
+        dl1, dl2, dl3 = st.columns(3)
+        with dl1:
+            st.download_button("📄 Download PDF Report", pdf_bytes,
+                               "churn_report.pdf", "application/pdf", use_container_width=True)
+        with dl2:
+            if xlsx_bytes:
+                st.download_button("📊 Download Excel Report", xlsx_bytes,
+                                   "churn_report.xlsx",
+                                   "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                   use_container_width=True)
+            else:
+                st.button("📊 Excel (install openpyxl)", disabled=True, use_container_width=True)
+        with dl3:
+            st.download_button("📥 Download CSV", res.to_csv(index=False),
+                               "risk_scores.csv", "text/csv", use_container_width=True)
+
+    with tab_lookup:
+        predictor = st.session_state.get("upload_predictor")
+        if predictor is None:
+            st.warning("Customer lookup unavailable — predictor could not be loaded for this upload.")
         else:
-            st.button("📊 Excel (install openpyxl)", disabled=True, use_container_width=True)
-    with dl3:
-        st.download_button("📥 Download CSV", res.to_csv(index=False),
-                           "risk_scores.csv", "text/csv", use_container_width=True)
+            all_ids = res["customer_id"].tolist() if "customer_id" in res.columns else []
+            cid = st.selectbox("Select a customer", ["— choose —"] + all_ids, key="upload_lookup_select")
+            if cid and cid != "— choose —":
+                result = predictor.predict_customer(cid)
+                if "error" in result:
+                    st.error(result["error"])
+                else:
+                    info = result.get("customer_info", {})
+                    prob = result["churn_probability"]
+                    risk = result["risk_level"]
+                    color = "#e74c3c" if risk=="HIGH" else ("#f39c12" if risk=="MEDIUM" else "#27ae60")
+                    st.markdown(f"### {info.get('name', cid)}")
+                    st.markdown(f'<span style="background:{color};color:white;padding:4px 12px;border-radius:12px;font-weight:bold">{risk} RISK — {prob:.1%} churn probability</span>', unsafe_allow_html=True)
+                    st.markdown("")
+                    c1, c2, c3 = st.columns(3)
+                    with c1:
+                        st.metric("Tenure", f"{info.get('tenure_months',0)} months")
+                        st.metric("Region", info.get('region','N/A'))
+                    with c2:
+                        st.metric("Contract", info.get('contract_type','N/A'))
+                        st.metric("Service", info.get('service_type','N/A'))
+                    with c3:
+                        st.metric("Complaints", info.get('complaint_count',0))
+                        st.metric("Sentiment", f"{info.get('avg_sentiment_score',0):.2f}")
+
+                    st.markdown("#### Recommended Actions")
+                    recs = predictor.get_retention_recommendations(cid)
+                    for r in recs.get("recommendations", []):
+                        st.markdown(f"- {r}")
+
+    with tab_ai:
+        chatbot = st.session_state.get("upload_chatbot")
+        if chatbot is None:
+            st.warning("AI assistant unavailable for this upload.")
+        else:
+            st.caption(f"Ask anything about your uploaded customers. Powered by {chatbot.get_mode_label()}.")
+            if "upload_chat_messages" not in st.session_state:
+                st.session_state.upload_chat_messages = []
+            for msg in st.session_state.upload_chat_messages:
+                with st.chat_message(msg["role"]):
+                    st.markdown(msg["content"])
+            prompt = st.chat_input("Ask about your uploaded data...", key="upload_chat_input")
+            if prompt:
+                st.session_state.upload_chat_messages.append({"role": "user", "content": prompt})
+                with st.chat_message("user"):
+                    st.markdown(prompt)
+                with st.chat_message("assistant"):
+                    with st.spinner("Thinking..."):
+                        response = chatbot.chat(prompt)
+                    st.markdown(response)
+                st.session_state.upload_chat_messages.append({"role": "assistant", "content": response})
+            if st.session_state.upload_chat_messages:
+                if st.button("🗑️ Clear chat", key="upload_clear_chat"):
+                    st.session_state.upload_chat_messages = []
+                    st.rerun()
 
 def _retrain(loaded_dfs, table_assignments, all_mappings):
     dirs = _get_dirs()
@@ -500,7 +584,7 @@ def _retrain(loaded_dfs, table_assignments, all_mappings):
     from src.eda import generate_eda_report
     generate_eda_report(merged, dirs=dirs)
     try:
-        results, trained_models, best_name, scaler = training_pipeline(engineered, dirs=dirs)
+        results, trained_models, best_name, scaler, _ = training_pipeline(engineered, dirs=dirs)
     except ValueError as e:
         st.error(f"Cannot train model: {e}")
         return False

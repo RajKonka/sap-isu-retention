@@ -82,7 +82,7 @@ def main():
     print("\n[3/4] Training models...")
     from src.model_training import training_pipeline
 
-    results, trained_models, best_name, scaler = training_pipeline(
+    results, trained_models, best_name, scaler, _ = training_pipeline(
         engineered, dirs=BASE_DIRS
     )
 

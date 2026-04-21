@@ -23,9 +23,11 @@ FREE_TIER_LIMIT = 5000  # Max customers in uploaded data
 CONTACT_EMAIL = "raj.konka@vantiveinc.com"  # Replace with your email
 CONTACT_PHONE = "6824053943"  # Replace with your phone
 
-# Google Sheets webhook URL (from Google Apps Script — see setup instructions below)
-# Set this as environment variable GSHEET_WEBHOOK in Hugging Face Spaces settings
-GSHEET_WEBHOOK = os.environ.get("GSHEET_WEBHOOK", "")
+# Google Sheets webhook URL — env var takes priority, falls back to hardcoded URL
+GSHEET_WEBHOOK = os.environ.get(
+    "GSHEET_WEBHOOK",
+    "https://script.google.com/macros/s/AKfycbxUbyz53DSdZJNtIBWN9n-sOK-AJCVCqMikl3FiakYMAI-IgzHIQYp3dzBOdwYE4z8cbg/exec"
+)
 
 # Email notification webhook (using formspree.io free tier or similar)
 # Set this as environment variable EMAIL_WEBHOOK in Hugging Face Spaces settings

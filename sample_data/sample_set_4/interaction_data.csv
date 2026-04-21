@@ -1,0 +1,1251 @@
+customer_id,interaction_date,channel,interaction_type,satisfaction_score,duration_minutes,resolved
+C00188,2023-01-01,Phone,Billing Inquiry,2,24,1
+C00353,2023-01-01,In-Person,Technical Support,3,29,0
+C00266,2023-01-01,Chat,Service Request,5,41,1
+C00019,2023-01-01,Chat,Service Request,2,25,0
+C00105,2023-01-01,Chat,Service Request,4,25,1
+C00361,2023-01-01,App,Complaint,2,25,1
+C00214,2023-01-02,Phone,Billing Inquiry,1,33,0
+C00092,2023-01-02,Phone,Complaint,5,17,0
+C00017,2023-01-02,Email,Technical Support,1,3,0
+C00483,2023-01-02,App,Billing Inquiry,2,10,0
+C00307,2023-01-02,In-Person,General Inquiry,4,37,1
+C00208,2023-01-02,Phone,Billing Inquiry,1,19,0
+C00157,2023-01-03,Chat,General Inquiry,1,16,0
+C00217,2023-01-03,Email,Service Request,5,26,0
+C00187,2023-01-03,In-Person,Technical Support,2,29,0
+C00435,2023-01-03,Email,Billing Inquiry,5,41,0
+C00338,2023-01-03,App,Technical Support,3,4,1
+C00274,2023-01-03,Phone,Technical Support,3,21,1
+C00353,2023-01-04,App,Service Request,3,23,1
+C00189,2023-01-04,Chat,Service Request,4,43,1
+C00334,2023-01-04,Phone,Technical Support,1,41,0
+C00150,2023-01-04,Email,Service Request,2,3,0
+C00067,2023-01-04,App,Technical Support,5,28,0
+C00318,2023-01-04,App,Service Request,2,25,0
+C00098,2023-01-05,In-Person,General Inquiry,2,11,0
+C00030,2023-01-05,In-Person,Technical Support,2,37,0
+C00030,2023-01-05,In-Person,Service Request,3,29,0
+C00247,2023-01-05,App,Technical Support,2,10,0
+C00152,2023-01-05,Email,General Inquiry,1,8,1
+C00498,2023-01-05,In-Person,Service Request,5,37,0
+C00198,2023-01-06,App,Technical Support,3,42,1
+C00301,2023-01-06,Chat,General Inquiry,3,24,0
+C00365,2023-01-06,Chat,General Inquiry,5,39,1
+C00221,2023-01-06,In-Person,Billing Inquiry,1,10,1
+C00352,2023-01-06,Email,Technical Support,2,20,0
+C00207,2023-01-06,App,Technical Support,4,31,0
+C00383,2023-01-07,In-Person,Technical Support,4,31,0
+C00227,2023-01-07,Email,Technical Support,2,25,1
+C00478,2023-01-07,Email,Billing Inquiry,3,14,0
+C00348,2023-01-07,Phone,Service Request,5,28,1
+C00457,2023-01-07,Phone,Billing Inquiry,2,3,0
+C00483,2023-01-07,In-Person,Billing Inquiry,1,13,1
+C00477,2023-01-08,App,Service Request,4,17,1
+C00475,2023-01-08,Chat,Billing Inquiry,3,33,1
+C00181,2023-01-08,Phone,Service Request,2,43,1
+C00333,2023-01-08,Chat,Complaint,1,15,1
+C00055,2023-01-08,Email,General Inquiry,2,22,1
+C00210,2023-01-08,Chat,Technical Support,5,12,0
+C00306,2023-01-09,App,Service Request,3,42,0
+C00198,2023-01-09,Chat,Billing Inquiry,3,33,0
+C00207,2023-01-09,Email,Service Request,2,2,1
+C00464,2023-01-09,Chat,Complaint,2,28,1
+C00277,2023-01-09,Phone,Complaint,2,17,1
+C00007,2023-01-09,Chat,Billing Inquiry,2,37,0
+C00092,2023-01-10,App,Service Request,5,12,0
+C00417,2023-01-10,Chat,General Inquiry,2,28,0
+C00094,2023-01-10,Chat,Complaint,4,6,1
+C00148,2023-01-10,Email,Technical Support,2,15,0
+C00161,2023-01-10,App,Billing Inquiry,3,25,0
+C00197,2023-01-10,Chat,Complaint,3,40,1
+C00297,2023-01-11,In-Person,Complaint,3,12,0
+C00287,2023-01-11,Phone,Billing Inquiry,5,41,1
+C00461,2023-01-11,In-Person,General Inquiry,5,15,1
+C00310,2023-01-11,Chat,Technical Support,1,25,0
+C00162,2023-01-11,Phone,Billing Inquiry,5,28,1
+C00158,2023-01-11,Phone,General Inquiry,2,34,0
+C00167,2023-01-12,In-Person,General Inquiry,4,29,0
+C00083,2023-01-12,In-Person,Service Request,4,30,1
+C00111,2023-01-12,App,Service Request,2,26,0
+C00137,2023-01-12,Email,General Inquiry,1,21,0
+C00439,2023-01-12,In-Person,Complaint,3,12,0
+C00130,2023-01-12,App,General Inquiry,3,38,1
+C00146,2023-01-13,In-Person,Technical Support,4,33,1
+C00310,2023-01-13,Phone,Service Request,3,24,0
+C00262,2023-01-13,Phone,General Inquiry,4,19,1
+C00458,2023-01-13,Email,Billing Inquiry,1,21,0
+C00261,2023-01-13,App,Billing Inquiry,2,30,0
+C00314,2023-01-13,App,General Inquiry,3,41,0
+C00175,2023-01-14,App,Service Request,5,43,0
+C00381,2023-01-14,Chat,Complaint,1,27,1
+C00268,2023-01-14,In-Person,Complaint,4,40,1
+C00407,2023-01-14,App,Complaint,2,9,0
+C00317,2023-01-14,In-Person,General Inquiry,1,13,0
+C00160,2023-01-14,App,Complaint,3,34,1
+C00257,2023-01-15,In-Person,Technical Support,4,2,1
+C00135,2023-01-15,Email,General Inquiry,2,23,0
+C00433,2023-01-15,App,Billing Inquiry,1,43,0
+C00486,2023-01-15,In-Person,Billing Inquiry,3,38,1
+C00363,2023-01-15,Email,Complaint,1,11,0
+C00391,2023-01-15,App,Service Request,4,13,0
+C00450,2023-01-16,In-Person,Complaint,3,19,1
+C00466,2023-01-16,In-Person,Service Request,3,12,1
+C00018,2023-01-16,App,Service Request,1,21,1
+C00195,2023-01-16,In-Person,Complaint,5,27,1
+C00021,2023-01-16,Phone,Complaint,1,4,0
+C00361,2023-01-16,In-Person,Service Request,3,20,1
+C00378,2023-01-17,In-Person,Complaint,2,15,0
+C00360,2023-01-17,Email,Service Request,3,27,1
+C00298,2023-01-17,In-Person,Technical Support,3,21,0
+C00226,2023-01-17,Email,Technical Support,4,40,1
+C00428,2023-01-17,Email,Billing Inquiry,3,10,0
+C00034,2023-01-17,In-Person,Technical Support,5,41,0
+C00123,2023-01-18,In-Person,Billing Inquiry,2,22,1
+C00023,2023-01-18,App,General Inquiry,3,27,0
+C00184,2023-01-18,Email,Complaint,5,28,0
+C00347,2023-01-18,Chat,Complaint,1,10,1
+C00046,2023-01-18,Chat,Complaint,2,39,0
+C00443,2023-01-18,Phone,Billing Inquiry,1,8,0
+C00005,2023-01-19,Chat,General Inquiry,4,42,1
+C00267,2023-01-19,Phone,Billing Inquiry,3,5,1
+C00401,2023-01-19,Email,Service Request,1,7,1
+C00450,2023-01-19,In-Person,Service Request,1,31,1
+C00061,2023-01-19,App,Service Request,2,26,1
+C00274,2023-01-19,Chat,Technical Support,2,40,0
+C00090,2023-01-20,In-Person,Complaint,3,8,1
+C00203,2023-01-20,Email,Service Request,1,15,0
+C00404,2023-01-20,Email,Complaint,1,42,0
+C00233,2023-01-20,Phone,Billing Inquiry,1,23,1
+C00148,2023-01-20,Chat,Technical Support,1,34,0
+C00189,2023-01-20,Chat,General Inquiry,1,34,1
+C00011,2023-01-21,Chat,Service Request,1,19,0
+C00049,2023-01-21,App,Service Request,1,10,0
+C00300,2023-01-21,Phone,Complaint,1,16,0
+C00073,2023-01-21,App,General Inquiry,2,16,0
+C00438,2023-01-21,Email,Service Request,3,3,1
+C00107,2023-01-21,Email,General Inquiry,4,10,1
+C00281,2023-01-22,Chat,General Inquiry,4,33,0
+C00235,2023-01-22,App,Complaint,5,33,0
+C00109,2023-01-22,In-Person,Service Request,2,14,0
+C00480,2023-01-22,Email,Billing Inquiry,3,42,1
+C00206,2023-01-22,App,Technical Support,1,2,0
+C00397,2023-01-22,App,Billing Inquiry,4,7,1
+C00289,2023-01-23,In-Person,Billing Inquiry,4,33,0
+C00455,2023-01-23,Chat,Billing Inquiry,5,24,1
+C00178,2023-01-23,In-Person,Complaint,2,4,0
+C00083,2023-01-23,Email,General Inquiry,2,31,0
+C00493,2023-01-23,Email,Technical Support,2,33,1
+C00041,2023-01-23,In-Person,Billing Inquiry,4,15,1
+C00329,2023-01-24,Phone,Complaint,5,22,0
+C00317,2023-01-24,Email,Technical Support,1,33,1
+C00229,2023-01-24,In-Person,Complaint,5,5,1
+C00263,2023-01-24,Phone,Technical Support,3,36,0
+C00047,2023-01-24,In-Person,General Inquiry,1,24,0
+C00226,2023-01-24,Phone,Complaint,1,6,1
+C00132,2023-01-25,App,General Inquiry,3,29,1
+C00283,2023-01-25,Phone,Service Request,1,22,1
+C00419,2023-01-25,In-Person,Service Request,1,16,1
+C00409,2023-01-25,Phone,Technical Support,2,11,0
+C00154,2023-01-25,In-Person,Billing Inquiry,1,43,1
+C00083,2023-01-25,Chat,Service Request,5,10,1
+C00253,2023-01-26,Chat,General Inquiry,3,14,0
+C00364,2023-01-26,In-Person,Technical Support,1,20,1
+C00195,2023-01-26,Email,Technical Support,1,44,0
+C00469,2023-01-26,Chat,Technical Support,1,8,1
+C00385,2023-01-26,Phone,General Inquiry,1,30,0
+C00263,2023-01-26,In-Person,Technical Support,5,43,1
+C00127,2023-01-27,Phone,Complaint,4,23,1
+C00131,2023-01-27,App,Technical Support,5,21,0
+C00289,2023-01-27,Phone,Service Request,3,19,1
+C00469,2023-01-27,App,Complaint,3,18,0
+C00025,2023-01-27,App,Service Request,5,2,1
+C00015,2023-01-27,App,Technical Support,1,9,0
+C00093,2023-01-28,Phone,General Inquiry,4,25,1
+C00057,2023-01-28,Phone,Billing Inquiry,5,35,1
+C00021,2023-01-28,App,General Inquiry,1,32,0
+C00321,2023-01-28,Phone,General Inquiry,2,25,1
+C00346,2023-01-28,Email,Service Request,5,42,1
+C00437,2023-01-28,Chat,Complaint,3,27,0
+C00109,2023-01-29,Phone,Service Request,5,9,0
+C00209,2023-01-29,Phone,Billing Inquiry,1,4,0
+C00211,2023-01-29,Chat,Technical Support,2,39,0
+C00474,2023-01-29,Chat,Service Request,5,20,0
+C00170,2023-01-29,In-Person,Complaint,3,29,1
+C00020,2023-01-29,App,General Inquiry,4,25,0
+C00477,2023-01-30,Phone,General Inquiry,2,22,0
+C00230,2023-01-30,Phone,Service Request,5,27,1
+C00002,2023-01-30,Chat,General Inquiry,2,19,1
+C00336,2023-01-30,Email,Billing Inquiry,3,10,0
+C00043,2023-01-30,Chat,General Inquiry,2,5,1
+C00115,2023-01-30,In-Person,Service Request,4,41,1
+C00253,2023-01-31,App,General Inquiry,5,10,0
+C00375,2023-01-31,Phone,Service Request,2,44,0
+C00207,2023-01-31,In-Person,General Inquiry,4,16,1
+C00446,2023-01-31,In-Person,Billing Inquiry,5,26,1
+C00236,2023-01-31,App,General Inquiry,2,22,0
+C00303,2023-01-31,In-Person,Complaint,1,35,0
+C00049,2023-02-01,Email,Billing Inquiry,2,3,1
+C00120,2023-02-01,Phone,Billing Inquiry,5,16,1
+C00022,2023-02-01,App,Service Request,3,39,0
+C00082,2023-02-01,Email,Complaint,1,17,1
+C00433,2023-02-01,Email,Technical Support,4,27,1
+C00032,2023-02-01,App,Complaint,2,39,1
+C00271,2023-02-02,Phone,Technical Support,3,21,0
+C00147,2023-02-02,Chat,Billing Inquiry,2,16,0
+C00232,2023-02-02,App,Service Request,1,35,0
+C00077,2023-02-02,Chat,Complaint,3,44,1
+C00245,2023-02-02,Email,Technical Support,2,6,0
+C00448,2023-02-02,In-Person,Technical Support,4,9,0
+C00362,2023-02-03,In-Person,Technical Support,2,31,1
+C00165,2023-02-03,Chat,Service Request,4,32,1
+C00287,2023-02-03,Chat,Complaint,2,40,0
+C00030,2023-02-03,In-Person,Technical Support,4,16,1
+C00343,2023-02-03,Email,Complaint,1,19,1
+C00460,2023-02-03,Phone,Technical Support,1,42,0
+C00142,2023-02-04,Chat,Technical Support,4,28,1
+C00104,2023-02-04,Email,Technical Support,1,38,0
+C00107,2023-02-04,App,Service Request,5,6,1
+C00493,2023-02-04,Email,Technical Support,4,11,1
+C00406,2023-02-04,In-Person,Service Request,2,7,0
+C00256,2023-02-04,Email,Complaint,5,35,0
+C00441,2023-02-05,Email,Service Request,1,32,0
+C00231,2023-02-05,Chat,General Inquiry,2,13,0
+C00040,2023-02-05,App,Complaint,2,30,0
+C00191,2023-02-05,Chat,Billing Inquiry,5,20,0
+C00470,2023-02-05,Email,Billing Inquiry,5,40,1
+C00275,2023-02-05,In-Person,Service Request,1,21,0
+C00265,2023-02-06,In-Person,Service Request,1,8,0
+C00405,2023-02-06,App,Billing Inquiry,1,17,0
+C00064,2023-02-06,Email,Complaint,3,29,0
+C00288,2023-02-06,Email,Complaint,4,44,1
+C00278,2023-02-06,Phone,General Inquiry,2,34,0
+C00025,2023-02-06,Email,Technical Support,4,34,1
+C00351,2023-02-07,Email,General Inquiry,4,33,1
+C00440,2023-02-07,Phone,General Inquiry,1,18,1
+C00080,2023-02-07,App,General Inquiry,5,9,1
+C00489,2023-02-07,Chat,Service Request,5,2,1
+C00292,2023-02-07,Chat,Complaint,4,23,1
+C00015,2023-02-07,Email,General Inquiry,5,13,1
+C00099,2023-02-08,Email,Technical Support,1,5,0
+C00341,2023-02-08,Email,General Inquiry,3,10,0
+C00434,2023-02-08,Email,Billing Inquiry,4,15,0
+C00248,2023-02-08,App,Complaint,1,39,1
+C00321,2023-02-08,Email,Billing Inquiry,1,36,1
+C00310,2023-02-08,Chat,Billing Inquiry,4,10,1
+C00379,2023-02-09,Chat,Complaint,3,21,1
+C00197,2023-02-09,App,Service Request,3,16,1
+C00384,2023-02-09,Chat,Technical Support,1,33,1
+C00360,2023-02-09,App,Complaint,5,19,1
+C00158,2023-02-09,Email,Technical Support,2,13,1
+C00050,2023-02-09,In-Person,Billing Inquiry,3,11,1
+C00095,2023-02-10,Chat,Billing Inquiry,1,36,0
+C00301,2023-02-10,Phone,Service Request,3,36,0
+C00103,2023-02-10,In-Person,Billing Inquiry,2,29,0
+C00037,2023-02-10,In-Person,Billing Inquiry,1,14,1
+C00312,2023-02-10,Email,Technical Support,1,7,0
+C00455,2023-02-10,App,General Inquiry,3,28,1
+C00024,2023-02-11,Phone,General Inquiry,1,30,0
+C00188,2023-02-11,In-Person,General Inquiry,1,34,1
+C00111,2023-02-11,App,General Inquiry,1,41,1
+C00315,2023-02-11,Email,Technical Support,5,7,1
+C00487,2023-02-11,Chat,Complaint,5,16,0
+C00075,2023-02-11,App,Service Request,4,44,1
+C00415,2023-02-12,Email,Technical Support,4,31,0
+C00008,2023-02-12,Chat,Billing Inquiry,5,5,0
+C00100,2023-02-12,Email,Complaint,5,17,0
+C00477,2023-02-12,Chat,Complaint,4,25,0
+C00140,2023-02-12,App,General Inquiry,5,30,0
+C00236,2023-02-12,In-Person,Billing Inquiry,5,26,0
+C00189,2023-02-13,Chat,Complaint,4,17,1
+C00285,2023-02-13,App,Service Request,5,22,0
+C00438,2023-02-13,App,Complaint,1,39,1
+C00376,2023-02-13,Phone,Service Request,1,6,0
+C00200,2023-02-13,Phone,Complaint,4,2,1
+C00340,2023-02-13,Email,Complaint,5,33,1
+C00139,2023-02-14,Email,Service Request,5,44,0
+C00276,2023-02-14,In-Person,General Inquiry,2,6,1
+C00288,2023-02-14,In-Person,General Inquiry,5,8,0
+C00002,2023-02-14,App,Technical Support,5,13,0
+C00164,2023-02-14,Email,General Inquiry,4,28,1
+C00252,2023-02-14,App,Complaint,1,9,0
+C00478,2023-02-15,App,General Inquiry,5,20,0
+C00154,2023-02-15,Email,General Inquiry,3,2,0
+C00284,2023-02-15,App,Service Request,1,16,0
+C00353,2023-02-15,Email,General Inquiry,2,20,0
+C00334,2023-02-15,In-Person,General Inquiry,3,32,1
+C00360,2023-02-15,Chat,Billing Inquiry,1,6,1
+C00139,2023-02-16,Phone,Technical Support,4,23,1
+C00427,2023-02-16,App,Service Request,5,29,0
+C00009,2023-02-16,App,Billing Inquiry,4,3,1
+C00217,2023-02-16,Chat,Complaint,4,9,0
+C00143,2023-02-16,Phone,Service Request,2,19,1
+C00371,2023-02-16,In-Person,General Inquiry,4,41,1
+C00307,2023-02-17,Email,Technical Support,3,43,1
+C00346,2023-02-17,App,Complaint,2,43,0
+C00176,2023-02-17,Phone,General Inquiry,5,27,0
+C00464,2023-02-17,Phone,General Inquiry,2,2,1
+C00050,2023-02-17,Chat,General Inquiry,2,38,0
+C00189,2023-02-17,Email,Service Request,1,16,1
+C00236,2023-02-18,Chat,Complaint,4,32,0
+C00110,2023-02-18,Chat,Complaint,3,44,1
+C00390,2023-02-18,In-Person,Technical Support,3,10,1
+C00402,2023-02-18,App,Technical Support,2,16,0
+C00189,2023-02-18,Chat,Service Request,5,20,1
+C00032,2023-02-18,App,General Inquiry,1,38,0
+C00386,2023-02-19,Chat,Billing Inquiry,5,44,1
+C00183,2023-02-19,App,Billing Inquiry,1,36,1
+C00294,2023-02-19,Email,Technical Support,3,37,1
+C00360,2023-02-19,Chat,Complaint,3,15,1
+C00044,2023-02-19,Phone,Technical Support,1,41,0
+C00223,2023-02-19,In-Person,Complaint,3,24,1
+C00171,2023-02-20,In-Person,Complaint,2,25,0
+C00069,2023-02-20,Email,Billing Inquiry,2,30,0
+C00300,2023-02-20,Phone,Complaint,5,8,0
+C00019,2023-02-20,App,General Inquiry,2,15,1
+C00292,2023-02-20,Email,Complaint,2,2,0
+C00333,2023-02-20,Phone,Service Request,2,38,0
+C00343,2023-02-21,Email,Billing Inquiry,5,14,0
+C00236,2023-02-21,Email,Billing Inquiry,2,22,1
+C00144,2023-02-21,App,General Inquiry,4,9,1
+C00483,2023-02-21,Phone,Billing Inquiry,1,33,0
+C00040,2023-02-21,Email,General Inquiry,3,10,0
+C00042,2023-02-21,App,Complaint,1,43,1
+C00238,2023-02-22,Chat,General Inquiry,5,39,1
+C00172,2023-02-22,App,Complaint,1,3,1
+C00328,2023-02-22,Email,Billing Inquiry,4,38,1
+C00233,2023-02-22,Email,Technical Support,4,33,0
+C00069,2023-02-22,Phone,General Inquiry,2,28,1
+C00483,2023-02-22,App,Technical Support,2,42,1
+C00010,2023-02-23,In-Person,Billing Inquiry,2,20,1
+C00058,2023-02-23,App,General Inquiry,4,15,1
+C00485,2023-02-23,Chat,General Inquiry,5,9,1
+C00405,2023-02-23,Email,Service Request,4,25,1
+C00082,2023-02-23,Chat,Complaint,1,39,1
+C00088,2023-02-23,Phone,Complaint,1,29,1
+C00128,2023-02-24,In-Person,Complaint,4,9,1
+C00445,2023-02-24,Chat,Technical Support,5,42,0
+C00367,2023-02-24,In-Person,Complaint,2,28,1
+C00275,2023-02-24,App,Billing Inquiry,2,40,0
+C00054,2023-02-24,Email,Service Request,2,37,1
+C00095,2023-02-24,In-Person,Complaint,1,2,1
+C00256,2023-02-25,Email,Complaint,1,7,1
+C00358,2023-02-25,Chat,Billing Inquiry,4,33,1
+C00465,2023-02-25,Chat,Technical Support,3,21,1
+C00119,2023-02-25,Chat,Billing Inquiry,3,16,1
+C00442,2023-02-25,Phone,Technical Support,4,6,1
+C00339,2023-02-25,Email,Technical Support,4,28,0
+C00210,2023-02-26,Email,Complaint,3,32,1
+C00029,2023-02-26,Phone,Service Request,3,14,1
+C00351,2023-02-26,In-Person,Billing Inquiry,5,12,1
+C00467,2023-02-26,Chat,Service Request,2,30,1
+C00025,2023-02-26,Chat,Service Request,3,34,0
+C00451,2023-02-26,App,Billing Inquiry,5,17,0
+C00239,2023-02-27,Chat,Technical Support,3,43,1
+C00061,2023-02-27,In-Person,Technical Support,4,7,1
+C00073,2023-02-27,App,Service Request,2,37,1
+C00218,2023-02-27,In-Person,General Inquiry,4,39,1
+C00160,2023-02-27,App,Billing Inquiry,4,16,0
+C00409,2023-02-27,App,Technical Support,5,34,0
+C00285,2023-02-28,Chat,Complaint,4,15,0
+C00143,2023-02-28,App,Billing Inquiry,3,3,0
+C00228,2023-02-28,Phone,Complaint,1,17,1
+C00460,2023-02-28,Phone,Service Request,5,3,1
+C00099,2023-02-28,Email,Billing Inquiry,4,28,1
+C00239,2023-02-28,App,General Inquiry,4,4,0
+C00431,2023-03-01,In-Person,Service Request,4,35,0
+C00125,2023-03-01,In-Person,Technical Support,5,17,0
+C00297,2023-03-01,App,General Inquiry,1,17,1
+C00200,2023-03-01,Chat,Complaint,2,16,1
+C00176,2023-03-01,Chat,Billing Inquiry,3,44,1
+C00475,2023-03-01,In-Person,Complaint,3,8,1
+C00461,2023-03-02,In-Person,General Inquiry,2,5,1
+C00104,2023-03-02,Chat,Service Request,5,30,1
+C00324,2023-03-02,App,Billing Inquiry,3,37,1
+C00011,2023-03-02,In-Person,Service Request,4,8,0
+C00436,2023-03-02,Email,Complaint,2,2,1
+C00192,2023-03-02,Phone,Complaint,3,5,1
+C00466,2023-03-03,Phone,Complaint,4,27,1
+C00358,2023-03-03,App,General Inquiry,4,27,1
+C00282,2023-03-03,Chat,Service Request,2,26,0
+C00477,2023-03-03,App,General Inquiry,2,26,1
+C00244,2023-03-03,Chat,Complaint,3,30,1
+C00476,2023-03-03,App,General Inquiry,3,32,1
+C00126,2023-03-04,In-Person,Billing Inquiry,5,35,0
+C00109,2023-03-04,App,Technical Support,1,36,1
+C00480,2023-03-04,In-Person,Billing Inquiry,5,14,1
+C00089,2023-03-04,Chat,General Inquiry,5,12,0
+C00274,2023-03-04,App,Service Request,4,40,0
+C00469,2023-03-04,Phone,Service Request,4,8,1
+C00071,2023-03-05,In-Person,Billing Inquiry,2,23,0
+C00254,2023-03-05,Email,Billing Inquiry,1,35,0
+C00424,2023-03-05,Phone,Technical Support,1,25,0
+C00137,2023-03-05,App,Service Request,2,41,0
+C00300,2023-03-05,Email,General Inquiry,2,23,1
+C00393,2023-03-05,Chat,General Inquiry,3,18,0
+C00451,2023-03-06,Email,General Inquiry,5,19,0
+C00279,2023-03-06,App,Service Request,4,20,0
+C00380,2023-03-06,Chat,Billing Inquiry,3,7,1
+C00404,2023-03-06,Chat,General Inquiry,5,8,0
+C00234,2023-03-06,In-Person,Technical Support,4,26,0
+C00250,2023-03-06,In-Person,Complaint,5,38,0
+C00120,2023-03-07,Email,Billing Inquiry,3,4,0
+C00374,2023-03-07,App,General Inquiry,3,20,1
+C00400,2023-03-07,Chat,General Inquiry,1,33,0
+C00034,2023-03-07,Chat,Service Request,4,17,1
+C00197,2023-03-07,Phone,Service Request,3,33,1
+C00181,2023-03-07,App,General Inquiry,4,43,0
+C00210,2023-03-08,App,Billing Inquiry,2,9,1
+C00105,2023-03-08,In-Person,Technical Support,3,7,1
+C00031,2023-03-08,Email,Technical Support,2,18,1
+C00070,2023-03-08,Email,Technical Support,5,2,0
+C00308,2023-03-08,Email,Complaint,5,28,0
+C00390,2023-03-08,In-Person,General Inquiry,1,12,0
+C00127,2023-03-09,App,Technical Support,1,31,0
+C00094,2023-03-09,Email,Billing Inquiry,3,17,1
+C00348,2023-03-09,Chat,Service Request,3,15,0
+C00365,2023-03-09,In-Person,Billing Inquiry,3,23,0
+C00195,2023-03-09,In-Person,General Inquiry,5,43,1
+C00245,2023-03-09,In-Person,Complaint,2,35,0
+C00160,2023-03-10,Email,Technical Support,4,28,0
+C00166,2023-03-10,App,Service Request,5,12,0
+C00064,2023-03-10,Phone,Service Request,1,36,0
+C00080,2023-03-10,In-Person,Complaint,2,28,0
+C00388,2023-03-10,In-Person,Complaint,1,20,1
+C00478,2023-03-10,Phone,Billing Inquiry,5,24,1
+C00472,2023-03-11,Phone,Technical Support,1,43,1
+C00380,2023-03-11,In-Person,Complaint,3,12,0
+C00192,2023-03-11,Phone,Complaint,5,17,1
+C00097,2023-03-11,Chat,Service Request,4,22,0
+C00102,2023-03-11,Phone,General Inquiry,3,44,0
+C00124,2023-03-11,Phone,Billing Inquiry,5,17,1
+C00363,2023-03-12,Chat,Technical Support,3,34,1
+C00156,2023-03-12,In-Person,Complaint,3,24,1
+C00324,2023-03-12,In-Person,Technical Support,2,18,1
+C00197,2023-03-12,Phone,Technical Support,5,40,1
+C00253,2023-03-12,Chat,Technical Support,1,28,1
+C00389,2023-03-12,App,Technical Support,1,3,1
+C00355,2023-03-13,In-Person,Billing Inquiry,3,2,1
+C00306,2023-03-13,App,Complaint,1,14,0
+C00209,2023-03-13,App,General Inquiry,2,29,0
+C00280,2023-03-13,Chat,Complaint,3,19,0
+C00050,2023-03-13,App,Technical Support,1,19,0
+C00306,2023-03-13,In-Person,Service Request,5,19,1
+C00099,2023-03-14,App,General Inquiry,5,12,0
+C00047,2023-03-14,App,Complaint,4,13,0
+C00404,2023-03-14,Email,Service Request,5,25,0
+C00314,2023-03-14,In-Person,General Inquiry,5,24,1
+C00141,2023-03-14,App,Billing Inquiry,3,12,1
+C00011,2023-03-14,Email,Billing Inquiry,3,33,1
+C00081,2023-03-15,App,Service Request,3,43,1
+C00001,2023-03-15,Phone,Billing Inquiry,4,5,0
+C00084,2023-03-15,Email,Service Request,2,26,0
+C00103,2023-03-15,App,Technical Support,4,10,0
+C00256,2023-03-15,Chat,General Inquiry,2,33,0
+C00430,2023-03-15,Phone,Service Request,5,39,0
+C00121,2023-03-16,In-Person,Technical Support,5,44,0
+C00127,2023-03-16,Phone,General Inquiry,4,41,1
+C00423,2023-03-16,In-Person,Technical Support,3,30,0
+C00271,2023-03-16,Phone,Complaint,3,31,1
+C00219,2023-03-16,Chat,Complaint,4,27,0
+C00140,2023-03-16,Phone,General Inquiry,1,20,0
+C00072,2023-03-17,App,Complaint,1,9,0
+C00202,2023-03-17,Phone,General Inquiry,4,40,1
+C00227,2023-03-17,Phone,Service Request,2,32,0
+C00020,2023-03-17,Phone,Complaint,2,31,0
+C00041,2023-03-17,Phone,Technical Support,2,16,0
+C00324,2023-03-17,App,Service Request,2,32,1
+C00295,2023-03-18,Phone,Complaint,4,22,1
+C00197,2023-03-18,Phone,Billing Inquiry,5,33,1
+C00144,2023-03-18,Email,Technical Support,3,35,0
+C00417,2023-03-18,In-Person,Service Request,4,22,0
+C00362,2023-03-18,In-Person,Service Request,1,40,1
+C00065,2023-03-18,Phone,Technical Support,1,24,1
+C00050,2023-03-19,Chat,Service Request,4,39,1
+C00263,2023-03-19,Phone,Technical Support,3,4,0
+C00117,2023-03-19,App,General Inquiry,4,3,1
+C00447,2023-03-19,Email,Billing Inquiry,3,21,0
+C00448,2023-03-19,Email,Service Request,3,15,0
+C00032,2023-03-19,Chat,Complaint,3,10,1
+C00379,2023-03-20,In-Person,Service Request,2,21,0
+C00059,2023-03-20,Email,Service Request,2,17,0
+C00045,2023-03-20,App,Technical Support,1,34,0
+C00224,2023-03-20,Chat,General Inquiry,2,2,0
+C00124,2023-03-20,App,Billing Inquiry,2,8,0
+C00174,2023-03-20,In-Person,Complaint,3,3,0
+C00098,2023-03-21,Phone,Billing Inquiry,3,32,1
+C00285,2023-03-21,Chat,Billing Inquiry,5,36,0
+C00341,2023-03-21,Phone,General Inquiry,4,15,1
+C00378,2023-03-21,App,Billing Inquiry,2,13,1
+C00187,2023-03-21,In-Person,Service Request,3,22,1
+C00423,2023-03-21,App,Technical Support,5,30,1
+C00163,2023-03-22,Email,Complaint,3,36,1
+C00309,2023-03-22,In-Person,Billing Inquiry,2,40,1
+C00237,2023-03-22,Phone,Technical Support,2,21,1
+C00191,2023-03-22,Phone,Service Request,4,24,0
+C00100,2023-03-22,In-Person,Service Request,4,6,0
+C00384,2023-03-22,App,Technical Support,4,44,0
+C00255,2023-03-23,Email,Complaint,3,19,1
+C00187,2023-03-23,Phone,General Inquiry,1,2,1
+C00045,2023-03-23,Email,Technical Support,2,39,1
+C00290,2023-03-23,App,General Inquiry,5,31,1
+C00441,2023-03-23,Email,Billing Inquiry,1,11,0
+C00254,2023-03-23,Email,General Inquiry,3,3,0
+C00348,2023-03-24,Email,Technical Support,2,24,0
+C00216,2023-03-24,In-Person,Complaint,4,41,1
+C00254,2023-03-24,Chat,Complaint,1,8,1
+C00195,2023-03-24,In-Person,General Inquiry,2,44,1
+C00296,2023-03-24,Phone,General Inquiry,2,13,1
+C00278,2023-03-24,Email,Service Request,4,3,1
+C00353,2023-03-25,Email,Complaint,3,21,1
+C00212,2023-03-25,Chat,Technical Support,1,12,0
+C00487,2023-03-25,Email,Service Request,3,35,1
+C00161,2023-03-25,In-Person,Technical Support,5,22,0
+C00279,2023-03-25,Phone,Technical Support,5,27,0
+C00056,2023-03-25,Email,Service Request,2,33,1
+C00165,2023-03-26,Email,Technical Support,1,27,1
+C00112,2023-03-26,Chat,Technical Support,5,33,0
+C00452,2023-03-26,App,Complaint,3,39,1
+C00295,2023-03-26,Phone,Technical Support,1,42,1
+C00201,2023-03-26,Email,Billing Inquiry,4,18,0
+C00078,2023-03-26,In-Person,Technical Support,4,33,0
+C00003,2023-03-27,Phone,Billing Inquiry,2,24,0
+C00049,2023-03-27,Phone,Billing Inquiry,3,10,1
+C00360,2023-03-27,App,Complaint,1,42,1
+C00469,2023-03-27,Chat,Service Request,3,10,1
+C00233,2023-03-27,In-Person,General Inquiry,4,44,1
+C00381,2023-03-27,Chat,Technical Support,4,32,1
+C00123,2023-03-28,Email,General Inquiry,3,11,0
+C00205,2023-03-28,Chat,Technical Support,3,42,0
+C00281,2023-03-28,Chat,Service Request,3,31,0
+C00221,2023-03-28,App,Billing Inquiry,2,5,1
+C00276,2023-03-28,Email,Technical Support,1,8,1
+C00232,2023-03-28,App,Technical Support,3,35,0
+C00083,2023-03-29,Phone,Service Request,5,3,1
+C00285,2023-03-29,Email,Service Request,3,15,1
+C00483,2023-03-29,Email,Technical Support,1,20,0
+C00354,2023-03-29,App,Technical Support,1,31,1
+C00016,2023-03-29,In-Person,Technical Support,2,37,1
+C00298,2023-03-29,In-Person,Service Request,4,31,0
+C00154,2023-03-30,In-Person,Service Request,3,39,1
+C00322,2023-03-30,Chat,Billing Inquiry,2,23,1
+C00289,2023-03-30,In-Person,Technical Support,4,21,0
+C00047,2023-03-30,App,Technical Support,3,4,1
+C00062,2023-03-30,In-Person,Complaint,1,18,0
+C00104,2023-03-30,Email,General Inquiry,2,30,1
+C00063,2023-03-31,App,Complaint,3,12,0
+C00108,2023-03-31,App,Billing Inquiry,5,15,0
+C00486,2023-03-31,Phone,Service Request,3,10,1
+C00437,2023-03-31,Phone,Complaint,1,22,1
+C00248,2023-03-31,Phone,Technical Support,2,36,1
+C00454,2023-03-31,Chat,Complaint,5,44,1
+C00290,2023-04-01,Chat,General Inquiry,1,30,1
+C00451,2023-04-01,In-Person,Service Request,4,19,1
+C00081,2023-04-01,In-Person,Complaint,1,25,1
+C00442,2023-04-01,Chat,Billing Inquiry,5,39,1
+C00304,2023-04-01,Email,Service Request,3,21,1
+C00241,2023-04-01,In-Person,General Inquiry,2,2,0
+C00115,2023-04-02,Chat,Billing Inquiry,3,26,0
+C00159,2023-04-02,Email,Technical Support,1,12,1
+C00327,2023-04-02,Chat,General Inquiry,4,37,1
+C00130,2023-04-02,Phone,General Inquiry,1,2,1
+C00252,2023-04-02,In-Person,Service Request,3,42,0
+C00335,2023-04-02,Phone,Complaint,1,19,0
+C00078,2023-04-03,App,Technical Support,5,11,0
+C00007,2023-04-03,In-Person,General Inquiry,2,9,1
+C00266,2023-04-03,Chat,Billing Inquiry,5,39,1
+C00269,2023-04-03,In-Person,Billing Inquiry,2,19,0
+C00431,2023-04-03,Phone,Billing Inquiry,3,6,0
+C00010,2023-04-03,Email,Billing Inquiry,5,38,0
+C00369,2023-04-04,In-Person,Complaint,2,20,0
+C00229,2023-04-04,App,Complaint,2,43,1
+C00158,2023-04-04,App,Technical Support,4,30,0
+C00384,2023-04-04,Email,Billing Inquiry,5,9,0
+C00061,2023-04-04,App,Technical Support,5,8,0
+C00150,2023-04-04,Chat,Complaint,1,31,0
+C00341,2023-04-05,Email,General Inquiry,5,29,1
+C00303,2023-04-05,Chat,General Inquiry,1,12,1
+C00500,2023-04-05,Chat,Service Request,1,5,0
+C00366,2023-04-05,Email,General Inquiry,5,42,0
+C00191,2023-04-05,In-Person,Technical Support,4,27,0
+C00199,2023-04-05,Phone,Technical Support,3,13,0
+C00470,2023-04-06,Phone,General Inquiry,1,13,1
+C00306,2023-04-06,App,Billing Inquiry,5,44,1
+C00458,2023-04-06,Email,Complaint,3,34,0
+C00197,2023-04-06,Email,Complaint,2,15,1
+C00426,2023-04-06,Email,General Inquiry,4,30,0
+C00494,2023-04-06,App,Complaint,3,18,0
+C00108,2023-04-07,App,Service Request,4,3,1
+C00202,2023-04-07,Phone,General Inquiry,5,23,0
+C00311,2023-04-07,In-Person,Technical Support,4,10,1
+C00204,2023-04-07,App,Service Request,5,5,1
+C00068,2023-04-07,Phone,Billing Inquiry,3,6,0
+C00378,2023-04-07,Phone,Service Request,5,7,0
+C00191,2023-04-08,Phone,Technical Support,5,20,0
+C00361,2023-04-08,Chat,Billing Inquiry,4,39,1
+C00086,2023-04-08,In-Person,General Inquiry,2,32,0
+C00025,2023-04-08,App,Service Request,1,19,0
+C00183,2023-04-08,App,Service Request,3,11,0
+C00242,2023-04-08,App,Technical Support,2,14,1
+C00271,2023-04-09,In-Person,Service Request,4,32,0
+C00107,2023-04-09,App,Service Request,3,40,0
+C00388,2023-04-09,App,Technical Support,5,30,0
+C00108,2023-04-09,App,Complaint,3,44,0
+C00180,2023-04-09,Phone,Complaint,1,30,0
+C00155,2023-04-09,Chat,General Inquiry,2,31,0
+C00331,2023-04-10,Phone,Service Request,1,42,0
+C00271,2023-04-10,Chat,General Inquiry,4,17,0
+C00210,2023-04-10,Chat,Complaint,2,7,0
+C00308,2023-04-10,In-Person,Technical Support,3,4,1
+C00307,2023-04-10,In-Person,Billing Inquiry,2,44,1
+C00124,2023-04-10,In-Person,General Inquiry,5,29,0
+C00377,2023-04-11,App,Complaint,3,16,1
+C00028,2023-04-11,Chat,Service Request,3,39,0
+C00220,2023-04-11,Phone,Complaint,4,12,1
+C00262,2023-04-11,Email,Complaint,4,26,0
+C00119,2023-04-11,Email,Service Request,4,6,1
+C00010,2023-04-11,Chat,Billing Inquiry,5,37,0
+C00192,2023-04-12,App,General Inquiry,1,39,0
+C00127,2023-04-12,Email,Billing Inquiry,5,24,1
+C00004,2023-04-12,Phone,General Inquiry,3,23,1
+C00323,2023-04-12,In-Person,Technical Support,5,4,1
+C00107,2023-04-12,In-Person,Technical Support,3,26,0
+C00052,2023-04-12,App,Service Request,2,24,1
+C00229,2023-04-13,App,Complaint,1,10,0
+C00337,2023-04-13,Phone,Complaint,5,28,1
+C00475,2023-04-13,App,Complaint,4,17,0
+C00439,2023-04-13,Phone,Technical Support,2,37,0
+C00236,2023-04-13,Chat,Billing Inquiry,2,17,0
+C00267,2023-04-13,Email,Technical Support,3,37,1
+C00317,2023-04-14,Email,Complaint,2,40,0
+C00299,2023-04-14,Phone,Complaint,5,2,0
+C00220,2023-04-14,Chat,Billing Inquiry,5,30,1
+C00104,2023-04-14,Email,Technical Support,2,16,0
+C00255,2023-04-14,App,Billing Inquiry,1,40,0
+C00029,2023-04-14,Phone,General Inquiry,1,33,1
+C00181,2023-04-15,In-Person,Billing Inquiry,2,25,0
+C00478,2023-04-15,App,Technical Support,2,10,0
+C00254,2023-04-15,Phone,General Inquiry,2,25,0
+C00071,2023-04-15,Phone,Service Request,5,13,1
+C00400,2023-04-15,Chat,Service Request,4,14,0
+C00260,2023-04-15,Email,General Inquiry,3,27,1
+C00018,2023-04-16,App,Technical Support,3,12,1
+C00256,2023-04-16,In-Person,Technical Support,3,20,1
+C00213,2023-04-16,In-Person,Technical Support,2,34,1
+C00173,2023-04-16,App,Billing Inquiry,4,9,1
+C00462,2023-04-16,In-Person,Service Request,1,13,0
+C00444,2023-04-16,Phone,Service Request,2,12,0
+C00426,2023-04-17,App,Billing Inquiry,4,3,0
+C00216,2023-04-17,In-Person,Complaint,2,12,0
+C00113,2023-04-17,App,Service Request,2,14,0
+C00303,2023-04-17,Phone,Service Request,2,15,1
+C00436,2023-04-17,App,Service Request,3,19,0
+C00392,2023-04-17,Phone,Billing Inquiry,2,22,0
+C00372,2023-04-18,In-Person,Service Request,5,26,0
+C00250,2023-04-18,Chat,Billing Inquiry,4,32,0
+C00229,2023-04-18,App,Billing Inquiry,1,7,1
+C00343,2023-04-18,App,Service Request,2,17,0
+C00445,2023-04-18,App,Complaint,3,40,1
+C00033,2023-04-18,Email,General Inquiry,5,24,1
+C00467,2023-04-19,Phone,Complaint,1,3,0
+C00393,2023-04-19,App,Technical Support,5,40,1
+C00398,2023-04-19,In-Person,General Inquiry,1,44,1
+C00168,2023-04-19,Email,Technical Support,5,31,1
+C00456,2023-04-19,App,Service Request,4,21,1
+C00130,2023-04-19,Chat,Complaint,1,42,0
+C00051,2023-04-20,Chat,Billing Inquiry,4,23,1
+C00456,2023-04-20,In-Person,Service Request,5,42,1
+C00015,2023-04-20,App,Service Request,1,18,1
+C00367,2023-04-20,Phone,Billing Inquiry,1,6,0
+C00092,2023-04-20,Phone,General Inquiry,5,3,0
+C00162,2023-04-20,App,Billing Inquiry,5,11,0
+C00198,2023-04-21,Email,General Inquiry,1,4,0
+C00342,2023-04-21,App,Billing Inquiry,4,32,1
+C00353,2023-04-21,Phone,Billing Inquiry,4,20,1
+C00297,2023-04-21,Email,General Inquiry,2,27,1
+C00175,2023-04-21,In-Person,Service Request,4,27,1
+C00159,2023-04-21,In-Person,Complaint,3,22,1
+C00171,2023-04-22,App,Technical Support,1,2,0
+C00088,2023-04-22,App,Technical Support,3,37,1
+C00142,2023-04-22,Chat,Complaint,4,9,0
+C00218,2023-04-22,Phone,Complaint,4,19,0
+C00468,2023-04-22,App,General Inquiry,3,11,1
+C00254,2023-04-22,In-Person,Billing Inquiry,1,21,1
+C00195,2023-04-23,In-Person,Technical Support,1,14,0
+C00408,2023-04-23,App,Billing Inquiry,5,15,1
+C00211,2023-04-23,Chat,Service Request,4,4,1
+C00154,2023-04-23,Email,Technical Support,1,16,1
+C00338,2023-04-23,Phone,General Inquiry,5,23,0
+C00408,2023-04-23,Phone,Complaint,2,36,1
+C00432,2023-04-24,Chat,Complaint,5,23,1
+C00025,2023-04-24,In-Person,Technical Support,4,30,1
+C00326,2023-04-24,App,Technical Support,2,16,0
+C00458,2023-04-24,Email,Complaint,5,40,0
+C00313,2023-04-24,Email,Technical Support,2,27,0
+C00367,2023-04-24,Chat,General Inquiry,3,12,0
+C00333,2023-04-25,In-Person,Technical Support,3,5,1
+C00099,2023-04-25,Email,Billing Inquiry,2,2,1
+C00244,2023-04-25,Email,Billing Inquiry,5,8,1
+C00068,2023-04-25,In-Person,General Inquiry,4,4,0
+C00365,2023-04-25,App,General Inquiry,5,39,0
+C00272,2023-04-25,App,Billing Inquiry,3,29,1
+C00019,2023-04-26,App,Billing Inquiry,5,21,0
+C00038,2023-04-26,Email,General Inquiry,2,27,1
+C00291,2023-04-26,Email,Billing Inquiry,4,44,1
+C00021,2023-04-26,Email,Complaint,1,33,1
+C00366,2023-04-26,In-Person,General Inquiry,4,10,0
+C00260,2023-04-26,In-Person,Billing Inquiry,5,6,0
+C00363,2023-04-27,Chat,Billing Inquiry,2,2,0
+C00098,2023-04-27,Email,Service Request,4,31,1
+C00488,2023-04-27,Email,Complaint,5,5,1
+C00013,2023-04-27,Phone,Complaint,5,8,1
+C00207,2023-04-27,In-Person,Technical Support,5,18,1
+C00223,2023-04-27,App,Billing Inquiry,5,35,1
+C00017,2023-04-28,Chat,Technical Support,4,35,1
+C00415,2023-04-28,Email,Billing Inquiry,2,32,0
+C00260,2023-04-28,Email,Technical Support,2,8,0
+C00484,2023-04-28,In-Person,Billing Inquiry,2,13,1
+C00127,2023-04-28,In-Person,Billing Inquiry,1,20,1
+C00411,2023-04-28,Phone,Technical Support,3,13,0
+C00084,2023-04-29,App,Service Request,1,25,0
+C00450,2023-04-29,App,Technical Support,1,12,0
+C00336,2023-04-29,Email,Service Request,5,22,0
+C00180,2023-04-29,In-Person,Technical Support,4,40,0
+C00299,2023-04-29,Email,General Inquiry,4,43,1
+C00054,2023-04-29,In-Person,Billing Inquiry,1,32,1
+C00216,2023-04-30,Email,Complaint,3,11,1
+C00463,2023-04-30,Phone,Complaint,3,6,1
+C00447,2023-04-30,App,General Inquiry,2,23,1
+C00027,2023-04-30,Phone,Complaint,3,40,1
+C00487,2023-04-30,Email,Technical Support,2,24,0
+C00289,2023-04-30,Phone,Complaint,1,39,0
+C00455,2023-05-01,Email,General Inquiry,3,23,0
+C00482,2023-05-01,Phone,Billing Inquiry,3,15,1
+C00372,2023-05-01,In-Person,Technical Support,5,16,0
+C00172,2023-05-01,App,Complaint,2,39,1
+C00351,2023-05-01,Email,Service Request,4,40,0
+C00274,2023-05-01,Chat,Technical Support,5,43,1
+C00181,2023-05-02,Chat,Complaint,5,14,1
+C00166,2023-05-02,In-Person,Technical Support,4,42,1
+C00479,2023-05-02,Chat,Complaint,5,37,1
+C00426,2023-05-02,Chat,Service Request,1,15,0
+C00273,2023-05-02,In-Person,Complaint,2,32,1
+C00230,2023-05-02,Email,Billing Inquiry,3,42,1
+C00025,2023-05-03,Phone,Complaint,5,34,0
+C00446,2023-05-03,Email,General Inquiry,4,33,0
+C00246,2023-05-03,Phone,Service Request,1,14,0
+C00078,2023-05-03,Phone,Billing Inquiry,4,31,0
+C00370,2023-05-03,In-Person,Technical Support,2,40,0
+C00067,2023-05-03,Chat,Complaint,4,26,0
+C00341,2023-05-04,App,Service Request,2,23,1
+C00063,2023-05-04,Email,Billing Inquiry,1,27,0
+C00042,2023-05-04,Email,Billing Inquiry,5,26,1
+C00244,2023-05-04,Email,Billing Inquiry,2,19,0
+C00339,2023-05-04,Email,Complaint,2,43,1
+C00011,2023-05-04,Email,Complaint,5,22,0
+C00132,2023-05-05,In-Person,Technical Support,2,13,1
+C00443,2023-05-05,App,Service Request,4,5,1
+C00262,2023-05-05,Chat,Complaint,5,39,0
+C00287,2023-05-05,Email,Service Request,3,13,1
+C00035,2023-05-05,Phone,Complaint,1,42,1
+C00208,2023-05-05,Chat,Technical Support,2,44,1
+C00208,2023-05-06,Phone,Technical Support,3,25,1
+C00155,2023-05-06,Email,General Inquiry,3,27,1
+C00494,2023-05-06,App,Service Request,5,21,0
+C00024,2023-05-06,Chat,Billing Inquiry,4,3,0
+C00115,2023-05-06,App,Service Request,2,42,1
+C00477,2023-05-06,Phone,Complaint,3,23,1
+C00111,2023-05-07,Phone,General Inquiry,3,4,0
+C00358,2023-05-07,In-Person,Billing Inquiry,5,20,1
+C00038,2023-05-07,Chat,General Inquiry,3,30,0
+C00304,2023-05-07,Email,Service Request,4,44,0
+C00085,2023-05-07,In-Person,General Inquiry,2,43,1
+C00328,2023-05-07,Phone,Service Request,5,33,0
+C00212,2023-05-08,In-Person,Service Request,5,15,1
+C00358,2023-05-08,App,Complaint,1,34,1
+C00471,2023-05-08,Email,Billing Inquiry,4,36,0
+C00053,2023-05-08,Email,Technical Support,4,32,0
+C00246,2023-05-08,Chat,Service Request,4,40,1
+C00012,2023-05-08,Email,General Inquiry,2,26,1
+C00294,2023-05-09,Email,Service Request,5,33,0
+C00469,2023-05-09,Chat,Billing Inquiry,5,33,1
+C00322,2023-05-09,App,Complaint,1,39,1
+C00001,2023-05-09,Chat,Complaint,1,8,0
+C00371,2023-05-09,Phone,General Inquiry,1,39,1
+C00323,2023-05-09,Chat,Technical Support,1,3,0
+C00354,2023-05-10,App,Complaint,1,21,0
+C00331,2023-05-10,Email,General Inquiry,4,44,1
+C00377,2023-05-10,Email,Billing Inquiry,2,4,0
+C00197,2023-05-10,Email,General Inquiry,5,29,0
+C00362,2023-05-10,Email,General Inquiry,1,30,0
+C00263,2023-05-10,App,Service Request,1,41,0
+C00437,2023-05-11,Chat,Technical Support,3,28,1
+C00052,2023-05-11,Chat,General Inquiry,2,29,0
+C00163,2023-05-11,Chat,Service Request,5,42,1
+C00258,2023-05-11,Chat,General Inquiry,4,38,1
+C00013,2023-05-11,In-Person,Complaint,5,23,1
+C00239,2023-05-11,Chat,Technical Support,3,5,1
+C00490,2023-05-12,In-Person,Complaint,2,11,1
+C00279,2023-05-12,Chat,Complaint,3,28,0
+C00205,2023-05-12,App,Complaint,2,36,0
+C00092,2023-05-12,Email,Billing Inquiry,5,7,0
+C00084,2023-05-12,Email,Complaint,1,32,0
+C00126,2023-05-12,Chat,Service Request,5,31,0
+C00072,2023-05-13,Chat,General Inquiry,3,38,1
+C00269,2023-05-13,In-Person,Complaint,3,43,0
+C00063,2023-05-13,In-Person,Technical Support,3,36,1
+C00319,2023-05-13,Email,Billing Inquiry,1,42,1
+C00078,2023-05-13,Email,Complaint,2,11,0
+C00065,2023-05-13,Email,Billing Inquiry,4,7,0
+C00220,2023-05-14,App,Complaint,2,14,0
+C00452,2023-05-14,App,General Inquiry,4,35,1
+C00311,2023-05-14,App,Service Request,2,5,1
+C00002,2023-05-14,Chat,Service Request,3,5,0
+C00423,2023-05-14,App,General Inquiry,2,40,0
+C00456,2023-05-14,Email,General Inquiry,4,23,1
+C00269,2023-05-15,Email,General Inquiry,1,40,0
+C00125,2023-05-15,App,Service Request,1,16,0
+C00363,2023-05-15,In-Person,Service Request,3,30,0
+C00344,2023-05-15,Chat,General Inquiry,5,17,0
+C00016,2023-05-15,Email,Billing Inquiry,2,8,0
+C00175,2023-05-15,App,Complaint,5,35,0
+C00339,2023-05-16,Chat,Billing Inquiry,3,39,0
+C00233,2023-05-16,App,General Inquiry,2,44,0
+C00442,2023-05-16,In-Person,Service Request,3,10,1
+C00477,2023-05-16,Email,Technical Support,3,17,1
+C00073,2023-05-16,Email,Technical Support,1,26,1
+C00254,2023-05-16,App,General Inquiry,1,37,1
+C00125,2023-05-17,Email,General Inquiry,5,38,1
+C00121,2023-05-17,In-Person,Technical Support,2,32,0
+C00181,2023-05-17,Chat,Technical Support,3,26,0
+C00313,2023-05-17,Email,Service Request,4,31,0
+C00323,2023-05-17,Phone,Billing Inquiry,1,27,0
+C00244,2023-05-17,Email,Billing Inquiry,1,12,1
+C00465,2023-05-18,Email,General Inquiry,4,35,0
+C00399,2023-05-18,In-Person,Service Request,1,43,1
+C00102,2023-05-18,Phone,Technical Support,4,6,0
+C00079,2023-05-18,Chat,Technical Support,3,40,0
+C00248,2023-05-18,Phone,Service Request,5,32,0
+C00235,2023-05-18,App,Billing Inquiry,2,19,1
+C00298,2023-05-19,Email,General Inquiry,5,6,0
+C00327,2023-05-19,App,Complaint,2,5,0
+C00314,2023-05-19,Phone,Service Request,5,19,0
+C00303,2023-05-19,Email,Billing Inquiry,5,8,0
+C00325,2023-05-19,Email,Service Request,1,44,1
+C00391,2023-05-19,Email,Billing Inquiry,2,20,1
+C00263,2023-05-20,Phone,General Inquiry,3,43,1
+C00080,2023-05-20,Phone,Complaint,2,8,0
+C00164,2023-05-20,Chat,Complaint,2,21,0
+C00099,2023-05-20,Email,Billing Inquiry,3,9,1
+C00427,2023-05-20,Chat,Billing Inquiry,5,19,0
+C00148,2023-05-20,In-Person,General Inquiry,5,8,1
+C00255,2023-05-21,App,Service Request,3,7,0
+C00168,2023-05-21,Email,Complaint,5,44,1
+C00041,2023-05-21,Chat,General Inquiry,2,15,1
+C00116,2023-05-21,Email,Complaint,4,44,1
+C00007,2023-05-21,Phone,Complaint,4,28,1
+C00432,2023-05-21,In-Person,Billing Inquiry,3,23,0
+C00269,2023-05-22,App,Billing Inquiry,2,20,0
+C00226,2023-05-22,Phone,General Inquiry,1,3,0
+C00178,2023-05-22,Email,Billing Inquiry,1,18,1
+C00213,2023-05-22,App,Billing Inquiry,5,22,0
+C00099,2023-05-22,Email,Billing Inquiry,4,23,0
+C00047,2023-05-22,App,Service Request,2,5,0
+C00419,2023-05-23,App,Complaint,3,23,1
+C00386,2023-05-23,Chat,Technical Support,4,35,1
+C00324,2023-05-23,In-Person,Billing Inquiry,4,25,1
+C00338,2023-05-23,App,Technical Support,1,28,0
+C00439,2023-05-23,App,Technical Support,2,34,0
+C00459,2023-05-23,In-Person,General Inquiry,2,13,1
+C00497,2023-05-24,Chat,General Inquiry,5,39,1
+C00252,2023-05-24,In-Person,Billing Inquiry,5,21,0
+C00196,2023-05-24,Chat,Technical Support,4,37,0
+C00467,2023-05-24,App,Service Request,4,8,0
+C00424,2023-05-24,In-Person,Service Request,4,2,1
+C00470,2023-05-24,Email,Billing Inquiry,3,7,1
+C00347,2023-05-25,Email,Service Request,5,11,1
+C00461,2023-05-25,Chat,Service Request,5,16,1
+C00332,2023-05-25,Chat,Service Request,4,7,1
+C00447,2023-05-25,In-Person,Complaint,5,18,0
+C00181,2023-05-25,Phone,General Inquiry,3,4,1
+C00490,2023-05-25,Email,Billing Inquiry,4,16,1
+C00469,2023-05-26,In-Person,Service Request,1,21,1
+C00155,2023-05-26,Phone,Billing Inquiry,5,27,0
+C00250,2023-05-26,App,Technical Support,3,18,1
+C00491,2023-05-26,Chat,Billing Inquiry,5,31,0
+C00390,2023-05-26,Phone,Complaint,3,37,1
+C00496,2023-05-26,Chat,Service Request,2,21,1
+C00411,2023-05-27,Phone,Billing Inquiry,3,27,0
+C00458,2023-05-27,Email,Complaint,5,36,1
+C00130,2023-05-27,Chat,Technical Support,5,22,0
+C00307,2023-05-27,Email,Complaint,4,24,1
+C00070,2023-05-27,In-Person,Service Request,3,15,1
+C00045,2023-05-27,In-Person,General Inquiry,5,15,0
+C00432,2023-05-28,Email,Service Request,3,2,1
+C00271,2023-05-28,In-Person,Billing Inquiry,5,6,1
+C00350,2023-05-28,In-Person,Billing Inquiry,1,8,1
+C00430,2023-05-28,In-Person,Service Request,1,19,0
+C00030,2023-05-28,Chat,Service Request,5,8,1
+C00133,2023-05-28,Email,General Inquiry,4,6,0
+C00119,2023-05-29,Chat,Technical Support,3,13,0
+C00374,2023-05-29,In-Person,Billing Inquiry,1,8,1
+C00270,2023-05-29,App,General Inquiry,2,40,1
+C00186,2023-05-29,Email,Billing Inquiry,4,12,1
+C00362,2023-05-29,In-Person,Service Request,3,31,1
+C00475,2023-05-29,Phone,Billing Inquiry,5,13,0
+C00172,2023-05-30,App,General Inquiry,4,8,1
+C00147,2023-05-30,In-Person,General Inquiry,3,35,0
+C00317,2023-05-30,Chat,Service Request,4,40,1
+C00120,2023-05-30,Phone,Complaint,1,5,1
+C00088,2023-05-30,App,Technical Support,4,3,0
+C00453,2023-05-30,In-Person,Billing Inquiry,2,27,1
+C00005,2023-05-31,Email,Complaint,5,12,1
+C00233,2023-05-31,App,Technical Support,5,15,0
+C00119,2023-05-31,App,Technical Support,2,36,0
+C00158,2023-05-31,Email,Complaint,2,9,1
+C00237,2023-05-31,Chat,Service Request,4,12,1
+C00112,2023-05-31,App,General Inquiry,3,23,1
+C00055,2023-06-01,Chat,General Inquiry,4,19,1
+C00098,2023-06-01,In-Person,Billing Inquiry,3,14,1
+C00441,2023-06-01,Chat,Complaint,1,32,1
+C00180,2023-06-01,Phone,Service Request,3,14,0
+C00008,2023-06-01,App,Complaint,5,42,1
+C00313,2023-06-01,App,General Inquiry,1,22,1
+C00332,2023-06-02,In-Person,Complaint,1,20,0
+C00403,2023-06-02,App,Technical Support,5,38,1
+C00495,2023-06-02,Chat,General Inquiry,3,14,0
+C00086,2023-06-02,Phone,General Inquiry,4,35,1
+C00020,2023-06-02,Chat,Technical Support,5,9,0
+C00325,2023-06-02,In-Person,Service Request,3,16,0
+C00210,2023-06-03,Email,Service Request,5,21,0
+C00026,2023-06-03,Chat,Service Request,2,9,0
+C00250,2023-06-03,Phone,Service Request,5,21,1
+C00035,2023-06-03,Email,Service Request,1,15,0
+C00302,2023-06-03,App,Service Request,3,25,1
+C00499,2023-06-03,In-Person,Service Request,2,12,1
+C00256,2023-06-04,Phone,Technical Support,1,8,0
+C00127,2023-06-04,Phone,Complaint,1,5,1
+C00411,2023-06-04,In-Person,Billing Inquiry,2,16,0
+C00145,2023-06-04,Phone,Complaint,4,6,0
+C00355,2023-06-04,In-Person,Billing Inquiry,3,37,1
+C00103,2023-06-04,In-Person,Billing Inquiry,2,35,1
+C00462,2023-06-05,App,Technical Support,5,5,1
+C00424,2023-06-05,App,Billing Inquiry,5,33,0
+C00103,2023-06-05,Email,Billing Inquiry,3,26,0
+C00392,2023-06-05,App,Complaint,1,11,1
+C00006,2023-06-05,App,Billing Inquiry,1,11,0
+C00309,2023-06-05,Phone,Complaint,3,22,0
+C00372,2023-06-06,App,Billing Inquiry,4,34,0
+C00249,2023-06-06,In-Person,Billing Inquiry,2,7,1
+C00295,2023-06-06,App,Complaint,4,20,1
+C00433,2023-06-06,Chat,Billing Inquiry,3,39,1
+C00236,2023-06-06,Phone,Technical Support,4,19,1
+C00122,2023-06-06,Email,Technical Support,4,37,0
+C00380,2023-06-07,Phone,Service Request,5,19,1
+C00489,2023-06-07,Chat,Complaint,4,13,1
+C00110,2023-06-07,In-Person,Service Request,4,6,1
+C00192,2023-06-07,Phone,Technical Support,4,3,1
+C00410,2023-06-07,Email,General Inquiry,3,5,1
+C00312,2023-06-07,Chat,Service Request,5,10,1
+C00093,2023-06-08,App,Service Request,3,19,0
+C00492,2023-06-08,In-Person,General Inquiry,1,28,1
+C00147,2023-06-08,Chat,Technical Support,5,30,1
+C00115,2023-06-08,Chat,General Inquiry,3,28,0
+C00278,2023-06-08,In-Person,Billing Inquiry,1,12,1
+C00137,2023-06-08,App,Technical Support,3,16,1
+C00025,2023-06-09,Chat,General Inquiry,4,8,0
+C00425,2023-06-09,In-Person,Complaint,5,27,0
+C00035,2023-06-09,Email,Technical Support,3,16,0
+C00183,2023-06-09,Email,Service Request,1,15,1
+C00385,2023-06-09,Phone,Technical Support,1,22,1
+C00475,2023-06-09,App,General Inquiry,1,40,1
+C00071,2023-06-10,Email,Service Request,4,37,0
+C00113,2023-06-10,In-Person,General Inquiry,4,9,1
+C00387,2023-06-10,Email,General Inquiry,4,4,1
+C00219,2023-06-10,In-Person,General Inquiry,1,38,0
+C00438,2023-06-10,In-Person,Complaint,3,26,1
+C00004,2023-06-10,In-Person,Billing Inquiry,4,15,1
+C00349,2023-06-11,Phone,Complaint,1,43,1
+C00336,2023-06-11,Phone,Billing Inquiry,5,13,0
+C00034,2023-06-11,App,Service Request,2,16,0
+C00312,2023-06-11,Email,Technical Support,4,5,1
+C00471,2023-06-11,Email,Service Request,3,39,0
+C00450,2023-06-11,Chat,General Inquiry,4,41,0
+C00390,2023-06-12,In-Person,Billing Inquiry,1,33,1
+C00207,2023-06-12,App,Technical Support,4,24,1
+C00014,2023-06-12,Email,Billing Inquiry,3,37,1
+C00430,2023-06-12,Phone,Complaint,3,34,0
+C00184,2023-06-12,Chat,Complaint,4,21,1
+C00321,2023-06-12,In-Person,Technical Support,2,5,0
+C00442,2023-06-13,Chat,Technical Support,5,39,1
+C00343,2023-06-13,App,Billing Inquiry,4,35,0
+C00115,2023-06-13,Phone,Service Request,3,6,0
+C00411,2023-06-13,Email,Complaint,4,37,0
+C00389,2023-06-13,In-Person,General Inquiry,5,17,0
+C00121,2023-06-13,Chat,Technical Support,5,8,1
+C00062,2023-06-14,App,Billing Inquiry,2,44,0
+C00378,2023-06-14,Email,Technical Support,3,33,1
+C00362,2023-06-14,Email,Complaint,5,19,0
+C00262,2023-06-14,App,Complaint,4,43,1
+C00383,2023-06-14,Email,Technical Support,1,8,1
+C00054,2023-06-14,Phone,Technical Support,5,2,0
+C00225,2023-06-15,In-Person,Billing Inquiry,5,26,0
+C00139,2023-06-15,In-Person,Technical Support,1,16,1
+C00075,2023-06-15,In-Person,Technical Support,2,16,1
+C00387,2023-06-15,In-Person,Service Request,5,42,1
+C00096,2023-06-15,In-Person,Complaint,1,37,0
+C00012,2023-06-15,Email,Complaint,4,39,1
+C00395,2023-06-16,Chat,Billing Inquiry,2,8,1
+C00254,2023-06-16,Email,Service Request,3,42,0
+C00144,2023-06-16,In-Person,Billing Inquiry,3,24,0
+C00239,2023-06-16,App,General Inquiry,1,2,1
+C00356,2023-06-16,App,Service Request,5,14,0
+C00344,2023-06-16,Email,Service Request,2,32,1
+C00371,2023-06-17,Chat,Technical Support,1,23,1
+C00020,2023-06-17,In-Person,General Inquiry,5,10,0
+C00253,2023-06-17,Phone,Technical Support,3,27,1
+C00435,2023-06-17,Phone,Technical Support,1,13,1
+C00222,2023-06-17,Phone,Service Request,3,17,1
+C00290,2023-06-17,Phone,Complaint,3,38,1
+C00276,2023-06-18,Email,Service Request,3,43,0
+C00423,2023-06-18,Email,Technical Support,2,13,1
+C00477,2023-06-18,App,Technical Support,1,34,0
+C00350,2023-06-18,Chat,Billing Inquiry,5,10,1
+C00242,2023-06-18,Email,General Inquiry,2,9,1
+C00324,2023-06-18,Chat,Complaint,5,8,1
+C00466,2023-06-19,In-Person,Technical Support,1,7,1
+C00203,2023-06-19,App,Complaint,3,17,1
+C00130,2023-06-19,Phone,Complaint,3,34,1
+C00287,2023-06-19,Email,Service Request,2,24,0
+C00215,2023-06-19,Email,Service Request,5,13,0
+C00442,2023-06-19,App,Service Request,3,24,0
+C00045,2023-06-20,In-Person,Complaint,2,6,1
+C00131,2023-06-20,Chat,Technical Support,4,29,1
+C00407,2023-06-20,Chat,Complaint,5,20,0
+C00048,2023-06-20,Email,Complaint,1,20,1
+C00234,2023-06-20,Phone,Complaint,2,7,0
+C00079,2023-06-20,App,Billing Inquiry,1,43,0
+C00453,2023-06-21,Chat,General Inquiry,4,19,1
+C00097,2023-06-21,Email,Service Request,2,41,1
+C00197,2023-06-21,Phone,Complaint,3,18,0
+C00137,2023-06-21,App,Billing Inquiry,5,17,0
+C00439,2023-06-21,Phone,Service Request,5,8,1
+C00218,2023-06-21,Email,Billing Inquiry,2,43,0
+C00298,2023-06-22,Email,Billing Inquiry,1,22,0
+C00170,2023-06-22,App,General Inquiry,5,12,0
+C00383,2023-06-22,In-Person,General Inquiry,3,3,0
+C00183,2023-06-22,Email,Complaint,4,38,1
+C00213,2023-06-22,App,Billing Inquiry,5,44,0
+C00393,2023-06-22,App,Complaint,1,19,1
+C00061,2023-06-23,Email,Technical Support,3,6,1
+C00020,2023-06-23,App,General Inquiry,2,31,0
+C00107,2023-06-23,In-Person,Technical Support,2,10,0
+C00438,2023-06-23,Email,Service Request,1,38,1
+C00384,2023-06-23,Phone,Complaint,5,3,1
+C00133,2023-06-23,Email,Service Request,2,37,0
+C00174,2023-06-24,Phone,Service Request,2,17,0
+C00063,2023-06-24,Email,Billing Inquiry,2,42,1
+C00110,2023-06-24,Chat,Complaint,5,31,1
+C00450,2023-06-24,App,General Inquiry,5,4,1
+C00444,2023-06-24,In-Person,Complaint,4,41,0
+C00161,2023-06-24,Email,Technical Support,3,37,1
+C00456,2023-06-25,In-Person,Service Request,5,27,0
+C00049,2023-06-25,Phone,Service Request,5,21,1
+C00484,2023-06-25,Chat,Technical Support,1,44,0
+C00281,2023-06-25,In-Person,Billing Inquiry,4,26,0
+C00084,2023-06-25,Email,Complaint,2,13,1
+C00147,2023-06-25,In-Person,Billing Inquiry,1,38,0
+C00218,2023-06-26,Phone,Technical Support,5,4,0
+C00222,2023-06-26,Chat,General Inquiry,3,30,0
+C00166,2023-06-26,Phone,Technical Support,2,32,1
+C00052,2023-06-26,App,Billing Inquiry,3,39,0
+C00269,2023-06-26,Email,General Inquiry,1,33,0
+C00065,2023-06-26,Phone,General Inquiry,2,19,1
+C00072,2023-06-27,Phone,General Inquiry,5,2,1
+C00455,2023-06-27,Chat,Technical Support,1,5,0
+C00092,2023-06-27,Chat,Complaint,5,23,1
+C00397,2023-06-27,Phone,Service Request,4,2,1
+C00180,2023-06-27,Email,Service Request,3,44,1
+C00417,2023-06-27,In-Person,Technical Support,4,34,0
+C00190,2023-06-28,App,Technical Support,4,17,1
+C00449,2023-06-28,In-Person,Billing Inquiry,4,2,1
+C00305,2023-06-28,In-Person,General Inquiry,3,24,0
+C00303,2023-06-28,App,Complaint,5,33,1
+C00413,2023-06-28,In-Person,Billing Inquiry,4,9,1
+C00050,2023-06-28,Email,Billing Inquiry,4,27,1
+C00254,2023-06-29,Email,Complaint,2,7,0
+C00185,2023-06-29,In-Person,Technical Support,1,27,1
+C00094,2023-06-29,Phone,Complaint,1,5,0
+C00218,2023-06-29,In-Person,Billing Inquiry,4,24,1
+C00163,2023-06-29,Chat,Technical Support,2,27,1
+C00143,2023-06-29,App,Technical Support,3,41,1
+C00405,2023-06-30,Chat,Technical Support,3,3,1
+C00141,2023-06-30,In-Person,Service Request,5,8,1
+C00317,2023-06-30,Email,Service Request,2,22,1
+C00499,2023-06-30,Chat,Billing Inquiry,4,8,0
+C00299,2023-06-30,Chat,General Inquiry,2,23,0
+C00185,2023-06-30,In-Person,Billing Inquiry,2,17,0
+C00242,2023-07-01,Phone,General Inquiry,1,37,0
+C00102,2023-07-01,Phone,Technical Support,3,37,1
+C00170,2023-07-01,App,General Inquiry,1,22,1
+C00471,2023-07-01,App,General Inquiry,5,42,1
+C00362,2023-07-01,Chat,Billing Inquiry,1,16,0
+C00269,2023-07-01,Phone,General Inquiry,4,39,0
+C00015,2023-07-02,App,Service Request,5,41,1
+C00210,2023-07-02,Chat,Billing Inquiry,5,28,0
+C00299,2023-07-02,Email,Service Request,4,43,1
+C00206,2023-07-02,Chat,Service Request,5,37,1
+C00257,2023-07-02,Phone,Service Request,1,39,0
+C00138,2023-07-02,Email,General Inquiry,1,3,0
+C00342,2023-07-03,App,Billing Inquiry,1,28,0
+C00316,2023-07-03,Phone,Complaint,5,17,1
+C00196,2023-07-03,App,Billing Inquiry,5,14,1
+C00321,2023-07-03,Chat,Technical Support,3,9,0
+C00136,2023-07-03,Phone,General Inquiry,4,24,1
+C00339,2023-07-03,Email,Technical Support,1,4,0
+C00354,2023-07-04,App,Technical Support,3,26,0
+C00496,2023-07-04,App,Complaint,4,18,1
+C00235,2023-07-04,In-Person,Technical Support,4,26,0
+C00059,2023-07-04,Chat,General Inquiry,5,43,1
+C00440,2023-07-04,App,Service Request,4,40,0
+C00031,2023-07-04,App,Technical Support,3,15,0
+C00145,2023-07-05,Chat,Technical Support,3,3,0
+C00112,2023-07-05,App,General Inquiry,5,19,1
+C00177,2023-07-05,Email,General Inquiry,3,37,1
+C00288,2023-07-05,In-Person,Complaint,2,11,0
+C00453,2023-07-05,Chat,General Inquiry,5,10,1
+C00275,2023-07-05,Chat,Technical Support,5,27,0
+C00032,2023-07-06,Phone,Complaint,3,4,0
+C00494,2023-07-06,Chat,General Inquiry,5,37,1
+C00302,2023-07-06,Email,Billing Inquiry,5,13,0
+C00013,2023-07-06,Phone,Technical Support,2,41,1
+C00140,2023-07-06,In-Person,Billing Inquiry,4,2,0
+C00340,2023-07-06,Chat,Billing Inquiry,5,28,0
+C00430,2023-07-07,Chat,Billing Inquiry,5,20,0
+C00192,2023-07-07,Chat,Technical Support,3,32,1
+C00292,2023-07-07,Email,Billing Inquiry,2,9,0
+C00208,2023-07-07,Phone,Service Request,1,25,0
+C00199,2023-07-07,Phone,Billing Inquiry,2,20,0
+C00062,2023-07-07,Phone,Technical Support,4,30,0
+C00020,2023-07-08,App,Technical Support,3,10,0
+C00301,2023-07-08,In-Person,Complaint,4,15,1
+C00177,2023-07-08,Email,Service Request,1,28,0
+C00169,2023-07-08,Phone,Technical Support,1,34,1
+C00127,2023-07-08,Chat,Billing Inquiry,4,13,0
+C00432,2023-07-08,Email,Service Request,1,12,0
+C00439,2023-07-09,Phone,General Inquiry,5,6,1
+C00492,2023-07-09,Chat,Technical Support,2,19,1
+C00294,2023-07-09,Phone,Technical Support,5,4,0
+C00216,2023-07-09,In-Person,Technical Support,5,26,1
+C00098,2023-07-09,App,Complaint,2,26,1
+C00092,2023-07-09,Chat,Service Request,2,26,1
+C00376,2023-07-10,Email,Technical Support,2,29,0
+C00374,2023-07-10,Email,Complaint,5,18,1
+C00381,2023-07-10,App,Complaint,4,20,0
+C00049,2023-07-10,Phone,Billing Inquiry,2,4,0
+C00172,2023-07-10,App,General Inquiry,4,41,0
+C00333,2023-07-10,Chat,Billing Inquiry,4,9,0
+C00114,2023-07-11,Phone,Complaint,5,29,0
+C00318,2023-07-11,In-Person,Service Request,5,44,0
+C00003,2023-07-11,App,General Inquiry,4,44,0
+C00141,2023-07-11,Phone,Complaint,3,9,1
+C00371,2023-07-11,App,Technical Support,4,17,0
+C00226,2023-07-11,Chat,Billing Inquiry,5,36,1
+C00199,2023-07-12,Chat,General Inquiry,3,15,1
+C00343,2023-07-12,App,General Inquiry,2,4,0
+C00369,2023-07-12,App,General Inquiry,3,19,0
+C00372,2023-07-12,Email,Complaint,1,27,0
+C00133,2023-07-12,Phone,General Inquiry,5,28,1
+C00019,2023-07-12,Chat,General Inquiry,5,17,1
+C00120,2023-07-13,App,Billing Inquiry,4,43,0
+C00367,2023-07-13,App,Billing Inquiry,2,25,0
+C00143,2023-07-13,In-Person,Service Request,3,44,0
+C00274,2023-07-13,App,Service Request,3,29,1
+C00070,2023-07-13,Email,Technical Support,3,13,1
+C00216,2023-07-13,Phone,General Inquiry,5,30,1
+C00389,2023-07-14,In-Person,Service Request,5,35,0
+C00187,2023-07-14,Chat,Billing Inquiry,5,10,0
+C00438,2023-07-14,App,Service Request,1,41,1
+C00033,2023-07-14,Chat,Service Request,4,44,0
+C00353,2023-07-14,Phone,Billing Inquiry,1,15,1
+C00434,2023-07-14,In-Person,Complaint,5,33,0
+C00176,2023-07-15,Phone,Technical Support,2,20,1
+C00472,2023-07-15,Phone,Billing Inquiry,4,36,1
+C00487,2023-07-15,Email,General Inquiry,2,27,1
+C00035,2023-07-15,App,Billing Inquiry,1,6,1
+C00202,2023-07-15,Phone,Billing Inquiry,2,16,1
+C00385,2023-07-15,In-Person,Billing Inquiry,1,25,1
+C00400,2023-07-16,Email,General Inquiry,5,16,1
+C00427,2023-07-16,Email,Technical Support,5,12,0
+C00054,2023-07-16,Email,Service Request,3,6,1
+C00187,2023-07-16,App,Technical Support,5,44,1
+C00018,2023-07-16,Phone,Billing Inquiry,4,36,0
+C00412,2023-07-16,In-Person,Billing Inquiry,1,30,0
+C00267,2023-07-17,Email,General Inquiry,5,12,0
+C00457,2023-07-17,Chat,General Inquiry,4,7,0
+C00455,2023-07-17,Phone,Complaint,2,34,0
+C00490,2023-07-17,App,Service Request,3,30,0
+C00212,2023-07-17,Email,Service Request,5,12,1
+C00369,2023-07-17,Phone,General Inquiry,5,24,0
+C00380,2023-07-18,Chat,Service Request,2,3,0
+C00107,2023-07-18,Email,Technical Support,4,36,1
+C00010,2023-07-18,Chat,Technical Support,5,12,0
+C00082,2023-07-18,App,Technical Support,4,10,1
+C00405,2023-07-18,In-Person,Service Request,4,30,1
+C00034,2023-07-18,In-Person,Billing Inquiry,3,36,1
+C00043,2023-07-19,Email,Technical Support,4,39,1
+C00498,2023-07-19,In-Person,Service Request,4,9,1
+C00383,2023-07-19,Chat,Billing Inquiry,3,17,0
+C00361,2023-07-19,Phone,General Inquiry,2,21,1
+C00083,2023-07-19,App,Technical Support,3,20,1
+C00446,2023-07-19,Email,Service Request,5,12,0
+C00269,2023-07-20,Phone,General Inquiry,1,7,0
+C00317,2023-07-20,In-Person,General Inquiry,2,24,0
+C00060,2023-07-20,Phone,Service Request,2,12,0
+C00456,2023-07-20,In-Person,Billing Inquiry,3,13,1
+C00474,2023-07-20,Phone,Complaint,1,19,0
+C00405,2023-07-20,Phone,Service Request,4,14,0
+C00210,2023-07-21,Chat,Technical Support,1,7,0
+C00460,2023-07-21,Chat,Service Request,3,27,1
+C00288,2023-07-21,In-Person,Technical Support,2,10,1
+C00294,2023-07-21,App,Complaint,2,26,0
+C00250,2023-07-21,Chat,Complaint,5,38,0
+C00257,2023-07-21,Phone,Billing Inquiry,2,16,1
+C00410,2023-07-22,Chat,Billing Inquiry,1,26,1
+C00091,2023-07-22,Chat,Complaint,2,29,0
+C00327,2023-07-22,Chat,Billing Inquiry,2,11,0
+C00131,2023-07-22,Email,Service Request,4,31,1
+C00070,2023-07-22,App,Complaint,5,33,1
+C00058,2023-07-22,In-Person,Complaint,2,40,0
+C00153,2023-07-23,Chat,Billing Inquiry,1,8,1
+C00313,2023-07-23,Email,Billing Inquiry,5,3,1
+C00228,2023-07-23,Phone,Technical Support,3,6,0
+C00499,2023-07-23,Phone,Complaint,4,36,0
+C00215,2023-07-23,Email,Technical Support,3,7,1
+C00105,2023-07-23,In-Person,General Inquiry,5,30,1
+C00156,2023-07-24,In-Person,Billing Inquiry,4,23,1
+C00059,2023-07-24,Phone,Service Request,3,34,0
+C00251,2023-07-24,Email,Billing Inquiry,2,42,1
+C00104,2023-07-24,In-Person,Technical Support,2,2,1
+C00500,2023-07-24,In-Person,Technical Support,3,8,1
+C00331,2023-07-24,In-Person,Complaint,1,33,1
+C00181,2023-07-25,In-Person,Technical Support,5,21,1
+C00074,2023-07-25,App,Technical Support,1,2,0
+C00400,2023-07-25,Chat,Technical Support,4,18,0
+C00411,2023-07-25,In-Person,Service Request,3,27,0
+C00200,2023-07-25,In-Person,Technical Support,1,29,0
+C00496,2023-07-25,Chat,General Inquiry,1,10,0
+C00290,2023-07-26,In-Person,Service Request,2,35,1
+C00469,2023-07-26,Chat,Service Request,5,6,1
+C00359,2023-07-26,App,Complaint,4,40,0
+C00195,2023-07-26,Email,Complaint,2,28,0
+C00390,2023-07-26,App,Complaint,4,33,1
+C00239,2023-07-26,Chat,Technical Support,1,18,1
+C00408,2023-07-27,In-Person,Complaint,3,9,1
+C00456,2023-07-27,Email,Billing Inquiry,1,19,0
+C00267,2023-07-27,Email,Complaint,5,36,0
+C00167,2023-07-27,In-Person,Technical Support,4,29,1
+C00476,2023-07-27,Email,Technical Support,3,41,0
+C00065,2023-07-27,In-Person,Complaint,1,24,0
+C00320,2023-07-28,Email,Technical Support,3,32,0
+C00126,2023-07-28,In-Person,General Inquiry,4,33,1

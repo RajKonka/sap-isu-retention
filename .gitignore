@@ -17,3 +17,5 @@ reports/sessions/
 .DS_Store
 *.pptx
 .env
+.claude/
+client_materials/*.docx
